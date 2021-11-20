@@ -14,13 +14,13 @@ namespace Nabs.Tests.NabsUnitTests
         [Theory]
         [InlineData("a")]
         [InlineData("-")]
-        public void IsNullOrWhitespaceOrDefault_ValueSuccess(string value)
+        public void OrDefault_ValueSuccess(string value)
         {
             //Arrange
             var expectedValue = value;
 
             //Act
-            var actualValue = value.IsNullOrWhitespaceOrDefault("xyz");
+            var actualValue = value.OrDefault("xyz");
 
             //Assert
             actualValue.Should().Be(expectedValue);
@@ -30,13 +30,13 @@ namespace Nabs.Tests.NabsUnitTests
         [InlineData("", "a")]
         [InlineData(null, "a")]
         [InlineData(" ", "a")]
-        public void IsNullOrWhitespaceOrDefault_DefaultSuccess(string value, string defaultValue)
+        public void OrDefault_DefaultSuccess(string value, string defaultValue)
         {
             //Arrange
             var expectedValue = defaultValue;
 
             //Act
-            var actualValue = value.IsNullOrWhitespaceOrDefault(defaultValue);
+            var actualValue = value.OrDefault(defaultValue);
 
             //Assert
             actualValue.Should().Be(expectedValue);
