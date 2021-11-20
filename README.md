@@ -3,7 +3,7 @@ Net Advantage Business Solutions Core Libraries.
 
 These libraries are made available to customers of Net Advantage Business Solutions are form part our our consulting services.
 
-The primary pupose is to provide an architectural opinionated set of libraries to development teams designed to get them solving business challenges rather than working out how to approach their technical projects.
+The primary pupose is to provide a set of opinionated architectura libraries to development teams designed to get them solving business challenges rather than working out how to approach their technical projects.
 
 ## In this repository
 
