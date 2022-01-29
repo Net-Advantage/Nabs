@@ -1,6 +1,5 @@
-﻿namespace Nabs.Persistence
+﻿namespace Nabs.Persistence;
+
+public interface ITableEntity
 {
-    public interface ITableEntity
-    {
-    }
 }

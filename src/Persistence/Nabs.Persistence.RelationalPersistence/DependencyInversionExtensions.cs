@@ -5,7 +5,7 @@ namespace Nabs.Persistence.RelationalPersistence
 {
     public static class DependencyInversionExtensions
     {
-        public static IServiceCollection AddSecretsAbstractions(this IServiceCollection services)
+        public static IServiceCollection AddRelationalPersistence(this IServiceCollection services)
         {
 
 

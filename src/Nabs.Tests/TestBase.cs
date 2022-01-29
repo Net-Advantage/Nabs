@@ -1,18 +1,21 @@
-﻿using System;
-using System.Threading.Tasks;
-using Xunit;
-using Xunit.Abstractions;
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace Nabs.Tests
 {
     public abstract class TestBase : IAsyncLifetime
     {
-        protected TestBase(ITestOutputHelper output)
+        protected TestBase([NotNull]TestFixtureBase testFixture, [NotNull]ITestOutputHelper output)
         {
+            TestFixture = testFixture;
             Output = output;
+            ConfigurationRoot = testFixture.ConfigurationRoot;
+            ServiceProvider = testFixture.ServiceScope.ServiceProvider;
         }
 
+        protected TestFixtureBase TestFixture { get; }
         protected ITestOutputHelper Output { get; }
+        protected IServiceProvider ServiceProvider { get; }
+        protected IConfigurationRoot ConfigurationRoot { get; }
 
         public virtual async Task StartTest()
         {

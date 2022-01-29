@@ -6,7 +6,7 @@ namespace Nabs.Tests.NabsUnitTests
 {
     public class ReflectionExtensionsUnitTests : TestBase
     {
-        public ReflectionExtensionsUnitTests(ITestOutputHelper output) : base(output)
+        public ReflectionExtensionsUnitTests(ITestOutputHelper output) : base(null, output)
         {
         }
 

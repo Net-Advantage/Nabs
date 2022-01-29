@@ -1,6 +1,5 @@
-﻿namespace Nabs.Persistence
+﻿namespace Nabs.Persistence;
+
+public interface ITableRepository
 {
-    public interface ITableRepository
-    {
-    }
 }

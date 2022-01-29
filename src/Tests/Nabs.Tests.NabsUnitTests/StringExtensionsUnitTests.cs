@@ -7,7 +7,7 @@ namespace Nabs.Tests.NabsUnitTests
 {
     public class StringExtensionsUnitTests : TestBase
     {
-        public StringExtensionsUnitTests(ITestOutputHelper output) : base(output)
+        public StringExtensionsUnitTests(ITestOutputHelper output) : base(null, output)
         {
         }
 
@@ -20,7 +20,7 @@ namespace Nabs.Tests.NabsUnitTests
             var expectedValue = value;
 
             //Act
-            var actualValue = value.OrDefault("xyz");
+            var actualValue = value.DefaultIfNullOrWhiteSpace("xyz");
 
             //Assert
             actualValue.Should().Be(expectedValue);
@@ -36,7 +36,7 @@ namespace Nabs.Tests.NabsUnitTests
             var expectedValue = defaultValue;
 
             //Act
-            var actualValue = value.OrDefault(defaultValue);
+            var actualValue = value.DefaultIfNullOrWhiteSpace(defaultValue);
 
             //Assert
             actualValue.Should().Be(expectedValue);
