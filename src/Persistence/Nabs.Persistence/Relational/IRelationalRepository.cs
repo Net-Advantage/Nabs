@@ -19,6 +19,9 @@ public interface IQueryItem<TEntity>
 
     IQueryItem<TEntity> WithPredicate(Expression<Func<TEntity, bool>> predicate);
 
+    Task<TProjection> ExecuteAsync<TProjection>(CancellationToken cancellationToken = default)
+        where TProjection : class, IDto;
+
     Task<TEntity> ExecuteAsync(CancellationToken cancellationToken = default);
 }
 

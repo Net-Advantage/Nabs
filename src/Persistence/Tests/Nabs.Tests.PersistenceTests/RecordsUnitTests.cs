@@ -5,8 +5,8 @@ public class RecordsUnitTests
     [Fact]
     public void InstantiateTestUser_ToSeeHowRecordsWork()
     {
-        var p1 = new TestUser(Guid.NewGuid(), "dwschreyer", "Darrel");
-        var p2 = new TestUser(p1.Id, p1.Username, p1.FirstName);
+        var p1 = new TestUser(Guid.NewGuid(), "dwschreyer", "Darrel", "Schreyer");
+        var p2 = new TestUser(p1.Id, p1.Username, p1.FirstName, p1.LastName);
 
         p1.Should().BeEquivalentTo(p2);
         

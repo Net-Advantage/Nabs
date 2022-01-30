@@ -4,6 +4,7 @@ public interface IRelationalRepositoryOptions<TContext>
     where TContext : DbContext
 {
     IDbContextFactory<TContext> ContextFactory { get; init; }
+    IMapper Mapper { get; init; }
 
     virtual void OnInitialise()
     {

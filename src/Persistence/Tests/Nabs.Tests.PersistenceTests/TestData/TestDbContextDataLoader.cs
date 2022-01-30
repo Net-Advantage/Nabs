@@ -36,7 +36,7 @@ public class TestDbContextDataLoader
 
     public async Task<TestUser> CreateTestUser(Guid id)
     {
-        var testUser = new TestUser(id, $"un:{id.ToString()}", $"fn:{id.ToString()}");
+        var testUser = new TestUser(id, $"un:{id}", $"fn:{id}", $"ln:{id}");
 
         var result = await _repository
             .ItemCommand<TestUser>()

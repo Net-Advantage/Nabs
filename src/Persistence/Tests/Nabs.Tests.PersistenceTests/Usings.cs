@@ -13,3 +13,5 @@ global using Nabs.Tests.PersistenceTests.Fixtures;
 global using Microsoft.Data.Sqlite;
 global using Microsoft.Extensions.DependencyInjection;
 global using Nabs.Persistence.Relational;
+global using AutoMapper;
+global using Nabs.Tests.PersistenceTests.TestDto;

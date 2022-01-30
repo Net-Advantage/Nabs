@@ -15,6 +15,8 @@ public sealed class DataLoaderFixture : TestFixtureBase
 
     protected override void ConfigureServices(IServiceCollection services)
     {
+        services.AddAutoMapper(typeof(DataLoaderFixture));
+
         services.AddDbContextFactory<TestDbContext>(_ =>
         {
             const string connectionString = "Filename=:memory:";
@@ -26,8 +28,8 @@ public sealed class DataLoaderFixture : TestFixtureBase
                 options.MaxBatchSize(25); //TODO: DWS: Make configurable
             });
         });
-        services.AddSingleton<IRelationalRepositoryOptions<TestDbContext>, RelationalRepositoryOptions<TestDbContext>>();
-        services.AddTransient<IRelationalRepository<TestDbContext>, RelationalRepository<TestDbContext>>();
+        services.AddTransient<IRelationalRepositoryOptions<TestDbContext>, RelationalRepositoryOptions<TestDbContext>>();
+        services.AddScoped<IRelationalRepository<TestDbContext>, RelationalRepository<TestDbContext>>();
     }
 
     public override async Task EnsureDatabaseLoaderAsync()

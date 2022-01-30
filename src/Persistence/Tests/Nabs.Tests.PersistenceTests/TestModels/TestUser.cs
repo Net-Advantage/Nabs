@@ -3,6 +3,7 @@
 public record TestUser(
         Guid Id,
         string Username,
-        string FirstName)
+        string FirstName,
+        string LastName)
     : IRelationalEntity<Guid>;
 

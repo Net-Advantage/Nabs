@@ -79,8 +79,8 @@ public class TestUserUnitTests : TestBase
     public async Task UpdateAndQueryItem_SpecificTestUser_Success()
     {
         //Arrange
-        var (id, username, firstName) = _newTestUser;
-        var itemToUpdate = new TestUser(id, username, "fn: updated first name");
+        var (id, username, _, _) = _newTestUser;
+        var itemToUpdate = new TestUser(id, username, "fn: updated first name", "ln: updated last name");
         var updatedItem = await _testRepository
             .ItemCommand<TestUser>()
             .ForItem(itemToUpdate)
@@ -95,5 +95,18 @@ public class TestUserUnitTests : TestBase
         actual.Should().NotBeNull();
         actual.Should().BeEquivalentTo(updatedItem);
         updatedItem.Should().NotBeEquivalentTo(_newTestUser);
+    }
+
+    [Fact]
+    public async Task QueryItem_SpecificTestUser_WithProjection_Success()
+    {
+        //Act
+        var actual = await _testUserQuery
+            .WithPredicate(_ => _.Id == _id)
+            .ExecuteAsync<TestUserDto>();
+
+        //Assert
+        actual.Should().NotBeNull();
+        actual.FullName.Should().NotBeNullOrWhiteSpace();
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Nabs.Persistence.Relational;
+﻿using AutoMapper.QueryableExtensions;
+
+namespace Nabs.Persistence.Relational;
 
 public class RelationalRepository<TDbContext> : IRelationalRepository<TDbContext>
     where TDbContext : DbContext
@@ -55,8 +57,31 @@ public class QueryItem<TDbContext, TEntity> : IQueryItem<TEntity>
         _predicate = predicate;
         return this;
     }
+    
+    public async Task<TProjection> ExecuteAsync<TProjection>(CancellationToken cancellationToken = default)
+        where TProjection : class, IDto
+    {
+        try
+        {
+            var result = await Execute<TProjection>(cancellationToken);
+            return result;
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
 
     public async Task<TEntity> ExecuteAsync(CancellationToken cancellationToken = default)
+    {
+        var result = await Execute<TEntity>(cancellationToken);
+        return result;
+    }
+
+    private async Task<TProjection> Execute<TProjection>(CancellationToken cancellationToken = default)
+        where TProjection : class
     {
         var context = await _relationalRepositoryOptions.ContextFactory.CreateDbContextAsync(cancellationToken);
         await context.Database.EnsureCreatedAsync(cancellationToken);
@@ -66,8 +91,16 @@ public class QueryItem<TDbContext, TEntity> : IQueryItem<TEntity>
             var predicate = _predicate as Expression<Func<TEntity, bool>>;
             query = query.Where(predicate!);
         }
+
+        if (typeof(TProjection) != typeof(TEntity))
+        {
+
+            var projection = query.ProjectTo<TProjection>(_relationalRepositoryOptions.Mapper.ConfigurationProvider);
+            return await projection.FirstOrDefaultAsync(cancellationToken);
+        }
+
         var result = await query.FirstOrDefaultAsync(cancellationToken);
-        return result;
+        return result as TProjection;
     }
 }
 
