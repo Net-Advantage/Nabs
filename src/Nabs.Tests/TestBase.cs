@@ -8,8 +8,12 @@ namespace Nabs.Tests
         {
             TestFixture = testFixture;
             Output = output;
-            ConfigurationRoot = testFixture.ConfigurationRoot;
-            ServiceProvider = testFixture.ServiceScope.ServiceProvider;
+
+            if (testFixture != null)
+            {
+                ConfigurationRoot = testFixture.ConfigurationRoot;
+                ServiceProvider = testFixture.ServiceScope.ServiceProvider;
+            }
         }
 
         protected TestFixtureBase TestFixture { get; }

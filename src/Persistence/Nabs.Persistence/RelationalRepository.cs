@@ -20,7 +20,7 @@ public class RelationalRepository<TDbContext> : IRepository<TDbContext>
         return result;
     }
 
-    public IQueryItem<TEntity> GetItem<TEntity>()
+    public IQueryItem<TEntity> QueryItem<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>
     {
         var result = new QueryItem<TDbContext, TEntity>(_relationalRepositoryOptions);

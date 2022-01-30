@@ -5,7 +5,7 @@ public interface IRepository<TDbContext>
 {
     TDbContext NewDbContext();
 
-    IQueryItem<TEntity> GetItem<TEntity>()
+    IQueryItem<TEntity> QueryItem<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>;
 
     IItemCommand<TEntity> ItemCommand<TEntity>()

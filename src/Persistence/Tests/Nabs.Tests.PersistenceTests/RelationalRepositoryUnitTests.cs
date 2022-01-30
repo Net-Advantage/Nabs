@@ -3,7 +3,7 @@
 [Collection("TestDbContextDataLoader")]
 public class RelationalRepositoryUnitTests : TestBase
 {
-    private IRepository<TestDbContext> _testRepository;
+    private readonly IRepository<TestDbContext> _testRepository;
 
     public RelationalRepositoryUnitTests(
         ITestOutputHelper output,
@@ -25,7 +25,7 @@ public class RelationalRepositoryUnitTests : TestBase
         //Arrange
 
         //Act
-        var actual = await _testRepository.GetItem<TestUser>().ExecuteAsync();
+        var actual = await _testRepository.QueryItem<TestUser>().ExecuteAsync();
 
         //Assert
         actual.Should().NotBeNull();
@@ -37,19 +37,20 @@ public class RelationalRepositoryUnitTests : TestBase
         //Arrange
         var id = Guid.NewGuid();
         var newTestUser = new TestUser(id, $"un:{id}", $"fn:{id}");
+        var command = _testRepository.ItemCommand<TestUser>();
+        var query = _testRepository.QueryItem<TestUser>();
 
-        newTestUser = await _testRepository
-            .ItemCommand<TestUser>()
+        newTestUser = await command
             .ForItem(newTestUser)
             .ExecuteAsync();
 
         //Act
-        var actual = await _testRepository
-            .GetItem<TestUser>()
+        var actual = await query
             .WithPredicate(_ => _.Id == id)
             .ExecuteAsync();
 
         //Assert
         actual.Should().NotBeNull();
+        actual.Should().BeEquivalentTo(newTestUser);
     }
 }
