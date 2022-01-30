@@ -11,7 +11,7 @@ public class TestDbContextSaveChangesInterceptor : SaveChangesInterceptor
         InterceptionResult<int> result,
         CancellationToken cancellationToken = default)
     {
-        var a = 10; //TODO: DWS: What you gonna do here?
+        Console.WriteLine(nameof(TestDbContextSaveChangesInterceptor));
 
         return base.SavingChangesAsync(eventData, result, cancellationToken);
     }
