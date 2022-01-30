@@ -26,12 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DbContexts\" />
-    <Folder Include="Fixtures\" />
-    <Folder Include="TestModels\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\..\Nabs.Tests\Nabs.Tests.csproj" />
     <ProjectReference Include="..\..\Nabs.Persistence\Nabs.Persistence.csproj" />
   </ItemGroup>
