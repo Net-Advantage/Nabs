@@ -1,13 +1,21 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.IO;
 
 namespace Nabs.Tests
 {
     public abstract class TestBase : IAsyncLifetime
     {
+        private readonly TextWriter _originalOut;
+        private readonly TextWriter _textWriter;
+
         protected TestBase([NotNull]TestFixtureBase testFixture, [NotNull]ITestOutputHelper output)
         {
             TestFixture = testFixture;
             Output = output;
+
+            _originalOut = Console.Out;
+            _textWriter = new StringWriter();
+            Console.SetOut(_textWriter);
 
             if (testFixture != null)
             {
@@ -39,8 +47,11 @@ namespace Nabs.Tests
 
         public async Task DisposeAsync()
         {
+            Output.WriteLine(_textWriter.ToString());
+
             Output.WriteLine("DisposeAsync");
             await TeardownTest();
+            Console.SetOut(_originalOut);
         }
     }
 }

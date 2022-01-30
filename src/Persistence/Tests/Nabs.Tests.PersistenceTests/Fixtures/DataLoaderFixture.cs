@@ -1,4 +1,7 @@
-﻿using Nabs.Tests.PersistenceTests.TestData;
+﻿using System.Diagnostics;
+using Microsoft.Extensions.Logging;
+using Nabs.Tests.PersistenceTests.TestData;
+using Xunit.Sdk;
 
 namespace Nabs.Tests.PersistenceTests.Fixtures;
 
@@ -27,6 +30,9 @@ public sealed class DataLoaderFixture : TestFixtureBase
                 options.MinBatchSize(1);
                 options.MaxBatchSize(25); //TODO: DWS: Make configurable
             });
+            _.AddInterceptors(new TestDbContextSaveChangesInterceptor());
+            _.LogTo(Console.WriteLine, LogLevel.Information);
+            _.EnableSensitiveDataLogging();
         });
         services.AddTransient<IRelationalRepositoryOptions<TestDbContext>, RelationalRepositoryOptions<TestDbContext>>();
         services.AddScoped<IRelationalRepository<TestDbContext>, RelationalRepository<TestDbContext>>();

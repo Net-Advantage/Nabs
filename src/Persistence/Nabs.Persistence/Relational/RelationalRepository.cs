@@ -41,7 +41,7 @@ public class QueryItem<TDbContext, TEntity> : IQueryItem<TEntity>
 {
     private readonly IRelationalRepositoryOptions<TDbContext> _relationalRepositoryOptions;
     private LambdaExpression _predicate;
-    
+
     public QueryItem(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
     {
         _relationalRepositoryOptions = relationalRepositoryOptions;
@@ -57,21 +57,12 @@ public class QueryItem<TDbContext, TEntity> : IQueryItem<TEntity>
         _predicate = predicate;
         return this;
     }
-    
+
     public async Task<TProjection> ExecuteAsync<TProjection>(CancellationToken cancellationToken = default)
         where TProjection : class, IDto
     {
-        try
-        {
-            var result = await Execute<TProjection>(cancellationToken);
-            return result;
-
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
+        var result = await Execute<TProjection>(cancellationToken);
+        return result;
     }
 
     public async Task<TEntity> ExecuteAsync(CancellationToken cancellationToken = default)
@@ -94,7 +85,6 @@ public class QueryItem<TDbContext, TEntity> : IQueryItem<TEntity>
 
         if (typeof(TProjection) != typeof(TEntity))
         {
-
             var projection = query.ProjectTo<TProjection>(_relationalRepositoryOptions.Mapper.ConfigurationProvider);
             return await projection.FirstOrDefaultAsync(cancellationToken);
         }
@@ -158,7 +148,7 @@ public class ItemCommand<TDbContext, TEntity> : IItemCommand<TEntity>
         _item = item;
         return this;
     }
-    
+
     public async Task<TEntity> ExecuteAsync(CancellationToken cancellationToken = default)
     {
         var context = await _relationalRepositoryOptions.ContextFactory.CreateDbContextAsync(cancellationToken);
