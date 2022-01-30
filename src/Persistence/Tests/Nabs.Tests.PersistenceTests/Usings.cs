@@ -12,3 +12,4 @@ global using Microsoft.Extensions.Configuration;
 global using Nabs.Tests.PersistenceTests.Fixtures;
 global using Microsoft.Data.Sqlite;
 global using Microsoft.Extensions.DependencyInjection;
+global using Nabs.Persistence.Relational;

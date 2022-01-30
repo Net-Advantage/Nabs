@@ -1,10 +1,10 @@
 ﻿namespace Nabs.Tests.PersistenceTests;
 
-[Collection("TestDbContextDataLoader")]
+[Collection(nameof(TestDbContextDataLoaderFixtureCollection))]
 public class TestDbContextRelationalRepositoryUnitTests : TestBase
 {
     private readonly DataLoaderFixture _dataLoaderFixture;
-    private readonly IContextRepository<TestDbContext> _testRepository;
+    private readonly IRelationalRepository<TestDbContext> _testRepository;
 
     public TestDbContextRelationalRepositoryUnitTests(
         ITestOutputHelper output,
@@ -13,7 +13,7 @@ public class TestDbContextRelationalRepositoryUnitTests : TestBase
     {
         _dataLoaderFixture = dataLoaderFixture;
         _testRepository = dataLoaderFixture.ServiceScope.ServiceProvider
-            .GetRequiredService<IContextRepository<TestDbContext>>();
+            .GetRequiredService<IRelationalRepository<TestDbContext>>();
     }
 
     [Fact]

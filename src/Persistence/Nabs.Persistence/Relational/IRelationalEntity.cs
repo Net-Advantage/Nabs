@@ -1,4 +1,4 @@
-﻿namespace Nabs.Persistence;
+﻿namespace Nabs.Persistence.Relational;
 
 public interface IRelationalEntity<TKey>
 {

@@ -27,7 +27,7 @@ public sealed class DataLoaderFixture : TestFixtureBase
             });
         });
         services.AddSingleton<IRelationalRepositoryOptions<TestDbContext>, RelationalRepositoryOptions<TestDbContext>>();
-        services.AddTransient<IContextRepository<TestDbContext>, RelationalRepository<TestDbContext>>();
+        services.AddTransient<IRelationalRepository<TestDbContext>, RelationalRepository<TestDbContext>>();
     }
 
     public override async Task EnsureDatabaseLoaderAsync()
@@ -38,7 +38,7 @@ public sealed class DataLoaderFixture : TestFixtureBase
         }
 
         var testRepository = ServiceScope.ServiceProvider
-            .GetRequiredService<IContextRepository<TestDbContext>>();
+            .GetRequiredService<IRelationalRepository<TestDbContext>>();
 
         TestDbContextDataLoader = new TestDbContextDataLoader(testRepository);
         await TestDbContextDataLoader.LoadAsync();

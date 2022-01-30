@@ -1,6 +1,4 @@
-﻿
-
-namespace Nabs.Persistence;
+﻿namespace Nabs.Persistence.Relational;
 
 public interface IRelationalRepositoryOptions<TContext>
     where TContext : DbContext

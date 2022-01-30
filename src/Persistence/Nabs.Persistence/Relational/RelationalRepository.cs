@@ -1,8 +1,6 @@
-﻿using System.Linq;
+﻿namespace Nabs.Persistence.Relational;
 
-namespace Nabs.Persistence;
-
-public class RelationalRepository<TDbContext> : IContextRepository<TDbContext>
+public class RelationalRepository<TDbContext> : IRelationalRepository<TDbContext>
     where TDbContext : DbContext
 {
     private readonly IRelationalRepositoryOptions<TDbContext> _relationalRepositoryOptions;

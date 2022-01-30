@@ -3,9 +3,9 @@
 public class TestDbContextDataLoader
 {
     private bool _hasRun = false;
-    private readonly IContextRepository<TestDbContext> _repository;
+    private readonly IRelationalRepository<TestDbContext> _repository;
 
-    public TestDbContextDataLoader(IContextRepository<TestDbContext> repository)
+    public TestDbContextDataLoader(IRelationalRepository<TestDbContext> repository)
     {
         
         _repository = repository;

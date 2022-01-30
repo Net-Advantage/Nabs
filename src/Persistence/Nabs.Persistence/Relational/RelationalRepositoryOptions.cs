@@ -1,4 +1,4 @@
-﻿namespace Nabs.Persistence;
+﻿namespace Nabs.Persistence.Relational;
 
 public class RelationalRepositoryOptions<TContext> : IRelationalRepositoryOptions<TContext>
     where TContext : DbContext

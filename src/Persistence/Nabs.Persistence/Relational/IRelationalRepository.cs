@@ -1,18 +1,15 @@
-﻿namespace Nabs.Persistence;
+﻿namespace Nabs.Persistence.Relational;
 
-public interface IRepository
+public interface IRelationalRepository<out TDbContext>
+    where TDbContext : DbContext
 {
+    TDbContext NewDbContext();
+
     IQueryItem<TEntity> QueryItem<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>;
 
     IItemCommand<TEntity> ItemCommand<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>;
-}
-
-public interface IContextRepository<out TDbContext> : IRepository
-    where TDbContext : DbContext
-{
-    TDbContext NewDbContext();
 }
 
 public interface IQueryItem<TEntity>

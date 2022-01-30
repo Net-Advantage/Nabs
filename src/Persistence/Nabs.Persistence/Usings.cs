@@ -4,5 +4,4 @@ global using Microsoft.EntityFrameworkCore;
 global using System;
 global using System.Linq.Expressions;
 global using System.Threading;
-global using Microsoft.EntityFrameworkCore.Diagnostics;
-global using Microsoft.EntityFrameworkCore.Internal;
+global using System.Linq;
