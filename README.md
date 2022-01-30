@@ -1,9 +1,10 @@
 # What is Nabs?
 Net Advantage Business Solutions Core Libraries.
 
-These libraries are made available to customers of Net Advantage Business Solutions are form part our our consulting services.
+These libraries are made available to customers of Net Advantage Business Solutions and form part our our consulting services.
 
-The primary pupose is to provide a set of opinionated libraries to development teams designed to get them solving business challenges rather than working out how to approach their technical projects.
+We believe that software development teams' primary objective is to address business needs. In order to do this certain technical 
+The primary pupose is to provide a set of opinionated libraries to development teams in order to get them solving business challenges rather than working out how to approach aspects of their technical projects.
 
 ## In this repository
 

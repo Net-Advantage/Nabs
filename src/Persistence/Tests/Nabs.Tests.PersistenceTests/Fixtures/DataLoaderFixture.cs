@@ -4,12 +4,7 @@ namespace Nabs.Tests.PersistenceTests.Fixtures;
 
 public sealed class DataLoaderFixture : TestFixtureBase
 {
-    private readonly DataLoader _dataLoader = new DataLoader();
-
-    public DataLoaderFixture()
-    {
-        
-    }
+    public TestDbContextDataLoader? TestDbContextDataLoader { get; private set; }
 
     protected override void ConfigureConfiguration(IConfigurationBuilder configurationBuilder)
     {
@@ -22,7 +17,7 @@ public sealed class DataLoaderFixture : TestFixtureBase
     {
         services.AddDbContextFactory<TestDbContext>(_ =>
         {
-            var connectionString = "Filename=:memory:";
+            const string connectionString = "Filename=:memory:";
             var sqliteConnection = new SqliteConnection(connectionString);
             sqliteConnection.Open();
             _.UseSqlite(sqliteConnection, options =>
@@ -32,15 +27,20 @@ public sealed class DataLoaderFixture : TestFixtureBase
             });
         });
         services.AddSingleton<IRelationalRepositoryOptions<TestDbContext>, RelationalRepositoryOptions<TestDbContext>>();
-        services.AddTransient<IRepository<TestDbContext>, RelationalRepository<TestDbContext>>();
+        services.AddTransient<IContextRepository<TestDbContext>, RelationalRepository<TestDbContext>>();
     }
 
     public override async Task EnsureDatabaseLoaderAsync()
     {
-        var testRepository = ServiceScope.ServiceProvider
-            .GetRequiredService<IRepository<TestDbContext>>();
+        if (TestDbContextDataLoader != null)
+        {
+            return;
+        }
 
-        
-        await _dataLoader.LoadAsync(testRepository);
+        var testRepository = ServiceScope.ServiceProvider
+            .GetRequiredService<IContextRepository<TestDbContext>>();
+
+        TestDbContextDataLoader = new TestDbContextDataLoader(testRepository);
+        await TestDbContextDataLoader.LoadAsync();
     }
 }

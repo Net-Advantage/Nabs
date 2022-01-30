@@ -3,17 +3,17 @@
 public class RecordsUnitTests
 {
     [Fact]
-    public void Test1()
+    public void InstantiateTestUser_ToSeeHowRecordsWork()
     {
         var p1 = new TestUser(Guid.NewGuid(), "dwschreyer", "Darrel");
         var p2 = new TestUser(p1.Id, p1.Username, p1.FirstName);
 
-        var x = p1 == p2;
-
+        p1.Should().BeEquivalentTo(p2);
+        
         var a = p1 as IRelationalEntity<Guid>;
-        var aId = a.Id;
+        a.Id.Should().NotBeEmpty();
 
         var b = p1 as IRelationalEntity<Guid>;
-        var bId = b.GetId();
+        b.GetId().Should().NotBeEmpty();
     }
 }

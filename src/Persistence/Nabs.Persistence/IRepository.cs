@@ -1,10 +1,7 @@
 ﻿namespace Nabs.Persistence;
 
-public interface IRepository<TDbContext>
-    where TDbContext : DbContext
+public interface IRepository
 {
-    TDbContext NewDbContext();
-
     IQueryItem<TEntity> QueryItem<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>;
 
@@ -12,9 +9,17 @@ public interface IRepository<TDbContext>
         where TEntity : class, IRelationalEntity<Guid>;
 }
 
+public interface IContextRepository<out TDbContext> : IRepository
+    where TDbContext : DbContext
+{
+    TDbContext NewDbContext();
+}
+
 public interface IQueryItem<TEntity>
     where TEntity : class, IRelationalEntity<Guid>
 {
+    IQueryItem<TEntity> WithId(Guid id);
+
     IQueryItem<TEntity> WithPredicate(Expression<Func<TEntity, bool>> predicate);
 
     Task<TEntity> ExecuteAsync(CancellationToken cancellationToken = default);

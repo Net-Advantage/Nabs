@@ -1,7 +1,7 @@
 ﻿namespace Nabs.Tests.PersistenceTests.Fixtures;
 
 [CollectionDefinition("TestDbContextDataLoader")]
-public class TestDbContextDataLoaderCollectionFixture : ICollectionFixture<DataLoaderFixture>
+public sealed class TestDbContextDataLoaderCollectionFixture : ICollectionFixture<DataLoaderFixture>
 {
     
 }

@@ -28,7 +28,6 @@
   <ItemGroup>
     <Folder Include="DbContexts\" />
     <Folder Include="Fixtures\" />
-    <Folder Include="TestData\" />
     <Folder Include="TestModels\" />
   </ItemGroup>
 

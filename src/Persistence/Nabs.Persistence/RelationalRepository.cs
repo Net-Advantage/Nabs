@@ -2,7 +2,7 @@
 
 namespace Nabs.Persistence;
 
-public class RelationalRepository<TDbContext> : IRepository<TDbContext>
+public class RelationalRepository<TDbContext> : IContextRepository<TDbContext>
     where TDbContext : DbContext
 {
     private readonly IRelationalRepositoryOptions<TDbContext> _relationalRepositoryOptions;
@@ -41,10 +41,15 @@ public class QueryItem<TDbContext, TEntity> : IQueryItem<TEntity>
 {
     private readonly IRelationalRepositoryOptions<TDbContext> _relationalRepositoryOptions;
     private LambdaExpression _predicate;
-
+    
     public QueryItem(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
     {
         _relationalRepositoryOptions = relationalRepositoryOptions;
+    }
+
+    public IQueryItem<TEntity> WithId(Guid id)
+    {
+        return WithPredicate(_ => _.Id == id);
     }
 
     public IQueryItem<TEntity> WithPredicate(Expression<Func<TEntity, bool>> predicate)
