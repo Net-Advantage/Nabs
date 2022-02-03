@@ -1,7 +1,4 @@
-﻿using AutoMapper;
-using AutoMapper.EF6;
-
-namespace Nabs.Tests.PersistenceTests.TestDto;
+﻿namespace Nabs.Tests.PersistenceTests.TestDto;
 
 public class TestUserDto : IDto
 {

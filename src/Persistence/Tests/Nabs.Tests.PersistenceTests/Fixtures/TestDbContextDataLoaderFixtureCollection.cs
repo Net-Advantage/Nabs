@@ -3,5 +3,5 @@
 [CollectionDefinition(nameof(TestDbContextDataLoaderFixtureCollection))]
 public sealed class TestDbContextDataLoaderFixtureCollection : ICollectionFixture<DataLoaderFixture>
 {
-    
+
 }

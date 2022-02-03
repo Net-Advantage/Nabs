@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace Nabs.Secrets
 {
@@ -9,7 +8,7 @@ namespace Nabs.Secrets
     {
         public static IServiceCollection AddSecretsAbstractions(this IServiceCollection services)
         {
-            
+
             return services;
         }
     }

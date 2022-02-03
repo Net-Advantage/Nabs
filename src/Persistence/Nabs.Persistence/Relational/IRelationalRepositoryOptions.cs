@@ -8,9 +8,9 @@ public interface IRelationalRepositoryOptions<TContext>
 
     virtual void OnInitialise()
     {
-        
+
     }
-    
+
 
 
     //ICurrentUserContext currentUserContext,

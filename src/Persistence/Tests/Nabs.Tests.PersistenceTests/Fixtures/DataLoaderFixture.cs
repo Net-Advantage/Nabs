@@ -1,7 +1,5 @@
-﻿using System.Diagnostics;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Nabs.Tests.PersistenceTests.TestData;
-using Xunit.Sdk;
 
 namespace Nabs.Tests.PersistenceTests.Fixtures;
 

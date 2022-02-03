@@ -1,4 +1,3 @@
-using System;
 using FluentAssertions;
 using Xunit;
 using Xunit.Abstractions;
@@ -7,7 +6,7 @@ namespace Nabs.Tests.NabsUnitTests
 {
     public class StringExtensionsUnitTests : TestBase
     {
-        public StringExtensionsUnitTests(ITestOutputHelper output) : base(null, output)
+        public StringExtensionsUnitTests(ITestOutputHelper output) : base(output)
         {
         }
 

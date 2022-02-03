@@ -2,18 +2,53 @@
 
 public class RecordsUnitTests
 {
+    private TestUser _user;
+    public RecordsUnitTests()
+    {
+        _user = new TestUser(
+            Guid.NewGuid(),
+            "theUsername",
+            "TheFirstName",
+            "TheLastName");
+    }
+
     [Fact]
     public void InstantiateTestUser_ToSeeHowRecordsWork()
     {
-        var p1 = new TestUser(Guid.NewGuid(), "dwschreyer", "Darrel", "Schreyer");
-        var p2 = new TestUser(p1.Id, p1.Username, p1.FirstName, p1.LastName);
+        var user = new TestUser(
+            _user.Id, 
+            _user.Username, 
+            _user.FirstName, 
+            _user.LastName);
 
-        p1.Should().BeEquivalentTo(p2);
-        
-        var a = p1 as IRelationalEntity<Guid>;
-        a.Id.Should().NotBeEmpty();
+        _user.Should().BeEquivalentTo(user)
+            .And.NotBeSameAs(user);
+    }
 
-        var b = p1 as IRelationalEntity<Guid>;
-        b.GetId().Should().NotBeEmpty();
+    [Fact]
+    public void InstantiateTestUser_EnsureTheSameInstance()
+    {
+        var user = _user;
+
+        _user.Should().BeEquivalentTo(user)
+            .And.BeSameAs(user);
+    }
+
+    [Fact]
+    public void InstantiateTestUser_EnsureNotTheSameInstance()
+    {
+        var user = _user with {};
+
+        _user.Should().BeEquivalentTo(user)
+            .And.NotBeSameAs(user);
+    }
+
+    [Fact]
+    public void InstantiateTestUser_EnsureNotEquivalentAndNotSameInstance()
+    {
+        var user = _user with { Username = "otherUsername"};
+
+        _user.Should().NotBeEquivalentTo(user)
+            .And.NotBeSameAs(user);
     }
 }

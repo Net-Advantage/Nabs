@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.IO;
+﻿using System.IO;
 
 namespace Nabs.Tests
 {
@@ -8,20 +7,21 @@ namespace Nabs.Tests
         private readonly TextWriter _originalOut;
         private readonly TextWriter _textWriter;
 
-        protected TestBase([NotNull]TestFixtureBase testFixture, [NotNull]ITestOutputHelper output)
+        protected TestBase(ITestOutputHelper output)
         {
-            TestFixture = testFixture;
             Output = output;
+            Output.WriteLine("Test is starting");
 
             _originalOut = Console.Out;
             _textWriter = new StringWriter();
             Console.SetOut(_textWriter);
+        }
 
-            if (testFixture != null)
-            {
-                ConfigurationRoot = testFixture.ConfigurationRoot;
-                ServiceProvider = testFixture.ServiceScope.ServiceProvider;
-            }
+        protected TestBase(TestFixtureBase testFixture, ITestOutputHelper output) : this(output)
+        {
+            TestFixture = testFixture;
+            ConfigurationRoot = testFixture.ConfigurationRoot;
+            ServiceProvider = testFixture.ServiceScope.ServiceProvider;
         }
 
         protected TestFixtureBase TestFixture { get; }
@@ -41,7 +41,7 @@ namespace Nabs.Tests
 
         public async Task InitializeAsync()
         {
-            Output.WriteLine("InitializeAsync");
+            Output.WriteLine("Test is initialising");
             await StartTest();
         }
 
@@ -49,9 +49,10 @@ namespace Nabs.Tests
         {
             Output.WriteLine(_textWriter.ToString());
 
-            Output.WriteLine("DisposeAsync");
             await TeardownTest();
             Console.SetOut(_originalOut);
+
+            Output.WriteLine("Test has ended");
         }
     }
 }

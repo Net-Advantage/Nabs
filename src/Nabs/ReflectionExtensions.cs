@@ -28,7 +28,7 @@ public static class ReflectionExtensions
             parametersTypes = parameters.Select(_ => _.GetType()).ToArray();
         }
 
-        var  methodInfo = type.GetMethod(
+        var methodInfo = type.GetMethod(
                 methodName,
                 bindingFlags,
                 null,

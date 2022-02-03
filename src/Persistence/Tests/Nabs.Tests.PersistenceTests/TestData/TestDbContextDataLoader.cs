@@ -7,7 +7,7 @@ public class TestDbContextDataLoader
 
     public TestDbContextDataLoader(IRelationalRepository<TestDbContext> repository)
     {
-        
+
         _repository = repository;
     }
 
@@ -20,7 +20,7 @@ public class TestDbContextDataLoader
 
         var context = _repository.NewDbContext();
         await context.Database.EnsureCreatedAsync();
-        
+
         var id = Guid.NewGuid();
         await CreateTestUser(id);
 

@@ -1,13 +1,12 @@
-﻿using System.Data.Common;
+﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 using System.Threading;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace Nabs.Tests.PersistenceTests.DbContexts;
 
 public class TestDbContextSaveChangesInterceptor : SaveChangesInterceptor
 {
     public override ValueTask<InterceptionResult<int>> SavingChangesAsync(
-        DbContextEventData eventData, 
+        DbContextEventData eventData,
         InterceptionResult<int> result,
         CancellationToken cancellationToken = default)
     {

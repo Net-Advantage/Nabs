@@ -13,5 +13,5 @@ public class RelationalRepositoryOptions<TContext> : IRelationalRepositoryOption
 
     public IDbContextFactory<TContext> ContextFactory { get; init; }
     public IMapper Mapper { get; init; }
-    
+
 }

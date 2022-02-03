@@ -6,7 +6,7 @@ public class TestUserUnitTests : TestBase
     private readonly DataLoaderFixture _dataLoaderFixture;
     private readonly IRelationalRepository<TestDbContext> _testRepository;
     private readonly IQueryItem<TestUser> _testUserQuery;
-    
+
     private Guid _id;
     private TestUser _newTestUser;
 
@@ -36,7 +36,7 @@ public class TestUserUnitTests : TestBase
             .TestDbContextDataLoader!
             .CreateTestUser(_id);
     }
-    
+
     [Fact]
     public async Task GetItem_FirstTestUser_Success()
     {
@@ -85,7 +85,7 @@ public class TestUserUnitTests : TestBase
             .ItemCommand<TestUser>()
             .ForItem(itemToUpdate)
             .ExecuteAsync();
-        
+
         //Act
         var actual = await _testUserQuery
             .WithPredicate(_ => _.Id == _id)
