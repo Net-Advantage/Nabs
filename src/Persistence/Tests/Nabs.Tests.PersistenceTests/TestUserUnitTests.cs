@@ -105,6 +105,10 @@ public class TestUserUnitTests : TestBase
             .WithPredicate(_ => _.Id == _id)
             .ExecuteAsync<TestUserDto>();
 
+        var actual1 = await _testUserQuery
+            .WithPredicate(_ => _.Id == _id)
+            .ExecuteAsync<TestUserDto>();
+
         //Assert
         actual.Should().NotBeNull();
         actual.FullName.Should().NotBeNullOrWhiteSpace();

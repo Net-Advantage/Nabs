@@ -1,6 +1,4 @@
-﻿using AutoMapper.QueryableExtensions;
-
-namespace Nabs.Persistence.Relational;
+﻿namespace Nabs.Persistence.Relational;
 
 public class RelationalRepository<TDbContext> : IRelationalRepository<TDbContext>
     where TDbContext : DbContext
@@ -27,10 +25,24 @@ public class RelationalRepository<TDbContext> : IRelationalRepository<TDbContext
         return result;
     }
 
+    public IQuerySet<TEntity> QuerySet<TEntity>()
+        where TEntity : class, IRelationalEntity<Guid>
+    {
+        var result = new QuerySet<TDbContext, TEntity>(_relationalRepositoryOptions);
+        return result;
+    }
+
     public IItemCommand<TEntity> ItemCommand<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>
     {
         var result = new ItemCommand<TDbContext, TEntity>(_relationalRepositoryOptions);
+        return result;
+    }
+
+    public ISetCommand<TEntity> SetCommand<TEntity>()
+        where TEntity : class, IRelationalEntity<Guid>
+    {
+        var result = new SetCommand<TDbContext, TEntity>(_relationalRepositoryOptions);
         return result;
     }
 }
@@ -169,5 +181,58 @@ public class ItemCommand<TDbContext, TEntity> : IItemCommand<TEntity>
             throw new Exception($"The item was not added or updated! {typeof(TEntity).Name}");
         }
         return _item;
+    }
+}
+
+public class SetCommand<TDbContext, TEntity> : ISetCommand<TEntity>
+    where TDbContext : DbContext
+    where TEntity : class, IRelationalEntity<Guid>
+{
+    private readonly IRelationalRepositoryOptions<TDbContext> _relationalRepositoryOptions;
+    private IEnumerable<TEntity> _items;
+
+    public SetCommand(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
+    {
+        _relationalRepositoryOptions = relationalRepositoryOptions;
+    }
+
+    public ISetCommand<TEntity> ForItems(IEnumerable<TEntity> items)
+    {
+        if (_items != null)
+        {
+            throw new InvalidOperationException("An item has already been queued. The 'ForItem' method can only be called once in an execution chain.");
+        }
+        _items = items;
+        return this;
+    }
+
+    public async Task<IEnumerable<TEntity>> ExecuteAsync(CancellationToken cancellationToken = default)
+    {
+        var context = await _relationalRepositoryOptions.ContextFactory.CreateDbContextAsync(cancellationToken);
+        await context.Database.EnsureCreatedAsync(cancellationToken);
+        var set = context.Set<TEntity>();
+        var ids = _items.Select(_ => _.Id).ToArray();
+        var existingItems = await set
+            .Where(_ => ids.Contains(_.Id))
+            .ToListAsync(cancellationToken);
+        var existingIds = existingItems.Select(_ => _.Id).ToArray();
+        var newItems = _items.Where(_ => !existingIds.Contains(_.Id)).ToArray();
+        
+        foreach (var item in _items)
+        {
+            var existingItem = existingItems.Find(_ => _.Id == item.Id);
+            if (existingItem == null)
+            {
+                set.AddRange(newItems);
+            }
+            else
+            {
+                context.Entry(existingItem).CurrentValues.SetValues(item);
+            }
+        }
+        
+        _ = await context.SaveChangesAsync(cancellationToken);
+        
+        return _items;
     }
 }

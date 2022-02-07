@@ -8,7 +8,13 @@ public interface IRelationalRepository<out TDbContext>
     IQueryItem<TEntity> QueryItem<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>;
 
+    IQuerySet<TEntity> QuerySet<TEntity>()
+        where TEntity : class, IRelationalEntity<Guid>;
+
     IItemCommand<TEntity> ItemCommand<TEntity>()
+        where TEntity : class, IRelationalEntity<Guid>;
+
+    ISetCommand<TEntity> SetCommand<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>;
 }
 
@@ -44,7 +50,7 @@ public interface IItemCommand<TEntity>
 public interface ISetCommand<TEntity>
     where TEntity : class, IRelationalEntity<Guid>
 {
-    IItemCommand<TEntity> ForItems(IEnumerable<TEntity> items);
+    ISetCommand<TEntity> ForItems(IEnumerable<TEntity> items);
 
     Task<IEnumerable<TEntity>> ExecuteAsync(CancellationToken cancellationToken = default);
 }
