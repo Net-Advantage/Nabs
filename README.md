@@ -17,13 +17,27 @@ This repository is mostly compose of Services, Abstractions and Extensions to he
 - Nabs.Monitoring - Abstractions for Logging, Metrics and Alerting.
 - Nabs.Configurations - Abstractions for configuration and secret management.
 
-## Genral Principles
+## SOLID Principles
 
-The general approach to these libraries is that they are to follow the *Dependency Inversions Principle* - at least as I see it.
+The general approach to these libraries is that they are to follow the SOLID principles - at least as I see them implemented.
 
-Each library will contain an extension method class called `DependencyInversionExtensions`. These extensions methods will allow you to register the types with the `IServiceCollection`.
+### Single Responsibility Principle
 
-I have tried as far as possible to follow the *Open/Close Principle*.
+### Open / Close Principle
+
+Each library will provide sensible extension points for developers to hook up functionality and extend capability.
+
+### Liskov Substitution Principle
+
+Each library will provide contracts by way of interfaces and abstractions to unsure common programming paradigms regardless of the implementation. 
+
+### Interface Segregation Principle
+
+Each library will attempt to provide granular interfaces to ensure limited API surface area.
+
+### Dependency Inversions Principle
+
+Each library will contain a static extension method class called `DependencyInversionExtensions`. These extensions methods will allow you to register the types with the `IServiceCollection`.
 
 ## Getting started
 

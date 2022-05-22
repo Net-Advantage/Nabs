@@ -5,7 +5,7 @@ public class TestUserUnitTests : TestBase
 {
     private readonly DataLoaderFixture _dataLoaderFixture;
     private readonly IRelationalRepository<TestDbContext> _testRepository;
-    private readonly IQueryItem<TestUser> _testUserQuery;
+    private readonly ISelectItem<TestUser> _testUserSelect;
 
     private Guid _id;
     private TestUser _newTestUser;
@@ -22,8 +22,8 @@ public class TestUserUnitTests : TestBase
             .GetRequiredService<IRelationalRepository<TestDbContext>>();
         _testRepository.Should().NotBeNull();
 
-        _testUserQuery = _testRepository.QueryItem<TestUser>();
-        _testUserQuery.Should().NotBeNull();
+        _testUserSelect = _testRepository.SelectItem<TestUser>();
+        _testUserSelect.Should().NotBeNull();
     }
 
     public override async Task StartTest()
@@ -41,7 +41,7 @@ public class TestUserUnitTests : TestBase
     public async Task GetItem_FirstTestUser_Success()
     {
         //Act
-        var actual = await _testUserQuery
+        var actual = await _testUserSelect
             .ExecuteAsync();
 
         //Assert
@@ -53,7 +53,7 @@ public class TestUserUnitTests : TestBase
     public async Task QueryItem_TestUserById_Success()
     {
         //Act
-        var actual = await _testUserQuery
+        var actual = await _testUserSelect
             .WithId(_id)
             .ExecuteAsync();
 
@@ -66,7 +66,7 @@ public class TestUserUnitTests : TestBase
     public async Task QueryItem_SpecificTestUser_Success()
     {
         //Act
-        var actual = await _testUserQuery
+        var actual = await _testUserSelect
             .WithPredicate(_ => _.Id == _id)
             .ExecuteAsync();
 
@@ -82,12 +82,12 @@ public class TestUserUnitTests : TestBase
         var (id, username, _, _) = _newTestUser;
         var itemToUpdate = new TestUser(id, username, "fn: updated first name", "ln: updated last name");
         var updatedItem = await _testRepository
-            .ItemCommand<TestUser>()
+            .UpsertItem<TestUser>()
             .ForItem(itemToUpdate)
             .ExecuteAsync();
 
         //Act
-        var actual = await _testUserQuery
+        var actual = await _testUserSelect
             .WithPredicate(_ => _.Id == _id)
             .ExecuteAsync();
 
@@ -101,11 +101,11 @@ public class TestUserUnitTests : TestBase
     public async Task QueryItem_SpecificTestUser_WithProjection_Success()
     {
         //Act
-        var actual = await _testUserQuery
+        var actual = await _testUserSelect
             .WithPredicate(_ => _.Id == _id)
             .ExecuteAsync<TestUserDto>();
 
-        var actual1 = await _testUserQuery
+        var actual1 = await _testUserSelect
             .WithPredicate(_ => _.Id == _id)
             .ExecuteAsync<TestUserDto>();
 

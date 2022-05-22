@@ -5,25 +5,31 @@ public interface IRelationalRepository<out TDbContext>
 {
     TDbContext NewDbContext();
 
-    IQueryItem<TEntity> QueryItem<TEntity>()
+    ISelectItem<TEntity> SelectItem<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>;
 
-    IQuerySet<TEntity> QuerySet<TEntity>()
+    ISelectSet<TEntity> SelectSet<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>;
 
-    IItemCommand<TEntity> ItemCommand<TEntity>()
+    IUpsertItem<TEntity> UpsertItem<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>;
 
-    ISetCommand<TEntity> SetCommand<TEntity>()
+    IUpsertSet<TEntity> UpsertSet<TEntity>()
+        where TEntity : class, IRelationalEntity<Guid>;
+
+    IDeleteItem<TEntity> DeleteItem<TEntity>()
+        where TEntity : class, IRelationalEntity<Guid>;
+
+    IDeleteSet<TEntity> DeleteSet<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>;
 }
 
-public interface IQueryItem<TEntity>
+public interface ISelectItem<TEntity>
     where TEntity : class, IRelationalEntity<Guid>
 {
-    IQueryItem<TEntity> WithId(Guid id);
+    ISelectItem<TEntity> WithId(Guid id);
 
-    IQueryItem<TEntity> WithPredicate(Expression<Func<TEntity, bool>> predicate);
+    ISelectItem<TEntity> WithPredicate(Expression<Func<TEntity, bool>> predicate);
 
     Task<TProjection> ExecuteAsync<TProjection>(CancellationToken cancellationToken = default)
         where TProjection : class, IDto;
@@ -31,26 +37,42 @@ public interface IQueryItem<TEntity>
     Task<TEntity> ExecuteAsync(CancellationToken cancellationToken = default);
 }
 
-public interface IQuerySet<TEntity>
+public interface ISelectSet<TEntity>
     where TEntity : class, IRelationalEntity<Guid>
 {
-    IQuerySet<TEntity> WithPredicate(Expression<Func<TEntity, bool>> predicate);
+    ISelectSet<TEntity> WithPredicate(Expression<Func<TEntity, bool>> predicate);
 
     Task<IEnumerable<TEntity>> ExecuteAsync(CancellationToken cancellationToken = default);
 }
 
-public interface IItemCommand<TEntity>
+public interface IUpsertItem<TEntity>
     where TEntity : class, IRelationalEntity<Guid>
 {
-    IItemCommand<TEntity> ForItem(TEntity item);
+    IUpsertItem<TEntity> ForItem(TEntity item);
 
     Task<TEntity> ExecuteAsync(CancellationToken cancellationToken = default);
 }
 
-public interface ISetCommand<TEntity>
+public interface IUpsertSet<TEntity>
     where TEntity : class, IRelationalEntity<Guid>
 {
-    ISetCommand<TEntity> ForItems(IEnumerable<TEntity> items);
+    IUpsertSet<TEntity> ForItems(IEnumerable<TEntity> items);
+
+    Task<IEnumerable<TEntity>> ExecuteAsync(CancellationToken cancellationToken = default);
+}
+
+public interface IDeleteItem<TEntity>
+    where TEntity : class, IRelationalEntity<Guid>
+{
+    IDeleteItem<TEntity> ForItem(TEntity item);
+
+    Task<TEntity> ExecuteAsync(CancellationToken cancellationToken = default);
+}
+
+public interface IDeleteSet<TEntity>
+    where TEntity : class, IRelationalEntity<Guid>
+{
+    IDeleteSet<TEntity> ForItems(IEnumerable<TEntity> items);
 
     Task<IEnumerable<TEntity>> ExecuteAsync(CancellationToken cancellationToken = default);
 }

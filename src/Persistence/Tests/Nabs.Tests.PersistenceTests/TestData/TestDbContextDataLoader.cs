@@ -39,7 +39,7 @@ public class TestDbContextDataLoader
         var testUser = new TestUser(id, $"un:{id}", $"fn:{id}", $"ln:{id}");
 
         var result = await _repository
-            .ItemCommand<TestUser>()
+            .UpsertItem<TestUser>()
             .ForItem(testUser)
             .ExecuteAsync();
 

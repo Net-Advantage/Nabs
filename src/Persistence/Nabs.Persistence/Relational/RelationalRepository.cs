@@ -18,58 +18,72 @@ public class RelationalRepository<TDbContext> : IRelationalRepository<TDbContext
         return result;
     }
 
-    public IQueryItem<TEntity> QueryItem<TEntity>()
+    public ISelectItem<TEntity> SelectItem<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>
     {
-        var result = new QueryItem<TDbContext, TEntity>(_relationalRepositoryOptions);
+        var result = new SelectItem<TDbContext, TEntity>(_relationalRepositoryOptions);
         return result;
     }
 
-    public IQuerySet<TEntity> QuerySet<TEntity>()
+    public ISelectSet<TEntity> SelectSet<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>
     {
-        var result = new QuerySet<TDbContext, TEntity>(_relationalRepositoryOptions);
+        var result = new SelectSet<TDbContext, TEntity>(_relationalRepositoryOptions);
         return result;
     }
 
-    public IItemCommand<TEntity> ItemCommand<TEntity>()
+    public IUpsertItem<TEntity> UpsertItem<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>
     {
-        var result = new ItemCommand<TDbContext, TEntity>(_relationalRepositoryOptions);
+        var result = new UpsertItem<TDbContext, TEntity>(_relationalRepositoryOptions);
         return result;
     }
 
-    public ISetCommand<TEntity> SetCommand<TEntity>()
+    public IUpsertSet<TEntity> UpsertSet<TEntity>()
         where TEntity : class, IRelationalEntity<Guid>
     {
-        var result = new SetCommand<TDbContext, TEntity>(_relationalRepositoryOptions);
+        var result = new UpsertSet<TDbContext, TEntity>(_relationalRepositoryOptions);
+        return result;
+    }
+
+    public IDeleteItem<TEntity> DeleteItem<TEntity>()
+        where TEntity : class, IRelationalEntity<Guid>
+    {
+        var result = new DeleteItem<TDbContext, TEntity>(_relationalRepositoryOptions);
+        return result;
+    }
+
+    public IDeleteSet<TEntity> DeleteSet<TEntity>()
+        where TEntity : class, IRelationalEntity<Guid>
+    {
+        var result = new DeleteSet<TDbContext, TEntity>(_relationalRepositoryOptions);
         return result;
     }
 }
 
-public class QueryItem<TDbContext, TEntity> : IQueryItem<TEntity>
+public class SelectItem<TDbContext, TEntity> : ISelectItem<TEntity>
     where TDbContext : DbContext
     where TEntity : class, IRelationalEntity<Guid>
 {
     private readonly IRelationalRepositoryOptions<TDbContext> _relationalRepositoryOptions;
     private LambdaExpression _predicate;
 
-    public QueryItem(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
+    public SelectItem(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
     {
         _relationalRepositoryOptions = relationalRepositoryOptions;
     }
 
-    public IQueryItem<TEntity> WithId(Guid id)
+    public ISelectItem<TEntity> WithId(Guid id)
     {
         return WithPredicate(_ => _.Id == id);
     }
 
-    public IQueryItem<TEntity> WithPredicate(Expression<Func<TEntity, bool>> predicate)
+    public ISelectItem<TEntity> WithPredicate(Expression<Func<TEntity, bool>> predicate)
     {
         _predicate = predicate;
         return this;
     }
-
+    
     public async Task<TProjection> ExecuteAsync<TProjection>(CancellationToken cancellationToken = default)
         where TProjection : class, IDto
     {
@@ -106,19 +120,19 @@ public class QueryItem<TDbContext, TEntity> : IQueryItem<TEntity>
     }
 }
 
-public class QuerySet<TDbContext, TEntity> : IQuerySet<TEntity>
+public class SelectSet<TDbContext, TEntity> : ISelectSet<TEntity>
     where TDbContext : DbContext
     where TEntity : class, IRelationalEntity<Guid>
 {
     private readonly IRelationalRepositoryOptions<TDbContext> _relationalRepositoryOptions;
     private LambdaExpression _predicate;
 
-    public QuerySet(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
+    public SelectSet(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
     {
         _relationalRepositoryOptions = relationalRepositoryOptions;
     }
 
-    public IQuerySet<TEntity> WithPredicate(Expression<Func<TEntity, bool>> predicate)
+    public ISelectSet<TEntity> WithPredicate(Expression<Func<TEntity, bool>> predicate)
     {
         _predicate = predicate;
         return this;
@@ -139,19 +153,19 @@ public class QuerySet<TDbContext, TEntity> : IQuerySet<TEntity>
     }
 }
 
-public class ItemCommand<TDbContext, TEntity> : IItemCommand<TEntity>
+public class UpsertItem<TDbContext, TEntity> : IUpsertItem<TEntity>
     where TDbContext : DbContext
     where TEntity : class, IRelationalEntity<Guid>
 {
     private readonly IRelationalRepositoryOptions<TDbContext> _relationalRepositoryOptions;
     private TEntity _item;
 
-    public ItemCommand(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
+    public UpsertItem(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
     {
         _relationalRepositoryOptions = relationalRepositoryOptions;
     }
 
-    public IItemCommand<TEntity> ForItem(TEntity item)
+    public IUpsertItem<TEntity> ForItem(TEntity item)
     {
         if (_item != null)
         {
@@ -184,19 +198,19 @@ public class ItemCommand<TDbContext, TEntity> : IItemCommand<TEntity>
     }
 }
 
-public class SetCommand<TDbContext, TEntity> : ISetCommand<TEntity>
+public class UpsertSet<TDbContext, TEntity> : IUpsertSet<TEntity>
     where TDbContext : DbContext
     where TEntity : class, IRelationalEntity<Guid>
 {
     private readonly IRelationalRepositoryOptions<TDbContext> _relationalRepositoryOptions;
     private IEnumerable<TEntity> _items;
 
-    public SetCommand(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
+    public UpsertSet(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
     {
         _relationalRepositoryOptions = relationalRepositoryOptions;
     }
 
-    public ISetCommand<TEntity> ForItems(IEnumerable<TEntity> items)
+    public IUpsertSet<TEntity> ForItems(IEnumerable<TEntity> items)
     {
         if (_items != null)
         {
@@ -236,3 +250,89 @@ public class SetCommand<TDbContext, TEntity> : ISetCommand<TEntity>
         return _items;
     }
 }
+
+public class DeleteItem<TDbContext, TEntity> : IDeleteItem<TEntity>
+    where TDbContext : DbContext
+    where TEntity : class, IRelationalEntity<Guid>
+{
+    private readonly IRelationalRepositoryOptions<TDbContext> _relationalRepositoryOptions;
+    private TEntity _item;
+
+    public DeleteItem(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
+    {
+        _relationalRepositoryOptions = relationalRepositoryOptions;
+    }
+
+    public IDeleteItem<TEntity> ForItem(TEntity item)
+    {
+        if (_item != null)
+        {
+            throw new InvalidOperationException("An item has already been queued. The 'ForItem' method can only be called once in an execution chain.");
+        }
+        _item = item;
+        return this;
+    }
+
+    public async Task<TEntity> ExecuteAsync(CancellationToken cancellationToken = default)
+    {
+        var context = await _relationalRepositoryOptions.ContextFactory.CreateDbContextAsync(cancellationToken);
+        await context.Database.EnsureCreatedAsync(cancellationToken);
+        var set = context.Set<TEntity>();
+        var existingItem = await set.FindAsync(_item.Id);
+        if (existingItem != null)
+        {
+            set.Remove(existingItem);
+        }
+        
+        var saveChangesResult = await context.SaveChangesAsync(cancellationToken);
+        if (saveChangesResult != 1)
+        {
+            throw new Exception($"The item was not deleted! {typeof(TEntity).Name}");
+        }
+        return _item;
+    }
+}
+
+public class DeleteSet<TDbContext, TEntity> : IDeleteSet<TEntity>
+    where TDbContext : DbContext
+    where TEntity : class, IRelationalEntity<Guid>
+{
+    private readonly IRelationalRepositoryOptions<TDbContext> _relationalRepositoryOptions;
+    private IEnumerable<TEntity> _items;
+
+    public DeleteSet(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
+    {
+        _relationalRepositoryOptions = relationalRepositoryOptions;
+    }
+
+    public IDeleteSet<TEntity> ForItems(IEnumerable<TEntity> items)
+    {
+        if (_items != null)
+        {
+            throw new InvalidOperationException("Item have already been queued. The 'ForItems' method can only be called once in an execution chain.");
+        }
+        _items = items;
+        return this;
+    }
+
+    public async Task<IEnumerable<TEntity>> ExecuteAsync(CancellationToken cancellationToken = default)
+    {
+        var context = await _relationalRepositoryOptions.ContextFactory.CreateDbContextAsync(cancellationToken);
+        await context.Database.EnsureCreatedAsync(cancellationToken);
+        var set = context.Set<TEntity>();
+        var ids = _items.Select(_ => _.Id).ToArray();
+        var existingItems = await set
+            .Where(_ => ids.Contains(_.Id))
+            .ToListAsync(cancellationToken);
+
+        if (existingItems.Any())
+        {
+            set.RemoveRange(existingItems);
+        }
+
+        _ = await context.SaveChangesAsync(cancellationToken);
+
+        return _items;
+    }
+}
+
