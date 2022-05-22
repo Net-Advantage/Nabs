@@ -12,6 +12,7 @@ This repository is mostly compose of Services, Abstractions and Extensions to he
 
 - Nabs - Extensions for working with Reflection, Primitives, Etc.
 - Nabs.Tests - supports xUnit testing.
+- Nabs.Secrets - Abstractions for secret management.
 - Nabs.Persistence - Abstractions for persistence operations.
 - Nabs.Identity - Abstractions for Authentication and Authorisation.
 - Nabs.Monitoring - Abstractions for Logging, Metrics and Alerting.
