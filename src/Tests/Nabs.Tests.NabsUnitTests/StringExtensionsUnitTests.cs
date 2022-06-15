@@ -1,45 +1,47 @@
 using FluentAssertions;
-using Xunit;
+using Nabs.Tests.Fixtures;
 using Xunit.Abstractions;
 
 namespace Nabs.Tests.NabsUnitTests
 {
-    public class StringExtensionsUnitTests : TestBase
-    {
-        public StringExtensionsUnitTests(ITestOutputHelper output) : base(output)
-        {
-        }
+	public class StringExtensionsUnitTests : TestBase
+	{
+		public StringExtensionsUnitTests(
+			ITestOutputHelper output)
+			: base(output)
+		{
+		}
 
-        [Theory]
-        [InlineData("a")]
-        [InlineData("-")]
-        public void OrDefault_ValueSuccess(string value)
-        {
-            //Arrange
-            var expectedValue = value;
+		[Theory]
+		[InlineData("a")]
+		[InlineData("-")]
+		public void OrDefault_ValueSuccess(string value)
+		{
+			//Arrange
+			var expectedValue = value;
 
-            //Act
-            var actualValue = value.DefaultIfNullOrWhiteSpace("xyz");
+			//Act
+			var actualValue = value.DefaultIfNullOrWhiteSpace("xyz");
 
-            //Assert
-            actualValue.Should().Be(expectedValue);
-        }
+			//Assert
+			actualValue.Should().Be(expectedValue);
+		}
 
-        [Theory]
-        [InlineData("", "a")]
-        [InlineData(null, "a")]
-        [InlineData(" ", "a")]
-        public void OrDefault_DefaultSuccess(string value, string defaultValue)
-        {
-            //Arrange
-            var expectedValue = defaultValue;
+		[Theory]
+		[InlineData("", "a")]
+		[InlineData(null, "a")]
+		[InlineData(" ", "a")]
+		public void OrDefault_DefaultSuccess(string value, string defaultValue)
+		{
+			//Arrange
+			var expectedValue = defaultValue;
 
-            //Act
-            var actualValue = value.DefaultIfNullOrWhiteSpace(defaultValue);
+			//Act
+			var actualValue = value.DefaultIfNullOrWhiteSpace(defaultValue);
 
-            //Assert
-            actualValue.Should().Be(expectedValue);
-            actualValue.Should().NotBe(value);
-        }
-    }
+			//Assert
+			actualValue.Should().Be(expectedValue);
+			actualValue.Should().NotBe(value);
+		}
+	}
 }

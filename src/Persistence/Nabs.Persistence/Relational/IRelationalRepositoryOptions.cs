@@ -1,18 +1,18 @@
 ﻿namespace Nabs.Persistence.Relational;
 
 public interface IRelationalRepositoryOptions<TContext>
-    where TContext : DbContext
+	where TContext : DbContext
 {
-    IDbContextFactory<TContext> ContextFactory { get; init; }
-    IMapper Mapper { get; init; }
+	IDbContextFactory<TContext> ContextFactory { get; init; }
+	IMapper Mapper { get; init; }
 
-    virtual void OnInitialise()
-    {
+	virtual void OnInitialise()
+	{
 
-    }
+	}
 
 
 
-    //ICurrentUserContext currentUserContext,
-    //ILogger<RepositoryBase<TContext>> logger
+	//ICurrentUserContext currentUserContext,
+	//ILogger<RepositoryBase<TContext>> logger
 }

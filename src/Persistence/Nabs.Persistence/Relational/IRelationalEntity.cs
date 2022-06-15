@@ -2,10 +2,10 @@
 
 public interface IRelationalEntity<TKey>
 {
-    TKey Id { get; init; }
+	TKey Id { get; init; }
 
-    public TKey GetId()
-    {
-        return Id;
-    }
+	public TKey GetId()
+	{
+		return Id;
+	}
 }

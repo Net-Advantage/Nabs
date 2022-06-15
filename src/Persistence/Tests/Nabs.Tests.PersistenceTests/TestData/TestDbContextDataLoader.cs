@@ -2,47 +2,47 @@
 
 public class TestDbContextDataLoader
 {
-    private bool _hasRun = false;
-    private readonly IRelationalRepository<TestDbContext> _repository;
+	private bool _hasRun = false;
+	private readonly IRelationalRepository<TestDbContext> _repository;
 
-    public TestDbContextDataLoader(IRelationalRepository<TestDbContext> repository)
-    {
+	public TestDbContextDataLoader(IRelationalRepository<TestDbContext> repository)
+	{
 
-        _repository = repository;
-    }
+		_repository = repository;
+	}
 
-    public async Task LoadAsync()
-    {
-        if (_hasRun)
-        {
-            throw new InvalidOperationException("You cannot load the database more than once. Try reset first to clear all the data.");
-        }
+	public async Task LoadAsync()
+	{
+		if (_hasRun)
+		{
+			throw new InvalidOperationException("You cannot load the database more than once. Try reset first to clear all the data.");
+		}
 
-        var context = _repository.NewDbContext();
-        await context.Database.EnsureCreatedAsync();
+		var context = _repository.NewDbContext();
+		await context.Database.EnsureCreatedAsync();
 
-        var id = Guid.NewGuid();
-        await CreateTestUser(id);
+		var id = Guid.NewGuid();
+		await CreateTestUser(id);
 
-        _hasRun = true;
-    }
+		_hasRun = true;
+	}
 
-    public async Task ResetAsync()
-    {
-        var context = _repository.NewDbContext();
-        await context.Database.EnsureDeletedAsync();
-        await context.Database.EnsureCreatedAsync();
-    }
+	public async Task ResetAsync()
+	{
+		var context = _repository.NewDbContext();
+		await context.Database.EnsureDeletedAsync();
+		await context.Database.EnsureCreatedAsync();
+	}
 
-    public async Task<TestUser> CreateTestUser(Guid id)
-    {
-        var testUser = new TestUser(id, $"un:{id}", $"fn:{id}", $"ln:{id}");
+	public async Task<TestUser> CreateTestUser(Guid id)
+	{
+		var testUser = new TestUser(id, $"un:{id}", $"fn:{id}", $"ln:{id}");
 
-        var result = await _repository
-            .UpsertItem<TestUser>()
-            .ForItem(testUser)
-            .ExecuteAsync();
+		var result = await _repository
+			.UpsertItem<TestUser>()
+			.ForItem(testUser)
+			.ExecuteAsync();
 
-        return result;
-    }
+		return result;
+	}
 }

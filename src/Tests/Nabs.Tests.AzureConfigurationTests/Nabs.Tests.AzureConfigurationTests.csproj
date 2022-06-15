@@ -1,20 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
 		<IsPackable>false</IsPackable>
-
-		<UserSecretsId>b97b3d6d-79bf-4b2e-a4b2-003ed72867cb</UserSecretsId>
+		<UserSecretsId>43c3415f-65a8-4cc9-8a0f-8a20b5cd1afc</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="AutoMapper" Version="11.0.1" />
-		<PackageReference Include="AutoMapper.EF6" Version="2.1.1" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.5" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
 		<PackageReference Include="xunit" Version="2.4.1" />
 		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
@@ -28,14 +23,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\Nabs.Tests\Nabs.Tests.csproj" />
-		<ProjectReference Include="..\..\Nabs.Persistence\Nabs.Persistence.csproj" />
+		<ProjectReference Include="..\..\Nabs.AzureConfiguration\Nabs.AzureConfiguration.csproj" />
+		<ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<None Update="appsettings.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Fixtures\" />
 	</ItemGroup>
 
 </Project>

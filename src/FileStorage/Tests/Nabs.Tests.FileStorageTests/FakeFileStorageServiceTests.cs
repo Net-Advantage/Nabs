@@ -76,7 +76,7 @@ namespace Nabs.Tests.FileStorageTests
 			result.Content.Value.Should().NotBeNull();
 			result.Content.Value.Should().BeOfType<byte[]>();
 		}
-		
+
 		[Fact]
 		public async Task GetFile_ReturnNull_Success()
 		{

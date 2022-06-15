@@ -1,30 +1,28 @@
 ﻿namespace Nabs.Tests.PersistenceTests;
 
 [Collection(nameof(TestDbContextDataLoaderFixtureCollection))]
-public class TestDbContextRelationalRepositoryUnitTests : TestBase
+public class TestDbContextRelationalRepositoryUnitTests : TestBase<DataLoaderFixture>
 {
-    private readonly DataLoaderFixture _dataLoaderFixture;
-    private readonly IRelationalRepository<TestDbContext> _testRepository;
+	private readonly IRelationalRepository<TestDbContext> _testRepository;
 
-    public TestDbContextRelationalRepositoryUnitTests(
-        ITestOutputHelper output,
-        DataLoaderFixture dataLoaderFixture)
-        : base(dataLoaderFixture, output)
-    {
-        _dataLoaderFixture = dataLoaderFixture;
-        _testRepository = dataLoaderFixture.ServiceScope.ServiceProvider
-            .GetRequiredService<IRelationalRepository<TestDbContext>>();
-    }
+	public TestDbContextRelationalRepositoryUnitTests(
+		DataLoaderFixture dataLoaderFixture,
+		ITestOutputHelper output)
+		: base(dataLoaderFixture, output)
+	{
+		_testRepository = dataLoaderFixture.ServiceScope.ServiceProvider
+			.GetRequiredService<IRelationalRepository<TestDbContext>>();
+	}
 
-    [Fact]
-    public void NewDbContext_Success()
-    {
-        //Arrange
+	[Fact]
+	public void NewDbContext_Success()
+	{
+		//Arrange
 
-        //Act
-        var actual = _testRepository.NewDbContext();
+		//Act
+		var actual = _testRepository.NewDbContext();
 
-        //Assert
-        actual.Should().NotBeNull();
-    }
+		//Assert
+		actual.Should().NotBeNull();
+	}
 }

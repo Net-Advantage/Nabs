@@ -2,14 +2,14 @@
 
 namespace Nabs.Persistence.RelationalPersistence
 {
-    public static class DependencyInversionExtensions
-    {
-        public static IServiceCollection AddRelationalPersistence(this IServiceCollection services)
-        {
+	public static class DependencyInversionExtensions
+	{
+		public static IServiceCollection AddRelationalPersistence(this IServiceCollection services)
+		{
 
 
 
-            return services;
-        }
-    }
+			return services;
+		}
+	}
 }

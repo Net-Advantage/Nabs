@@ -1,6 +1,4 @@
-﻿using OneOf.Types;
-
-namespace Nabs.FileStorage;
+﻿namespace Nabs.FileStorage;
 
 public class FileResponse
 {
