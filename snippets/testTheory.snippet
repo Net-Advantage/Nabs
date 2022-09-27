@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>xUnit Theory Test Scaffold Snippet</Title>
+      <Author>Net Advantage Business Solutions</Author>
+      <Description>Code snippet for a xUnit Theory test method</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>nabsTestTheory</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the test method</ToolTip>
+          <Default>Theory_Test_Method</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>nam</ID>
+          <ToolTip>nam</ToolTip>
+          <Default>nam</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>na</ID>
+          <ToolTip>na</ToolTip>
+          <Default>na</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>n</ID>
+          <ToolTip>n</ToolTip>
+          <Default>n</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[
+                  [Theory]
+                  [InlineData("A", 1)]
+                  public void $name$__Success(string scenario, int a)
+                  {
+                    //Arrange
+                    OutputScenario(scenario);
+                    $end$
+
+                    //Act
+
+                    //Assert
+                  }
+                ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>xUnit Theory Test Scaffold Snippet</Title>
+      <Author>Net Advantage Business Solutions</Author>
+      <Description>Code snippet for a xUnit Theory test method</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>nabsTestTheoryCsv</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the test method</ToolTip>
+          <Default>Theory_Test_Method</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>TestMethod</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>
+          </Default>
+          <Function>SimpleTypeName(global::Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod)</Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[
+                  [Theory]
+                  [CsvData<$name$TestClass>(".TestData.$name$TestData.csv")]
+                  public void $name$__Success(object scenario)
+                  {
+                    var testData = ($name$DataClass)scenario;
+
+                    //Arrange
+                    OutputScenario(scenario);
+                    $end$
+
+                    //Act
+
+                    //Assert
+                  }
+                ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

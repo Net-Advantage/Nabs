@@ -1,64 +1,53 @@
-﻿namespace Nabs.Tests;
+﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
-public abstract class TestBase
+namespace Nabs.Tests;
+
+public abstract class TestBase : IDisposable
 {
 	private readonly TextWriter _originalOut;
-	private readonly TextWriter _textWriter;
+	private readonly string _testClassName;
 
 	protected TestBase(
 		ITestOutputHelper output)
 	{
+		_testClassName = this.GetType().Name;
+
 		Output = output;
-		Output.WriteLine("Test is starting");
+		var message = $"[{_testClassName}] is constructing...";
+		OutputLine(message);
+		OutputLine(new string('=', message.Length));
 
 		_originalOut = Console.Out;
-		_textWriter = new StringWriter();
-		Console.SetOut(_textWriter);
+		TextWriter = new StringWriter();
+		Console.SetOut(TextWriter);
 	}
 
 	protected ITestOutputHelper Output { get; }
-	protected IServiceProvider ServiceProvider { get; init; }
-	protected IConfigurationRoot ConfigurationRoot { get; init; }
+	protected TextWriter TextWriter { get; }
 
-	public virtual async Task StartTest()
+	public void OutputLine(string message)
 	{
-		await Task.CompletedTask;
+		Output.WriteLine(message);
 	}
 
-	public virtual async Task TeardownTest()
+	public virtual void OutputScenario(string scenario = "default", [CallerMemberName] string caller = null)
 	{
-		await Task.CompletedTask;
+		OutputLine($"[{caller}] - Scenario: {scenario}");
 	}
 
-	public async Task InitializeAsync()
+	public virtual void OutputStep(string stepName)
 	{
-		Output.WriteLine("Test is initialising");
-		await StartTest();
+		OutputLine($"Step: {stepName}");
 	}
 
-	public async Task DisposeAsync()
+	public void Dispose()
 	{
-		Output.WriteLine(_textWriter.ToString());
-
-		await TeardownTest();
+		var message = $"[{_testClassName}] is disposed!";
+		OutputLine(new string('=', message.Length));
+		OutputLine(message);
 		Console.SetOut(_originalOut);
-
-		Output.WriteLine("Test has ended");
-	}
-}
-
-public abstract class TestBase<TTestFixture> : TestBase
-	where TTestFixture : TestFixtureBase, new()
-{
-	protected TestBase(
-		TTestFixture testFixture,
-		ITestOutputHelper output) : base(output)
-	{
-		TestFixture = testFixture;
-		ConfigurationRoot = testFixture.ConfigurationRoot;
-		ServiceProvider = testFixture.ServiceScope.ServiceProvider;
 	}
 
-	protected TTestFixture TestFixture { get; }
-
+	
 }

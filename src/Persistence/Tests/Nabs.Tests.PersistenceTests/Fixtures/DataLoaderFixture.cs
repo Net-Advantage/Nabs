@@ -11,7 +11,6 @@ public sealed class DataLoaderFixture : TestFixtureBase
 		IConfigurationBuilder configurationBuilder)
 	{
 		configurationBuilder
-			.AddJsonFile("appsettings.json", false)
 			.AddUserSecrets(typeof(DataLoaderFixture).Assembly, false);
 	}
 

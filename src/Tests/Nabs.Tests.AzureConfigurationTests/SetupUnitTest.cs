@@ -14,4 +14,6 @@ public class SetupUnitTest : TestBase<AzureConfigurationTestFixture>
 	public void Test1()
 	{
 	}
+
+	
 }

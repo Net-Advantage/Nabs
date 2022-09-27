@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+        <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+            <Title>xUnit Fact Test Scaffold Snippet</Title>
+            <Shortcut>nabsTestFact</Shortcut>
+            <Description>Code snippet for a xUnit Fact test method</Description>
+      <Author>Net Advantage Business Solutions</Author>
+        </Header>
+        <Snippet>
+          <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Replace with the name of the test method</ToolTip>
+          <Default>Fact_Test_Method</Default>
+        </Literal>
+      </Declarations>
+            <Code Language="CSharp">
+                <![CDATA[
+                  [Fact]
+                  public void $name$__Success()
+                  {
+                    //Arrange
+                    $end$
+
+                    //Act
+
+                    //Assert
+                    
+                  }
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
