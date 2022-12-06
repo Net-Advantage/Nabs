@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -20,19 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
-    <ProjectReference Include="..\..\Nabs\Nabs.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Fixtures\" />
-    <Folder Include="TestClasses\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\..\..\Nabs.Tests\Nabs.Tests.csproj" />
+    <ProjectReference Include="..\..\Nabs.ObjectBuilder\Nabs.ObjectBuilder.csproj" />
   </ItemGroup>
 
 </Project>

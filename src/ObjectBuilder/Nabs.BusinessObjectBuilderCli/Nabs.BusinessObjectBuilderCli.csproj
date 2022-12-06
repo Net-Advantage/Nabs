@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="GeneratedSchemas\" />
+    <Folder Include="Services\" />
+    <Folder Include="Outputs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.14" />
+    <PackageReference Include="NJsonSchema" Version="10.8.0" />
+    <PackageReference Include="NJsonSchema.CodeGeneration.CSharp" Version="10.8.0" />
+  </ItemGroup>
+
+</Project>

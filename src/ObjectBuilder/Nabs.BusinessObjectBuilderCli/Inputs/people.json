@@ -1,0 +1,38 @@
+{
+	"IntrovertPerson": {
+		"Id": "29536967-271d-40ff-8b79-301f05cad0e9",
+		"FullName": "dwschreyer",
+		"DateOfBirth": "1968-01-12",
+		"Dependents": 0,
+		"StreetAddress": {
+			"Line1": "1 First Street",
+			"Line2": "Someplace",
+			"Suburb": "The Sub",
+			"Code": "0001"
+		},
+		"Relationships": [
+			{
+				"PersonId": "762bf5bb-ef47-4221-a3ae-0a136bf7be46",
+				"RelationshipType": "Spouse"
+			}
+		]
+	},
+	"ExtrovertPerson": {
+		"Id": "762bf5bb-ef47-4221-a3ae-0a136bf7be46",
+		"FullName": "aaschreyer",
+		"DateOfBirth": "1968-01-02",
+		"Dependents": 0,
+		"StreetAddress": {
+			"Line1": "1 First Street",
+			"Line2": "Someplace",
+			"Suburb": "The Sub",
+			"Code": "0001"
+		},
+		"Relationships": [
+			{
+				"PersonId": "29536967-271d-40ff-8b79-301f05cad0e9",
+				"RelationshipType": "Spouse"
+			}
+		]
+	}
+}

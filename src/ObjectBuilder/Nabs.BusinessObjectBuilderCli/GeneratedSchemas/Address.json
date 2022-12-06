@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "Line1": {
+      "type": "string"
+    },
+    "Line2": {
+      "type": "string"
+    },
+    "Suburb": {
+      "type": "string"
+    },
+    "Code": {
+      "type": "string"
+    }
+  }
+}
