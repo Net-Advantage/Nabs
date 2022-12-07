@@ -44,20 +44,25 @@ public class JsonSchemaGenerator
 			//File.WriteAllText(definitionPath, definitionJson);
 		}
 
-		foreach (var schemaDefinition in schema.Definitions)
+		var allDefinitionKeys = schema.Definitions.Keys.ToList();
+
+		while (allDefinitionKeys.Any())
 		{
-			var schemaDefinitionPath = Path.Combine(_rootPath, _folderName, $"{schemaDefinition.Key}.json");
-
-			var hasReferences = schemaDefinition.Value.HasReference
-			                    || schemaDefinition.Value.Properties.Any(_ => _.Value.HasReference);
-
-			if (!hasReferences)
+			foreach (var schemaDefinition in schema.Definitions)
 			{
-				var schemaDefinitionJson = schemaDefinition.Value.ActualSchema.ToJson();
-				File.WriteAllText(schemaDefinitionPath, schemaDefinitionJson);
-			}
-			
-		}
+				var schemaDefinitionPath = Path.Combine(_rootPath, _folderName, $"{schemaDefinition.Key}.schema.json");
 
+				var hasReferences = schemaDefinition.Value.HasReference
+				                    || schemaDefinition.Value.Properties.Any(_ => _.Value.HasReference);
+
+				if (!hasReferences)
+				{
+					var schemaDefinitionJson = schemaDefinition.Value.ActualSchema.ToJson();
+					File.WriteAllText(schemaDefinitionPath, schemaDefinitionJson);
+				}
+				
+				allDefinitionKeys.Remove(schemaDefinition.Key);
+			}
+		}
 	}
 }

@@ -12,7 +12,8 @@ jsonSchemaGenerator.Generate<People>();
 var inputsPath = Path.Join(rootPath, "Inputs", "people.json");
 var inputsJson = File.ReadAllText(inputsPath);
 
-var schemaPath = Path.Join(rootPath, "Schemas", "person.schema.json");
+//var schemaPath = Path.Join(rootPath, "Schemas", "person.schema.json");
+var schemaPath = Path.Join(rootPath, "GeneratedSchemas", "people.schema.json");
 var schema = await JsonSchema.FromFileAsync(schemaPath);
 var schemaValidationErrors = schema.Validate(inputsJson);
 
