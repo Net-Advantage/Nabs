@@ -5,3 +5,6 @@ global using System.IO;
 global using System.Threading.Tasks;
 global using Xunit;
 global using Xunit.Abstractions;
+global using Xunit.Sdk;
+global using System.Collections.Generic;
+global using System.Reflection;

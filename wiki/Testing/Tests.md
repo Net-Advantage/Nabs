@@ -10,38 +10,35 @@ Target Audience
 - Architects
 - Analysts
 
+Use the Unit Testing Decision Tree to create a mental model of good unit tests practices.
+
+![Unit Testing Decision Tree](_images/UnitTestsDecisionTree.png "Unit Tests Decision Tree")
+
 There are two basic runbooks that should be employed at all times:
 - Standard Unit Test Method Template Runbook
 - Output Logging Unit Test Runbook
 
-In addition one or more of the following runbooks can also be employed dependent on the testing tactics required for your scenario:
+Working down from the top...
 
-1. There is only one scenario my unit tests will cover.
-1. The are multiple scenarios my unit test will cover.
-1. Do you need to provide services to your unit test that are best set up through dependency injection or mocks?
-1. Do you need to load test data for each test?
-1. Do you need to bootstrap a data store prior to running the test?
+If you need to provide services to your unit test that are best set up through dependency injection or mocks, then add the Service Collection Unit Test Runbook.
 
-Runbook | 1 | 2 | 3 | 4 | 5
----|---|---|---|---|---
-Single-scenario Unit Test Runbook | N | Y | N | N | N
-Multi-scenario Unit Test Runbook | N | N | Y | N | N
-Service Collection Unit Test Runbook | N | N | Y | N | N
-Scenario Data Unit Test Runbook | N | N | N | Y | N
-Bootstrap Data Unit Test Runbook | N | N | N | N | Y
+You now need to choose between Multi- or Single-scenario Unit Tests Runbooks.
 
-You will note that you should always excute the _Output Logging Unit Test Runbook_.
+Lastly you should determine if you need to:
+1. load test data for each test using the Scenario Data Unit Test Runbook?
+1. bootstrap a data store prior to running the test using the Bootstrap Data Unit Test Runbook?
 
 ## Standard Unit Test Method Template Runbook
 
 All tests should follow a basic convention. We recommend that each test method is broken down into the following basic parts.
 - Arrange - set up the variables for the inputs to the test.
-- Act - perfo
-- Assert
+- Act - execute the code your are targeting for the test.
+- Assert - examine the results
 
 Example:
 ```csharp
 [Fact]
+[ExcludeFromCodeCoverage]
 public void Multiply_A_and_B__Success()
 {
     //Arrange
@@ -72,6 +69,7 @@ All tests should provide enough information to the observer to validate the the 
 Example:
 ```csharp
 [Fact]
+[ExcludeFromCodeCoverage]
 public void Outputs__Success()
 {
     OutputScenario();
