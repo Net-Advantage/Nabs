@@ -2,7 +2,7 @@
 
 [DataDiscoverer("Xunit.Sdk.DataDiscoverer", "xunit.core")]
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
-public abstract class BaseDataAttribute<T> : Attribute
+public abstract class BaseTheoryDataAttribute<T> : Attribute
 {
 	public abstract IEnumerable<T> GetData(MethodInfo testMethod);
 

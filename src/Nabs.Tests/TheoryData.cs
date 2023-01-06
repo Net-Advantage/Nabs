@@ -2,7 +2,15 @@
 
 namespace Nabs.Tests;
 
-public abstract class BaseTheoryData : IEnumerable<object[]>
+public class TheoryData<T> : TheoryData
+{
+	public void Add(string scenario, T data)
+	{
+		AddRow(scenario, data);
+	}
+}
+
+public abstract class TheoryData : IEnumerable<object[]>
 {
 	readonly List<object[]> _data = new();
 
