@@ -1,11 +1,16 @@
 ﻿namespace Nabs.Tests.PersistenceTests.DbContexts;
 
-public class TestDbContext : DbContext
+public class TestDbContext : DbContext, ITestDbContext
 {
+	public TestDbContext()
+	{
+		
+	}
+
 	public TestDbContext(DbContextOptions<TestDbContext> dbContextOptions)
 		: base(dbContextOptions)
 	{
 	}
 
-	public DbSet<TestUser> Users { get; set; }
+	public virtual DbSet<TestUser> Users { get; set; } = default!;
 }

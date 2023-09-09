@@ -1,4 +1,6 @@
-﻿namespace Nabs.Tests;
+﻿using Nabs.Resources;
+
+namespace Nabs.Tests;
 
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
 public class CsvDataAttribute<T> : DataAttribute
@@ -6,20 +8,25 @@ public class CsvDataAttribute<T> : DataAttribute
 {
 	private readonly Type _relativeAssemblyType;
 	private readonly string _resourceFilePath;
-	private readonly ResourceFileLoader _resourceFileLoader;
+	private readonly ResourceLoader _resourceLoader;
 
 	public CsvDataAttribute(Type relativeAssemblyType, string resourceFilePath)
 	{
 		_relativeAssemblyType = relativeAssemblyType;
 		_resourceFilePath = resourceFilePath;
-		_resourceFileLoader = new ResourceFileLoader(_relativeAssemblyType);
+		_resourceLoader = new ResourceLoader(_relativeAssemblyType);
 	}
 
-	public override IEnumerable<> GetData(MethodInfo testMethod)
+	public override IEnumerable<object[]> GetData(MethodInfo testMethod)
 	{
-		for (int i = 0; i < 10; i++)
-		{
-			yield return new T();
-		}
+		throw new NotImplementedException();
 	}
+
+	//public override IEnumerable<T> GetData(MethodInfo testMethod)
+	//{
+	//	for (int i = 0; i < 10; i++)
+	//	{
+	//		yield return new T();
+	//	}
+	//}
 }

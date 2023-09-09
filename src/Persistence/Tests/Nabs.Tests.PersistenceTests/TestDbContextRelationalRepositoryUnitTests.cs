@@ -21,8 +21,10 @@ public class TestDbContextRelationalRepositoryUnitTests : TestBase<DataLoaderFix
 
 		//Act
 		var actual = _testRepository.NewDbContext();
+		var users = actual.Users.ToList();
 
 		//Assert
 		actual.Should().NotBeNull();
+		users.Should().NotBeNullOrEmpty();
 	}
 }

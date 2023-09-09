@@ -73,8 +73,8 @@ public class SimpleTestWithOutputLoggingUnitTests : TestBase
     }
 
     [Theory]
-    [InlineData("A", 1)]
-    public void Theory_Test_Method__Success(string scenario, int a)
+    [InlineData("A")]
+    public void TheoryTestMethod__Success(string scenario)
     {
 	    //Arrange
 	    OutputScenario(scenario);
@@ -83,5 +83,4 @@ public class SimpleTestWithOutputLoggingUnitTests : TestBase
 
 	    //Assert
     }
-    
 }

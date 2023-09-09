@@ -100,8 +100,7 @@ public class SelectItem<TDbContext, TEntity> : ISelectItem<TEntity>
 	private async Task<TProjection> Execute<TProjection>(CancellationToken cancellationToken = default)
 		where TProjection : class
 	{
-		var context = await _relationalRepositoryOptions.ContextFactory.CreateDbContextAsync(cancellationToken);
-		await context.Database.EnsureCreatedAsync(cancellationToken);
+		using var context = _relationalRepositoryOptions.ContextFactory.CreateDbContext();
 		var query = context.Set<TEntity>().AsNoTracking();
 		if (_predicate != null)
 		{
@@ -140,7 +139,7 @@ public class SelectSet<TDbContext, TEntity> : ISelectSet<TEntity>
 
 	public async Task<IEnumerable<TEntity>> ExecuteAsync(CancellationToken cancellationToken = default)
 	{
-		var context = await _relationalRepositoryOptions.ContextFactory.CreateDbContextAsync(cancellationToken);
+		using var context = _relationalRepositoryOptions.ContextFactory.CreateDbContext();
 		await context.Database.EnsureCreatedAsync(cancellationToken);
 		var query = context.Set<TEntity>().AsNoTracking();
 		if (_predicate != null)
@@ -177,8 +176,7 @@ public class UpsertItem<TDbContext, TEntity> : IUpsertItem<TEntity>
 
 	public async Task<TEntity> ExecuteAsync(CancellationToken cancellationToken = default)
 	{
-		var context = await _relationalRepositoryOptions.ContextFactory.CreateDbContextAsync(cancellationToken);
-		await context.Database.EnsureCreatedAsync(cancellationToken);
+		using var context = _relationalRepositoryOptions.ContextFactory.CreateDbContext();
 		var set = context.Set<TEntity>();
 		var existingItem = await set.FindAsync(_item.Id);
 		if (existingItem == null)
@@ -222,8 +220,7 @@ public class UpsertSet<TDbContext, TEntity> : IUpsertSet<TEntity>
 
 	public async Task<IEnumerable<TEntity>> ExecuteAsync(CancellationToken cancellationToken = default)
 	{
-		var context = await _relationalRepositoryOptions.ContextFactory.CreateDbContextAsync(cancellationToken);
-		await context.Database.EnsureCreatedAsync(cancellationToken);
+		using var context = _relationalRepositoryOptions.ContextFactory.CreateDbContext();
 		var set = context.Set<TEntity>();
 		var ids = _items.Select(_ => _.Id).ToArray();
 		var existingItems = await set
@@ -275,7 +272,7 @@ public class DeleteItem<TDbContext, TEntity> : IDeleteItem<TEntity>
 
 	public async Task<TEntity> ExecuteAsync(CancellationToken cancellationToken = default)
 	{
-		var context = await _relationalRepositoryOptions.ContextFactory.CreateDbContextAsync(cancellationToken);
+		using var context = _relationalRepositoryOptions.ContextFactory.CreateDbContext();
 		await context.Database.EnsureCreatedAsync(cancellationToken);
 		var set = context.Set<TEntity>();
 		var existingItem = await set.FindAsync(_item.Id);
@@ -317,7 +314,7 @@ public class DeleteSet<TDbContext, TEntity> : IDeleteSet<TEntity>
 
 	public async Task<IEnumerable<TEntity>> ExecuteAsync(CancellationToken cancellationToken = default)
 	{
-		var context = await _relationalRepositoryOptions.ContextFactory.CreateDbContextAsync(cancellationToken);
+		using var context = _relationalRepositoryOptions.ContextFactory.CreateDbContext();
 		await context.Database.EnsureCreatedAsync(cancellationToken);
 		var set = context.Set<TEntity>();
 		var ids = _items.Select(_ => _.Id).ToArray();

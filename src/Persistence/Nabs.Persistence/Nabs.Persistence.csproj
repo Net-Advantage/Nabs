@@ -5,12 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper.EF6" Version="2.1.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.0" />
+    <PackageReference Include="AutoMapper.EF6" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.10" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Nabs\Nabs.csproj" />
+    <ProjectReference Include="..\Nabs.Persistence.Entities\Nabs.Persistence.Entities.csproj" />
   </ItemGroup>
 
 </Project>

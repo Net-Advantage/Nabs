@@ -40,11 +40,6 @@ public abstract class TestFixtureBase : IDisposable
 	{
 	}
 
-	public virtual async Task EnsureDatabaseLoaderAsync()
-	{
-		await Task.CompletedTask;
-	}
-
 	public void Dispose()
 	{
 		ConfigurationRoot = null;

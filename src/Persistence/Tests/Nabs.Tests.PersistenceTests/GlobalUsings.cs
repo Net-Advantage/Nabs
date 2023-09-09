@@ -13,3 +13,6 @@ global using System;
 global using System.Threading.Tasks;
 global using Xunit;
 global using Xunit.Abstractions;
+global using Moq;
+global using System.Linq;
+global using System.Collections.Generic;

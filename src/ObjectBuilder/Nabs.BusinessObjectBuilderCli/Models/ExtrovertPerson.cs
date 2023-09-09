@@ -3,11 +3,11 @@
 public class ExtrovertPerson : IPerson
 {
     public Guid Id { get; set; }
-    public string FullName { get; set; }
+    public string? FullName { get; set; }
     public DateOnly DateOfBirth { get; set; }
     public int Dependents { get; set; }
 
-    public Address StreetAddress { get; set; }
+    public Address? StreetAddress { get; set; }
 
-    public List<Relationship> Relationships { get; set; }
+    public List<Relationship>? Relationships { get; set; }
 }

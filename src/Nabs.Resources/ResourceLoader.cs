@@ -6,7 +6,7 @@ namespace Nabs.Resources
 	{
 		private readonly string[] _manifestResourceNames;
 
-		public ResourceLoader(Type[] relativeAssemblyTypes)
+		public ResourceLoader(params Type[] relativeAssemblyTypes)
 		{
 			var warnings = new List<string>();
 			var manifestResourceNames = new List<string>();
