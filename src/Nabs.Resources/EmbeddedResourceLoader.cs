@@ -95,7 +95,7 @@ public class EmbeddedResourceLoader
 		return result;
 	}
 
-	private System.Collections.Generic.HashSet<Assembly> GetAssemblies(params Type[] relativeAssemblyTypes)
+	private static System.Collections.Generic.HashSet<Assembly> GetAssemblies(params Type[] relativeAssemblyTypes)
 	{
 		var assemblies = new System.Collections.Generic.HashSet<Assembly>();
 

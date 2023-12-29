@@ -3,16 +3,11 @@
 namespace Nabs.Tests.TestsTests.DataAttributes;
 
 [Collection(nameof(SimpleFixtureCollection))]
-public class CsvDataAttributeUnitTests : TestBase<SimpleTestFixture>
+public class CsvDataAttributeUnitTests(
+	ITestOutputHelper testOutputHelper,
+	SimpleTestFixture testFixture) 
+	: TestBase<SimpleTestFixture>(testOutputHelper, testFixture)
 {
-	public CsvDataAttributeUnitTests(
-		ITestOutputHelper testOutputHelper, 
-		SimpleTestFixture testFixture) 
-		: base(testOutputHelper, testFixture)
-	{
-		
-	}
-
 	[Theory]
 	[LoadFromCsvDataAttribute<CsvTestDataModel>(typeof(CsvTestDataModel), "CsvTestData.csv", "|")]
 	public void LoadCsvTestDataWithAttribute(CsvTestDataModel item)
