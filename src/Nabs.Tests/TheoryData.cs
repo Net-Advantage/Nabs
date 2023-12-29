@@ -12,7 +12,7 @@ public class TheoryData<T> : TheoryData
 
 public abstract class TheoryData : IEnumerable<object[]>
 {
-	readonly List<object[]> _data = new();
+	readonly List<object[]> _data = [];
 
 	protected void AddRow(params object[] values)
 	{

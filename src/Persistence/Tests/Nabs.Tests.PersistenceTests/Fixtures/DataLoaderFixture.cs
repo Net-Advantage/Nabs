@@ -1,16 +1,9 @@
 ﻿namespace Nabs.Tests.PersistenceTests.Fixtures;
 
-public sealed class DataLoaderFixture : TestFixtureBase
+public sealed class DataLoaderFixture(IMessageSink diagnosticMessageSink) 
+	: TestConfigurationFixtureBase(diagnosticMessageSink)
 {
-	protected override void ConfigureConfiguration(
-		IConfigurationBuilder configurationBuilder)
-	{
-		configurationBuilder
-			.AddUserSecrets(typeof(DataLoaderFixture).Assembly, false);
-	}
-
-	protected override void ConfigureServices(
-		IServiceCollection services)
+	protected override void ConfigureServices(IServiceCollection services)
 	{
 		services.AddAutoMapper(typeof(DataLoaderFixture));
 

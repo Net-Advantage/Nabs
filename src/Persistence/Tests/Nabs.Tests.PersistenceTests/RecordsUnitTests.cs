@@ -2,7 +2,7 @@
 
 public class RecordsUnitTests
 {
-	private TestUser _user;
+	private readonly TestUser _user;
 	public RecordsUnitTests()
 	{
 		_user = new TestUser(

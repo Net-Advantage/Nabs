@@ -7,13 +7,13 @@ public class TestUserUnitTests : TestBase<DataLoaderFixture>
 	private readonly ISelectItem<TestUser> _testUserSelect;
 	
 	public TestUserUnitTests(
-		DataLoaderFixture testFixture,
-		ITestOutputHelper output)
-		: base(testFixture, output)
+		ITestOutputHelper testOutputHelper, 
+		DataLoaderFixture testFixture)
+		: base(testOutputHelper, testFixture)
 	{
 		TestFixture.Should().NotBeNull();
 
-		_testRepository = TestFixture.ServiceScope.ServiceProvider
+		_testRepository = TestFixture.ServiceProvider
 			.GetRequiredService<IRelationalRepository<TestDbContext>>();
 		_testRepository.Should().NotBeNull();
 

@@ -8,3 +8,6 @@ global using Xunit.Abstractions;
 global using Xunit.Sdk;
 global using System.Collections.Generic;
 global using System.Reflection;
+global using Nabs.Tests.Fixtures;
+global using System.Runtime.CompilerServices;
+global using Nabs.Resources;

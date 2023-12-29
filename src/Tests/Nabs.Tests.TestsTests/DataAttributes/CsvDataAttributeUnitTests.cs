@@ -1,17 +1,24 @@
-﻿using System.Runtime.InteropServices.ComTypes;
+﻿using Xunit.Abstractions;
 
 namespace Nabs.Tests.TestsTests.DataAttributes;
 
-
-public class CsvDataAttributeUnitTests
+[Collection(nameof(SimpleFixtureCollection))]
+public class CsvDataAttributeUnitTests : TestBase<SimpleTestFixture>
 {
+	public CsvDataAttributeUnitTests(
+		ITestOutputHelper testOutputHelper, 
+		SimpleTestFixture testFixture) 
+		: base(testOutputHelper, testFixture)
+	{
+		
+	}
 
 	[Theory]
-	//[CsvDataAttribute<CsvTestDataModel>()]
-	[ClassData(typeof(TheoryData<CsvTestDataModel>))]
-	public void LoadCsvTestDataWithAttribute(string scenario, CsvTestDataModel item)
+	[LoadFromCsvDataAttribute<CsvTestDataModel>(typeof(CsvTestDataModel), "CsvTestData.csv", "|")]
+	public void LoadCsvTestDataWithAttribute(CsvTestDataModel item)
 	{
-		_ = scenario;
 		_ = item;
+
+		OutputScenario(item.Scenario.ToString());
 	}
 }

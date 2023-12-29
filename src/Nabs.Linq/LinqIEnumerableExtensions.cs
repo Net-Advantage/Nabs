@@ -1,6 +1,6 @@
-﻿namespace Nabs;
+﻿namespace Nabs.Linq;
 
-public static class MoreLinqExtensions
+public static class LinqIEnumerableExtensions
 {
 	public static bool NotNullAndAny<TSource>(this IEnumerable<TSource>? source)
 	{

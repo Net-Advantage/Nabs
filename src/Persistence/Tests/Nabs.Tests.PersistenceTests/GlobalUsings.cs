@@ -16,3 +16,4 @@ global using Xunit.Abstractions;
 global using Moq;
 global using System.Linq;
 global using System.Collections.Generic;
+global using Nabs.Tests.Fixtures;

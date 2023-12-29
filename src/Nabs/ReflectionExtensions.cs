@@ -4,16 +4,11 @@ public static class ReflectionExtensions
 {
 	public static T CreateInstance<T>(
 		this Type type,
-		params object[]? args)
+		params object[] args)
 			where T : new()
 	{
 		var instance = args != null ? Activator.CreateInstance(type, args) : Activator.CreateInstance(type);
-		if (instance == null)
-		{
-			throw new TypeInitializationException(type.FullName, null);
-		}
-
-		return (T)instance;
+		return instance == null ? throw new TypeInitializationException(type.FullName, null) : (T)instance;
 	}
 
 	public static async Task<T?> InvokeMethodAsync<T>(this Type type,
@@ -23,7 +18,7 @@ public static class ReflectionExtensions
 		params object[] parameters)
 	{
 		var parametersTypes = Array.Empty<Type>();
-		if (parameters.NotNullAndAny())
+		if (parameters.Length > 0)
 		{
 			parametersTypes = parameters.Select(_ => _.GetType()).ToArray();
 		}
@@ -33,15 +28,11 @@ public static class ReflectionExtensions
 				bindingFlags,
 				null,
 				parametersTypes,
-				null);
-
-		if (methodInfo == null)
-		{
-			throw new ArgumentException($"The method, '{methodName}', could not be found or parameters did not match.");
-		}
+				null) 
+		        ?? throw new ArgumentException($"The method, '{methodName}', could not be found or parameters did not match.");
 
 		var task = methodInfo.Invoke(obj, parameters);
-		if (task == null)
+		if (task is null)
 		{
 			return default;
 		}

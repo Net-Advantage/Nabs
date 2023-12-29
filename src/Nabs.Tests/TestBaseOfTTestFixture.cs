@@ -1,18 +1,33 @@
-﻿using System.IO;
+﻿namespace Nabs.Tests;
 
-namespace Nabs.Tests;
-
-public abstract class TestBase<TTestFixture> : TestBase
-	where TTestFixture : TestFixtureBase, new()
+public abstract class TestBase<TTestFixture> : IAsyncLifetime
+	where TTestFixture : TestFixtureBase
 {
-	protected TestBase(
-		TTestFixture testFixture,
-		ITestOutputHelper output) : base(output)
+
+	protected TestBase(ITestOutputHelper testOutputHelper, TTestFixture testFixture)
 	{
+		var testClassName = GetType().Name;
+		var message = $"[{testClassName}] is constructing...";
+
 		TestFixture = testFixture;
+		TestFixture.TestOutputHelper = testOutputHelper;
+
+		TestFixture.OutputLine(message);
+		TestFixture.OutputLine(new string('=', message.Length));
+
 	}
 
 	protected TTestFixture TestFixture { get; }
+
+	public void OutputScenario(string scenario = "default", [CallerMemberName] string caller = null)
+	{
+		TestFixture.OutputLine($"[{caller}] - Scenario: {scenario}");
+	}
+
+	public void OutputStep(string stepName)
+	{
+		TestFixture.OutputLine($"Step: {stepName}");
+	}
 
 	public virtual async Task StartTest()
 	{
@@ -26,17 +41,13 @@ public abstract class TestBase<TTestFixture> : TestBase
 
 	public async Task InitializeAsync()
 	{
-		Output.WriteLine("Test is initialising");
+		TestFixture.OutputLine("Test is initialising");
 		await StartTest();
 	}
 
 	public async Task DisposeAsync()
 	{
-		Output.WriteLine(TextWriter.ToString());
-
 		await TeardownTest();
-
-		Output.WriteLine("Test has ended");
+		TestFixture.OutputLine("Test has ended");
 	}
-
 }

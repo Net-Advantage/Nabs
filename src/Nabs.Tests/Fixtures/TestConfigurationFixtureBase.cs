@@ -1,18 +1,18 @@
-﻿namespace Nabs.Tests;
+﻿namespace Nabs.Tests.Fixtures;
 
-public abstract class TestFixtureBase : IDisposable
+public abstract class TestConfigurationFixtureBase : TestFixtureBase
 {
-	protected TestFixtureBase()
-	{
-		Initialise();
-	}
 
-	public IConfigurationRoot ConfigurationRoot { get; private set; }
-	public IServiceScope ServiceScope { get; private set; }
-
-	protected void Initialise()
+	protected TestConfigurationFixtureBase(IMessageSink diagnosticMessageSink)
+		: base(diagnosticMessageSink)
 	{
+		var superTestFixtureAssembly = GetType().Assembly;
+
 		var configurationBuilder = new ConfigurationBuilder();
+		configurationBuilder
+			.AddJsonFile("appsettings.json", false)
+			.AddUserSecrets(superTestFixtureAssembly, true);
+
 		ConfigureConfiguration(configurationBuilder);
 		ConfigurationRoot = configurationBuilder.Build();
 
@@ -20,17 +20,23 @@ public abstract class TestFixtureBase : IDisposable
 
 		ConfigureServices(services);
 
-		ServiceScope = services
+		ServiceProvider = services
 			.BuildServiceProvider(
 				new ServiceProviderOptions
 				{
 					ValidateScopes = true,
 					ValidateOnBuild = true
-				})
+				});
+
+		ServiceScope = ServiceProvider
 			.GetRequiredService<IServiceScopeFactory>()
 			.CreateScope();
 	}
 
+	public IConfigurationRoot ConfigurationRoot { get; }
+	public IServiceProvider ServiceProvider { get; }
+	public IServiceScope ServiceScope {get; }
+	
 	protected virtual void ConfigureConfiguration(IConfigurationBuilder configurationBuilder)
 	{
 
@@ -38,11 +44,5 @@ public abstract class TestFixtureBase : IDisposable
 
 	protected virtual void ConfigureServices(IServiceCollection services)
 	{
-	}
-
-	public void Dispose()
-	{
-		ConfigurationRoot = null;
-		ServiceScope.Dispose();
 	}
 }

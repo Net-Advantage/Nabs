@@ -4,9 +4,9 @@ namespace Nabs.Tests.AzureConfigurationTests;
 public class SetupUnitTest : TestBase<AzureConfigurationTestFixture>
 {
 	public SetupUnitTest(
-		AzureConfigurationTestFixture testFixture,
-		ITestOutputHelper output) 
-		: base(testFixture, output)
+		ITestOutputHelper testOutputHelper, 
+		AzureConfigurationTestFixture testFixture) 
+		: base(testOutputHelper, testFixture)
 	{
 	}
 
@@ -14,6 +14,4 @@ public class SetupUnitTest : TestBase<AzureConfigurationTestFixture>
 	public void Test1()
 	{
 	}
-
-	
 }

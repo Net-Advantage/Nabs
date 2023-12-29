@@ -1,6 +1,7 @@
-﻿namespace Nabs.Tests.AzureConfigurationTests.Fixtures;
+﻿
+namespace Nabs.Tests.AzureConfigurationTests.Fixtures;
 
-public class AzureConfigurationTestFixture : AppSettingsTestFixture
+public class AzureConfigurationTestFixture(IMessageSink diagnosticMessageSink) 
+	: TestFixtureBase(diagnosticMessageSink)
 {
-	
 }
