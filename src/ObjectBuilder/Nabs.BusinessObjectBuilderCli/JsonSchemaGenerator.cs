@@ -6,17 +6,11 @@ using NJsonSchema.Generation;
 
 namespace Nabs.BusinessObjectBuilderCli;
 
-public class JsonSchemaGenerator
+public class JsonSchemaGenerator(string rootPath, string fileName)
 {
 	private const string _folderName = "GeneratedSchemas";
-	private readonly string _rootPath;
-	private readonly string _fileName;
-
-	public JsonSchemaGenerator(string rootPath, string fileName)
-	{
-		_rootPath = rootPath;
-		_fileName = fileName;
-	}
+	private readonly string _rootPath = rootPath;
+	private readonly string _fileName = fileName;
 
 	public void Generate<T>()
 		where T : class
@@ -37,16 +31,11 @@ public class JsonSchemaGenerator
 		{
 			var definitionPath = Path.Combine(_rootPath, _folderName, $"{jsonSchemaProperty.Key}.json");
 			schema.Definitions.TryGetValue(jsonSchemaProperty.Key, out var definition);
-
-			
-
-			//var definitionJson = definition.ActualSchema.ToJson();
-			//File.WriteAllText(definitionPath, definitionJson);
 		}
 
 		var allDefinitionKeys = schema.Definitions.Keys.ToList();
 
-		while (allDefinitionKeys.Any())
+		while (allDefinitionKeys.Count > 0)
 		{
 			foreach (var schemaDefinition in schema.Definitions)
 			{

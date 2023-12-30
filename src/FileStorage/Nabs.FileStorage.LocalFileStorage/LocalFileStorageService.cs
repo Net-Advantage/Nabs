@@ -3,28 +3,28 @@ public class LocalFileStorageService : IFileStorageService
 {
 	public async Task<bool> PersistFileAsync(byte[] fileAsBytes)
 	{
-		return true;
+		return await Task.FromResult(true);
 	}
 
 	public async Task<bool> PersistFileAsync(string fileAsString)
 	{
-		return true;
+		return await Task.FromResult(true);
 	}
 
 	public async Task<FileResponse> GetFileAsync(string id)
 	{
 		var result = new FileResponse();
 
-		return result;
+		return await Task.FromResult(result);
 	}
 
 	public async Task<string> GetOneTimeDownloadLinkAsync(string id)
 	{
-		return string.Empty;
+		return await Task.FromResult(string.Empty);
 	}
 
 	public async Task<string> GetOneTimeUploadLinkAsync(string id)
 	{
-		return string.Empty;
+		return await Task.FromResult(string.Empty);
 	}
 }
