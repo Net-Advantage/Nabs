@@ -8,8 +8,6 @@ public class RelationalRepository<TDbContext> : IRelationalRepository<TDbContext
 	public RelationalRepository(IRelationalRepositoryOptions<TDbContext> relationalRepositoryOptions)
 	{
 		_relationalRepositoryOptions = relationalRepositoryOptions;
-
-		_relationalRepositoryOptions.OnInitialise();
 	}
 
 	public TDbContext NewDbContext()

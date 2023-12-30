@@ -1,12 +1,22 @@
 ﻿namespace Nabs.Tests.Fixtures;
 
-public abstract class TestFixtureBase : IDisposable
+public interface ITestFixture
+{
+	public void Initialise();
+}
+
+public abstract class TestFixtureBase : ITestFixture, IDisposable
 {
 	private readonly IMessageSink _diagnosticMessageSink;
 
 	protected TestFixtureBase(IMessageSink diagnosticMessageSink)
 	{
 		_diagnosticMessageSink = diagnosticMessageSink;
+	}
+
+	protected virtual void Dispose(bool disposing)
+	{
+
 	}
 
 	public ITestOutputHelper TestOutputHelper {get; set; }
@@ -24,8 +34,5 @@ public abstract class TestFixtureBase : IDisposable
 		GC.SuppressFinalize(this);
 	}
 
-	protected virtual void Dispose(bool disposing)
-	{
-
-	}
+	public abstract void Initialise();
 }

@@ -5,14 +5,4 @@ public interface IRelationalRepositoryOptions<TContext>
 {
 	IDbContextFactory<TContext> ContextFactory { get; init; }
 	IMapper Mapper { get; init; }
-
-	virtual void OnInitialise()
-	{
-
-	}
-
-
-
-	//ICurrentUserContext currentUserContext,
-	//ILogger<RepositoryBase<TContext>> logger
 }

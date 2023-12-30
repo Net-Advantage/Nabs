@@ -6,6 +6,24 @@ public abstract class TestConfigurationFixtureBase : TestFixtureBase
 	protected TestConfigurationFixtureBase(IMessageSink diagnosticMessageSink)
 		: base(diagnosticMessageSink)
 	{
+		
+	}
+
+	public IConfigurationRoot ConfigurationRoot { get; private set; } = default!;
+	public IServiceProvider ServiceProvider { get; private set; } = default!;
+	public IServiceScope ServiceScope {get; private set; } = default!;
+	
+	protected virtual void ConfigureConfiguration(IConfigurationBuilder configurationBuilder)
+	{
+
+	}
+
+	protected virtual void ConfigureServices(IServiceCollection services)
+	{
+	}
+
+	public override void Initialise()
+	{
 		var superTestFixtureAssembly = GetType().Assembly;
 
 		var configurationBuilder = new ConfigurationBuilder();
@@ -31,18 +49,5 @@ public abstract class TestConfigurationFixtureBase : TestFixtureBase
 		ServiceScope = ServiceProvider
 			.GetRequiredService<IServiceScopeFactory>()
 			.CreateScope();
-	}
-
-	public IConfigurationRoot ConfigurationRoot { get; }
-	public IServiceProvider ServiceProvider { get; }
-	public IServiceScope ServiceScope {get; }
-	
-	protected virtual void ConfigureConfiguration(IConfigurationBuilder configurationBuilder)
-	{
-
-	}
-
-	protected virtual void ConfigureServices(IServiceCollection services)
-	{
 	}
 }

@@ -3,13 +3,18 @@
 [Collection(nameof(TestDbContextDataLoaderFixtureCollection))]
 public class TestUserUnitTests : TestBase<DataLoaderFixture>
 {
-	private readonly IRelationalRepository<TestDbContext> _testRepository;
-	private readonly ISelectItem<TestUser> _testUserSelect;
+	private IRelationalRepository<TestDbContext> _testRepository;
+	private ISelectItem<TestUser> _testUserSelect;
 	
 	public TestUserUnitTests(
 		ITestOutputHelper testOutputHelper, 
 		DataLoaderFixture testFixture)
 		: base(testOutputHelper, testFixture)
+	{
+		
+	}
+
+	public override async Task StartTest()
 	{
 		TestFixture.Should().NotBeNull();
 
@@ -20,7 +25,7 @@ public class TestUserUnitTests : TestBase<DataLoaderFixture>
 		_testUserSelect = _testRepository.SelectItem<TestUser>();
 		_testUserSelect.Should().NotBeNull();
 	}
-	
+
 	[Fact]
 	public async Task GetItem_FirstTestUser_Success()
 	{

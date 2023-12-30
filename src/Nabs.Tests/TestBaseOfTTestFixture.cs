@@ -42,6 +42,7 @@ public abstract class TestBase<TTestFixture> : IAsyncLifetime
 	public async Task InitializeAsync()
 	{
 		TestFixture.OutputLine("Test is initialising");
+		TestFixture.Initialise();
 		await StartTest();
 	}
 
