@@ -51,13 +51,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Reflection.Abstraction
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenAi", "OpenAi", "{FA0EF1BA-8273-4376-84AB-E995208318A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.OpenAi", "OpenAi\Nabs.OpenAi\Nabs.OpenAi.csproj", "{11FD4731-CC4F-4CFA-87A3-B29499A59348}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.OpenAi", "OpenAi\Nabs.OpenAi\Nabs.OpenAi.csproj", "{11FD4731-CC4F-4CFA-87A3-B29499A59348}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{992DADE0-57C1-4E4D-9481-1B7670419993}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Tests.OpenAiTests", "OpenAi\Tests\Nabs.Tests.OpenAiTests\Nabs.Tests.OpenAiTests.csproj", "{B39CD065-5E76-4BC9-A549-092368942863}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests.OpenAiTests", "OpenAi\Tests\Nabs.Tests.OpenAiTests\Nabs.Tests.OpenAiTests.csproj", "{B39CD065-5E76-4BC9-A549-092368942863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Tests.ResourcesUnitTests", "Tests\Nabs.Tests.ResourcesUnitTests\Nabs.Tests.ResourcesUnitTests.csproj", "{0ED73316-96EA-4762-BCB8-E840C56D2CD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests.ResourcesUnitTests", "Tests\Nabs.Tests.ResourcesUnitTests\Nabs.Tests.ResourcesUnitTests.csproj", "{0ED73316-96EA-4762-BCB8-E840C56D2CD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{96B933C3-A33F-45D2-968E-DBA103632A49}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		..\.gitignore = ..\.gitignore
+		coverlet.runsettings = coverlet.runsettings
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		nuget.config = nuget.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

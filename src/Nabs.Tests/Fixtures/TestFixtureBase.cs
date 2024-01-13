@@ -14,12 +14,7 @@ public abstract class TestFixtureBase : ITestFixture, IDisposable
 		_diagnosticMessageSink = diagnosticMessageSink;
 	}
 
-	protected virtual void Dispose(bool disposing)
-	{
-
-	}
-
-	public ITestOutputHelper TestOutputHelper {get; set; }
+	public ITestOutputHelper? TestOutputHelper {get; set; }
 
 	public void OutputLine(string message)
 	{
@@ -32,6 +27,11 @@ public abstract class TestFixtureBase : ITestFixture, IDisposable
 		//See: https://learn.microsoft.com/en-gb/dotnet/fundamentals/code-analysis/quality-rules/ca1816
 		Dispose(true);
 		GC.SuppressFinalize(this);
+	}
+
+	protected virtual void Dispose(bool disposing)
+	{
+
 	}
 
 	public abstract void Initialise();

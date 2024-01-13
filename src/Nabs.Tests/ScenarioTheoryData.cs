@@ -3,6 +3,6 @@
 public class ScenarioTheoryData<T>
 	where T : class, new()
 {
-	public string Scenario { get; set; }
-	public T Data { get; set; }
+	public string Scenario { get; set; } = default!;
+	public T Data { get; set; } = default!;
 }

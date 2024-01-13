@@ -21,7 +21,7 @@ public class StringExtensionsUnitTests
 	[InlineData("", "a")]
 	[InlineData(null, "a")]
 	[InlineData(" ", "a")]
-	public void OrDefault_DefaultSuccess(string value, string defaultValue)
+	public void OrDefault_DefaultSuccess(string? value, string defaultValue)
 	{
 		//Arrange
 		var expectedValue = defaultValue;

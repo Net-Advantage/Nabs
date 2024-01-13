@@ -1,21 +1,18 @@
-﻿using System.Threading.Tasks;
+﻿namespace Nabs.Tests.NabsUnitTests.TestClasses;
 
-namespace Nabs.Tests.NabsUnitTests.TestClasses
+public class TestClass
 {
-	public class TestClass
+	public bool DoStuffDone { get; set; }
+	public bool DoStuffAsyncDone { get; set; }
+
+	public void DoStuff()
 	{
-		public bool DoStuffDone { get; set; }
-		public bool DoStuffAsyncDone { get; set; }
+		DoStuffDone = true;
+	}
 
-		public void DoStuff()
-		{
-			DoStuffDone = true;
-		}
-
-		public async Task DoStuffAsync()
-		{
-			DoStuffAsyncDone = true;
-			await Task.CompletedTask;
-		}
+	public async Task DoStuffAsync()
+	{
+		DoStuffAsyncDone = true;
+		await Task.CompletedTask;
 	}
 }

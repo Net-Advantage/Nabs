@@ -6,7 +6,7 @@ namespace Nabs.Tests.TestsTests.Playbooks.SimpleTestWithOutputLogging;
 [Collection(nameof(SimpleFixtureCollection))]
 [ExcludeFromCodeCoverage]
 public class SimpleTestWithOutputLoggingUnitTests(ITestOutputHelper testOutputHelper, SimpleTestFixture fixture)
-		: TestBase<SimpleTestFixture>(testOutputHelper, fixture)
+		: FixtureTestBase<SimpleTestFixture>(testOutputHelper, fixture)
 {
 	[Fact]
 	public void OutputInitialised__Success()

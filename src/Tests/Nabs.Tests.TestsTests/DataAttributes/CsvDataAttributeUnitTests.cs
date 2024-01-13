@@ -6,7 +6,7 @@ namespace Nabs.Tests.TestsTests.DataAttributes;
 public class CsvDataAttributeUnitTests(
 	ITestOutputHelper testOutputHelper,
 	SimpleTestFixture testFixture) 
-	: TestBase<SimpleTestFixture>(testOutputHelper, testFixture)
+	: FixtureTestBase<SimpleTestFixture>(testOutputHelper, testFixture)
 {
 	[Theory]
 	[LoadFromCsvDataAttribute<CsvTestDataModel>(typeof(CsvTestDataModel), "CsvTestData.csv", "|")]

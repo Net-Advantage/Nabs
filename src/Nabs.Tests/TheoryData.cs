@@ -3,6 +3,7 @@
 namespace Nabs.Tests;
 
 public class TheoryData<T> : TheoryData
+	where T : notnull
 {
 	public void Add(string scenario, T data)
 	{

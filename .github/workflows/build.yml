@@ -1,0 +1,55 @@
+name: NABS Build
+
+on:
+    push:
+        branches: [ main ]
+
+
+jobs:
+    build:
+
+        runs-on: ubuntu-latest
+
+       
+        steps:
+
+        - name: Checkout source
+          uses: actions/checkout@v4
+
+        - name: Print workspace path
+          run: | 
+              echo "Workspace directory: $GITHUB_WORKSPACE"
+
+        - name: List files in /src directory
+          run: |
+            echo "Listing files and directories in the workspace /src directory:"
+            ls -alh "${GITHUB_WORKSPACE}/src"
+  
+        - name: Setup .NET 8.0
+          uses: actions/setup-dotnet@v3
+          with:
+            dotnet-version: '8.0.x'
+
+        - name: Restore dependencies using nuget.config
+          run: dotnet restore src/Nabs.sln --configfile ./src/nuget.config
+
+        - name: Build Solution
+          run: dotnet build src/Nabs.sln --configuration Release --no-restore
+          
+        - name: Run Solution Tests with code coverage
+          run: dotnet test src/Nabs.sln --configuration Release --no-restore --no-build --logger "console;verbosity=detailed" --settings src/coverlet.runsettings
+
+        - name: Generate Code Coverage Report
+          uses: danielpalme/ReportGenerator-GitHub-Action@5.2.0
+          with:
+            reports: '**/TestResults/**/coverage.cobertura.xml'
+            targetdir: coveragereport
+            reporttypes: Html;HtmlSummary;MarkdownSummaryGithub
+
+        - name: Deploy to GitHub Pages
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./coveragereport/Nabs
+            destination_dir: coverage
+          

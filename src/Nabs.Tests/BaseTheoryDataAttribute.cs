@@ -6,5 +6,5 @@ public abstract class BaseTheoryDataAttribute<T> : Attribute
 {
 	public abstract IEnumerable<T> GetData(MethodInfo testMethod);
 
-	public virtual string Skip { get; set; }
+	public virtual string Skip { get; set; } = default!;
 }

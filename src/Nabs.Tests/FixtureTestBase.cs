@@ -1,10 +1,10 @@
 ﻿namespace Nabs.Tests;
 
-public abstract class TestBase<TTestFixture> : IAsyncLifetime
+public abstract class FixtureTestBase<TTestFixture> : IAsyncLifetime
 	where TTestFixture : TestFixtureBase
 {
 
-	protected TestBase(ITestOutputHelper testOutputHelper, TTestFixture testFixture)
+	protected FixtureTestBase(ITestOutputHelper testOutputHelper, TTestFixture testFixture)
 	{
 		var testClassName = GetType().Name;
 		var message = $"[{testClassName}] is constructing...";
@@ -19,7 +19,7 @@ public abstract class TestBase<TTestFixture> : IAsyncLifetime
 
 	protected TTestFixture TestFixture { get; }
 
-	public void OutputScenario(string scenario = "default", [CallerMemberName] string caller = null)
+	public void OutputScenario(string scenario = "default", [CallerMemberName] string? caller = null)
 	{
 		TestFixture.OutputLine($"[{caller}] - Scenario: {scenario}");
 	}
