@@ -54,7 +54,9 @@ jobs:
             destination_dir: coverage
           
         - name: Pack NuGet packages
-          run: dotnet pack src/Nabs.sln --configuration Release --output nupkgs /p:PackageVersion=8.0.$GITHUB_RUN_NUMBER
+          run: |
+              dotnet pack src/Nabs.sln --configuration Release  --no-restore --no-build --output nupkgs /p:PackageVersion=8.0.$GITHUB_RUN_NUMBER
+              dotnet nuget push **/*.nupkg --source "GitHub" --skip-duplicate --api-key ${{secrets.GITHUB_TOKEN}}
 
         - name: Upload NuGet packages to the artifact store
           uses: actions/upload-artifact@v4
