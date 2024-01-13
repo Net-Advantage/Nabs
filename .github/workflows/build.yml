@@ -57,7 +57,7 @@ jobs:
           run: dotnet pack src/Nabs.sln --configuration Release --output nupkgs /p:PackageVersion=8.0.$GITHUB_RUN_NUMBER
 
         - name: Upload NuGet packages to the artifact store
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v4
           with:
             name: nuget-packages
             path: nupkgs
