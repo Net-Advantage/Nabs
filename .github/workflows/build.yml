@@ -53,3 +53,11 @@ jobs:
             publish_dir: ./coveragereport/Nabs
             destination_dir: coverage
           
+        - name: Pack NuGet packages
+          run: dotnet pack src/Nabs.sln --configuration Release --output nupkgs /p:PackageVersion=8.0.$GITHUB_RUN_NUMBER
+
+        - name: Upload NuGet packages to the artifact store
+          uses: actions/upload-artifact@v3
+          with:
+            name: nuget-packages
+            path: nupkgs

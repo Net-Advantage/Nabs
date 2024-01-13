@@ -1,7 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+	<Import Project="../../props/Directory.Build.props" />
+	
 	<PropertyGroup>
-		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 	</PropertyGroup>
 
 	<ItemGroup>

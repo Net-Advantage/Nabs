@@ -1,11 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
-  </PropertyGroup>
+	<Import Project="../../../props/Directory.Build.props" />
 
-  <ItemGroup>
-    <PackageReference Include="OneOf" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="OneOf" />
+	</ItemGroup>
 
 </Project>
