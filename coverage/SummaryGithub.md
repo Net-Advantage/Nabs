@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/14/2024 - 10:20:22 |
-| Coverage date: | 01/14/2024 - 10:20:16 - 01/14/2024 - 10:20:20 |
+| Generated on: | 01/14/2024 - 22:55:14 |
+| Coverage date: | 01/14/2024 - 22:55:08 - 01/14/2024 - 22:55:12 |
 | Parser: | MultiReport (7x Cobertura) |
 | Assemblies: | 7 |
 | Classes: | 22 |
 | Files: | 19 |
-| **Line coverage:** | 51.6% (125 of 242) |
-| Covered lines: | 125 |
-| Uncovered lines: | 117 |
+| **Line coverage:** | 62.3% (151 of 242) |
+| Covered lines: | 151 |
+| Uncovered lines: | 91 |
 | Coverable lines: | 242 |
 | Total lines: | 565 |
-| **Branch coverage:** | 50% (24 of 48) |
-| Covered branches: | 24 |
+| **Branch coverage:** | 52% (25 of 48) |
+| Covered branches: | 25 |
 | Total branches: | 48 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 11_7518536904 |
+| Tag: | 12_7522212943 |
 
 </details>
 
@@ -66,20 +66,20 @@
 |Nabs.OpenAi.OpenAiApiClientSettings|0%||
 
 </details>
-<details><summary>Nabs.Resources - 50%</summary>
+<details><summary>Nabs.Resources - 94.6%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Resources**|**50%**|**71.4%**|
-|Nabs.Resources.EmbeddedResourceLoader|49%|71.4%|
+|**Nabs.Resources**|**94.6%**|**78.5%**|
+|Nabs.Resources.EmbeddedResourceLoader|94.5%|78.5%|
 |Nabs.Resources.ResourceInfo|100%||
 
 </details>
-<details><summary>Nabs.Tests - 64%</summary>
+<details><summary>Nabs.Tests - 64.7%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Tests**|**64%**|**71.4%**|
+|**Nabs.Tests**|**64.7%**|**71.4%**|
 |Nabs.Tests.BaseTheoryDataAttribute`1|0%||
 |Nabs.Tests.CommonTestDependencies|66.6%|25%|
 |Nabs.Tests.Fixtures.SimpleTestFixture|100%||
@@ -87,7 +87,7 @@
 |Nabs.Tests.Fixtures.TestFixtureBase|100%|50%|
 |Nabs.Tests.FixtureTestBase`1|100%||
 |Nabs.Tests.LoadEnumerableFromJsonDataAttribute`1|95.4%|100%|
-|Nabs.Tests.LoadFromCsvDataAttribute`1|95.4%|100%|
+|Nabs.Tests.LoadFromCsvDataAttribute`1|100%|100%|
 |Nabs.Tests.ScenarioTheoryData`1|0%||
 |Nabs.Tests.ScenarioWrapper`1|0%||
 |Nabs.Tests.TheoryData|0%||
