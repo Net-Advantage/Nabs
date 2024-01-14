@@ -1,34 +1,119 @@
+using LanguageExt;
+using Nabs.Tests.Fixtures;
+using System.Diagnostics.CodeAnalysis;
+using Xunit.Abstractions;
+
 namespace Nabs.Tests.ResourcesUnitTests;
 
+[Collection(nameof(SimpleFixtureCollection))]
+[ExcludeFromCodeCoverage]
 public class EmbeddedResourceLoaderUnitTest
+	: FixtureTestBase<SimpleTestFixture>
 {
-	[Fact]
-	public void RunToSuccess()
+	const string _txtEmbeddedResourcePath = ".TestEmbeddedResource.txt";
+	const string _txtMissingEmbeddedResourcePath = ".MissingFile.txt";
+	const string _jsonArrayEmbeddedResourcePath = ".TestArrayEmbeddedResource.json";
+	const string _jsonObjectEmbeddedResourcePath = ".TestObjectEmbeddedResource.json";
+	const string _jsonMissingEmbeddedResourcePath = ".MissingFile.json";
+	const string _pngEmbeddedResourcePath = ".nabs_logo.png";
+	const string _pngMissingEmbeddedResourcePath = ".MissingFile.png";
+
+	private readonly EmbeddedResourceLoader _resourceLoader;
+
+	public EmbeddedResourceLoaderUnitTest(
+		ITestOutputHelper testOutputHelper, 
+		SimpleTestFixture testFixture) 
+		: base(testOutputHelper, testFixture)
 	{
-		// Arrange
 		var types = new[] { typeof(EmbeddedResourceLoaderUnitTest) };
-		var loader = new EmbeddedResourceLoader(types);
-
-		// Act
-		var result = loader.GetResourceInfoItems(x => x.Path.EndsWith(".TestEmbeddedResource.txt"));
-
-		// Assert
-		result.Should().NotBeEmpty();
-
+		_resourceLoader = new EmbeddedResourceLoader(types);
 	}
 
 	[Fact]
-	public void RunToFailure()
+	public void GetResourceInfoItems_RunToSuccess()
 	{
 		// Arrange
-		var types = new[] { typeof(EmbeddedResourceLoaderUnitTest) };
-		var loader = new EmbeddedResourceLoader(types);
-
 		// Act
-		var result = loader.GetResourceInfoItems(x => x.Path.EndsWith(".NotAValidFile.txt"));
+		var result = _resourceLoader.GetResourceInfoItems(x => x.Path.EndsWith(_txtEmbeddedResourcePath));
+
+		// Assert
+		result.Should().NotBeEmpty();
+	}
+
+	[Fact]
+	public void GetResourceInfoItems_RunToFailure()
+	{
+		// Arrange
+		// Act
+		var result = _resourceLoader.GetResourceInfoItems(x => x.Path.EndsWith(_txtMissingEmbeddedResourcePath));
 
 		// Assert
 		result.Should().BeEmpty();
+	}
 
+	[Fact]
+	public void GetResourceStreamContent_RunToSuccess()
+	{
+		// Arrange
+		// Act
+		var result = _resourceLoader.GetResourceStreamContent(x => x.Path.EndsWith(_txtEmbeddedResourcePath));
+
+		// Assert
+		result.IsSuccess.Should().BeTrue();
+	}
+
+	[Fact]
+	public void GetResourceStreamContent_RunToFailure()
+	{
+		// Arrange
+		// Act
+		var result = _resourceLoader.GetResourceStreamContent(x => x.Path.EndsWith(_txtMissingEmbeddedResourcePath));
+
+		// Assert
+		result.IsFaulted.Should().BeTrue();
+	}
+
+	[Fact]
+	public void GetResourceBytesContent_RunToSuccess()
+	{
+		// Arrange
+		// Act
+		var result = _resourceLoader.GetResourceBytesContent(x => x.Path.EndsWith(_pngEmbeddedResourcePath));
+
+		// Assert
+		result.IsSuccess.Should().BeTrue();
+	}
+
+	[Fact]
+	public void GetResourceBytesContent_RunToFailure()
+	{
+		// Arrange
+		// Act
+		var result = _resourceLoader.GetResourceBytesContent(x => x.Path.EndsWith(_pngMissingEmbeddedResourcePath));
+
+		// Assert
+		result.IsFaulted.Should().BeTrue();
+	}
+
+	[Fact]
+	public void GetResourceTextContent_RunToSuccess()
+	{
+		// Arrange
+		// Act
+		var result = _resourceLoader.GetResourceTextContent(x => x.Path.EndsWith(_txtEmbeddedResourcePath));
+
+		// Assert
+		result.IsSuccess.Should().BeTrue();
+	}
+
+	[Fact]
+	public void GetResourceTextContent_RunToFailure()
+	{
+		// Arrange
+		// Act
+		var result = _resourceLoader.GetResourceTextContent(x => x.Path.EndsWith(_txtMissingEmbeddedResourcePath));
+
+		// Assert
+		result.IsFaulted.Should().BeTrue();
 	}
 }

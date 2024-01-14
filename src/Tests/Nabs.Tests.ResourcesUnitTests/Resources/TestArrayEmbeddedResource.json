@@ -1,0 +1,14 @@
+[
+  {
+    "scenario": 1,
+    "name": "A"
+  },
+  {
+    "scenario": 2,
+    "name": "B"
+  },
+  {
+    "scenario": 3,
+    "name": "C"
+  }
+]

@@ -5,14 +5,17 @@
 	<PropertyGroup>
 		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
 		<IsPackable>false</IsPackable>
+		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Remove="DataAttributes\CsvBadTestData.csv" />
 		<None Remove="DataAttributes\CsvTestData.csv" />
 		<None Remove="DataAttributes\JsonTestData.json" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<EmbeddedResource Include="DataAttributes\CsvBadTestData.csv" />
 		<EmbeddedResource Include="DataAttributes\CsvTestData.csv" />
 		<EmbeddedResource Include="DataAttributes\JsonTestData.json" />
 	</ItemGroup>

@@ -17,7 +17,7 @@ public abstract class FixtureTestBase<TTestFixture> : IAsyncLifetime
 
 	}
 
-	protected TTestFixture TestFixture { get; }
+	protected TTestFixture TestFixture { get; } = default!;
 
 	public void OutputScenario(string scenario = "default", [CallerMemberName] string? caller = null)
 	{

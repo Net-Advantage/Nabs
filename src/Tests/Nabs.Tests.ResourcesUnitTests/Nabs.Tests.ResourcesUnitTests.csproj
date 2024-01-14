@@ -6,24 +6,31 @@
 		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
 		<IsPackable>false</IsPackable>
 		<IsTestProject>true</IsTestProject>
+		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Remove="Resources\nabs_logo.png" />
+		<None Remove="Resources\TestArrayEmbeddedResource.json" />
 		<None Remove="Resources\TestEmbeddedResource.txt" />
+		<None Remove="Resources\TestObjectEmbeddedResource.json" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<EmbeddedResource Include="Resources\nabs_logo.png" />
+		<EmbeddedResource Include="Resources\TestObjectEmbeddedResource.json" />
+		<EmbeddedResource Include="Resources\TestArrayEmbeddedResource.json" />
 		<EmbeddedResource Include="Resources\TestEmbeddedResource.txt" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.NET.Test.Sdk" />
 		<PackageReference Include="xunit" />
-		<PackageReference Include="xunit.runner.visualstudio" >
+		<PackageReference Include="xunit.runner.visualstudio">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
-		<PackageReference Include="coverlet.collector" >
+		<PackageReference Include="coverlet.collector">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>

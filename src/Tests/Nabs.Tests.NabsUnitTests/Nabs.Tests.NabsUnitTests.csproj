@@ -5,6 +5,7 @@
 	<PropertyGroup>
 		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
 		<IsPackable>false</IsPackable>
+		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
 	</PropertyGroup>
 
 	<ItemGroup>
