@@ -57,9 +57,4 @@ jobs:
           run: |
               dotnet pack src/Nabs.sln --configuration Release  --no-restore --no-build --output nupkgs /p:PackageVersion=8.0.$GITHUB_RUN_NUMBER
               dotnet nuget push **/*.nupkg --source "https://nuget.pkg.github.com/Net-Advantage/index.json" --skip-duplicate --api-key ${{secrets.GITHUB_TOKEN}}
-
-        - name: Upload NuGet packages to the artifact store
-          uses: actions/upload-artifact@v4
-          with:
-            name: nuget-packages
-            path: nupkgs
+  
