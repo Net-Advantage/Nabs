@@ -11,3 +11,7 @@ global using System.Reflection;
 global using Nabs.Tests.Fixtures;
 global using System.Runtime.CompilerServices;
 global using Nabs.Resources;
+global using CsvHelper;
+global using CsvHelper.Configuration;
+global using System.Globalization;
+global using System.Linq;

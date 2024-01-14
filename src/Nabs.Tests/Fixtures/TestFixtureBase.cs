@@ -1,11 +1,6 @@
 ﻿namespace Nabs.Tests.Fixtures;
 
-public interface ITestFixture
-{
-	public void Initialise();
-}
-
-public abstract class TestFixtureBase : ITestFixture, IDisposable
+public abstract class TestFixtureBase : ITestFixture
 {
 	private readonly IMessageSink _diagnosticMessageSink;
 
@@ -15,6 +10,8 @@ public abstract class TestFixtureBase : ITestFixture, IDisposable
 	}
 
 	public ITestOutputHelper? TestOutputHelper {get; set; }
+
+	public abstract void Initialise();
 
 	public void OutputLine(string message)
 	{
@@ -33,6 +30,4 @@ public abstract class TestFixtureBase : ITestFixture, IDisposable
 	{
 
 	}
-
-	public abstract void Initialise();
 }

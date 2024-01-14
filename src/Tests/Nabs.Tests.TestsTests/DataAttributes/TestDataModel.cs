@@ -1,6 +1,6 @@
 ﻿namespace Nabs.Tests.TestsTests.DataAttributes;
 
-public class CsvTestDataModel
+public class TestDataModel
 {
 	public int Scenario { get; set; }
 	public string? Name { get; set; }

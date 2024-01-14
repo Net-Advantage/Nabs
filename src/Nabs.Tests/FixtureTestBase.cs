@@ -29,12 +29,12 @@ public abstract class FixtureTestBase<TTestFixture> : IAsyncLifetime
 		TestFixture.OutputLine($"Step: {stepName}");
 	}
 
-	public virtual async Task StartTest()
+	protected virtual async Task StartTest()
 	{
 		await Task.CompletedTask;
 	}
 
-	public virtual async Task TeardownTest()
+	protected virtual async Task TeardownTest()
 	{
 		await Task.CompletedTask;
 	}

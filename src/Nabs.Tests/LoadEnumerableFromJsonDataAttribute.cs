@@ -1,20 +1,22 @@
-﻿namespace Nabs.Tests;
+﻿using System.Text.Json;
+
+namespace Nabs.Tests;
 
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-public class LoadFromCsvDataAttribute<T> : DataAttribute
-	where T : class, new()
+public class LoadEnumerableFromJsonDataAttribute<T> : DataAttribute
+	where T : notnull, new()
 {
 	private readonly Type _relativeAssemblyType;
 	private readonly string _resourceFilePathEndsWith;
-	private readonly CsvConfiguration _csvConfiguration;
 	private readonly EmbeddedResourceLoader _resourceLoader;
+	private readonly JsonSerializerOptions _jsonSerializerOptions;
 
-	public LoadFromCsvDataAttribute(Type relativeAssemblyType, string resourceFilePathEndsWith)
+	public LoadEnumerableFromJsonDataAttribute(Type relativeAssemblyType, string resourceFilePathEndsWith)
 	{
 		_relativeAssemblyType = relativeAssemblyType;
 		_resourceFilePathEndsWith = resourceFilePathEndsWith;
 		_resourceLoader = new EmbeddedResourceLoader(_relativeAssemblyType);
-		_csvConfiguration = CommonTestDependencies.CsvConfiguration;
+		_jsonSerializerOptions = CommonTestDependencies.JsonSerializerOptions;
 	}
 
 	public override IEnumerable<object[]> GetData(MethodInfo testMethod)
@@ -23,8 +25,8 @@ public class LoadFromCsvDataAttribute<T> : DataAttribute
 			.Match(
 				content =>
 				{
-					var csvReader = new CsvReader(new StreamReader(content), _csvConfiguration);
-					var records = csvReader.GetRecords<T>();
+					var streamReader = new StreamReader(content);
+					var records = JsonSerializer.Deserialize<T[]>(streamReader.ReadToEnd(), _jsonSerializerOptions)!;
 					var data = records.Select(x => new object[] { x });
 					return data;
 				},

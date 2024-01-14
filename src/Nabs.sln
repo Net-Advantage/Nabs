@@ -47,8 +47,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Resources", "Nabs.Reso
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Linq", "Nabs.Linq\Nabs.Linq.csproj", "{23A3F9D1-66BA-4778-811D-E57007664DDC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Reflection.Abstractions", "Nabs.Reflection.Abstractions\Nabs.Reflection.Abstractions.csproj", "{05E9B955-190B-49BB-A65C-26BFDC2D0C6B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenAi", "OpenAi", "{FA0EF1BA-8273-4376-84AB-E995208318A5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.OpenAi", "OpenAi\Nabs.OpenAi\Nabs.OpenAi.csproj", "{11FD4731-CC4F-4CFA-87A3-B29499A59348}"
@@ -63,6 +61,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		..\.gitignore = ..\.gitignore
+		..\build.ps1 = ..\build.ps1
 		..\.github\workflows\build.yml = ..\.github\workflows\build.yml
 		coverlet.runsettings = coverlet.runsettings
 		..\props\Directory.Build.props = ..\props\Directory.Build.props
@@ -74,6 +73,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Scenarios", "Nabs.Scenarios\Nabs.Scenarios.csproj", "{AA254BFB-CE73-4522-A111-3448873B4B33}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Identity.Web", "Nabs.Identity.Web\Nabs.Identity.Web.csproj", "{E45E9E89-3677-4CDA-BA37-50121DBD68D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Reflection", "Nabs.Reflection\Nabs.Reflection.csproj", "{811E29EC-FF1C-460B-A5CD-2C4714439DD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -145,10 +146,6 @@ Global
 		{23A3F9D1-66BA-4778-811D-E57007664DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23A3F9D1-66BA-4778-811D-E57007664DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23A3F9D1-66BA-4778-811D-E57007664DDC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{05E9B955-190B-49BB-A65C-26BFDC2D0C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05E9B955-190B-49BB-A65C-26BFDC2D0C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05E9B955-190B-49BB-A65C-26BFDC2D0C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05E9B955-190B-49BB-A65C-26BFDC2D0C6B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11FD4731-CC4F-4CFA-87A3-B29499A59348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11FD4731-CC4F-4CFA-87A3-B29499A59348}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11FD4731-CC4F-4CFA-87A3-B29499A59348}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -169,6 +166,10 @@ Global
 		{E45E9E89-3677-4CDA-BA37-50121DBD68D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E45E9E89-3677-4CDA-BA37-50121DBD68D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E45E9E89-3677-4CDA-BA37-50121DBD68D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{811E29EC-FF1C-460B-A5CD-2C4714439DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{811E29EC-FF1C-460B-A5CD-2C4714439DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{811E29EC-FF1C-460B-A5CD-2C4714439DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{811E29EC-FF1C-460B-A5CD-2C4714439DD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
