@@ -17,6 +17,20 @@ The `TestFixtureBase` class, part of the `Nabs.Tests.Fixtures` namespace, serves
 ### `SimpleTestFixture` Class
 The `SimpleTestFixture` class, residing in the `Nabs.Tests.Fixtures` namespace, is a concrete implementation of the `TestFixtureBase` class. It is tailored for straightforward test scenarios within the Nabs testing framework. The class is characterized by its simplicity and direct focus on essential test setup functionalities. By inheriting from `TestFixtureBase`, `SimpleTestFixture` leverages the foundational setup, teardown, and diagnostic messaging capabilities already established in the base class. The constructor of `SimpleTestFixture` accepts an IMessageSink object, which is passed to the `TestFixtureBase` constructor, ensuring that diagnostic messaging capabilities are integrated seamlessly. The primary function of this class is embodied in its override of the `Initialise` method. This method is intended to be implemented with specific initialization logic tailored to the needs of the tests it supports. The `SimpleTestFixture` class is ideal for scenarios where a basic, no-frills approach to test setup is desired, providing a clean and efficient way to create and manage test environments with minimal overhead.
 
+### `TestConfigurationFixtureBase` Abstract Class
+
+The `TestConfigurationFixtureBase` class, a part of the `Nabs.Tests.Fixtures` namespace, serves as an abstract base class that extends `TestFixtureBase`. It is specifically designed to facilitate configuration and service setup for testing environments within the Nabs testing framework. This class provides a structured approach to handling application configurations and dependency injections, which are crucial for integration and functional testing.
+
+The constructor of `TestConfigurationFixtureBase` takes an `IMessageSink` argument, similar to `TestFixtureBase`, ensuring that diagnostic messaging capabilities are integrated.
+
+Central to this class are the properties `ConfigurationRoot`, `ServiceProvider`, and `ServiceScope`. `ConfigurationRoot` holds the application's configuration settings, typically loaded from files like `appsettings.json` and user secrets. `ServiceProvider`` and `ServiceScope`` are related to the Dependency Injection (DI) container, managing the lifecycle of services during tests.
+
+`TestConfigurationFixtureBase` introduces two key protected virtual methods: `ConfigureConfiguration` and `ConfigureServices`. `ConfigureConfiguration` is intended to be overridden in derived classes to add additional configuration sources to the `ConfigurationBuilder`. `ConfigureServices` is used to register services with the DI container, allowing customization of the service collection in derived classes.
+
+The `Initialise` method, overriding the abstract method from `TestFixtureBase`, sets up the configuration and service provider. It first builds the configuration using `ConfigurationBuilder`, incorporating `appsettings.json` and user secrets. Then, it initializes the DI container with the services defined in `ConfigureServices`.
+
+This class provides a comprehensive and extendable foundation for creating test fixtures that require complex configuration and service setups. It abstracts away the boilerplate code related to configuration and service initialization, enabling testers to focus on the specific requirements of their test environments.
+
 ## The Test Types
 
 ### `FixtureTestBase<TTestFixture>` Abstract Class
