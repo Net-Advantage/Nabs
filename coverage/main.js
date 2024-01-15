@@ -232,25 +232,16 @@ var assemblies = [
   {
     "name": "Nabs.FileStorage",
     "classes": [
-      { "name": "Nabs.FileStorage.FileResponse", "rp": "Nabs.FileStorage_FileResponse.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 6, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-    ]},
-  {
-    "name": "Nabs.ObjectBuilder",
-    "classes": [
-      { "name": "Nabs.ObjectBuilder.PersistentEntityModel", "rp": "Nabs.ObjectBuilder_PersistentEntityModel.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 8, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.ObjectBuilder.PersistentEntityProperty<T>", "rp": "Nabs.ObjectBuilder_PersistentEntityProperty_1.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 6, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.OpenAi",
     "classes": [
-      { "name": "Nabs.OpenAi.OpenAiApiClient", "rp": "Nabs.OpenAi_OpenAiApiClient.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.OpenAi.OpenAiApiClientSettings", "rp": "Nabs.OpenAi_OpenAiApiClientSettings.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.OpenAi.OpenAiApiClient", "rp": "Nabs.OpenAi_OpenAiApiClient.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.Resources",
     "classes": [
-      { "name": "Nabs.Resources.EmbeddedResourceLoader", "rp": "Nabs.Resources_EmbeddedResourceLoader.html", "cl": 51, "ucl": 0, "cal": 51, "tl": 103, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Resources.ResourceInfo", "rp": "Nabs.Resources_ResourceInfo.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 103, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Resources.EmbeddedResourceLoader", "rp": "Nabs.Resources_EmbeddedResourceLoader.html", "cl": 49, "ucl": 0, "cal": 49, "tl": 103, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.Serialisation",
@@ -260,10 +251,10 @@ var assemblies = [
   {
     "name": "Nabs.Tests",
     "classes": [
-      { "name": "Nabs.Tests.Fixtures.ConfigurationTestFixtureBase", "rp": "Nabs.Tests_ConfigurationTestFixtureBase.html", "cl": 27, "ucl": 0, "cal": 27, "tl": 53, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.Fixtures.ConfigurationTestFixtureBase", "rp": "Nabs.Tests_ConfigurationTestFixtureBase.html", "cl": 24, "ucl": 0, "cal": 24, "tl": 53, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.Fixtures.SimpleTestFixture", "rp": "Nabs.Tests_SimpleTestFixture.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Tests.Fixtures.TestFixtureBase", "rp": "Nabs.Tests_TestFixtureBase.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 33, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Tests.FixtureTestBase<T>", "rp": "Nabs.Tests_FixtureTestBase_1.html", "cl": 24, "ucl": 0, "cal": 24, "tl": 54, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.Fixtures.TestFixtureBase", "rp": "Nabs.Tests_TestFixtureBase.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 33, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.FixtureTestBase<T>", "rp": "Nabs.Tests_FixtureTestBase_1.html", "cl": 21, "ucl": 0, "cal": 21, "tl": 54, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.LoadEnumerableFromJsonDataAttribute<T>", "rp": "Nabs.Tests_LoadEnumerableFromJsonDataAttribute_1.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 43, "cb": 4, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.LoadFromCsvDataAttribute<T>", "rp": "Nabs.Tests_LoadFromCsvDataAttribute_1.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 41, "cb": 4, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
