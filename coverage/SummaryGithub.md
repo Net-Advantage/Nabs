@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/15/2024 - 01:19:14 |
-| Coverage date: | 01/15/2024 - 01:19:07 - 01/15/2024 - 01:19:11 |
-| Parser: | MultiReport (7x Cobertura) |
-| Assemblies: | 7 |
-| Classes: | 21 |
-| Files: | 18 |
-| **Line coverage:** | 65.6% (157 of 239) |
-| Covered lines: | 157 |
-| Uncovered lines: | 82 |
-| Coverable lines: | 239 |
-| Total lines: | 565 |
-| **Branch coverage:** | 59% (26 of 44) |
-| Covered branches: | 26 |
+| Generated on: | 01/15/2024 - 03:27:50 |
+| Coverage date: | 01/15/2024 - 03:27:42 - 01/15/2024 - 03:27:48 |
+| Parser: | MultiReport (8x Cobertura) |
+| Assemblies: | 8 |
+| Classes: | 17 |
+| Files: | 15 |
+| **Line coverage:** | 83% (186 of 224) |
+| Covered lines: | 186 |
+| Uncovered lines: | 38 |
+| Coverable lines: | 224 |
+| Total lines: | 515 |
+| **Branch coverage:** | 61.3% (27 of 44) |
+| Covered branches: | 27 |
 | Total branches: | 44 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 16_7523059591 |
+| Tag: | 17_7523960871 |
 
 </details>
 
@@ -75,21 +75,24 @@
 |Nabs.Resources.ResourceInfo|100%||
 
 </details>
-<details><summary>Nabs.Tests - 69.2%</summary>
+<details><summary>Nabs.Serialisation - 100%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Tests**|**69.2%**|**85.7%**|
-|Nabs.Tests.CommonTestDependencies|90%|75%|
+|**Nabs.Serialisation**|**100%**|**100%**|
+|Nabs.Serialisation.GlobalSettings|100%|100%|
+
+</details>
+<details><summary>Nabs.Tests - 100%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.Tests**|**100%**|**90%**|
+|Nabs.Tests.Fixtures.ConfigurationTestFixtureBase|100%||
 |Nabs.Tests.Fixtures.SimpleTestFixture|100%||
-|Nabs.Tests.Fixtures.TestConfigurationFixtureBase|0%||
 |Nabs.Tests.Fixtures.TestFixtureBase|100%|50%|
 |Nabs.Tests.FixtureTestBase`1|100%||
 |Nabs.Tests.LoadEnumerableFromJsonDataAttribute`1|100%|100%|
 |Nabs.Tests.LoadFromCsvDataAttribute`1|100%|100%|
-|Nabs.Tests.ScenarioTheoryData`1|0%||
-|Nabs.Tests.ScenarioWrapper`1|0%||
-|Nabs.Tests.TheoryData|0%||
-|Nabs.Tests.TheoryData`1|0%||
 
 </details>
