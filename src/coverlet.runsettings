@@ -18,6 +18,7 @@
 					<ReportFormat>lcov</ReportFormat>
 					<ReportDirectory>./TestResults/CoverageReports</ReportDirectory>
 					<SingleHit>true</SingleHit>
+					<SkipAutoProps>true</SkipAutoProps>
 				</Configuration>
 			</DataCollector>
 		</DataCollectors>
