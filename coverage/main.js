@@ -249,13 +249,12 @@ var assemblies = [
   {
     "name": "Nabs.Resources",
     "classes": [
-      { "name": "Nabs.Resources.EmbeddedResourceLoader", "rp": "Nabs.Resources_EmbeddedResourceLoader.html", "cl": 52, "ucl": 3, "cal": 55, "tl": 112, "cb": 11, "tb": 14, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Resources.ResourceInfo", "rp": "Nabs.Resources_ResourceInfo.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 112, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Resources.EmbeddedResourceLoader", "rp": "Nabs.Resources_EmbeddedResourceLoader.html", "cl": 51, "ucl": 0, "cal": 51, "tl": 103, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Resources.ResourceInfo", "rp": "Nabs.Resources_ResourceInfo.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 103, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.Tests",
     "classes": [
-      { "name": "Nabs.Tests.BaseTheoryDataAttribute<T>", "rp": "Nabs.Tests_BaseTheoryDataAttribute_1.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.CommonTestDependencies", "rp": "Nabs.Tests_CommonTestDependencies.html", "cl": 12, "ucl": 6, "cal": 18, "tl": 31, "cb": 1, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.Fixtures.SimpleTestFixture", "rp": "Nabs.Tests_SimpleTestFixture.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.Fixtures.TestConfigurationFixtureBase", "rp": "Nabs.Tests_TestConfigurationFixtureBase.html", "cl": 0, "ucl": 27, "cal": 27, "tl": 53, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },

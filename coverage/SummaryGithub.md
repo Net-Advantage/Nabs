@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/14/2024 - 22:55:14 |
-| Coverage date: | 01/14/2024 - 22:55:08 - 01/14/2024 - 22:55:12 |
+| Generated on: | 01/15/2024 - 00:24:53 |
+| Coverage date: | 01/15/2024 - 00:24:46 - 01/15/2024 - 00:24:50 |
 | Parser: | MultiReport (7x Cobertura) |
 | Assemblies: | 7 |
-| Classes: | 22 |
-| Files: | 19 |
-| **Line coverage:** | 62.3% (151 of 242) |
-| Covered lines: | 151 |
-| Uncovered lines: | 91 |
-| Coverable lines: | 242 |
-| Total lines: | 565 |
-| **Branch coverage:** | 52% (25 of 48) |
-| Covered branches: | 25 |
-| Total branches: | 48 |
+| Classes: | 21 |
+| Files: | 18 |
+| **Line coverage:** | 63.2% (150 of 237) |
+| Covered lines: | 150 |
+| Uncovered lines: | 87 |
+| Coverable lines: | 237 |
+| Total lines: | 546 |
+| **Branch coverage:** | 54.5% (24 of 44) |
+| Covered branches: | 24 |
+| Total branches: | 44 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 12_7522212943 |
+| Tag: | 13_7522684980 |
 
 </details>
 
@@ -66,21 +66,20 @@
 |Nabs.OpenAi.OpenAiApiClientSettings|0%||
 
 </details>
-<details><summary>Nabs.Resources - 94.6%</summary>
+<details><summary>Nabs.Resources - 100%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Resources**|**94.6%**|**78.5%**|
-|Nabs.Resources.EmbeddedResourceLoader|94.5%|78.5%|
+|**Nabs.Resources**|**100%**|**100%**|
+|Nabs.Resources.EmbeddedResourceLoader|100%|100%|
 |Nabs.Resources.ResourceInfo|100%||
 
 </details>
-<details><summary>Nabs.Tests - 64.7%</summary>
+<details><summary>Nabs.Tests - 65.2%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Tests**|**64.7%**|**71.4%**|
-|Nabs.Tests.BaseTheoryDataAttribute`1|0%||
+|**Nabs.Tests**|**65.2%**|**71.4%**|
 |Nabs.Tests.CommonTestDependencies|66.6%|25%|
 |Nabs.Tests.Fixtures.SimpleTestFixture|100%||
 |Nabs.Tests.Fixtures.TestConfigurationFixtureBase|0%||
