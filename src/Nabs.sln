@@ -70,11 +70,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		..\props\NuGet.props = ..\props\NuGet.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Scenarios", "Nabs.Scenarios\Nabs.Scenarios.csproj", "{AA254BFB-CE73-4522-A111-3448873B4B33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Scenarios", "Nabs.Scenarios\Nabs.Scenarios.csproj", "{AA254BFB-CE73-4522-A111-3448873B4B33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Identity.Web", "Nabs.Identity.Web\Nabs.Identity.Web.csproj", "{E45E9E89-3677-4CDA-BA37-50121DBD68D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Identity.Web", "Nabs.Identity.Web\Nabs.Identity.Web.csproj", "{E45E9E89-3677-4CDA-BA37-50121DBD68D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Reflection", "Nabs.Reflection\Nabs.Reflection.csproj", "{811E29EC-FF1C-460B-A5CD-2C4714439DD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Reflection", "Nabs.Reflection\Nabs.Reflection.csproj", "{811E29EC-FF1C-460B-A5CD-2C4714439DD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Serialisation", "Nabs.Serialisation\Nabs.Serialisation.csproj", "{80EB2550-35F3-47BE-A433-31548A16BEC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Tests.SerialisationUnitTests", "Tests\Nabs.Tests.SerialisationUnitTests\Nabs.Tests.SerialisationUnitTests.csproj", "{DFBB879E-1715-4B94-AA16-B4B26EBD061A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -170,6 +174,14 @@ Global
 		{811E29EC-FF1C-460B-A5CD-2C4714439DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{811E29EC-FF1C-460B-A5CD-2C4714439DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{811E29EC-FF1C-460B-A5CD-2C4714439DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80EB2550-35F3-47BE-A433-31548A16BEC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EB2550-35F3-47BE-A433-31548A16BEC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EB2550-35F3-47BE-A433-31548A16BEC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EB2550-35F3-47BE-A433-31548A16BEC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFBB879E-1715-4B94-AA16-B4B26EBD061A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBB879E-1715-4B94-AA16-B4B26EBD061A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBB879E-1715-4B94-AA16-B4B26EBD061A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBB879E-1715-4B94-AA16-B4B26EBD061A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -191,6 +203,7 @@ Global
 		{992DADE0-57C1-4E4D-9481-1B7670419993} = {FA0EF1BA-8273-4376-84AB-E995208318A5}
 		{B39CD065-5E76-4BC9-A549-092368942863} = {992DADE0-57C1-4E4D-9481-1B7670419993}
 		{0ED73316-96EA-4762-BCB8-E840C56D2CD0} = {BA217827-098B-4118-83B0-70F653CDBDCD}
+		{DFBB879E-1715-4B94-AA16-B4B26EBD061A} = {BA217827-098B-4118-83B0-70F653CDBDCD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF8489AD-3118-4EB9-B3A7-B0383F2146B3}

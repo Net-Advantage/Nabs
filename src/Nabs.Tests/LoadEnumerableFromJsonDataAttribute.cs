@@ -16,7 +16,7 @@ public class LoadEnumerableFromJsonDataAttribute<T> : DataAttribute
 		_relativeAssemblyType = relativeAssemblyType;
 		_resourceFilePathEndsWith = resourceFilePathEndsWith;
 		_resourceLoader = new EmbeddedResourceLoader(_relativeAssemblyType);
-		_jsonSerializerOptions = CommonTestDependencies.JsonSerializerOptions;
+		_jsonSerializerOptions = GlobalSettings.JsonSerializerOptions;
 	}
 
 	public override IEnumerable<object[]> GetData(MethodInfo testMethod)

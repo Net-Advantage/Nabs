@@ -8,7 +8,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="README.md" Pack="true" PackagePath="\"/>
+		<None Include="README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -22,11 +22,11 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
 		<PackageReference Include="Moq" />
 		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
-		<PackageReference Include="CsvHelper" />
 		<PackageReference Include="FluentAssertions" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Nabs.Serialisation\Nabs.Serialisation.csproj" />
 		<ProjectReference Include="..\Nabs\Nabs.csproj" />
 		<ProjectReference Include="..\Nabs.Resources\Nabs.Resources.csproj" />
 	</ItemGroup>

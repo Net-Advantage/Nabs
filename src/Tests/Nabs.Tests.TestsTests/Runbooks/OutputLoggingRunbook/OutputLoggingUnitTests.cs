@@ -1,10 +1,8 @@
-using System.Diagnostics.CodeAnalysis;
+namespace Nabs.Tests.TestsTests.Runbooks.OutputLoggingRunbook;
 
-namespace Nabs.Tests.TestsTests.Playbooks.SimpleTestWithOutputLogging;
-
-[Collection(nameof(SimpleFixtureCollection))]
+[Collection(nameof(SimpleTestFixtureCollection))]
 [ExcludeFromCodeCoverage]
-public class SimpleTestWithOutputLoggingUnitTests(ITestOutputHelper testOutputHelper, SimpleTestFixture fixture)
+public class OutputLoggingUnitTests(ITestOutputHelper testOutputHelper, SimpleTestFixture fixture)
 		: FixtureTestBase<SimpleTestFixture>(testOutputHelper, fixture)
 {
 	[Fact]
@@ -35,7 +33,7 @@ public class SimpleTestWithOutputLoggingUnitTests(ITestOutputHelper testOutputHe
 	{
 		//Arrange
 		OutputScenario(scenario);
-		
+
 		//Act
 		var actual = a * b;
 
@@ -50,7 +48,7 @@ public class SimpleTestWithOutputLoggingUnitTests(ITestOutputHelper testOutputHe
 		const int a = 2;
 		const int b = 2;
 		const int expected = 4;
-		
+
 		//Act
 		const int actual = a * b;
 
@@ -62,7 +60,7 @@ public class SimpleTestWithOutputLoggingUnitTests(ITestOutputHelper testOutputHe
 	public void Fact_Test_Method__Success()
 	{
 		//Arrange
-		
+
 		//Act
 
 		//Assert

@@ -14,7 +14,7 @@ public class LoadFromCsvDataAttribute<T> : DataAttribute
 		_relativeAssemblyType = relativeAssemblyType;
 		_resourceFilePathEndsWith = resourceFilePathEndsWith;
 		_resourceLoader = new EmbeddedResourceLoader(_relativeAssemblyType);
-		_csvConfiguration = CommonTestDependencies.CsvConfiguration;
+		_csvConfiguration = GlobalSettings.CsvConfiguration;
 	}
 
 	public override IEnumerable<object[]> GetData(MethodInfo testMethod)

@@ -15,3 +15,4 @@ global using CsvHelper;
 global using CsvHelper.Configuration;
 global using System.Globalization;
 global using System.Linq;
+global using Nabs.Serialisation;

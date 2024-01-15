@@ -1,7 +1,4 @@
-﻿using CsvHelper.Configuration;
-using System.Globalization;
-using Xunit.Abstractions;
-using Xunit.Sdk;
+﻿using Nabs.Serialisation;
 
 [assembly: Xunit.TestFramework("Nabs.Tests.TestsTests.RunOnce", "Nabs.Tests.TestsTests")]
 
@@ -11,7 +8,7 @@ public sealed class RunOnce : XunitTestFramework, IDisposable
 {
 	public RunOnce(IMessageSink messageSink) : base(messageSink)
 	{
-		CommonTestDependencies.RegisterCsvConfiguration(new CsvConfiguration(CultureInfo.InvariantCulture)
+		GlobalSettings.RegisterCsvConfiguration(new CsvConfiguration(CultureInfo.InvariantCulture)
 		{
 			HasHeaderRecord = true,
 			HeaderValidated = null,

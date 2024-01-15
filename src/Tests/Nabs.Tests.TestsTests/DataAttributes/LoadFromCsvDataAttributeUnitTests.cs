@@ -1,6 +1,6 @@
 ﻿namespace Nabs.Tests.TestsTests.DataAttributes;
 
-[Collection(nameof(SimpleFixtureCollection))]
+[Collection(nameof(SimpleTestFixtureCollection))]
 public class LoadFromCsvDataAttributeUnitTests(
 	ITestOutputHelper testOutputHelper,
 	SimpleTestFixture testFixture) 

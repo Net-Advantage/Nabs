@@ -1,13 +1,15 @@
-﻿using System.Text.Json;
+﻿using CsvHelper.Configuration;
+using System.Globalization;
+using System.Text.Json;
 
-namespace Nabs.Tests;
+namespace Nabs.Serialisation;
 
-public static class CommonTestDependencies
+public class GlobalSettings
 {
 	private static CsvConfiguration? _csvConfiguration;
 	private static JsonSerializerOptions? _jsonSerializerOptions;
 
-	internal static CsvConfiguration CsvConfiguration
+	public static CsvConfiguration CsvConfiguration
 	{
 		get
 		{
@@ -24,10 +26,10 @@ public static class CommonTestDependencies
 			return _csvConfiguration;
 		}
 	}
-	internal static JsonSerializerOptions JsonSerializerOptions
+	public static JsonSerializerOptions JsonSerializerOptions
 	{
 		get
-		{ 			
+		{
 			_jsonSerializerOptions ??= new JsonSerializerOptions
 			{
 				PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
