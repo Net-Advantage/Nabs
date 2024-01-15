@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/15/2024 - 00:24:53 |
-| Coverage date: | 01/15/2024 - 00:24:46 - 01/15/2024 - 00:24:50 |
+| Generated on: | 01/15/2024 - 01:06:32 |
+| Coverage date: | 01/15/2024 - 01:06:25 - 01/15/2024 - 01:06:29 |
 | Parser: | MultiReport (7x Cobertura) |
 | Assemblies: | 7 |
 | Classes: | 21 |
 | Files: | 18 |
-| **Line coverage:** | 63.2% (150 of 237) |
-| Covered lines: | 150 |
-| Uncovered lines: | 87 |
-| Coverable lines: | 237 |
-| Total lines: | 546 |
-| **Branch coverage:** | 54.5% (24 of 44) |
-| Covered branches: | 24 |
+| **Line coverage:** | 65.6% (157 of 239) |
+| Covered lines: | 157 |
+| Uncovered lines: | 82 |
+| Coverable lines: | 239 |
+| Total lines: | 565 |
+| **Branch coverage:** | 59% (26 of 44) |
+| Covered branches: | 26 |
 | Total branches: | 44 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 13_7522684980 |
+| Tag: | 14_7522971517 |
 
 </details>
 
@@ -75,17 +75,17 @@
 |Nabs.Resources.ResourceInfo|100%||
 
 </details>
-<details><summary>Nabs.Tests - 65.2%</summary>
+<details><summary>Nabs.Tests - 69.2%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Tests**|**65.2%**|**71.4%**|
-|Nabs.Tests.CommonTestDependencies|66.6%|25%|
+|**Nabs.Tests**|**69.2%**|**85.7%**|
+|Nabs.Tests.CommonTestDependencies|90%|75%|
 |Nabs.Tests.Fixtures.SimpleTestFixture|100%||
 |Nabs.Tests.Fixtures.TestConfigurationFixtureBase|0%||
 |Nabs.Tests.Fixtures.TestFixtureBase|100%|50%|
 |Nabs.Tests.FixtureTestBase`1|100%||
-|Nabs.Tests.LoadEnumerableFromJsonDataAttribute`1|95.4%|100%|
+|Nabs.Tests.LoadEnumerableFromJsonDataAttribute`1|100%|100%|
 |Nabs.Tests.LoadFromCsvDataAttribute`1|100%|100%|
 |Nabs.Tests.ScenarioTheoryData`1|0%||
 |Nabs.Tests.ScenarioWrapper`1|0%||

@@ -255,12 +255,12 @@ var assemblies = [
   {
     "name": "Nabs.Tests",
     "classes": [
-      { "name": "Nabs.Tests.CommonTestDependencies", "rp": "Nabs.Tests_CommonTestDependencies.html", "cl": 12, "ucl": 6, "cal": 18, "tl": 31, "cb": 1, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.CommonTestDependencies", "rp": "Nabs.Tests_CommonTestDependencies.html", "cl": 18, "ucl": 2, "cal": 20, "tl": 50, "cb": 3, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.Fixtures.SimpleTestFixture", "rp": "Nabs.Tests_SimpleTestFixture.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.Fixtures.TestConfigurationFixtureBase", "rp": "Nabs.Tests_TestConfigurationFixtureBase.html", "cl": 0, "ucl": 27, "cal": 27, "tl": 53, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.Fixtures.TestFixtureBase", "rp": "Nabs.Tests_TestFixtureBase.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 33, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.FixtureTestBase<T>", "rp": "Nabs.Tests_FixtureTestBase_1.html", "cl": 24, "ucl": 0, "cal": 24, "tl": 54, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Tests.LoadEnumerableFromJsonDataAttribute<T>", "rp": "Nabs.Tests_LoadEnumerableFromJsonDataAttribute_1.html", "cl": 21, "ucl": 1, "cal": 22, "tl": 43, "cb": 4, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.LoadEnumerableFromJsonDataAttribute<T>", "rp": "Nabs.Tests_LoadEnumerableFromJsonDataAttribute_1.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 43, "cb": 4, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.LoadFromCsvDataAttribute<T>", "rp": "Nabs.Tests_LoadFromCsvDataAttribute_1.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 41, "cb": 4, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.ScenarioTheoryData<T>", "rp": "Nabs.Tests_ScenarioTheoryData_1.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 8, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.ScenarioWrapper<T>", "rp": "Nabs.Tests_ScenarioWrapper_1.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
