@@ -239,7 +239,7 @@ var assemblies = [
   {
     "name": "Nabs.Reflection",
     "classes": [
-      { "name": "Nabs.Reflection.ReflectionExtensions", "rp": "Nabs.Reflection_ReflectionExtensions.html", "cl": 2, "ucl": 18, "cal": 20, "tl": 47, "cb": 2, "tb": 14, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Reflection.ReflectionExtensions", "rp": "Nabs.Reflection_ReflectionExtensions.html", "cl": 31, "ucl": 0, "cal": 31, "tl": 66, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.Resources",
