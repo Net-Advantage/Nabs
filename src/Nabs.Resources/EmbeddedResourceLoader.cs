@@ -15,11 +15,7 @@ public class EmbeddedResourceLoader
 			var manifestResourceNames = assembly.GetManifestResourceNames();
 			foreach (var manifestResourceName in manifestResourceNames)
 			{
-				var isAdded = _resourceInfos.Add(new(manifestResourceName, assembly));
-				if (!isAdded)
-				{
-					Warnings.Add($"Could not add '{manifestResourceName}' to the manifest resource names dictionary.");
-				}
+				_ = _resourceInfos.Add(new(manifestResourceName, assembly));
 			}
 		}
 	}
@@ -49,12 +45,7 @@ public class EmbeddedResourceLoader
 
 		var resourceInfoItem = resourceInfoItems.First();
 		var resourceStream = resourceInfoItem.Assembly
-			.GetManifestResourceStream(resourceInfoItem.Path);
-
-		if(resourceStream is null)
-		{
-			return new Result<Stream>(new Exception("The Resource stream could not be loaded."));
-		}
+			.GetManifestResourceStream(resourceInfoItem.Path)!;
 
 		return resourceStream;
 	}

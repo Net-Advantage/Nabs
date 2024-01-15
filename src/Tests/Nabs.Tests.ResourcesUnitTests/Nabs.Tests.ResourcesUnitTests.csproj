@@ -10,6 +10,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Remove="Resources\001.MultiTestEmbeddedResource.txt" />
+		<None Remove="Resources\002.MultiTestEmbeddedResource.txt" />
 		<None Remove="Resources\nabs_logo.png" />
 		<None Remove="Resources\TestArrayEmbeddedResource.json" />
 		<None Remove="Resources\TestEmbeddedResource.txt" />
@@ -17,7 +19,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<EmbeddedResource Include="Resources\002.MultiTestEmbeddedResource.txt" />
 		<EmbeddedResource Include="Resources\nabs_logo.png" />
+		<EmbeddedResource Include="Resources\001.MultiTestEmbeddedResource.txt" />
 		<EmbeddedResource Include="Resources\TestObjectEmbeddedResource.json" />
 		<EmbeddedResource Include="Resources\TestArrayEmbeddedResource.json" />
 		<EmbeddedResource Include="Resources\TestEmbeddedResource.txt" />

@@ -48,4 +48,21 @@ public class LoadFromCsvDataAttributeUnitTests(
 		subject.Source.Should().Be("Nabs.Tests");
 		subject.Message.Should().Be("No resource info items found.");
 	}
+
+	[Fact]
+	public void SkipAttribute()
+	{
+		// Arrange
+		var attribute = new LoadFromCsvDataAttribute<TestDataModel>(typeof(TestDataModel), "MissingFile.csv");
+		var methodInfo = typeof(LoadFromCsvDataAttributeUnitTests).GetMethod(nameof(LoadCsvBadTestDataWithAttribute))!;
+
+		// Act
+		var action = () => attribute.GetData(methodInfo).ToList();
+
+		// Assert
+		var exception = action.Should().Throw<Exception>();
+		var subject = exception.Subject.ToArray()[0];
+		subject.Source.Should().Be("Nabs.Tests");
+		subject.Message.Should().Be("No resource info items found.");
+	}
 }

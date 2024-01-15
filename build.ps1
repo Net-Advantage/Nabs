@@ -1,3 +1,15 @@
+$testResultsPath = "TestResults"
+$coverageReportPath = "coveragereport"
+
+# Clean up old test results and coverage reports
+if (Test-Path $testResultsPath) {
+    Remove-Item -Path $testResultsPath -Recurse -Force
+}
+if (Test-Path $coverageReportPath) {
+    Remove-Item -Path $coverageReportPath -Recurse -Force
+}
+
+
 dotnet restore src/Nabs.sln --configfile ./src/nuget.config
 dotnet build src/Nabs.sln --configuration Release --no-restore
 dotnet test src/Nabs.sln --configuration Release --no-restore --no-build --logger "console;verbosity=detailed" --settings src/coverlet.runsettings

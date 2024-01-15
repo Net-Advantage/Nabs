@@ -17,6 +17,7 @@ public class EmbeddedResourceLoaderUnitTest
 	const string _jsonMissingEmbeddedResourcePath = ".MissingFile.json";
 	const string _pngEmbeddedResourcePath = ".nabs_logo.png";
 	const string _pngMissingEmbeddedResourcePath = ".MissingFile.png";
+	const string _multiTestEmbeddedResourcePath = ".MultiTestEmbeddedResource.txt";
 
 	private readonly EmbeddedResourceLoader _resourceLoader;
 
@@ -116,4 +117,15 @@ public class EmbeddedResourceLoaderUnitTest
 		// Assert
 		result.IsFaulted.Should().BeTrue();
 	}
+
+	[Fact]
+	public void GetResourceTextContent_PredicateWithMultipleResults_RunToFailure()
+	{
+		// Arrange
+		// Act
+		var result = _resourceLoader.GetResourceTextContent(x => x.Path.EndsWith(_multiTestEmbeddedResourcePath));
+
+		// Assert
+		result.IsFaulted.Should().BeTrue();
+	}	
 }
