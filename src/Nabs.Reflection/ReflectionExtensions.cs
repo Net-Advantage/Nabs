@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Nabs.Reflection.Abstractions;
+namespace Nabs.Reflection;
 
 public static class ReflectionExtensions
 {

@@ -70,6 +70,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Serialisation", "Nabs.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Tests.SerialisationUnitTests", "Tests\Nabs.Tests.SerialisationUnitTests\Nabs.Tests.SerialisationUnitTests.csproj", "{DFBB879E-1715-4B94-AA16-B4B26EBD061A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Tests.ReflectionUnitTests", "Tests\Nabs.Tests.ReflectionUnitTests\Nabs.Tests.ReflectionUnitTests.csproj", "{31403F24-B3D1-4ED9-852C-FC1DEAF8B98D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -160,6 +162,10 @@ Global
 		{DFBB879E-1715-4B94-AA16-B4B26EBD061A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFBB879E-1715-4B94-AA16-B4B26EBD061A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFBB879E-1715-4B94-AA16-B4B26EBD061A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31403F24-B3D1-4ED9-852C-FC1DEAF8B98D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31403F24-B3D1-4ED9-852C-FC1DEAF8B98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31403F24-B3D1-4ED9-852C-FC1DEAF8B98D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31403F24-B3D1-4ED9-852C-FC1DEAF8B98D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -178,6 +184,7 @@ Global
 		{B39CD065-5E76-4BC9-A549-092368942863} = {992DADE0-57C1-4E4D-9481-1B7670419993}
 		{0ED73316-96EA-4762-BCB8-E840C56D2CD0} = {BA217827-098B-4118-83B0-70F653CDBDCD}
 		{DFBB879E-1715-4B94-AA16-B4B26EBD061A} = {BA217827-098B-4118-83B0-70F653CDBDCD}
+		{31403F24-B3D1-4ED9-852C-FC1DEAF8B98D} = {BA217827-098B-4118-83B0-70F653CDBDCD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF8489AD-3118-4EB9-B3A7-B0383F2146B3}

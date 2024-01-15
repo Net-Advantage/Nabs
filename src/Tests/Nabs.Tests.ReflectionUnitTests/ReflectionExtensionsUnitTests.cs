@@ -1,4 +1,7 @@
-﻿namespace Nabs.Tests.NabsUnitTests;
+﻿using FluentAssertions;
+using Nabs.Reflection;
+
+namespace Nabs.Tests.ReflectionUnitTests;
 
 public class ReflectionExtensionsUnitTests
 {
