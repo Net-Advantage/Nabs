@@ -47,3 +47,13 @@ The core functionality of this attribute is implemented in the `GetData` method.
 The `LoadFromCsvDataAttribute<T>` class is particularly useful for parameterized tests where each test case can be driven by a row of data from a CSV file. This approach enhances the reusability and scalability of test cases, allowing for a broad range of input scenarios to be tested efficiently.
 
 ### `LoadEnumerableFromJsonDataAttribute<T>` Attribute Class
+
+The `LoadEnumerableFromJsonDataAttribute<T>` class, located within the `Nabs.Tests` namespace, is a custom attribute tailored for enabling data-driven testing with JSON data sources in the Nabs testing framework. This attribute is generic, with `T` specified as a non-nullable type (`notnull`) that must have a parameterless constructor (`new()` constraint). It extends the `DataAttribute` class, marking it as a tool for specifying data sources for test methods.
+
+The attribute is designed with the `[AttributeUsage]` annotation to restrict its application to methods, ensuring it's not used multiple times on the same method or inherited by other attributes.
+
+Essential to this class are its properties: `_relativeAssemblyType`, `_resourceFilePathEndsWith`, `_resourceLoader`, and `_jsonSerializerOptions`. The `_relativeAssemblyType` and `_resourceFilePathEndsWith` are instrumental in locating the JSON file within an assembly's resources. The `_resourceLoader` is tasked with fetching the embedded resource stream, while `_jsonSerializerOptions` (sourced from `CommonTestDependencies`) defines the settings for JSON deserialization.
+
+The core functionality of `LoadEnumerableFromJsonDataAttribute<T>` is encapsulated in its `GetData` method. This method overrides `DataAttribute`'s abstract `GetData` method, aiming to retrieve test data from the specified JSON resource. It reads the JSON file using a `StreamReader`, then deserializes it into an array of objects of type T using the `JsonSerializer`. This array is then transformed into a collection of object arrays, each representing a set of parameters to be passed to the test method.
+
+This attribute is particularly beneficial for parameterized testing scenarios where test cases require complex, structured data inputs. By leveraging JSON files for test data, it allows for a more manageable, readable, and maintainable approach to defining test cases, especially when dealing with a large amount of data or complex data structures.
