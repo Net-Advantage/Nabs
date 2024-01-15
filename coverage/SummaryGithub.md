@@ -3,33 +3,31 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/15/2024 - 08:30:12 |
-| Coverage date: | 01/15/2024 - 08:30:06 - 01/15/2024 - 08:30:10 |
-| Parser: | MultiReport (7x Cobertura) |
-| Assemblies: | 7 |
-| Classes: | 12 |
-| Files: | 12 |
-| **Line coverage:** | 83.9% (172 of 205) |
-| Covered lines: | 172 |
-| Uncovered lines: | 33 |
-| Coverable lines: | 205 |
-| Total lines: | 495 |
-| **Branch coverage:** | 61.3% (27 of 44) |
-| Covered branches: | 27 |
-| Total branches: | 44 |
+| Generated on: | 01/15/2024 - 08:48:28 |
+| Coverage date: | 01/15/2024 - 08:48:21 - 01/15/2024 - 08:48:26 |
+| Parser: | MultiReport (8x Cobertura) |
+| Assemblies: | 8 |
+| Classes: | 11 |
+| Files: | 11 |
+| **Line coverage:** | 84.6% (171 of 202) |
+| Covered lines: | 171 |
+| Uncovered lines: | 31 |
+| Coverable lines: | 202 |
+| Total lines: | 478 |
+| **Branch coverage:** | 65.7% (25 of 38) |
+| Covered branches: | 25 |
+| Total branches: | 38 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 18_7526203018 |
+| Tag: | 19_7526392668 |
 
 </details>
 
 ## Coverage
-<details><summary>Nabs - 13%</summary>
+<details><summary>Nabs - </summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs**|**13%**|**20%**|
-|Nabs.ReflectionExtensions|10%|14.2%|
-|Nabs.StringExtensions|33.3%|33.3%|
+|**Nabs**|****|****|
 
 </details>
 <details><summary>Nabs.AzureConfiguration - 0%</summary>
@@ -53,6 +51,14 @@
 |:---|---:|---:|
 |**Nabs.OpenAi**|**0%**|****|
 |Nabs.OpenAi.OpenAiApiClient|0%||
+
+</details>
+<details><summary>Nabs.Reflection - 10%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.Reflection**|**10%**|**14.2%**|
+|Nabs.Reflection.ReflectionExtensions|10%|14.2%|
 
 </details>
 <details><summary>Nabs.Resources - 100%</summary>

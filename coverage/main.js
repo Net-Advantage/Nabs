@@ -221,8 +221,6 @@ var assemblies = [
   {
     "name": "Nabs",
     "classes": [
-      { "name": "Nabs.ReflectionExtensions", "rp": "Nabs_ReflectionExtensions.html", "cl": 2, "ucl": 18, "cal": 20, "tl": 45, "cb": 2, "tb": 14, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.StringExtensions", "rp": "Nabs_StringExtensions.html", "cl": 1, "ucl": 2, "cal": 3, "tl": 19, "cb": 2, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.AzureConfiguration",
@@ -237,6 +235,11 @@ var assemblies = [
     "name": "Nabs.OpenAi",
     "classes": [
       { "name": "Nabs.OpenAi.OpenAiApiClient", "rp": "Nabs.OpenAi_OpenAiApiClient.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+    ]},
+  {
+    "name": "Nabs.Reflection",
+    "classes": [
+      { "name": "Nabs.Reflection.ReflectionExtensions", "rp": "Nabs.Reflection_ReflectionExtensions.html", "cl": 2, "ucl": 18, "cal": 20, "tl": 47, "cb": 2, "tb": 14, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.Resources",
