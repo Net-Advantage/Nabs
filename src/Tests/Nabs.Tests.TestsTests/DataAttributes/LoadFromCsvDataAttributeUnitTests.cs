@@ -1,6 +1,4 @@
-﻿using LanguageExt.SomeHelp;
-
-namespace Nabs.Tests.TestsTests.DataAttributes;
+﻿namespace Nabs.Tests.TestsTests.DataAttributes;
 
 [Collection(nameof(SimpleFixtureCollection))]
 public class LoadFromCsvDataAttributeUnitTests(

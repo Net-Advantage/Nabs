@@ -1,14 +1,17 @@
+# Define paths for coverage reports and test results
+$rootDirectory = Get-Location
 $testResultsPath = "TestResults"
 $coverageReportPath = "coveragereport"
 
 # Clean up old test results and coverage reports
-if (Test-Path $testResultsPath) {
-    Remove-Item -Path $testResultsPath -Recurse -Force
+Get-ChildItem -Path $rootDirectory -Recurse -Filter $testResultsPath -Directory | ForEach-Object {
+    Remove-Item -Path $_.FullName -Recurse -Force
+    Write-Host "Removed TestResults directory at: $($_.FullName)"
 }
+
 if (Test-Path $coverageReportPath) {
     Remove-Item -Path $coverageReportPath -Recurse -Force
 }
-
 
 dotnet restore src/Nabs.sln --configfile ./src/nuget.config
 dotnet build src/Nabs.sln --configuration Release --no-restore
