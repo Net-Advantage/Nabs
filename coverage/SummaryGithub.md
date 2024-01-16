@@ -3,31 +3,32 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/15/2024 - 10:58:02 |
-| Coverage date: | 01/15/2024 - 10:57:54 - 01/15/2024 - 10:57:59 |
-| Parser: | MultiReport (8x Cobertura) |
-| Assemblies: | 8 |
-| Classes: | 11 |
-| Files: | 11 |
-| **Line coverage:** | 93.8% (200 of 213) |
-| Covered lines: | 200 |
+| Generated on: | 01/16/2024 - 02:00:29 |
+| Coverage date: | 01/16/2024 - 02:00:21 - 01/16/2024 - 02:00:27 |
+| Parser: | MultiReport (9x Cobertura) |
+| Assemblies: | 9 |
+| Classes: | 14 |
+| Files: | 14 |
+| **Line coverage:** | 94.7% (234 of 247) |
+| Covered lines: | 234 |
 | Uncovered lines: | 13 |
-| Coverable lines: | 213 |
-| Total lines: | 497 |
-| **Branch coverage:** | 97% (33 of 34) |
-| Covered branches: | 33 |
-| Total branches: | 34 |
+| Coverable lines: | 247 |
+| Total lines: | 595 |
+| **Branch coverage:** | 98.2% (55 of 56) |
+| Covered branches: | 55 |
+| Total branches: | 56 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 20_7527857556 |
+| Tag: | 21_7536045607 |
 
 </details>
 
 ## Coverage
-<details><summary>Nabs - </summary>
+<details><summary>Nabs - 100%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs**|****|****|
+|**Nabs**|**100%**|**100%**|
+|Nabs.ValueObject`1|100%|100%|
 
 </details>
 <details><summary>Nabs.AzureConfiguration - 0%</summary>
@@ -67,6 +68,15 @@
 |:---|---:|---:|
 |**Nabs.Resources**|**100%**|**100%**|
 |Nabs.Resources.EmbeddedResourceLoader|100%|100%|
+
+</details>
+<details><summary>Nabs.Scenarios - 100%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.Scenarios**|**100%**|**100%**|
+|Nabs.Scenarios.ApplicationContext|100%||
+|Nabs.Scenarios.TenantId|100%|100%|
 
 </details>
 <details><summary>Nabs.Serialisation - 100%</summary>

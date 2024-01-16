@@ -221,6 +221,7 @@ var assemblies = [
   {
     "name": "Nabs",
     "classes": [
+      { "name": "Nabs.ValueObject<T>", "rp": "Nabs_ValueObject_1.html", "cl": 23, "ucl": 0, "cal": 23, "tl": 55, "cb": 20, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.AzureConfiguration",
@@ -245,6 +246,12 @@ var assemblies = [
     "name": "Nabs.Resources",
     "classes": [
       { "name": "Nabs.Resources.EmbeddedResourceLoader", "rp": "Nabs.Resources_EmbeddedResourceLoader.html", "cl": 49, "ucl": 0, "cal": 49, "tl": 103, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+    ]},
+  {
+    "name": "Nabs.Scenarios",
+    "classes": [
+      { "name": "Nabs.Scenarios.ApplicationContext", "rp": "Nabs.Scenarios_ApplicationContext.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Scenarios.TenantId", "rp": "Nabs.Scenarios_TenantId.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 24, "cb": 2, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.Serialisation",
