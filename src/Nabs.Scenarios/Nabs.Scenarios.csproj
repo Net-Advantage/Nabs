@@ -8,7 +8,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="README.md" Pack="true" PackagePath="\"/>
+		<None Include="README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Nabs\Nabs.csproj" />
 	</ItemGroup>
 
 </Project>

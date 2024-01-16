@@ -13,43 +13,44 @@ public class TestClass
 		_name = name;
 	}
 
-	public bool DoStuffDone { get; set; }
-	public bool DoStuffAsyncDone { get; set; }
+	public bool Completed { get; set; }
 	public int Age { get; set; }
 
 	public void DoStuff()
 	{
-		DoStuffDone = true;
+		Completed = true;
 	}
 
 	public async Task DoNothingAsync()
 	{
+		Completed = true;
 		await Task.CompletedTask;
 	}
 
 	public async Task SetAgeAsync(int age)
 	{
 		Age = age;
-		DoStuffAsyncDone = true;
+		Completed = true;
 		await Task.CompletedTask;
 	}
 
 	public async Task<string> GetNameAsync()
 	{
-		DoStuffAsyncDone = true;
+		Completed = true;
 		return await Task.FromResult(_name);
 	}
 
 	public async Task<string> SetAgeAndGetNameAsync(int age)
 	{
 		Age = age;
-		DoStuffAsyncDone = true;
+		Completed = true;
 		return await Task.FromResult(_name);
 	}
 
 	public async Task<string?> GetNullAsync()
 	{
 		string? result = null;
+		Completed = true;
 		return await Task.FromResult(result);
 	}
 }
