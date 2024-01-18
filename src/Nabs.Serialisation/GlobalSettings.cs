@@ -1,8 +1,4 @@
-﻿using CsvHelper.Configuration;
-using System.Globalization;
-using System.Text.Json;
-
-namespace Nabs.Serialisation;
+﻿namespace Nabs.Serialisation;
 
 public class GlobalSettings
 {

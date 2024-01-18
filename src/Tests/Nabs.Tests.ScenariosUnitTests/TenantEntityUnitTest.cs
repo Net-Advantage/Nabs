@@ -1,6 +1,6 @@
 namespace Nabs.Tests.ScenariosUnitTests;
 
-public class TenantEntityUnitTest
+public sealed class TenantEntityUnitTest
 {
 	[Fact]
 	public void CreateTenantId_Success()

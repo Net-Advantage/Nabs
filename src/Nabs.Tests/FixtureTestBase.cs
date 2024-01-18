@@ -1,6 +1,7 @@
 ﻿namespace Nabs.Tests;
 
-public abstract class FixtureTestBase<TTestFixture> : IAsyncLifetime
+public abstract class FixtureTestBase<TTestFixture> 
+	: IClassFixture<TTestFixture>, IAsyncLifetime
 	where TTestFixture : TestFixtureBase
 {
 

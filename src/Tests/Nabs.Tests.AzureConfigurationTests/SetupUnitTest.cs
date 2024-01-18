@@ -1,7 +1,7 @@
 namespace Nabs.Tests.AzureConfigurationTests;
 
 [Collection(nameof(AzureConfigurationTestFixtureCollection))]
-public class SetupUnitTest(
+public sealed class SetupUnitTest(
 	ITestOutputHelper testOutputHelper,
 	AzureConfigurationTestFixture testFixture) 
 	: FixtureTestBase<AzureConfigurationTestFixture>(testOutputHelper, testFixture)

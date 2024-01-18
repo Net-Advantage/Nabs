@@ -1,13 +1,7 @@
-using LanguageExt;
-using Nabs.Tests.Fixtures;
-using System.Diagnostics.CodeAnalysis;
-using Xunit.Abstractions;
-
 namespace Nabs.Tests.ResourcesUnitTests;
 
 [Collection(nameof(SimpleFixtureCollection))]
-[ExcludeFromCodeCoverage]
-public class EmbeddedResourceLoaderUnitTest
+public sealed class EmbeddedResourceLoaderUnitTest
 	: FixtureTestBase<SimpleTestFixture>
 {
 	const string _txtEmbeddedResourcePath = ".TestEmbeddedResource.txt";

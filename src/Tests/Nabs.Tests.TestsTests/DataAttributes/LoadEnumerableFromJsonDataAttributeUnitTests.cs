@@ -1,7 +1,7 @@
 ﻿namespace Nabs.Tests.TestsTests.DataAttributes;
 
 [Collection(nameof(SimpleTestFixtureCollection))]
-public class LoadEnumerableFromJsonDataAttributeUnitTests(
+public sealed class LoadEnumerableFromJsonDataAttributeUnitTests(
 	ITestOutputHelper testOutputHelper,
 	SimpleTestFixture testFixture)
 	: FixtureTestBase<SimpleTestFixture>(testOutputHelper, testFixture)

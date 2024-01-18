@@ -9,14 +9,14 @@ public abstract class TestFixtureBase : ITestFixture
 		_diagnosticMessageSink = diagnosticMessageSink;
 	}
 
-	public ITestOutputHelper? TestOutputHelper {get; set; }
+	public ITestOutputHelper TestOutputHelper {get; set; } = default!;
 
 	public abstract void Initialise();
 
 	public void OutputLine(string message)
 	{
 		_diagnosticMessageSink.OnMessage(new DiagnosticMessage(message));
-		TestOutputHelper?.WriteLine(message);
+		TestOutputHelper.WriteLine(message);
 	}
 
 	public void Dispose()

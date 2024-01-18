@@ -1,8 +1,7 @@
 ﻿namespace Nabs.Tests.TestsTests.Runbooks.TestWithConfiguration;
 
 [Collection(nameof(SimpleConfigurationFixtureCollection))]
-[ExcludeFromCodeCoverage]
-public class ServiceCollectionUnitTests(
+public sealed class ServiceCollectionUnitTests(
 	ITestOutputHelper testOutputHelper, SimpleConfigurationTestFixture fixture)
 		: FixtureTestBase<SimpleConfigurationTestFixture>(testOutputHelper, fixture)
 {

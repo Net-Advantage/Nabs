@@ -1,6 +1,6 @@
 ﻿namespace Nabs.Tests.NabsUnitTests;
 
-public class TestValueObjectTests
+public sealed class TestValueObjectTests
 {
 	[Fact]
 	public void GetHashCode_WithNullProperty_CoversNullPath()

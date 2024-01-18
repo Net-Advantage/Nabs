@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace Nabs.Tests.ReflectionUnitTests;
 
-public class ReflectionExtensionsUnitTests
+public sealed class ReflectionExtensionsUnitTests
 {
 	[Fact]
 	public void CreateInstance_Success()

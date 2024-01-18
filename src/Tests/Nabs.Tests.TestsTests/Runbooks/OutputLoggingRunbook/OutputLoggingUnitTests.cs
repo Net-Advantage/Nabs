@@ -1,8 +1,7 @@
 namespace Nabs.Tests.TestsTests.Runbooks.OutputLoggingRunbook;
 
 [Collection(nameof(SimpleTestFixtureCollection))]
-[ExcludeFromCodeCoverage]
-public class OutputLoggingUnitTests(ITestOutputHelper testOutputHelper, SimpleTestFixture fixture)
+public sealed class OutputLoggingUnitTests(ITestOutputHelper testOutputHelper, SimpleTestFixture fixture)
 		: FixtureTestBase<SimpleTestFixture>(testOutputHelper, fixture)
 {
 	[Fact]
