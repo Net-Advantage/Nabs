@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/16/2024 - 02:00:29 |
-| Coverage date: | 01/16/2024 - 02:00:21 - 01/16/2024 - 02:00:27 |
-| Parser: | MultiReport (9x Cobertura) |
-| Assemblies: | 9 |
-| Classes: | 14 |
-| Files: | 14 |
-| **Line coverage:** | 94.7% (234 of 247) |
-| Covered lines: | 234 |
+| Generated on: | 01/18/2024 - 09:03:59 |
+| Coverage date: | 01/18/2024 - 09:03:48 - 01/18/2024 - 09:03:57 |
+| Parser: | MultiReport (10x Cobertura) |
+| Assemblies: | 11 |
+| Classes: | 20 |
+| Files: | 20 |
+| **Line coverage:** | 95.5% (282 of 295) |
+| Covered lines: | 282 |
 | Uncovered lines: | 13 |
-| Coverable lines: | 247 |
-| Total lines: | 595 |
-| **Branch coverage:** | 98.2% (55 of 56) |
-| Covered branches: | 55 |
-| Total branches: | 56 |
+| Coverable lines: | 295 |
+| Total lines: | 748 |
+| **Branch coverage:** | 100% (72 of 72) |
+| Covered branches: | 72 |
+| Total branches: | 72 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 21_7536045607 |
+| Tag: | 22_7567622643 |
 
 </details>
 
@@ -54,6 +54,16 @@
 |Nabs.OpenAi.OpenAiApiClient|0%||
 
 </details>
+<details><summary>Nabs.Persistence - 100%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.Persistence**|**100%**|**100%**|
+|Nabs.Persistence.BaseDbContext|100%||
+|Nabs.Persistence.TenantableDbContext`1|100%|100%|
+|Nabs.Persistence.TenantQueryExtensions|100%||
+
+</details>
 <details><summary>Nabs.Reflection - 100%</summary>
 
 |**Name**|**Line**|**Branch**|
@@ -84,6 +94,7 @@
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
 |**Nabs.Serialisation**|**100%**|**100%**|
+|Nabs.Serialisation.DefaultJsonSerializer|100%||
 |Nabs.Serialisation.GlobalSettings|100%|100%|
 
 </details>
@@ -91,12 +102,21 @@
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Tests**|**100%**|**90%**|
+|**Nabs.Tests**|**100%**|**100%**|
 |Nabs.Tests.Fixtures.ConfigurationTestFixtureBase|100%||
 |Nabs.Tests.Fixtures.SimpleTestFixture|100%||
-|Nabs.Tests.Fixtures.TestFixtureBase|100%|50%|
+|Nabs.Tests.Fixtures.TestFixtureBase|100%||
 |Nabs.Tests.FixtureTestBase`1|100%||
 |Nabs.Tests.LoadEnumerableFromJsonDataAttribute`1|100%|100%|
 |Nabs.Tests.LoadFromCsvDataAttribute`1|100%|100%|
+
+</details>
+<details><summary>Nabs.Tests.DatabaseTests - 100%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.Tests.DatabaseTests**|**100%**|****|
+|Nabs.Tests.DatabaseTests.DatabaseFixtureBase|100%||
+|Nabs.Tests.DatabaseTests.DatabaseTestBase`1|100%||
 
 </details>
