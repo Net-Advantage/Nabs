@@ -5,8 +5,8 @@ public abstract class TenantableDbContext<TTenantEntity>
 	where TTenantEntity : class, ITenantEntity
 {
 	protected TenantableDbContext(
-			   DbContextOptions options,
-			   IApplicationContext applicationContext)
+		DbContextOptions options,
+		IApplicationContext applicationContext)
 		: base(options)
 	{
 		ApplicationContext = applicationContext;
