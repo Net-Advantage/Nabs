@@ -1,4 +1,4 @@
-﻿namespace Nabs.Scenarios;
+﻿namespace Nabs;
 
 /// <summary>
 /// Described the tenant strategy of the application.
