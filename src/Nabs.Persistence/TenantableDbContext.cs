@@ -1,22 +1,15 @@
 ﻿namespace Nabs.Persistence;
 
-public abstract class TenantableDbContext<TTenantEntity> 
-	: DbContext, ITenantableDbContext
+public abstract class TenantableDbContext<TTenantEntity>(
+	DbContextOptions options,
+	IApplicationContext applicationContext)
+	: DbContext(options), ITenantableDbContext
 	where TTenantEntity : class, ITenantEntity
 {
-	protected TenantableDbContext(
-		DbContextOptions options,
-		IApplicationContext applicationContext)
-		: base(options)
-	{
-		ApplicationContext = applicationContext;
+	protected IApplicationContext ApplicationContext { get; } = applicationContext;
+	public Guid TenantId { get; } = applicationContext.TenantContext.TenantId;
 
-		TenantId = applicationContext.TenantContext.TenantId;
-	}
 
-	protected IApplicationContext ApplicationContext { get; }
-
-	public Guid TenantId { get; }
 	public DbSet<TTenantEntity> Tenants => Set<TTenantEntity>();
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)

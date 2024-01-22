@@ -24,6 +24,7 @@ public class RunOnce : XunitTestFramework, IDisposable
 	public new void Dispose()
 	{
 		_container.StopAsync().GetAwaiter().GetResult();
+		GC.SuppressFinalize(this);
 		base.Dispose();
 	}
 }

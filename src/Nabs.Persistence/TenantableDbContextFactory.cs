@@ -9,24 +9,18 @@ public interface ITenantableDbContextFactory<TDbContext> : IDbContextFactory<TDb
 	new TDbContext CreateDbContext();
 }
 
-public class TenantableDbContextFactory<TDbContext> : ITenantableDbContextFactory<TDbContext>
+public class TenantableDbContextFactory<TDbContext>(string databaseNamePrefix, IConfigurationRoot configurationRoot) : ITenantableDbContextFactory<TDbContext>
 	where TDbContext : DbContext, ITenantableDbContext
 {
 	//TODO: DWS: This needs to be set up properly
-	const string _testConnectionString = "Server=localhost,14331;Database={0};User Id=sa;Password=Password123;TrustServerCertificate=True;";
+	const string _testConnectionStringTemplate = "Server=localhost,14331;Database={0};User Id=sa;Password=Password123;TrustServerCertificate=True;";
 
 	//TODO: DWS: This assumes azure Sql we will need to provide various options for clouds other than Azure.
-	const string _envConnectionString = "Server=tcp:{0};Database={1};Authentication=Active Directory Default;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+	const string _envConnectionStringTemplate = "Server=tcp:{0};Database={1};Authentication=Active Directory Default;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
 
-	private readonly string _databaseNamePrefix;
-	private readonly IConfigurationRoot _configurationRoot;
-
-	public TenantableDbContextFactory(string databaseNamePrefix, IConfigurationRoot configurationRoot)
-	{
-		_databaseNamePrefix = databaseNamePrefix;
-		_configurationRoot = configurationRoot;
-	}
+	private readonly string _databaseNamePrefix = databaseNamePrefix;
+	private readonly IConfigurationRoot _configurationRoot = configurationRoot;
 
 	public TDbContext CreateDbContext(IApplicationContext applicationContext)
 	{
@@ -44,11 +38,11 @@ public class TenantableDbContextFactory<TDbContext> : ITenantableDbContextFactor
 		string? connectionString;
 		if (string.IsNullOrWhiteSpace(serverName))
 		{
-			connectionString = string.Format(_testConnectionString, databaseName);
+			connectionString = string.Format(_testConnectionStringTemplate, databaseName);
 		}
 		else
 		{
-			connectionString = string.Format(_envConnectionString, serverName, databaseName);
+			connectionString = string.Format(_envConnectionStringTemplate, serverName, databaseName);
 		}
 
 		var optionsBuilder = new DbContextOptionsBuilder<TDbContext>();
