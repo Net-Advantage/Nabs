@@ -242,8 +242,8 @@ var assemblies = [
     "classes": [
       { "name": "Nabs.Persistence.BaseDbContext", "rp": "Nabs.Persistence_BaseDbContext.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 7, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Persistence.DependencyInversionExtensions", "rp": "Nabs.Persistence_DependencyInversionExtensions.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Persistence.TenantableDbContext<T>", "rp": "Nabs.Persistence_TenantableDbContext_1.html", "cl": 29, "ucl": 0, "cal": 29, "tl": 74, "cb": 18, "tb": 18, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Persistence.TenantableDbContextFactory<T>", "rp": "Nabs.Persistence_TenantableDbContextFactory_1.html", "cl": 15, "ucl": 2, "cal": 17, "tl": 68, "cb": 3, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Persistence.TenantableDbContext<T>", "rp": "Nabs.Persistence_TenantableDbContext_1.html", "cl": 28, "ucl": 0, "cal": 28, "tl": 67, "cb": 18, "tb": 18, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Persistence.TenantableDbContextFactory<T>", "rp": "Nabs.Persistence_TenantableDbContextFactory_1.html", "cl": 14, "ucl": 2, "cal": 16, "tl": 62, "cb": 3, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Persistence.TenantQueryExtensions", "rp": "Nabs.Persistence_TenantQueryExtensions.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 31, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
@@ -282,7 +282,7 @@ var assemblies = [
     "name": "Nabs.Tests.DatabaseTests",
     "classes": [
       { "name": "Nabs.Tests.DatabaseTests.DatabaseFixtureBase", "rp": "Nabs.Tests.DatabaseTests_DatabaseFixtureBase.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Tests.DatabaseTests.DatabaseTestBase<T>", "rp": "Nabs.Tests.DatabaseTests_DatabaseTestBase_1.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.DatabaseTests.DatabaseTestBase<T>", "rp": "Nabs.Tests.DatabaseTests_DatabaseTestBase_1.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
 ];
 
