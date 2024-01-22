@@ -5,13 +5,9 @@ public interface IDatabaseFixtureBase : ITestFixture
 	Func<IApplicationContext>? ApplicationContextFactory { get; set; }
 };
 
-public abstract class DatabaseFixtureBase 
-	: ConfigurationTestFixtureBase, IDatabaseFixtureBase
+public abstract class DatabaseFixtureBase(
+	IMessageSink diagnosticMessageSink)
+	: ConfigurationTestFixtureBase(diagnosticMessageSink), IDatabaseFixtureBase
 {
-	protected DatabaseFixtureBase(IMessageSink diagnosticMessageSink) 
-		: base(diagnosticMessageSink)
-	{
-	}
-
 	public Func<IApplicationContext>? ApplicationContextFactory { get; set; }
 }
