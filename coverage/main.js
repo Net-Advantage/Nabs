@@ -241,7 +241,9 @@ var assemblies = [
     "name": "Nabs.Persistence",
     "classes": [
       { "name": "Nabs.Persistence.BaseDbContext", "rp": "Nabs.Persistence_BaseDbContext.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 7, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Persistence.DependencyInversionExtensions", "rp": "Nabs.Persistence_DependencyInversionExtensions.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Persistence.TenantableDbContext<T>", "rp": "Nabs.Persistence_TenantableDbContext_1.html", "cl": 29, "ucl": 0, "cal": 29, "tl": 74, "cb": 18, "tb": 18, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Persistence.TenantableDbContextFactory<T>", "rp": "Nabs.Persistence_TenantableDbContextFactory_1.html", "cl": 15, "ucl": 2, "cal": 17, "tl": 68, "cb": 3, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Persistence.TenantQueryExtensions", "rp": "Nabs.Persistence_TenantQueryExtensions.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 31, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
@@ -269,7 +271,7 @@ var assemblies = [
   {
     "name": "Nabs.Tests",
     "classes": [
-      { "name": "Nabs.Tests.Fixtures.ConfigurationTestFixtureBase", "rp": "Nabs.Tests_ConfigurationTestFixtureBase.html", "cl": 24, "ucl": 0, "cal": 24, "tl": 53, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.Fixtures.ConfigurationTestFixtureBase", "rp": "Nabs.Tests_ConfigurationTestFixtureBase.html", "cl": 23, "ucl": 0, "cal": 23, "tl": 48, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.Fixtures.SimpleTestFixture", "rp": "Nabs.Tests_SimpleTestFixture.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.Fixtures.TestFixtureBase", "rp": "Nabs.Tests_TestFixtureBase.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 33, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.FixtureTestBase<T>", "rp": "Nabs.Tests_FixtureTestBase_1.html", "cl": 21, "ucl": 0, "cal": 21, "tl": 55, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -279,7 +281,7 @@ var assemblies = [
   {
     "name": "Nabs.Tests.DatabaseTests",
     "classes": [
-      { "name": "Nabs.Tests.DatabaseTests.DatabaseFixtureBase", "rp": "Nabs.Tests.DatabaseTests_DatabaseFixtureBase.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 17, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.DatabaseTests.DatabaseFixtureBase", "rp": "Nabs.Tests.DatabaseTests_DatabaseFixtureBase.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.DatabaseTests.DatabaseTestBase<T>", "rp": "Nabs.Tests.DatabaseTests_DatabaseTestBase_1.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
 ];
