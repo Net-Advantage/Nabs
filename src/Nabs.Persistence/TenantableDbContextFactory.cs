@@ -9,7 +9,10 @@ public interface ITenantableDbContextFactory<TDbContext> : IDbContextFactory<TDb
 	new TDbContext CreateDbContext();
 }
 
-public class TenantableDbContextFactory<TDbContext>(string databaseNamePrefix, IConfigurationRoot configurationRoot) : ITenantableDbContextFactory<TDbContext>
+public class TenantableDbContextFactory<TDbContext>(
+	string databaseNamePrefix, 
+	IConfigurationRoot configurationRoot) 
+	: ITenantableDbContextFactory<TDbContext>
 	where TDbContext : DbContext, ITenantableDbContext
 {
 	//TODO: DWS: This needs to be set up properly

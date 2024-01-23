@@ -43,6 +43,6 @@ public sealed class TenantIsolationStrategyUnitTest(
 			connectionString.Should().Contain($"{tenantId}");
 		}
 
-		dbContext.TenantId.Should().Be(tenantId);
+		dbContext.ApplicationContext.TenantContext.TenantId.Should().Be(tenantId);
 	}
 }

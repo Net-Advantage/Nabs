@@ -24,7 +24,7 @@ internal static class TenantQueryExtensions
 		   where TEntity : class, ITenantableEntity
 	{
 		Expression<Func<TEntity, bool>> filter = entity =>
-			EF.Property<Guid>(entity, "TenantId") == tenantableDbContext.TenantId;
+			EF.Property<Guid>(entity, "TenantId") == tenantableDbContext.ApplicationContext.TenantContext.TenantId;
 
 		return filter;
 	}

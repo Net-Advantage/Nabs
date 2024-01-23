@@ -57,7 +57,7 @@ SimpleTenantDatabaseTestFixture testFixture)
 	public async Task AddTenant_Success(SimpleTenantEntity item)
 	{
 		// Arrange
-		item.Id = _dbContext.TenantId;
+		item.Id = _dbContext.ApplicationContext.TenantContext.TenantId;
 
 		// Act
 		_dbContext.Tenants.Add(item);

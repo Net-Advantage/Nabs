@@ -52,7 +52,9 @@ public abstract class Workflow<TWorkflowState>
 	public async Task RunAsync()
 	{
 		Processed = false;
+		await OnDataLoadAsync();
 		await ProcessActivitiesAsync();
+		await OnDataPersistAsync();
 		Processed = true;
 	}
 

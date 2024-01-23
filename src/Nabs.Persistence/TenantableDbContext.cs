@@ -6,9 +6,7 @@ public abstract class TenantableDbContext<TTenantEntity>(
 	: DbContext(options), ITenantableDbContext
 	where TTenantEntity : class, ITenantEntity
 {
-	protected IApplicationContext ApplicationContext { get; } = applicationContext;
-	public Guid TenantId { get; } = applicationContext.TenantContext.TenantId;
-
+	public IApplicationContext ApplicationContext { get; } = applicationContext;
 
 	public DbSet<TTenantEntity> Tenants => Set<TTenantEntity>();
 
@@ -26,7 +24,7 @@ public abstract class TenantableDbContext<TTenantEntity>(
 			if (typeof(TTenantEntity) == entityType.ClrType)
 			{
 				Expression<Func<TTenantEntity, bool>> filter = entity =>
-					EF.Property<Guid>(entity, "Id") == TenantId;
+					EF.Property<Guid>(entity, "Id") == ApplicationContext.TenantContext.TenantId;
 
 				entityType.SetQueryFilter(filter);
 			}
