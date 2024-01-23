@@ -1,4 +1,4 @@
-﻿namespace Nabs.ActivityFramework.Abstractions;
+﻿namespace Nabs.ActivityFramework;
 
 public interface IActivityStateInitialiser<TActivityState>
     where TActivityState : class, IActivityState

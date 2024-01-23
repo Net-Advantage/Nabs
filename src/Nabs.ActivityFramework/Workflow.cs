@@ -1,4 +1,4 @@
-﻿namespace Nabs.ActivityFramework.Abstractions;
+﻿namespace Nabs.ActivityFramework;
 
 public abstract class Workflow<TWorkflowState>
 	where TWorkflowState : class, IWorkflowState

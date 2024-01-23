@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Results;
 
-namespace Nabs.ActivityFramework.Abstractions;
+namespace Nabs.ActivityFramework;
 
 public interface IActivityStateValidator<TActivityState>
     where TActivityState : class, IActivityState
