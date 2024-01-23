@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/22/2024 - 23:56:34 |
-| Coverage date: | 01/22/2024 - 23:55:45 - 01/22/2024 - 23:56:32 |
-| Parser: | MultiReport (10x Cobertura) |
-| Assemblies: | 11 |
+| Generated on: | 01/23/2024 - 00:07:01 |
+| Coverage date: | 01/23/2024 - 00:06:16 - 01/23/2024 - 00:06:58 |
+| Parser: | MultiReport (9x Cobertura) |
+| Assemblies: | 10 |
 | Classes: | 22 |
 | Files: | 22 |
 | **Line coverage:** | 95.1% (295 of 310) |
 | Covered lines: | 295 |
 | Uncovered lines: | 15 |
 | Coverable lines: | 310 |
-| Total lines: | 807 |
+| Total lines: | 806 |
 | **Branch coverage:** | 98.6% (75 of 76) |
 | Covered branches: | 75 |
 | Total branches: | 76 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 28_7618908857 |
+| Tag: | 29_7618990629 |
 
 </details>
 
@@ -37,13 +37,6 @@
 |:---|---:|---:|
 |**Nabs.AzureConfiguration**|**0%**|****|
 |Nabs.AzureConfiguration.DependencyInversionExtensions|0%||
-
-</details>
-<details><summary>Nabs.FileStorage - </summary>
-
-|**Name**|**Line**|**Branch**|
-|:---|---:|---:|
-|**Nabs.FileStorage**|****|****|
 
 </details>
 <details><summary>Nabs.OpenAi - 0%</summary>

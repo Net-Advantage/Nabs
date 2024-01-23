@@ -229,10 +229,6 @@ var assemblies = [
       { "name": "Nabs.AzureConfiguration.DependencyInversionExtensions", "rp": "Nabs.AzureConfiguration_DependencyInversionExtensions.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
-    "name": "Nabs.FileStorage",
-    "classes": [
-    ]},
-  {
     "name": "Nabs.OpenAi",
     "classes": [
       { "name": "Nabs.OpenAi.OpenAiApiClient", "rp": "Nabs.OpenAi_OpenAiApiClient.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -282,7 +278,7 @@ var assemblies = [
     "name": "Nabs.Tests.DatabaseTests",
     "classes": [
       { "name": "Nabs.Tests.DatabaseTests.DatabaseFixtureBase", "rp": "Nabs.Tests.DatabaseTests_DatabaseFixtureBase.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Tests.DatabaseTests.DatabaseTestBase<T>", "rp": "Nabs.Tests.DatabaseTests_DatabaseTestBase_1.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.DatabaseTests.DatabaseTestBase<T>", "rp": "Nabs.Tests.DatabaseTests_DatabaseTestBase_1.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 9, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
 ];
 
