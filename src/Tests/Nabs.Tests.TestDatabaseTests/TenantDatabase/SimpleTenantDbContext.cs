@@ -1,7 +1,7 @@
 ﻿namespace Nabs.Tests.TestDatabaseTests.TenantDatabase;
 
 public sealed class SimpleTenantDbContext(
-	DbContextOptions options, 
+	DbContextOptions options,
 	IApplicationContext applicationContext)
 	: TenantableDbContext<SimpleTenantEntity>(options, applicationContext)
 {

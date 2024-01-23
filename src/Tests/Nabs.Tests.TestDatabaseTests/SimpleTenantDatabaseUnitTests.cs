@@ -29,17 +29,17 @@ public class SimpleUnsetTenantDatabaseUnitTests(
 		// Act
 		_dbContext.Comments.Add(comment);
 		var action = () => _dbContext.SaveChanges();
-		
+
 		// Assert
 		action.Should().Throw<InvalidOperationException>();
 	}
 }
 
 
-	public class SimpleTenantDatabaseUnitTests(
-	ITestOutputHelper testOutputHelper,
-	SimpleTenantDatabaseTestFixture testFixture)
-	: DatabaseTestBase<SimpleTenantDatabaseTestFixture>(testOutputHelper, testFixture)
+public class SimpleTenantDatabaseUnitTests(
+ITestOutputHelper testOutputHelper,
+SimpleTenantDatabaseTestFixture testFixture)
+: DatabaseTestBase<SimpleTenantDatabaseTestFixture>(testOutputHelper, testFixture)
 {
 	private SimpleTenantDbContext _dbContext = default!;
 
@@ -91,7 +91,7 @@ public class SimpleUnsetTenantDatabaseUnitTests(
 		// Act
 		_dbContext.Comments.Add(comment);
 
-		if(overload == 1)
+		if (overload == 1)
 		{
 			_dbContext.SaveChanges();
 		}
@@ -103,7 +103,7 @@ public class SimpleUnsetTenantDatabaseUnitTests(
 		{
 			false.Should().BeTrue("Invalid overload specified");
 		}
-		
+
 		_dbContext.ChangeTracker.Clear();
 		var result = await _dbContext.Comments
 			.AsNoTracking()

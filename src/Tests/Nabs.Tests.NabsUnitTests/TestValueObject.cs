@@ -1,6 +1,6 @@
 ﻿namespace Nabs.Tests.NabsUnitTests;
 
-public class TestValueObject(string? nullableProperty) 
+public class TestValueObject(string? nullableProperty)
 	: ValueObject<TestValueObject>
 {
 	public string? NullableProperty { get; } = nullableProperty;

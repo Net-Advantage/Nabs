@@ -2,5 +2,5 @@
 
 public interface ITenantableDbContext
 {
-    public Guid TenantId { get; }
+	public Guid TenantId { get; }
 }

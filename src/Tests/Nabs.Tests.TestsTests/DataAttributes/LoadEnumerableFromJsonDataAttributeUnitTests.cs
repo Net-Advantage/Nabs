@@ -15,7 +15,7 @@ public sealed class LoadEnumerableFromJsonDataAttributeUnitTests(
 		OutputScenario(item.Scenario.ToString());
 	}
 
-	
+
 	[Fact]
 	public void LoadJsonBadTestDataWithAttribute()
 	{

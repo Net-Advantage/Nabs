@@ -3,8 +3,8 @@
 public static class DependencyInversionExtensions
 {
 	public static IServiceCollection AddTenantablePersistence<TDbContext>(
-		this IServiceCollection services, 
-		string databaseNamePrefix, 
+		this IServiceCollection services,
+		string databaseNamePrefix,
 		IConfigurationRoot configuration)
 		where TDbContext : DbContext, ITenantableDbContext
 	{

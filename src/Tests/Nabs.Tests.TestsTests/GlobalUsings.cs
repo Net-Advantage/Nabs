@@ -1,9 +1,7 @@
-global using Xunit;
-global using Nabs.Tests;
+global using CsvHelper.Configuration;
 global using FluentAssertions;
 global using Nabs.Tests.Fixtures;
-global using Xunit.Abstractions;
-global using System.Diagnostics.CodeAnalysis;
-global using CsvHelper.Configuration;
 global using System.Globalization;
+global using Xunit;
+global using Xunit.Abstractions;
 global using Xunit.Sdk;

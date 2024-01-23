@@ -9,7 +9,7 @@ public abstract class TestFixtureBase : ITestFixture
 		_diagnosticMessageSink = diagnosticMessageSink;
 	}
 
-	public ITestOutputHelper TestOutputHelper {get; set; } = default!;
+	public ITestOutputHelper TestOutputHelper { get; set; } = default!;
 
 	public abstract void Initialise();
 

@@ -2,7 +2,7 @@ namespace Nabs.Tests.TestDatabaseTests;
 
 public class SimpleDatabaseUnitTests(
 	ITestOutputHelper testOutputHelper,
-	SimpleDatabaseTestFixture testFixture) 
+	SimpleDatabaseTestFixture testFixture)
 	: DatabaseTestBase<SimpleDatabaseTestFixture>(testOutputHelper, testFixture)
 {
 	private SimpleDbContext _dbContext = default!;

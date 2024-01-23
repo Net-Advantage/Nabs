@@ -38,7 +38,7 @@ public class EmbeddedResourceLoader
 		{
 			return new Result<Stream>(new Exception("No resource info items found."));
 		}
-		else if(itemCount > 1)
+		else if (itemCount > 1)
 		{
 			return new Result<Stream>(new Exception("More than one resource info item found."));
 		}

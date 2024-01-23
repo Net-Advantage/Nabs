@@ -3,7 +3,7 @@
 internal static class TenantQueryExtensions
 {
 	public static void AddTenantEntityQueryFilter(
-		this IMutableEntityType entityType, 
+		this IMutableEntityType entityType,
 		ITenantableDbContext tenantableDbContext)
 	{
 		var tenantIdProperty = entityType.AddProperty("TenantId", typeof(Guid));

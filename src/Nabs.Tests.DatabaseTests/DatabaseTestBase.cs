@@ -1,8 +1,7 @@
-﻿
-namespace Nabs.Tests.DatabaseTests;
+﻿namespace Nabs.Tests.DatabaseTests;
 
 public abstract class DatabaseTestBase<TDatabaseFixture>(
-	ITestOutputHelper testOutputHelper, 
+	ITestOutputHelper testOutputHelper,
 	TDatabaseFixture testFixture)
 	: FixtureTestBase<TDatabaseFixture>(testOutputHelper, testFixture)
 	where TDatabaseFixture : DatabaseFixtureBase, IDatabaseFixtureBase

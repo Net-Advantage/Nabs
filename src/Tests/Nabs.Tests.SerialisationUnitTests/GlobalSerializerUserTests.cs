@@ -25,7 +25,7 @@ public sealed class GlobalSerializerUserTests : BaseSerialisationUnitTest
 	public void DeserializeTest()
 	{
 		// Arrange
-		var json = 
+		var json =
 			"""
 			{
 				"name": "Test"

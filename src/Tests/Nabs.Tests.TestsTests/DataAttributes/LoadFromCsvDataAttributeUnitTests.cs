@@ -3,7 +3,7 @@
 [Collection(nameof(SimpleTestFixtureCollection))]
 public sealed class LoadFromCsvDataAttributeUnitTests(
 	ITestOutputHelper testOutputHelper,
-	SimpleTestFixture testFixture) 
+	SimpleTestFixture testFixture)
 	: FixtureTestBase<SimpleTestFixture>(testOutputHelper, testFixture)
 {
 	[Theory]

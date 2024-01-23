@@ -16,8 +16,8 @@ public sealed class EmbeddedResourceLoaderUnitTest
 	private readonly EmbeddedResourceLoader _resourceLoader;
 
 	public EmbeddedResourceLoaderUnitTest(
-		ITestOutputHelper testOutputHelper, 
-		SimpleTestFixture testFixture) 
+		ITestOutputHelper testOutputHelper,
+		SimpleTestFixture testFixture)
 		: base(testOutputHelper, testFixture)
 	{
 		var types = new[] { typeof(EmbeddedResourceLoaderUnitTest) };
@@ -121,5 +121,5 @@ public sealed class EmbeddedResourceLoaderUnitTest
 
 		// Assert
 		result.IsFaulted.Should().BeTrue();
-	}	
+	}
 }

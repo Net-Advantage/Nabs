@@ -5,6 +5,6 @@ public class SimpleTestFixture(IMessageSink diagnosticMessageSink)
 {
 	public override void Initialise()
 	{
-		
+
 	}
 }

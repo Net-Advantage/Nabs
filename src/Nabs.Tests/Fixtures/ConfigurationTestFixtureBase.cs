@@ -1,13 +1,13 @@
 ﻿namespace Nabs.Tests.Fixtures;
 
 public abstract class ConfigurationTestFixtureBase(
-	IMessageSink diagnosticMessageSink) 
+	IMessageSink diagnosticMessageSink)
 	: TestFixtureBase(diagnosticMessageSink)
 {
 	public IConfigurationRoot ConfigurationRoot { get; private set; } = default!;
 	public IServiceProvider ServiceProvider { get; private set; } = default!;
-	public IServiceScope ServiceScope {get; private set; } = default!;
-	
+	public IServiceScope ServiceScope { get; private set; } = default!;
+
 	protected virtual void ConfigureConfiguration(IConfigurationBuilder configurationBuilder)
 	{
 

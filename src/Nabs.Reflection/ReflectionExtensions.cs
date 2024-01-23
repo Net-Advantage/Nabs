@@ -34,7 +34,7 @@ public static class ReflectionExtensions
 				?? throw new ArgumentException($"The method, '{methodName}', could not be found or parameters did not match.");
 
 		var task = methodInfo.Invoke(obj, parameters)!;
-		
+
 		await (Task)task;
 
 		var resultProperty = task.GetType().GetProperty("Result")!;

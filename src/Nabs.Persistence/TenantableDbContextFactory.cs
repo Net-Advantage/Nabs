@@ -47,7 +47,7 @@ public class TenantableDbContextFactory<TDbContext>(string databaseNamePrefix, I
 
 		var optionsBuilder = new DbContextOptionsBuilder<TDbContext>();
 		optionsBuilder.UseSqlServer(connectionString);
-		
+
 		var options = optionsBuilder
 			.Options;
 

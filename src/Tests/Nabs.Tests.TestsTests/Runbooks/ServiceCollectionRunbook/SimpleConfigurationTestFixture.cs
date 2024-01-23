@@ -1,7 +1,7 @@
 ﻿namespace Nabs.Tests.TestsTests.Runbooks.TestWithConfiguration;
 
 public sealed class SimpleConfigurationTestFixture(
-	IMessageSink diagnosticMessageSink) 
+	IMessageSink diagnosticMessageSink)
 	: ConfigurationTestFixtureBase(diagnosticMessageSink)
 {
 }

@@ -6,6 +6,6 @@ public class AzureConfigurationTestFixture(IMessageSink diagnosticMessageSink)
 {
 	public override void Initialise()
 	{
-		
+
 	}
 }

@@ -1,5 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using Testcontainers.MsSql;
+﻿using Testcontainers.MsSql;
 using Xunit.Sdk;
 
 [assembly: Xunit.TestFramework("Nabs.Tests.TestDatabaseTests.RunOnce", "Nabs.Tests.TestDatabaseTests")]
