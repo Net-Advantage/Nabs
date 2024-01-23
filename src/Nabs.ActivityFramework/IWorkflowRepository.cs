@@ -4,6 +4,6 @@ public interface IWorkflowRepository<TRepositoryParameters, TWorkflowState>
     where TRepositoryParameters : class, IWorkflowParameters
     where TWorkflowState : class, IWorkflowState
 {
-    Task<TWorkflowState> Load(TRepositoryParameters parameters);
-    Task Persist(TWorkflowState workflowState);
+    Task<Result<TWorkflowState>> LoadAsync(TRepositoryParameters parameters);
+    Task<Result<bool>> PersistAsync(TWorkflowState workflowState);
 }

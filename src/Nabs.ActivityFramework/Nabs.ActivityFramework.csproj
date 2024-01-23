@@ -10,4 +10,8 @@
 		<PackageReference Include="FluentValidation" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Nabs\Nabs.csproj" />
+	</ItemGroup>
+
 </Project>
