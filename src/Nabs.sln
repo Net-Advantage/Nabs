@@ -46,6 +46,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		Directory.Packages.props = Directory.Packages.props
 		nuget.config = nuget.config
 		..\props\NuGet.props = ..\props\NuGet.props
+		xunit.runner.json = xunit.runner.json
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Scenarios", "Nabs.Scenarios\Nabs.Scenarios.csproj", "{AA254BFB-CE73-4522-A111-3448873B4B33}"
@@ -70,7 +71,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Persistence", "Nabs.Pe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.ActivityFramework", "Nabs.ActivityFramework\Nabs.ActivityFramework.csproj", "{E60155B1-8DA8-40D7-9464-BC68F5E5D089}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Tests.ActivityFrameworkUnitTests", "Tests\Nabs.Tests.ActivityFrameworkUnitTests\Nabs.Tests.ActivityFrameworkUnitTests.csproj", "{278D0519-02B5-43AA-B562-F69DB8662981}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests.ActivityFrameworkUnitTests", "Tests\Nabs.Tests.ActivityFrameworkUnitTests\Nabs.Tests.ActivityFrameworkUnitTests.csproj", "{278D0519-02B5-43AA-B562-F69DB8662981}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

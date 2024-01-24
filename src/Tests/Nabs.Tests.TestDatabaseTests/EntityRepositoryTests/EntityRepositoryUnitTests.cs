@@ -14,27 +14,41 @@ public sealed class EntityRepositoryUnitTests(
 		await dbContext.Database.EnsureDeletedAsync();
 		await dbContext.Database.EnsureCreatedAsync();
 
-		var item = new AllTypesEntity()
+		var items = new List<AllTypesEntity>()
 		{
-			StringColumn = "First",
+			new()
+			{
+				StringColumn = "First"
+			},
+			new()
+			{
+				StringColumn = "Second"
+			},
+			new()
+			{
+				StringColumn = "Third"
+			},
 		};
-		dbContext.AllTypesEntities.Add(item);
+		dbContext.AllTypesEntities.AddRange(items);
 		await dbContext.SaveChangesAsync();
 	}
 
-	[Fact]
-	public async Task GetFirstAsync_WithSpecification_ReturnsFirstEntity()
+	[Theory]
+	[InlineData("First")]
+	[InlineData("Second")]
+	[InlineData("Third")]
+	public async Task GetAllTypesDto_WithSpecification_ReturnsFirstEntity(string stringColumnValue)
 	{
 		// Arrange
 		SimpleDbContext dbContext = _dbContextFactory.CreateDbContext();
 		var repository = new EntityRepository<AllTypesEntity>(dbContext);
-		var specification = new GetFirstAllTypesDtoSpecification();
+		var specification = new GetAllTypesDtoSpecification(stringColumnValue);
 
 		// Act
 		var result = await repository.FirstOrDefaultAsync(specification);
 
 		// Assert
 		Assert.NotNull(result);
-		Assert.Equal("First", result.StringColumn);
+		Assert.Equal(stringColumnValue, result.StringColumn);
 	}
 }

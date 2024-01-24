@@ -8,6 +8,10 @@
 		<IsTestProject>true</IsTestProject>
 		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
 	</PropertyGroup>
+	
+	<ItemGroup>
+	  <None Include="..\..\xunit.runner.json" Link="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<None Remove="Resources\001.MultiTestEmbeddedResource.txt" />

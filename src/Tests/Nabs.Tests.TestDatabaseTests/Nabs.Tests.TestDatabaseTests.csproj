@@ -8,13 +8,18 @@
 		<IsTestProject>true</IsTestProject>
 		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
 	</PropertyGroup>
+	
+	<ItemGroup>
+	  <None Include="..\..\xunit.runner.json" Link="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+
 
 	<ItemGroup>
 		<None Remove="appsettings.json" />
 		<None Remove="DataResources\AllTypesEntityItems.json" />
 		<None Remove="DataResources\SimpleTenantEntityItems.json" />
 	</ItemGroup>
-
+	
 	<ItemGroup>
 		<Content Include="appsettings.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -28,7 +33,6 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.NET.Test.Sdk" />
-		<PackageReference Include="Testcontainers.MsSql" />
 		<PackageReference Include="xunit" />
 		<PackageReference Include="xunit.runner.visualstudio">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -44,12 +48,6 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\Nabs.Tests.DatabaseTests\Nabs.Tests.DatabaseTests.csproj" />
 		<ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Update="xunit.runner.json">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
 	</ItemGroup>
 
 </Project>

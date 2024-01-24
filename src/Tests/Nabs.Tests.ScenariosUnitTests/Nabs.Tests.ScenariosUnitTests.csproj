@@ -9,6 +9,10 @@
 		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
 		<UserSecretsId>43c3415f-65a8-4cc9-8a0f-8a20b5cd1afc</UserSecretsId>
 	</PropertyGroup>
+	
+	<ItemGroup>
+	  <None Include="..\..\xunit.runner.json" Link="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.NET.Test.Sdk" />
