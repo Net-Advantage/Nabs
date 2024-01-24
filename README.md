@@ -1,3 +1,6 @@
+[![Coverage](https://img.shields.io/badge/Coverage-Latest-blue)](https://net-advantage.github.io/Nabs/coverage)
+
+
 # What is Nabs?
 Net Advantage Business Solutions Core Libraries.
 
