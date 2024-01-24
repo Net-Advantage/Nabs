@@ -69,7 +69,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.ActivityFramework", "N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests.ActivityFrameworkUnitTests", "Tests\Nabs.Tests.ActivityFrameworkUnitTests\Nabs.Tests.ActivityFrameworkUnitTests.csproj", "{278D0519-02B5-43AA-B562-F69DB8662981}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Tests.Identity.WebUnitTests", "tests\Nabs.Tests.Identity.WebUnitTests\Nabs.Tests.Identity.WebUnitTests.csproj", "{6BD41D5E-0A77-4489-9BD8-2FFDDC70EE57}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Tests.Identity.WebUnitTests", "Tests\Nabs.Tests.Identity.WebUnitTests\Nabs.Tests.Identity.WebUnitTests.csproj", "{6BD41D5E-0A77-4489-9BD8-2FFDDC70EE57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
