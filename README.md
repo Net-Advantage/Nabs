@@ -1,4 +1,4 @@
-<a href="https://net-advantage.github.io/Nabs/coverage/" target="_blank"><img src="https://img.shields.io/badge/coverage-90%25-brightgreen" alt="Coverage"></a>
+<a href="https://net-advantage.github.io/Nabs/coverage/" target="_blank"><img src="https://img.shields.io/badge/Code-Coverage-brightgreen" alt="Coverage"></a>
 
 # What is Nabs?
 Net Advantage Business Solutions Core Libraries.
@@ -8,8 +8,6 @@ These libraries are made available to customers of Net Advantage Business Soluti
 We believe that software development teams' primary objective is to solve address business requirements. Some form of work is required to solve technical challenges, but this should be minimised.
 
 The primary purpose of this repo is to provide a set of opinionated libraries to development teams in order to abstract away the technical aspects that do not contribute directly to addressing the business requirements.
-
-[Nabs Code Coverage](https://net-advantage.github.io/Nabs/coverage)
 
 ## In this repository
 
