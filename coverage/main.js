@@ -229,6 +229,11 @@ var assemblies = [
       { "name": "Nabs.AzureConfiguration.DependencyInversionExtensions", "rp": "Nabs.AzureConfiguration_DependencyInversionExtensions.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
+    "name": "Nabs.Identity.Web",
+    "classes": [
+      { "name": "Nabs.Scenarios.DependencyInversionExtensions", "rp": "Nabs.Identity.Web_DependencyInversionExtensions.html", "cl": 0, "ucl": 26, "cal": 26, "tl": 37, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+    ]},
+  {
     "name": "Nabs.OpenAi",
     "classes": [
       { "name": "Nabs.OpenAi.OpenAiApiClient", "rp": "Nabs.OpenAi_OpenAiApiClient.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },

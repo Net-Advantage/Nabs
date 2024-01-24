@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/24/2024 - 20:56:52 |
-| Coverage date: | 01/24/2024 - 20:56:03 - 01/24/2024 - 20:56:50 |
-| Parser: | MultiReport (10x Cobertura) |
-| Assemblies: | 10 |
-| Classes: | 24 |
-| Files: | 24 |
-| **Line coverage:** | 93.6% (325 of 347) |
+| Generated on: | 01/24/2024 - 21:28:32 |
+| Coverage date: | 01/24/2024 - 21:27:48 - 01/24/2024 - 21:28:30 |
+| Parser: | MultiReport (11x Cobertura) |
+| Assemblies: | 11 |
+| Classes: | 25 |
+| Files: | 25 |
+| **Line coverage:** | 87.1% (325 of 373) |
 | Covered lines: | 325 |
-| Uncovered lines: | 22 |
-| Coverable lines: | 347 |
-| Total lines: | 887 |
+| Uncovered lines: | 48 |
+| Coverable lines: | 373 |
+| Total lines: | 924 |
 | **Branch coverage:** | 97.5% (80 of 82) |
 | Covered branches: | 80 |
 | Total branches: | 82 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 42_7646123190 |
+| Tag: | 45_7646456003 |
 
 </details>
 
@@ -37,6 +37,14 @@
 |:---|---:|---:|
 |**Nabs.AzureConfiguration**|**0%**|****|
 |Nabs.AzureConfiguration.DependencyInversionExtensions|0%||
+
+</details>
+<details><summary>Nabs.Identity.Web - 0%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.Identity.Web**|**0%**|****|
+|Nabs.Scenarios.DependencyInversionExtensions|0%||
 
 </details>
 <details><summary>Nabs.OpenAi - 0%</summary>
