@@ -6,7 +6,7 @@ These libraries are made available to customers of Net Advantage Business Soluti
 We believe that software development teams' primary objective is to address business needs. In order to do this certain technical 
 The primary pupose is to provide a set of opinionated libraries to development teams in order to get them solving business challenges rather than working out how to approach aspects of their technical projects.
 
-[Nabs Code Coverage](https://net-advantage.github.io/nabs/coverage)
+[Nabs Code Coverage](https://net-advantage.github.io/Nabs/coverage)
 
 ## In this repository
 
