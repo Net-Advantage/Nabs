@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/24/2024 - 04:23:28 |
-| Coverage date: | 01/24/2024 - 04:22:45 - 01/24/2024 - 04:23:26 |
+| Generated on: | 01/24/2024 - 07:22:07 |
+| Coverage date: | 01/24/2024 - 07:21:26 - 01/24/2024 - 07:22:05 |
 | Parser: | MultiReport (10x Cobertura) |
 | Assemblies: | 10 |
-| Classes: | 22 |
-| Files: | 22 |
-| **Line coverage:** | 95.1% (294 of 309) |
-| Covered lines: | 294 |
+| Classes: | 23 |
+| Files: | 23 |
+| **Line coverage:** | 95.1% (296 of 311) |
+| Covered lines: | 296 |
 | Uncovered lines: | 15 |
-| Coverable lines: | 309 |
-| Total lines: | 808 |
+| Coverable lines: | 311 |
+| Total lines: | 820 |
 | **Branch coverage:** | 98.6% (75 of 76) |
 | Covered branches: | 75 |
 | Total branches: | 76 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 37_7635473882 |
+| Tag: | 38_7636815120 |
 
 </details>
 
@@ -47,13 +47,14 @@
 |Nabs.OpenAi.OpenAiApiClient|0%||
 
 </details>
-<details><summary>Nabs.Persistence - 96.6%</summary>
+<details><summary>Nabs.Persistence - 96.7%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Persistence**|**96.6%**|**95.4%**|
+|**Nabs.Persistence**|**96.7%**|**95.4%**|
 |Nabs.Persistence.BaseDbContext|100%||
 |Nabs.Persistence.DependencyInversionExtensions|100%||
+|Nabs.Persistence.EntityRepository`1|100%||
 |Nabs.Persistence.TenantableDbContext`1|100%|100%|
 |Nabs.Persistence.TenantableDbContextFactory`1|87.5%|75%|
 |Nabs.Persistence.TenantQueryExtensions|100%||
