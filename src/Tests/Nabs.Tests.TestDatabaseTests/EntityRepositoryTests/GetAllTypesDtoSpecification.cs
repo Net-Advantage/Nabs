@@ -1,6 +1,6 @@
 ﻿namespace Nabs.Tests.TestDatabaseTests.EntityRepositoryTests;
 
-public sealed class GetFirstAllTypesDtoSpecification 
+public sealed class GetFirstAllTypesDtoSpecification
 	: Specification<AllTypesEntity, AllTypesDto>
 {
 	public GetFirstAllTypesDtoSpecification()

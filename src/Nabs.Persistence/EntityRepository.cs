@@ -5,7 +5,7 @@ public sealed class EntityRepository<TEntity> : RepositoryBase<TEntity>
 	where TEntity : class
 {
 	public EntityRepository(
-		DbContext dbContext) 
+		DbContext dbContext)
 		: base(dbContext)
 	{
 	}

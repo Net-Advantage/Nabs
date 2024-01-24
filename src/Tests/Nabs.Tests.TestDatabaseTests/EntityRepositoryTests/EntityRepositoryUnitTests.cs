@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Internal;
-
-namespace Nabs.Tests.TestDatabaseTests.EntityRepositoryTests;
+﻿namespace Nabs.Tests.TestDatabaseTests.EntityRepositoryTests;
 
 public sealed class EntityRepositoryUnitTests(
 	ITestOutputHelper testOutputHelper,

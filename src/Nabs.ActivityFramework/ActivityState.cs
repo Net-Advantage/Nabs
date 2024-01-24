@@ -2,10 +2,10 @@
 
 public interface IActivityState
 {
-    Guid Id { get; set; }
+	Guid Id { get; set; }
 }
 
 public abstract record ActivityState : IActivityState
 {
-    public Guid Id { get; set; }
+	public Guid Id { get; set; }
 }

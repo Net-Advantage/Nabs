@@ -1,7 +1,7 @@
 ﻿namespace Nabs.ActivityFramework;
 
 public interface IActivityStateBehaviour<TActivityState>
-    where TActivityState : class, IActivityState
+	where TActivityState : class, IActivityState
 {
-    Task<TActivityState> RunAsync(TActivityState activityState);
+	Task<TActivityState> RunAsync(TActivityState activityState);
 }

@@ -32,13 +32,13 @@ public sealed class TenantIsolationStrategyUnitTest(
 		var connectionString = dbContext.Database.GetConnectionString()!;
 
 		// Assert
-		if(tenantIsolationStrategy == TenantIsolationStrategy.SharedShared)
-		{ 
+		if (tenantIsolationStrategy == TenantIsolationStrategy.SharedShared)
+		{
 			connectionString.Should().Contain($"Database=SimpleTenantDb_SharedShared");
 			connectionString.Should().NotContain($"{tenantId}");
 		}
 		else
-		{ 
+		{
 			connectionString.Should().Contain($"Database=SimpleTenantDb_{tenantIsolationStrategy}");
 			connectionString.Should().Contain($"{tenantId}");
 		}

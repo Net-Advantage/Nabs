@@ -95,7 +95,7 @@ public abstract class Activity<
 	}
 	public virtual async Task ProcessBehaviours()
 	{
-		if(ActivityState is null)
+		if (ActivityState is null)
 		{
 			return;
 		}

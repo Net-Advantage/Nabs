@@ -1,9 +1,9 @@
 ﻿namespace Nabs.ActivityFramework;
 
 public interface IActivityStateInitialiser<TActivityState>
-    where TActivityState : class, IActivityState
+	where TActivityState : class, IActivityState
 {
-    Task<TActivityState> RunAsync();
+	Task<TActivityState> RunAsync();
 };
 
 
@@ -12,8 +12,8 @@ public interface IActivityStateInitialiser<TActivityState>
 /// </summary>
 /// <typeparam name="TActivityState"></typeparam>
 public abstract class ActivityStateInitialiser<TActivityState>
-    : IActivityStateInitialiser<TActivityState>
-    where TActivityState : class, IActivityState
+	: IActivityStateInitialiser<TActivityState>
+	where TActivityState : class, IActivityState
 {
-    public abstract Task<TActivityState> RunAsync();
+	public abstract Task<TActivityState> RunAsync();
 }

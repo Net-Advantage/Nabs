@@ -10,8 +10,8 @@ public interface ITenantableDbContextFactory<TDbContext> : IDbContextFactory<TDb
 }
 
 public class TenantableDbContextFactory<TDbContext>(
-	string databaseNamePrefix, 
-	IConfigurationRoot configurationRoot) 
+	string databaseNamePrefix,
+	IConfigurationRoot configurationRoot)
 	: ITenantableDbContextFactory<TDbContext>
 	where TDbContext : DbContext, ITenantableDbContext
 {
