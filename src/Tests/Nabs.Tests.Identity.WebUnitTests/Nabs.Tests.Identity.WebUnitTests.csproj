@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="../../../props/Directory.Build.props" />
+	<Import Project="../../../props/Directory.Build.props" />
 
 	<PropertyGroup>
 		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
@@ -9,9 +9,9 @@
 		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
 		<UserSecretsId>43c3415f-65a8-4cc9-8a0f-8a20b5cd1afc</UserSecretsId>
 	</PropertyGroup>
-	
+
 	<ItemGroup>
-	  <None Include="..\..\xunit.runner.json" Link="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="..\..\xunit.runner.json" Link="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -28,7 +28,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Nabs.Identity.Web\Nabs.Identity.Web.csproj" />
+		<ProjectReference Include="..\..\Nabs.Identity.Web\Nabs.Identity.Web.csproj" />
 	</ItemGroup>
 
 </Project>

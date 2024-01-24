@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests.NabsUnitTests", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests", "Nabs.Tests\Nabs.Tests.csproj", "{F4A554DF-E484-4BC1-99FB-7AEA7FFFE23F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Secrets", "Nabs.Secrets\Nabs.Secrets.csproj", "{D509A5ED-3A72-425C-AC53-CA3BA386E263}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.AzureConfiguration", "Nabs.AzureConfiguration\Nabs.AzureConfiguration.csproj", "{E4BA855F-CF05-4191-B240-12FA3E68E2A3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests.AzureConfigurationTests", "Tests\Nabs.Tests.AzureConfigurationTests\Nabs.Tests.AzureConfigurationTests.csproj", "{1068E27B-5995-4622-A702-FFAC7B072F20}"
@@ -22,8 +20,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{A4BF6906-CD5C-418D-9AB3-E4CC6589FC0A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Resources", "Nabs.Resources\Nabs.Resources.csproj", "{4976201B-F5C9-444E-9DC0-A90FBCE683F7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Linq", "Nabs.Linq\Nabs.Linq.csproj", "{23A3F9D1-66BA-4778-811D-E57007664DDC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenAi", "OpenAi", "{FA0EF1BA-8273-4376-84AB-E995208318A5}"
 EndProject
@@ -93,10 +89,6 @@ Global
 		{F4A554DF-E484-4BC1-99FB-7AEA7FFFE23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4A554DF-E484-4BC1-99FB-7AEA7FFFE23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4A554DF-E484-4BC1-99FB-7AEA7FFFE23F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D509A5ED-3A72-425C-AC53-CA3BA386E263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D509A5ED-3A72-425C-AC53-CA3BA386E263}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D509A5ED-3A72-425C-AC53-CA3BA386E263}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D509A5ED-3A72-425C-AC53-CA3BA386E263}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E4BA855F-CF05-4191-B240-12FA3E68E2A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E4BA855F-CF05-4191-B240-12FA3E68E2A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4BA855F-CF05-4191-B240-12FA3E68E2A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -113,10 +105,6 @@ Global
 		{4976201B-F5C9-444E-9DC0-A90FBCE683F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4976201B-F5C9-444E-9DC0-A90FBCE683F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4976201B-F5C9-444E-9DC0-A90FBCE683F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23A3F9D1-66BA-4778-811D-E57007664DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23A3F9D1-66BA-4778-811D-E57007664DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23A3F9D1-66BA-4778-811D-E57007664DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23A3F9D1-66BA-4778-811D-E57007664DDC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11FD4731-CC4F-4CFA-87A3-B29499A59348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11FD4731-CC4F-4CFA-87A3-B29499A59348}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11FD4731-CC4F-4CFA-87A3-B29499A59348}.Release|Any CPU.ActiveCfg = Release|Any CPU
