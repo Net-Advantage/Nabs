@@ -1,5 +1,4 @@
-[![Coverage](https://img.shields.io/badge/Coverage-Latest-blue)](https://net-advantage.github.io/Nabs/coverage)
-
+<a href="https://net-advantage.github.io/Nabs/coverage/" target="_blank"><img src="https://img.shields.io/badge/coverage-90%25-brightgreen" alt="Coverage"></a>
 
 # What is Nabs?
 Net Advantage Business Solutions Core Libraries.
@@ -27,8 +26,8 @@ This repository is mostly compose of Services, Abstractions and Extensions to he
 - Nabs.Scenarios - abstractions to supports business application scenarios.
 - Nabs.Secrets - abstractions for secret management.
 - Nabs.Serialisation - abstractions to supports serialisation.
-- Nabs.Tests - core abstractions to supports xUnit testing.
-- Nabs.Tests.DatabaseTests - core abstractions to supports xUnit testing with a database.
+- Nabs.Tests - abstractions to supports xUnit testing.
+- Nabs.Tests.DatabaseTests - abstractions to supports xUnit testing with a database.
 
 > All of these packages are a work in progress and will continue to change as we learn more about the best way to implement them.
 

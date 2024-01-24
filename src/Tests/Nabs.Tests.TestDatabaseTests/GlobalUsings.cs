@@ -1,3 +1,4 @@
+global using Ardalis.Specification;
 global using FluentAssertions;
 global using Microsoft.Data.Sqlite;
 global using Microsoft.EntityFrameworkCore;
