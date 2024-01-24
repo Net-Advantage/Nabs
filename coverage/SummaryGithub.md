@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/24/2024 - 08:49:38 |
-| Coverage date: | 01/24/2024 - 08:48:56 - 01/24/2024 - 08:49:36 |
+| Generated on: | 01/24/2024 - 20:56:52 |
+| Coverage date: | 01/24/2024 - 20:56:03 - 01/24/2024 - 20:56:50 |
 | Parser: | MultiReport (10x Cobertura) |
 | Assemblies: | 10 |
-| Classes: | 23 |
-| Files: | 23 |
-| **Line coverage:** | 95.1% (296 of 311) |
-| Covered lines: | 296 |
-| Uncovered lines: | 15 |
-| Coverable lines: | 311 |
-| Total lines: | 820 |
-| **Branch coverage:** | 98.6% (75 of 76) |
-| Covered branches: | 75 |
-| Total branches: | 76 |
+| Classes: | 24 |
+| Files: | 24 |
+| **Line coverage:** | 93.6% (325 of 347) |
+| Covered lines: | 325 |
+| Uncovered lines: | 22 |
+| Coverable lines: | 347 |
+| Total lines: | 887 |
+| **Branch coverage:** | 97.5% (80 of 82) |
+| Covered branches: | 80 |
+| Total branches: | 82 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 41_7637626157 |
+| Tag: | 42_7646123190 |
 
 </details>
 
@@ -47,11 +47,11 @@
 |Nabs.OpenAi.OpenAiApiClient|0%||
 
 </details>
-<details><summary>Nabs.Persistence - 96.7%</summary>
+<details><summary>Nabs.Persistence - 96.6%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Persistence**|**96.7%**|**95.4%**|
+|**Nabs.Persistence**|**96.6%**|**95.4%**|
 |Nabs.Persistence.BaseDbContext|100%||
 |Nabs.Persistence.DependencyInversionExtensions|100%||
 |Nabs.Persistence.EntityRepository`1|100%||
@@ -107,11 +107,12 @@
 |Nabs.Tests.LoadFromCsvDataAttribute`1|100%|100%|
 
 </details>
-<details><summary>Nabs.Tests.DatabaseTests - 100%</summary>
+<details><summary>Nabs.Tests.DatabaseTests - 82%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Tests.DatabaseTests**|**100%**|****|
+|**Nabs.Tests.DatabaseTests**|**82%**|**83.3%**|
+|Nabs.Tests.DatabaseTests.DatabaseContainerRunOnce|81%|83.3%|
 |Nabs.Tests.DatabaseTests.DatabaseFixtureBase|100%||
 |Nabs.Tests.DatabaseTests.DatabaseTestBase`1|100%||
 
