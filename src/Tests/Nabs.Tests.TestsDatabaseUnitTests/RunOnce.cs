@@ -1,1 +1,3 @@
-﻿[assembly: Xunit.TestFramework(DatabaseContainerRunOnce.RunOnceFqn, DatabaseContainerRunOnce.RunOnceAssemblyName)]
+﻿[assembly: Xunit.TestFramework(
+	DatabaseContainerRunOnce.RunOnceFqn, 
+	DatabaseContainerRunOnce.RunOnceAssemblyName)]

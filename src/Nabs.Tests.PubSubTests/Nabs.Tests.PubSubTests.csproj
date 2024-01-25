@@ -21,6 +21,7 @@
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
 		<PackageReference Include="Testcontainers.Kafka" />
+		<PackageReference Include="Confluent.Kafka" />
 	</ItemGroup>
 
 	<ItemGroup>

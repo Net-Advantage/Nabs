@@ -1,19 +1,21 @@
 ﻿namespace Nabs.Tests.PubSubTests;
 
-public sealed class KafkaContainerRunOnce : XunitTestFramework, IDisposable
+public sealed class KafkaPubSubContainerRunOnce : XunitTestFramework, IDisposable
 {
-	public const string RunOnceFqn = "Nabs.Tests.PubSubTests.KafkaContainerRunOnce";
+	public const string RunOnceFqn = "Nabs.Tests.PubSubTests.KafkaPubSubContainerRunOnce";
 	public const string RunOnceAssemblyName = "Nabs.Tests.PubSubTests";
 
 	private readonly KafkaContainer _container;
 
-	public KafkaContainerRunOnce(IMessageSink messageSink)
+	public KafkaPubSubContainerRunOnce(IMessageSink messageSink)
 		: base(messageSink)
 	{
 		DiagnosticMessageSink.OnMessage(new DiagnosticMessage("Kafka Container starting ..."));
 
 		_container = new KafkaBuilder()
 			.WithImage("confluentinc/cp-kafka:6.2.10")
+			.WithName("nabs-test-pubsub-kafka")
+			.WithPortBinding(9092, 9092)
 			.Build();
 		
 		_container.StartAsync().GetAwaiter().GetResult();
