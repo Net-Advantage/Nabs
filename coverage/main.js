@@ -226,7 +226,7 @@ var assemblies = [
   {
     "name": "Nabs.ActivityFramework",
     "classes": [
-      { "name": "Nabs.ActivityFramework.Activity<T>", "rp": "Nabs.ActivityFramework_Activity_1.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 112, "cb": 0, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.Activity<T>", "rp": "Nabs.ActivityFramework_Activity_1.html", "cl": 3, "ucl": 3, "cal": 6, "tl": 112, "cb": 3, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.Activity<T1, T2, T3>", "rp": "Nabs.ActivityFramework_Activity_3.html", "cl": 0, "ucl": 25, "cal": 25, "tl": 112, "cb": 0, "tb": 12, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.ActivityState", "rp": "Nabs.ActivityFramework_ActivityState.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.ActivityStateValidator<T>", "rp": "Nabs.ActivityFramework_ActivityStateValidator_1.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 25, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
