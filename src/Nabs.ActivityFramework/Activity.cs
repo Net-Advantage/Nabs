@@ -14,7 +14,7 @@ public interface IActivity<TActivityState>
 /// <summary>
 /// An activity that holds the state based on TActivityState.
 /// An activity that simply creates and instance of the state defined by TActivityState.
-/// It seems useless to have this, but I know we are going to use it - you'll see!
+/// Typically this state is used to start off a workflow that will present blank or partially filled state.
 /// </summary>
 /// <typeparam name="TActivityState"></typeparam>
 public abstract class Activity<
