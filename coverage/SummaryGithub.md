@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/25/2024 - 08:40:25 |
-| Coverage date: | 01/25/2024 - 08:39:41 - 01/25/2024 - 08:40:23 |
-| Parser: | MultiReport (11x Cobertura) |
-| Assemblies: | 12 |
-| Classes: | 32 |
-| Files: | 31 |
-| **Line coverage:** | 76.3% (356 of 466) |
+| Generated on: | 01/25/2024 - 09:54:34 |
+| Coverage date: | 01/25/2024 - 09:53:50 - 01/25/2024 - 09:54:32 |
+| Parser: | MultiReport (12x Cobertura) |
+| Assemblies: | 13 |
+| Classes: | 33 |
+| Files: | 32 |
+| **Line coverage:** | 74.3% (356 of 479) |
 | Covered lines: | 356 |
-| Uncovered lines: | 110 |
-| Coverable lines: | 466 |
-| Total lines: | 1225 |
+| Uncovered lines: | 123 |
+| Coverable lines: | 479 |
+| Total lines: | 1255 |
 | **Branch coverage:** | 74.1% (83 of 112) |
 | Covered branches: | 83 |
 | Total branches: | 112 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 47_7651904565 |
+| Tag: | 49_7652736102 |
 
 </details>
 
@@ -137,5 +137,13 @@
 |Nabs.Tests.DatabaseTests.DatabaseContainerRunOnce|81%|83.3%|
 |Nabs.Tests.DatabaseTests.DatabaseFixtureBase|100%||
 |Nabs.Tests.DatabaseTests.DatabaseTestBase`1|100%||
+
+</details>
+<details><summary>Nabs.Tests.PubSubTests - 0%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.Tests.PubSubTests**|**0%**|****|
+|Nabs.Tests.PubSubTests.KafkaContainerRunOnce|0%||
 
 </details>

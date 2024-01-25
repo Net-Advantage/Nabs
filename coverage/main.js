@@ -298,6 +298,11 @@ var assemblies = [
       { "name": "Nabs.Tests.DatabaseTests.DatabaseFixtureBase", "rp": "Nabs.Tests.DatabaseTests_DatabaseFixtureBase.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.DatabaseTests.DatabaseTestBase<T>", "rp": "Nabs.Tests.DatabaseTests_DatabaseTestBase_1.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 9, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
+  {
+    "name": "Nabs.Tests.PubSubTests",
+    "classes": [
+      { "name": "Nabs.Tests.PubSubTests.KafkaContainerRunOnce", "rp": "Nabs.Tests.PubSubTests_KafkaContainerRunOnce.html", "cl": 0, "ucl": 13, "cal": 13, "tl": 30, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+    ]},
 ];
 
 var metrics = [{ "name": "Cyclomatic complexity", "abbreviation": "cc", "explanationUrl": "https://en.wikipedia.org/wiki/Cyclomatic_complexity" }, { "name": "Line coverage", "abbreviation": "cov", "explanationUrl": "https://en.wikipedia.org/wiki/Code_coverage" }, { "name": "Branch coverage", "abbreviation": "bcov", "explanationUrl": "https://en.wikipedia.org/wiki/Code_coverage" }];
