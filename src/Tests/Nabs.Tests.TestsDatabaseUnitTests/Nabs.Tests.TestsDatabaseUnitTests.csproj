@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="../../../props/Directory.Build.props" />
+
+	<PropertyGroup>
+		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
+		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
+	</PropertyGroup>
+	
+	<ItemGroup>
+	  <None Include="..\..\xunit.runner.json" Link="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<None Remove="appsettings.json" />
+		<None Remove="DataResources\SimpleTenantEntityItems.json" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Content Include="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="DataResources\SimpleTenantEntityItems.json" />
+	  <EmbeddedResource Include="DataResources\AllTypesEntityItems.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" />
+		<PackageReference Include="xunit" />
+		<PackageReference Include="xunit.runner.visualstudio">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="coverlet.collector">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Nabs.Tests.DatabaseTests\Nabs.Tests.DatabaseTests.csproj" />
+		<ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
+	</ItemGroup>
+
+</Project>
