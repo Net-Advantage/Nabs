@@ -224,6 +224,17 @@ var assemblies = [
       { "name": "Nabs.ValueObject<T>", "rp": "Nabs_ValueObject_1.html", "cl": 23, "ucl": 0, "cal": 23, "tl": 55, "cb": 20, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
+    "name": "Nabs.ActivityFramework",
+    "classes": [
+      { "name": "Nabs.ActivityFramework.Activity<T>", "rp": "Nabs.ActivityFramework_Activity_1.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 112, "cb": 0, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.Activity<T1, T2, T3>", "rp": "Nabs.ActivityFramework_Activity_3.html", "cl": 0, "ucl": 25, "cal": 25, "tl": 112, "cb": 0, "tb": 12, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.ActivityState", "rp": "Nabs.ActivityFramework_ActivityState.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.ActivityStateValidator<T>", "rp": "Nabs.ActivityFramework_ActivityStateValidator_1.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 25, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.UiManifest.ActivityStateUiManifest<T>", "rp": "Nabs.ActivityFramework_ActivityStateUiManifest_1.html", "cl": 27, "ucl": 0, "cal": 27, "tl": 70, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.UiManifest.UiManifestResult", "rp": "Nabs.ActivityFramework_UiManifestResult.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.Workflow<T>", "rp": "Nabs.ActivityFramework_Workflow_1.html", "cl": 0, "ucl": 26, "cal": 26, "tl": 69, "cb": 0, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+    ]},
+  {
     "name": "Nabs.AzureConfiguration",
     "classes": [
       { "name": "Nabs.AzureConfiguration.DependencyInversionExtensions", "rp": "Nabs.AzureConfiguration_DependencyInversionExtensions.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },

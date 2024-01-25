@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/24/2024 - 21:28:32 |
-| Coverage date: | 01/24/2024 - 21:27:48 - 01/24/2024 - 21:28:30 |
+| Generated on: | 01/25/2024 - 05:22:31 |
+| Coverage date: | 01/25/2024 - 05:21:43 - 01/25/2024 - 05:22:29 |
 | Parser: | MultiReport (11x Cobertura) |
-| Assemblies: | 11 |
-| Classes: | 25 |
-| Files: | 25 |
-| **Line coverage:** | 87.1% (325 of 373) |
-| Covered lines: | 325 |
-| Uncovered lines: | 48 |
-| Coverable lines: | 373 |
-| Total lines: | 924 |
-| **Branch coverage:** | 97.5% (80 of 82) |
+| Assemblies: | 12 |
+| Classes: | 32 |
+| Files: | 31 |
+| **Line coverage:** | 75.7% (353 of 466) |
+| Covered lines: | 353 |
+| Uncovered lines: | 113 |
+| Coverable lines: | 466 |
+| Total lines: | 1225 |
+| **Branch coverage:** | 71.4% (80 of 112) |
 | Covered branches: | 80 |
-| Total branches: | 82 |
+| Total branches: | 112 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 45_7646456003 |
+| Tag: | 46_7650242217 |
 
 </details>
 
@@ -29,6 +29,20 @@
 |:---|---:|---:|
 |**Nabs**|**100%**|**100%**|
 |Nabs.ValueObject`1|100%|100%|
+
+</details>
+<details><summary>Nabs.ActivityFramework - 30.1%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.ActivityFramework**|**30.1%**|**0%**|
+|Nabs.ActivityFramework.Activity`1|0%|0%|
+|Nabs.ActivityFramework.Activity`3|0%|0%|
+|Nabs.ActivityFramework.ActivityState|0%||
+|Nabs.ActivityFramework.ActivityStateValidator`1|0%|0%|
+|Nabs.ActivityFramework.UiManifest.ActivityStateUiManifest`1|100%||
+|Nabs.ActivityFramework.UiManifest.UiManifestResult|100%||
+|Nabs.ActivityFramework.Workflow`1|0%|0%|
 
 </details>
 <details><summary>Nabs.AzureConfiguration - 0%</summary>
