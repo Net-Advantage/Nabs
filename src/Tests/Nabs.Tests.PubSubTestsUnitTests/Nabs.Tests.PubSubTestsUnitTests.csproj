@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<Import Project="../../../props/Directory.Build.props" />
 
@@ -11,23 +11,6 @@
 
 	<ItemGroup>
 		<None Include="..\..\xunit.runner.json" Link="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
-	</ItemGroup>
-
-
-	<ItemGroup>
-		<None Remove="appsettings.json" />
-		<None Remove="DataResources\SimpleTenantEntityItems.json" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Content Include="appsettings.json">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</Content>
-	</ItemGroup>
-
-	<ItemGroup>
-		<EmbeddedResource Include="DataResources\SimpleTenantEntityItems.json" />
-		<EmbeddedResource Include="DataResources\AllTypesEntityItems.json" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -45,7 +28,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\Nabs.Tests.DatabaseTests\Nabs.Tests.DatabaseTests.csproj" />
+		<ProjectReference Include="..\..\Nabs.Tests.PubSubTests\Nabs.Tests.PubSubTests.csproj" />
 		<ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
 	</ItemGroup>
 

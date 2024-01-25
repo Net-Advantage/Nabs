@@ -1,6 +1,6 @@
 ﻿using Nabs.Serialisation;
 
-[assembly: Xunit.TestFramework("Nabs.Tests.TestsTests.RunOnce", "Nabs.Tests.TestsTests")]
+[assembly: Xunit.TestFramework("Nabs.Tests.TestsUnitTests.RunOnce", "Nabs.Tests.TestsUnitTests")]
 
 namespace Nabs.Tests.TestsUnitTests;
 
