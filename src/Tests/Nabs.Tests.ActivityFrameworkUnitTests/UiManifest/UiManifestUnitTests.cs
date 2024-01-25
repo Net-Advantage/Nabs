@@ -1,6 +1,4 @@
-﻿using Xunit.Abstractions;
-
-namespace Nabs.Tests.ActivityFrameworkUnitTests.UiManifest;
+﻿namespace Nabs.Tests.ActivityFrameworkUnitTests.UiManifest;
 
 public sealed class UiManifestUnitTests(ITestOutputHelper outputHelper)
 {
