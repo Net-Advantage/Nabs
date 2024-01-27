@@ -10,6 +10,7 @@ public sealed class OpenAiApiClient(HttpClient client, OpenAiApiClientSettings s
 
 public sealed class OpenAiApiClientSettings
 {
+
 	public string OpenAiKey { get; set; } = default!;
 	public string OpenAiApiEndpoint { get; set; } = default!;
 }
