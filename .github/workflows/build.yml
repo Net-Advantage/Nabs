@@ -55,6 +55,5 @@ jobs:
           
         - name: Pack NuGet packages
           run: |
-              dotnet pack src/Nabs.sln --configuration Release  --no-restore --no-build --output nupkgs /p:PackageVersion=8.0.$GITHUB_RUN_NUMBER
-              dotnet nuget push **/*.nupkg --source "https://nuget.pkg.github.com/Net-Advantage/index.json" --skip-duplicate --api-key ${{secrets.GITHUB_TOKEN}}
-  
+              dotnet pack src/Nabs.sln --configuration Release --no-restore --no-build --output nupkgs /p:PackageVersion=8.0.$GITHUB_RUN_NUMBER
+              dotnet nuget push **/*.nupkg --source "https://api.nuget.org/v3/index.json" --skip-duplicate --api-key ${{secrets.NABS_NUGET_API_KEY}}
