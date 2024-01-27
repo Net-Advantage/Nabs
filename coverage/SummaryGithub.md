@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 01/25/2024 - 09:54:34 |
-| Coverage date: | 01/25/2024 - 09:53:50 - 01/25/2024 - 09:54:32 |
+| Generated on: | 01/27/2024 - 09:38:08 |
+| Coverage date: | 01/27/2024 - 09:37:14 - 01/27/2024 - 09:38:05 |
 | Parser: | MultiReport (12x Cobertura) |
 | Assemblies: | 13 |
-| Classes: | 33 |
-| Files: | 32 |
-| **Line coverage:** | 74.3% (356 of 479) |
-| Covered lines: | 356 |
-| Uncovered lines: | 123 |
-| Coverable lines: | 479 |
-| Total lines: | 1255 |
+| Classes: | 35 |
+| Files: | 34 |
+| **Line coverage:** | 77.2% (373 of 483) |
+| Covered lines: | 373 |
+| Uncovered lines: | 110 |
+| Coverable lines: | 483 |
+| Total lines: | 1287 |
 | **Branch coverage:** | 74.1% (83 of 112) |
 | Covered branches: | 83 |
 | Total branches: | 112 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 49_7652736102 |
+| Tag: | 51_7677786007 |
 
 </details>
 
@@ -139,11 +139,13 @@
 |Nabs.Tests.DatabaseTests.DatabaseTestBase`1|100%||
 
 </details>
-<details><summary>Nabs.Tests.PubSubTests - 0%</summary>
+<details><summary>Nabs.Tests.PubSubTests - 100%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Tests.PubSubTests**|**0%**|****|
-|Nabs.Tests.PubSubTests.KafkaContainerRunOnce|0%||
+|**Nabs.Tests.PubSubTests**|**100%**|****|
+|Nabs.Tests.PubSubTests.KafkaPubSubContainerRunOnce|100%||
+|Nabs.Tests.PubSubTests.KafkaPubSubFixtureBase|100%||
+|Nabs.Tests.PubSubTests.KafkaPubSubTestBase`1|100%||
 
 </details>

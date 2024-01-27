@@ -301,7 +301,9 @@ var assemblies = [
   {
     "name": "Nabs.Tests.PubSubTests",
     "classes": [
-      { "name": "Nabs.Tests.PubSubTests.KafkaContainerRunOnce", "rp": "Nabs.Tests.PubSubTests_KafkaContainerRunOnce.html", "cl": 0, "ucl": 13, "cal": 13, "tl": 30, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.PubSubTests.KafkaPubSubContainerRunOnce", "rp": "Nabs.Tests.PubSubTests_KafkaPubSubContainerRunOnce.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 32, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.PubSubTests.KafkaPubSubFixtureBase", "rp": "Nabs.Tests.PubSubTests_KafkaPubSubFixtureBase.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.PubSubTests.KafkaPubSubTestBase<T>", "rp": "Nabs.Tests.PubSubTests_KafkaPubSubTestBase_1.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
 ];
 
