@@ -1,9 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	
-	<Import Project="../../../props/Directory.Build.props" />
+	<Import Project="../../props/NuGet.props" />
 
 	<PropertyGroup>
 		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
 
 </Project>
