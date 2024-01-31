@@ -2,6 +2,8 @@
 
 public static class DependencyInversionExtensions
 {
+	const string _bearerTokenSettingsSection = "BearerTokenSettings";
+
 	public static IHostApplicationBuilder AddServiceAuthentication(
 		this IHostApplicationBuilder builder,
 		Func<TokenValidatedContext, Task> onTokenValidated)
@@ -10,7 +12,7 @@ public static class DependencyInversionExtensions
 			.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 			.AddJwtBearer(options =>
 			{
-				var bearerTokenSettingsSection = builder.Configuration.GetRequiredSection("BearerTokenSettings");
+				var bearerTokenSettingsSection = builder.Configuration.GetRequiredSection(_bearerTokenSettingsSection);
 				var bearerTokenSettings = new BearerTokenSettings();
 				bearerTokenSettingsSection.Bind(bearerTokenSettings);
 

@@ -22,6 +22,7 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
 		<PackageReference Include="Moq" />
 		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+		<PackageReference Include="ReportGenerator" />
 		<PackageReference Include="FluentAssertions" />
 	</ItemGroup>
 
