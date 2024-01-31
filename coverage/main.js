@@ -242,7 +242,7 @@ var assemblies = [
   {
     "name": "Nabs.Identity.Web",
     "classes": [
-      { "name": "Nabs.Scenarios.DependencyInversionExtensions", "rp": "Nabs.Identity.Web_DependencyInversionExtensions.html", "cl": 0, "ucl": 26, "cal": 26, "tl": 37, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Scenarios.DependencyInversionExtensions", "rp": "Nabs.Identity.Web_DependencyInversionExtensions.html", "cl": 0, "ucl": 26, "cal": 26, "tl": 39, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.OpenAi",
