@@ -34,7 +34,7 @@ public class SimpleKafkaPubSubUnitTest(
 		// Assert
 		deliveryResult.Should().NotBeNull();
 		deliveryResult.Status.Should().Be(PersistenceStatus.Persisted);
-		var result = kafkaConsumer.Consume(TimeSpan.FromSeconds(1));
+		var result = kafkaConsumer.Consume(TimeSpan.FromSeconds(10));
 		result.Should().NotBeNull();
 		result.Message.Should().BeEquivalentTo(message);
 	}
