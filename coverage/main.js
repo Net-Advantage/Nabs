@@ -247,7 +247,7 @@ var assemblies = [
   {
     "name": "Nabs.OpenAi",
     "classes": [
-      { "name": "Nabs.OpenAi.OpenAiApiClient", "rp": "Nabs.OpenAi_OpenAiApiClient.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 17, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.OpenAi.OpenAiApiClient", "rp": "Nabs.OpenAi_OpenAiApiClient.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 22, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.Persistence",
