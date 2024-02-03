@@ -25,13 +25,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		..\.gitignore = ..\.gitignore
+		Base.Directory.Build.props = Base.Directory.Build.props
 		..\build.ps1 = ..\build.ps1
 		..\.github\workflows\build.yml = ..\.github\workflows\build.yml
 		coverlet.runsettings = coverlet.runsettings
-		..\props\Directory.Build.props = ..\props\Directory.Build.props
 		Directory.Packages.props = Directory.Packages.props
 		nuget.config = nuget.config
-		..\props\NuGet.props = ..\props\NuGet.props
+		NuGet.Directory.Build.props = NuGet.Directory.Build.props
+		Tests\Tests.Directory.Build.props = Tests\Tests.Directory.Build.props
 		xunit.runner.json = xunit.runner.json
 	EndProjectSection
 EndProject

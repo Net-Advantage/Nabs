@@ -5,12 +5,17 @@ public sealed class OpenAiApiClient(HttpClient client, OpenAiApiClientSettings s
 	private readonly HttpClient _client = client;
 	private readonly OpenAiApiClientSettings _settings = settings;
 
+	public async Task RunAsync()
+	{
+		_ = _client;
+		_ = _settings;
 
+		await Task.CompletedTask;
+	}
 }
 
 public sealed class OpenAiApiClientSettings
 {
-
 	public string OpenAiKey { get; set; } = default!;
 	public string OpenAiApiEndpoint { get; set; } = default!;
 }

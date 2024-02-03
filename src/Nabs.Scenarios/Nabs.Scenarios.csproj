@@ -1,18 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="../../props/NuGet.props" />
-
-	<PropertyGroup>
-		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-	</PropertyGroup>
+	<Import Project="../NuGet.Directory.Build.props" />
 
 	<ItemGroup>
-		<None Include="README.md" Pack="true" PackagePath="\" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\Nabs\Nabs.csproj" />
+		<ProjectReference Include="..\Nabs\Nabs.csproj" />
 	</ItemGroup>
 
 </Project>

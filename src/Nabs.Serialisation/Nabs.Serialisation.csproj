@@ -1,15 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="../../props/NuGet.props" />
-
-	<PropertyGroup>
-		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<None Include="README.md" Pack="true" PackagePath="\"/>
-	</ItemGroup>
+	<Import Project="../NuGet.Directory.Build.props" />
 
 	<ItemGroup>
 		<PackageReference Include="CsvHelper" />

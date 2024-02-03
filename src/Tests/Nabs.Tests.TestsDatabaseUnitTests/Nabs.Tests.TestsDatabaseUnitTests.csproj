@@ -1,30 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="../../../props/Directory.Build.props" />
-
-	<PropertyGroup>
-		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
-		<IsPackable>false</IsPackable>
-		<IsTestProject>true</IsTestProject>
-		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<None Include="..\..\xunit.runner.json" Link="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
-	</ItemGroup>
-
+	<Import Project="../Tests.Directory.Build.props" />
 
 	<ItemGroup>
 		<None Remove="appsettings.json" />
-		<None Remove="DataResources\SimpleTenantEntityItems.json" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Content Include="appsettings.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
 
+	<ItemGroup>
+		<None Remove="DataResources\SimpleTenantEntityItems.json" />
+		<None Remove="DataResources\AllTypesEntityItems.json" />
+	</ItemGroup>
+	
 	<ItemGroup>
 		<EmbeddedResource Include="DataResources\SimpleTenantEntityItems.json" />
 		<EmbeddedResource Include="DataResources\AllTypesEntityItems.json" />

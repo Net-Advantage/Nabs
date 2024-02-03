@@ -1,23 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="../../../props/Directory.Build.props" />
+	<Import Project="../Tests.Directory.Build.props" />
 
-	<PropertyGroup>
-		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
-		<IsPackable>false</IsPackable>
-		<IsTestProject>true</IsTestProject>
-		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<None Include="..\..\xunit.runner.json" Link="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
-	</ItemGroup>
-	
 	<ItemGroup>
 		<None Remove="appsettings.json" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Content Include="appsettings.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>

@@ -1,18 +1,25 @@
 <Project>
 
-	<Import Project="./Directory.Build.props" />
+	<Import Project="./Base.Directory.Build.props" />
 
 	<PropertyGroup>
-		<PackageIcon>images/nabs_logo.png</PackageIcon>
+	
 		<Authors>Darrel Schreyer</Authors>
 		<Company>Net Advantage Business Solutions</Company>
 		<Product>NABS Shared Libraries</Product>
 		<ProjectUrl>https://github.com/Net-Advantage/Nabs</ProjectUrl>
 		<RepositoryUrl>https://github.com/Net-Advantage/Nabs</RepositoryUrl>
+
+		<PackageIcon>images/nabs_logo.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="../../images/nabs_logo.png" Pack="true" PackagePath="images\"/>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\"/>
 	</ItemGroup>
 
 </Project>

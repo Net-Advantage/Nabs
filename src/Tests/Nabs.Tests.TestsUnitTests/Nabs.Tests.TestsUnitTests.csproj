@@ -1,32 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="../../../props/Directory.Build.props" />
-
-	<PropertyGroup>
-		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
-		<IsPackable>false</IsPackable>
-		<IsTestProject>true</IsTestProject>
-		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<None Include="..\..\xunit.runner.json" Link="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
-	</ItemGroup>
-
+	<Import Project="../Tests.Directory.Build.props" />
+	
 	<ItemGroup>
 		<None Remove="appsettings.json" />
-		<None Remove="DataAttributes\CsvBadTestData.csv" />
-		<None Remove="DataAttributes\CsvTestData.csv" />
-		<None Remove="DataAttributes\JsonBadTestData.json" />
-		<None Remove="DataAttributes\JsonTestData.json" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Content Include="appsettings.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
 
+	<ItemGroup>
+		<None Remove="DataAttributes\CsvBadTestData.csv" />
+		<None Remove="DataAttributes\CsvTestData.csv" />
+		<None Remove="DataAttributes\JsonBadTestData.json" />
+		<None Remove="DataAttributes\JsonTestData.json" />
+	</ItemGroup>
+	
 	<ItemGroup>
 		<EmbeddedResource Include="DataAttributes\CsvBadTestData.csv" />
 		<EmbeddedResource Include="DataAttributes\CsvTestData.csv" />
@@ -50,6 +39,5 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
 	</ItemGroup>
-
 
 </Project>

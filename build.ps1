@@ -1,3 +1,8 @@
+# Set console colors to defaults
+$Host.UI.RawUI.ForegroundColor = 'White'
+$Host.UI.RawUI.BackgroundColor = 'Black'
+Clear-Host
+
 # Define paths for coverage reports and test results
 $rootDirectory = Get-Location
 $testResultsPath = "TestResults"
@@ -21,3 +26,5 @@ dotnet pack src/Nabs.sln --configuration Release --no-restore --no-build --outpu
 
 # Open coverage report in browser
 Start-Process -FilePath (Join-Path -Path $coverageReportPath -ChildPath "index.html")
+$Host.UI.RawUI.ForegroundColor = 'White'
+$Host.UI.RawUI.BackgroundColor = 'Black'

@@ -1,18 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="../../../props/Directory.Build.props" />
-
-	<PropertyGroup>
-		<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
-		<IsPackable>false</IsPackable>
-		<IsTestProject>true</IsTestProject>
-		<ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
-	</PropertyGroup>
-	
-	<ItemGroup>
-	  <None Include="..\..\xunit.runner.json" Link="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
-	</ItemGroup>
-
+	<Import Project="../Tests.Directory.Build.props" />
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.NET.Test.Sdk" />
@@ -29,8 +17,8 @@
 
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Nabs.Serialisation\Nabs.Serialisation.csproj" />
-	  <ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
+		<ProjectReference Include="..\..\Nabs.Serialisation\Nabs.Serialisation.csproj" />
+		<ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
 	</ItemGroup>
 
 </Project>

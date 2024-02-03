@@ -1,7 +1,4 @@
-﻿using Confluent.Kafka.Admin;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace Nabs.Tests.PubSubTestsUnitTests;
+﻿namespace Nabs.Tests.PubSubTestsUnitTests;
 
 public class SimpleKafkaPubSubFixture(
 	IMessageSink diagnosticMessageSink) 
