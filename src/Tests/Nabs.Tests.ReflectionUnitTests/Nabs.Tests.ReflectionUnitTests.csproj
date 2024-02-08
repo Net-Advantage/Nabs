@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="../Tests.Directory.Build.props" />
+	<Import Project="../../Tests.Directory.Build.props" />
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\Nabs.Reflection\Nabs.Reflection.csproj" />

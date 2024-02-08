@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="../Tests.Directory.Build.props" />
+	<Import Project="../../Tests.Directory.Build.props" />
 
 	<PropertyGroup>
 		<UserSecretsId>43c3415f-65a8-4cc9-8a0f-8a20b5cd1afc</UserSecretsId>
