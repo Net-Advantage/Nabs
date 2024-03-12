@@ -4,6 +4,7 @@
 
 	<PropertyGroup>
 		<EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
+		<NoWarn>$(NoWarn);NU5104</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>
