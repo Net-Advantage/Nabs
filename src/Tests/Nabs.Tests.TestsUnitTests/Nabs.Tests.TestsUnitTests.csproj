@@ -2,6 +2,8 @@
 
 	<Import Project="../../Tests.Directory.Build.props" />
 	
+	
+	
 	<ItemGroup>
 		<None Remove="appsettings.json" />
 		<Content Include="appsettings.json">

@@ -2,4 +2,15 @@
 
 	<Import Project="../NuGet.Directory.Build.props" />
 
+	<PropertyGroup>
+		<EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Azure.AI.OpenAI" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+	</ItemGroup>
+
 </Project>

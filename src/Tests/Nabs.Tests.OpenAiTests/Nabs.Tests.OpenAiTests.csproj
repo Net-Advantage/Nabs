@@ -1,9 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+	<PropertyGroup>
+		<UserSecretsId>f8b78361-fa1b-4bba-9a74-6e3bb92a0fe8</UserSecretsId>
+	</PropertyGroup>
+
 	<Import Project="../../Tests.Directory.Build.props" />
-	
+
 	<ItemGroup>
 		<ProjectReference Include="..\..\Nabs.OpenAi\Nabs.OpenAi.csproj" />
+		<ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="appsettings.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 </Project>
