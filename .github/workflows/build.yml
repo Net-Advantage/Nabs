@@ -40,7 +40,7 @@ jobs:
           run: dotnet test src/Nabs.sln --configuration Release --no-restore --no-build --logger "console;verbosity=detailed" --settings src/coverlet.runsettings
 
         - name: Generate Code Coverage Report
-          uses: danielpalme/ReportGenerator-GitHub-Action@5.2.0
+          uses: danielpalme/ReportGenerator-GitHub-Action@5.2.2
           with:
             reports: '**/TestResults/**/coverage.cobertura.xml'
             targetdir: coveragereport
