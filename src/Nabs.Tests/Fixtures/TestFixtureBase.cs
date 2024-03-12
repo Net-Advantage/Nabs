@@ -1,13 +1,10 @@
 ﻿namespace Nabs.Tests.Fixtures;
 
-public abstract class TestFixtureBase : ITestFixture
+public abstract class TestFixtureBase(
+	IMessageSink diagnosticMessageSink) 
+	: ITestFixture
 {
-	private readonly IMessageSink _diagnosticMessageSink;
-
-	protected TestFixtureBase(IMessageSink diagnosticMessageSink)
-	{
-		_diagnosticMessageSink = diagnosticMessageSink;
-	}
+	private readonly IMessageSink _diagnosticMessageSink = diagnosticMessageSink;
 
 	public ITestOutputHelper TestOutputHelper { get; set; } = default!;
 
