@@ -1,8 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Nabs.OpenAi;
 using Nabs.Tests.Fixtures;
-using Xunit.Abstractions;
 
 namespace Nabs.Tests.OpenAiTests;
 

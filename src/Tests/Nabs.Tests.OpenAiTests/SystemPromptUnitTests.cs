@@ -12,7 +12,7 @@ public sealed class SystemPromptUnitTests(
 		await Task.CompletedTask;
 	}
 
-	[Fact]
+	[Fact(Skip = "Requires secrets")]
 	public async Task AddSystemMessage__Success()
 	{
 		//Objective:

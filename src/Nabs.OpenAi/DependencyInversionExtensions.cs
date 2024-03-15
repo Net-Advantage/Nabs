@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Nabs.OpenAi;
 
+[ExcludeFromCodeCoverage]
 public static class DependencyInversionExtensions
 {
 	public static IServiceCollection AddOpenAiApiClient(this IServiceCollection services, IConfigurationRoot configuration)

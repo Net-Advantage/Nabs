@@ -20,7 +20,7 @@ public sealed class OpenAiApiClientUnitTest(
 		_client.Should().NotBeNull();
 	}
 
-	[Fact]
+	[Fact(Skip = "Requires secrets")]
 	public async Task EmbeddingsCreated__Success()
 	{
 		// Arrange
@@ -36,7 +36,7 @@ public sealed class OpenAiApiClientUnitTest(
 		result.First().Should().Be(text);
 	}
 
-	[Fact]
+	[Fact(Skip = "Requires secrets")]
 	public async Task SearchContentExact__Success()
 	{
 		// Arrange
@@ -54,7 +54,7 @@ public sealed class OpenAiApiClientUnitTest(
 		similarity.Should().BeApproximately(1.0D, 0.1D);
 	}
 
-	[Theory]
+	[Theory(Skip = "Requires secrets")]
 	[InlineData("Hello, world!", "world", 0.8D, 0.9D)]
 	[InlineData("Hello, world!", "hello", 0.8D, 0.9D)]
 	[InlineData("Hello, world!", "other", 0.7D, 0.8D)]
