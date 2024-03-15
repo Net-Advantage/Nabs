@@ -37,7 +37,7 @@ jobs:
           run: dotnet build src/Nabs.sln --configuration Release --no-restore
           
         - name: Run Solution Tests with code coverage
-          run: dotnet test src/Nabs.sln --configuration Release --no-restore --no-build --logger "console;verbosity=detailed" --settings src/coverlet.runsettings $env:UserProfile/.nuget/packages/reportgenerator/5.2.0/tools/net8.0/ReportGenerator.exe" -reports:"**/TestResults/*/coverage.cobertura.xml" -targetdir:"coveragereport"
+          run: dotnet test src/Nabs.sln --configuration Release --no-restore --no-build --logger "console;verbosity=detailed" --settings src/coverlet.runsettings
 
         - name: Generate Code Coverage Report
           uses: danielpalme/ReportGenerator-GitHub-Action@5.2.3
