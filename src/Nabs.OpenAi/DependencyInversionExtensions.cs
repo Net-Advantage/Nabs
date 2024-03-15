@@ -10,7 +10,7 @@ public static class DependencyInversionExtensions
 		var configSection = configuration.GetRequiredSection(nameof(OpenAiApiClientSettings));
 		services.AddSingleton(a => configSection.Get<OpenAiApiClientSettings>()!);
 
-		services.AddSingleton<IOpenAiApiClient, OpenAiApiClient>();
+		services.AddSingleton<IAiClient, AiClient>();
 
 		return services;
 	}

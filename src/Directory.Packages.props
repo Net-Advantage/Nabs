@@ -1,8 +1,8 @@
 <Project>
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <AspireVersion>8.0.0-preview.3.24059.2</AspireVersion>
-    <EfCoreVersion>8.0.1</EfCoreVersion>
+    <AspireVersion>8.0.0-preview.4.24156.9</AspireVersion>
+    <EfCoreVersion>8.0.3</EfCoreVersion>
   </PropertyGroup>
   <ItemGroup>
     <!-- microsoft asp net dependencies -->
@@ -13,7 +13,7 @@
     <!-- microsoft identity dependencies -->
     <PackageVersion Include="Azure.Identity" Version="1.10.4" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
-    <PackageVersion Include="Microsoft.Identity.Web" Version="2.17.1" />
+    <PackageVersion Include="Microsoft.Identity.Web" Version="2.17.2" />
     <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
     <!-- microsoft extensions dependencies -->
     <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="8.1.0" />
@@ -23,9 +23,9 @@
     <PackageVersion Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
     <!-- open telemetry dependencies -->
     <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.7.0" />
     <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.7.0" />
@@ -34,10 +34,10 @@
     <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.7.0" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.7.0" />
     <!-- efcore dependencies -->
-    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="8.0.2" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.2" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Cosmos" Version="8.0.2" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.3" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Cosmos" Version="8.0.3" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.3" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="$(EfCoreVersion)" />
     <!-- xUnit dependencies -->
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
@@ -45,12 +45,12 @@
     <PackageVersion Include="Testcontainers.Kafka" Version="3.7.0" />
     <PackageVersion Include="xunit" Version="2.7.0" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.5.7" />
-    <PackageVersion Include="coverlet.collector" Version="6.0.1" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.2" />
     <PackageVersion Include="coverlet.msbuild" Version="6.0.0" />
     <PackageVersion Include="xunit.extensibility.core" Version="2.7.0" />
     <PackageVersion Include="xunit.extensibility.execution" Version="2.7.0" />
     <PackageVersion Include="xunit.abstractions" Version="2.0.3" />
-    <PackageVersion Include="ReportGenerator" Version="5.2.2" />
+    <PackageVersion Include="ReportGenerator" Version="5.2.3" />
     <PackageVersion Include="FluentAssertions" Version="6.12.0" />
     <PackageVersion Include="Moq" Version="4.20.70" />
     <!-- other dependencies -->

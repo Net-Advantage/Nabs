@@ -4,11 +4,11 @@ public sealed class OpenAiApiClientUnitTest(
 	ITestOutputHelper testOutputHelper, OpenAiApiClientFixture fixture)
 		: FixtureTestBase<OpenAiApiClientFixture>(testOutputHelper, fixture)
 {
-	private IOpenAiApiClient _client = default!;
+	private IAiClient _client = default!;
 
 	protected override async Task StartTest()
 	{
-		_client = TestFixture.ServiceProvider.GetRequiredService<IOpenAiApiClient>();
+		_client = TestFixture.ServiceProvider.GetRequiredService<IAiClient>();
 		await Task.CompletedTask;
 	}
 
@@ -25,11 +25,11 @@ public sealed class OpenAiApiClientUnitTest(
 	{
 		// Arrange
 		var text = "Hello, world!";
-		await _client.ClearEmbeddingsAsync();
-		await _client.CreateEmbeddingsAsync(text);
+		await _client.ClearEmbeddingsContent();
+		await _client.CreateEmbeddingsContent(text);
 
 		// Act
-		var result = await _client.GetEmbeddingsContentAsync();
+		var result = await _client.GetEmbeddingsContent();
 
 		// Assert
 		result.Should().NotBeEmpty();
@@ -41,11 +41,11 @@ public sealed class OpenAiApiClientUnitTest(
 	{
 		// Arrange
 		var text = "Hello, world!";
-		await _client.ClearEmbeddingsAsync();
-		await _client.CreateEmbeddingsAsync(text);
+		await _client.ClearEmbeddingsContent();
+		await _client.CreateEmbeddingsContent(text);
 
 		// Act
-		var result = await _client.SearchContentAsync(text);
+		var result = await _client.SearchEmbeddingsContent(text);
 
 		// Assert
 		result.Should().NotBeEmpty();
@@ -61,11 +61,11 @@ public sealed class OpenAiApiClientUnitTest(
 	public async Task SearchContent80Pcnt__Success(string text, string searchText, double min, double max)
 	{
 		// Arrange
-		await _client.ClearEmbeddingsAsync();
-		await _client.CreateEmbeddingsAsync(text);
+		await _client.ClearEmbeddingsContent();
+		await _client.CreateEmbeddingsContent(text);
 
 		// Act
-		var result = await _client.SearchContentAsync(searchText);
+		var result = await _client.SearchEmbeddingsContent(searchText);
 
 		// Assert
 		result.Should().NotBeEmpty();
