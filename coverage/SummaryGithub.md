@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 02/08/2024 - 05:55:34 |
-| Coverage date: | 02/08/2024 - 05:54:43 - 02/08/2024 - 05:55:32 |
+| Generated on: | 03/15/2024 - 03:35:01 |
+| Coverage date: | 03/15/2024 - 03:34:04 - 03/15/2024 - 03:34:59 |
 | Parser: | MultiReport (12x Cobertura) |
 | Assemblies: | 13 |
-| Classes: | 35 |
-| Files: | 34 |
-| **Line coverage:** | 76.5% (373 of 487) |
-| Covered lines: | 373 |
-| Uncovered lines: | 114 |
-| Coverable lines: | 487 |
-| Total lines: | 1295 |
-| **Branch coverage:** | 74.1% (83 of 112) |
-| Covered branches: | 83 |
-| Total branches: | 112 |
+| Classes: | 39 |
+| Files: | 37 |
+| **Line coverage:** | 67.7% (405 of 598) |
+| Covered lines: | 405 |
+| Uncovered lines: | 193 |
+| Coverable lines: | 598 |
+| Total lines: | 1577 |
+| **Branch coverage:** | 64.7% (101 of 156) |
+| Covered branches: | 101 |
+| Total branches: | 156 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 60_7825481997 |
+| Tag: | 71_8290930272 |
 
 </details>
 
@@ -31,14 +31,13 @@
 |Nabs.ValueObject`1|100%|100%|
 
 </details>
-<details><summary>Nabs.ActivityFramework - 33.3%</summary>
+<details><summary>Nabs.ActivityFramework - 33.6%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.ActivityFramework**|**33.3%**|**10%**|
+|**Nabs.ActivityFramework**|**33.6%**|**10%**|
 |Nabs.ActivityFramework.Activity`1|50%|50%|
 |Nabs.ActivityFramework.Activity`3|0%|0%|
-|Nabs.ActivityFramework.ActivityState|0%||
 |Nabs.ActivityFramework.ActivityStateValidator`1|0%|0%|
 |Nabs.ActivityFramework.UiManifest.ActivityStateUiManifest`1|100%||
 |Nabs.ActivityFramework.UiManifest.UiManifestResult|100%||
@@ -61,12 +60,17 @@
 |Nabs.Scenarios.DependencyInversionExtensions|0%||
 
 </details>
-<details><summary>Nabs.OpenAi - 0%</summary>
+<details><summary>Nabs.OpenAi - 27.7%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.OpenAi**|**0%**|****|
-|Nabs.OpenAi.OpenAiApiClient|0%||
+|**Nabs.OpenAi**|**27.7%**|**40.9%**|
+|Microsoft.Extensions.Configuration.Binder.SourceGeneration|61.9%|47.3%|
+|Nabs.OpenAi.AiClient|33.3%||
+|Nabs.OpenAi.Extensions.ChatPromptExtensions|0%|0%|
+|Nabs.OpenAi.Extensions.EmbeddingsContentExtensions|0%|0%|
+|Nabs.OpenAi.Extensions.SearchEmbeddingsContentExtensions|0%|0%|
+|System.Runtime.CompilerServices|0%||
 
 </details>
 <details><summary>Nabs.Persistence - 96.6%</summary>
