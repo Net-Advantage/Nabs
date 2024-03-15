@@ -49,9 +49,9 @@ public sealed class OpenAiApiClientUnitTest(
 
 		// Assert
 		result.Should().NotBeEmpty();
-		var firstItem = result.First();
-		firstItem.content.Should().Be(text);
-		firstItem.similarity.Should().BeApproximately(1.0D, 0.1D);
+		var (content, similarity) = result.First();
+		content.Should().Be(text);
+		similarity.Should().BeApproximately(1.0D, 0.1D);
 	}
 
 	[Theory]
@@ -69,9 +69,9 @@ public sealed class OpenAiApiClientUnitTest(
 
 		// Assert
 		result.Should().NotBeEmpty();
-		var firstItem = result.First();
-		firstItem.content.Should().Be(text);
-		firstItem.similarity.Should().BeInRange(min, max);
+		var (content, similarity) = result.First();
+		content.Should().Be(text);
+		similarity.Should().BeInRange(min, max);
 	}
 
 }
