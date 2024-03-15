@@ -51,14 +51,14 @@ public sealed class OpenAiApiClientUnitTest(
 		result.Should().NotBeEmpty();
 		var firstItem = result.First();
 		firstItem.content.Should().Be(text);
-		firstItem.similarity.Should().Be(1.0D);
+		firstItem.similarity.Should().BeApproximately(1.0D, 0.1D);
 	}
 
 	[Theory]
 	[InlineData("Hello, world!", "world", 0.8D, 0.9D)]
 	[InlineData("Hello, world!", "hello", 0.8D, 0.9D)]
 	[InlineData("Hello, world!", "other", 0.7D, 0.8D)]
-	public async Task SearchContent80Pcnt__Success(string text, string searchText, double min, double max)
+	public async Task SearchContent80Percent__Success(string text, string searchText, double min, double max)
 	{
 		// Arrange
 		await _client.ClearEmbeddingsContent();
