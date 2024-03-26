@@ -1,0 +1,12 @@
+﻿@using System.ComponentModel
+
+<CascadingValue Value="_context">
+    @ChildContent
+</CascadingValue>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private DynamicFormContext _context = new();
+}

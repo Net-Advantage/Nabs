@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="../../Tests.Directory.Build.props" />
+
+	<ItemGroup>
+		<PackageReference Include="bunit" />
+		<PackageReference Include="HtmlAgilityPack" />
+		<PackageReference Update="coverlet.collector">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Update="xunit.runner.visualstudio">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" />
+		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Emoji" />
+		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
+		<ProjectReference Include="..\..\Nabs.Ui\Nabs.Ui.csproj" />
+	</ItemGroup>
+
+</Project>

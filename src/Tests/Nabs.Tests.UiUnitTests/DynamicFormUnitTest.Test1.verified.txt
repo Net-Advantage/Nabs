@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form blazor:onsubmit="1">
+    <label for="StringValue" class="fluent-input-label" b-hum22yrq17="">String value
+        </label>
+<fluent-text-field class="valid" id="StringValue" value="Initial Value" current-value="Initial Value" appearance="outline" blazor:onchange="2" blazor:oninput="3" blazor:elementReference="GUID" /><br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+        
+        </form>

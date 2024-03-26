@@ -1,0 +1,83 @@
+﻿@typeparam TModel
+
+@if (Model is not null)
+{
+    <EditForm Model="@Model">
+        <Header />
+        @foreach (var property in typeof(TModel).GetProperties())
+        {
+            @RenderInputForProperty(property)
+        }
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+        @ChildContent
+        <Footer />
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public TModel? Model { get; set; }
+
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private RenderFragment RenderInputForProperty(PropertyInfo propertyInfo) => builder =>
+    {
+        var sequence = 0;
+        var propertyType = propertyInfo.PropertyType;
+        var value = propertyInfo.GetValue(Model);
+
+        var uiHint = propertyInfo.GetCustomAttribute<BlazorUIHintAttribute>();
+        if (uiHint != null)
+        {
+            var componentType = BlazorUiHintMappings.Mappings[uiHint.UIComponent];
+            builder.OpenComponent(sequence++, componentType);
+            builder.AddAttribute(1, "id", propertyInfo.Name);
+            builder.AddAttribute(2, "Label", uiHint.UiLabel);
+            builder.AddAttribute(3, "Value", value);
+            CreateEventCallback(builder, propertyInfo, value);
+            //builder.AddAttribute(5, "ValueExpression", () => value);
+
+            builder.CloseComponent();
+        }
+    };
+
+    private void CreateEventCallback(RenderTreeBuilder builder, PropertyInfo propertyInfo, object? value)
+    {
+        var underlyingType = Nullable.GetUnderlyingType(propertyInfo.PropertyType);
+
+        (RenderTreeBuilder builder, int sequence, PropertyInfo propertyInfo) valueChangedArgs =
+            (builder, 4, propertyInfo);
+
+        var typeCode = Type.GetTypeCode(propertyInfo.PropertyType);
+        switch (typeCode)
+        {
+            case TypeCode.Int32:
+                SetValueChangedArgs<int>(valueChangedArgs);
+                break;
+
+            case TypeCode.String:
+                SetValueChangedArgs<string>(valueChangedArgs);
+                break;
+
+            case TypeCode.Object when propertyInfo.PropertyType == typeof(DateOnly):
+                SetValueChangedArgs<DateOnly>(valueChangedArgs);
+                break;
+
+            case TypeCode.Object when propertyInfo.PropertyType == typeof(int?):
+                SetValueChangedArgs<int?>(valueChangedArgs);
+                break;
+
+            default:
+                return;
+        }
+    }
+
+    private void SetValueChangedArgs<T>((RenderTreeBuilder builder, int sequence, PropertyInfo propertyInfo) args)
+    {
+        args.builder.AddAttribute(args.sequence, "ValueChanged",
+            EventCallback.Factory.Create(this, (T val) => args.propertyInfo.SetValue(Model, val)));
+    }
+}

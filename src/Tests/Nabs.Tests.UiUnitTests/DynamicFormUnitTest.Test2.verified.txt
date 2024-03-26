@@ -1,0 +1,3 @@
+﻿<div class="my-component" b-9vyec7xl9q>
+    This component is defined in the <strong b-9vyec7xl9q>Nabs.Ui</strong> library.
+</div>

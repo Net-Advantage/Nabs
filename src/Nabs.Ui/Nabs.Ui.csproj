@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<Import Project="../NuGet.Directory.Build.props" />
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Nabs.Ui.Abstractions\Nabs.Ui.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

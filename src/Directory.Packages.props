@@ -7,9 +7,11 @@
   <ItemGroup>
     <!-- microsoft asp net dependencies -->
     <PackageVersion Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageVersion Include="bunit" Version="1.27.17" />
+    <PackageVersion Include="HtmlAgilityPack" Version="1.11.59" />
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.1" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.Web" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.Web" Version="8.0.3" />
     <!-- microsoft identity dependencies -->
     <PackageVersion Include="Azure.Identity" Version="1.10.4" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
@@ -41,8 +43,9 @@
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="$(EfCoreVersion)" />
     <!-- xUnit dependencies -->
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
-    <PackageVersion Include="Testcontainers.MsSql" Version="3.7.0" />
-    <PackageVersion Include="Testcontainers.Kafka" Version="3.7.0" />
+    <PackageVersion Include="Testcontainers.MsSql" Version="3.8.0" />
+    <PackageVersion Include="Testcontainers.Kafka" Version="3.8.0" />
+    <PackageVersion Include="Verify.Xunit" Version="23.5.2" />
     <PackageVersion Include="xunit" Version="2.7.0" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.5.7" />
     <PackageVersion Include="coverlet.collector" Version="6.0.2" />
@@ -50,7 +53,7 @@
     <PackageVersion Include="xunit.extensibility.core" Version="2.7.0" />
     <PackageVersion Include="xunit.extensibility.execution" Version="2.7.0" />
     <PackageVersion Include="xunit.abstractions" Version="2.0.3" />
-    <PackageVersion Include="ReportGenerator" Version="5.2.3" />
+    <PackageVersion Include="ReportGenerator" Version="5.2.4" />
     <PackageVersion Include="FluentAssertions" Version="6.12.0" />
     <PackageVersion Include="Moq" Version="4.20.70" />
     <!-- other dependencies -->
@@ -69,6 +72,10 @@
     <PackageVersion Include="Ardalis.Specification" Version="8.0.0" />
     <PackageVersion Include="Ardalis.Specification.EntityFrameworkCore" Version="8.0.0" />
     <PackageVersion Include="Confluent.Kafka" Version="2.3.0" />
+    <!-- FluentUI -->
+    <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.5.0" />
+    <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components.Emoji" Version="4.5.0" />
+    <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.5.0" />
     <!-- Azure dependencies -->
     <PackageVersion Include="Azure.Security.KeyVault.Secrets" Version="4.6.0" />
     <PackageVersion Include="Microsoft.Extensions.Azure" Version="1.7.2" />
