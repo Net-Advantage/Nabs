@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 03/15/2024 - 03:35:01 |
-| Coverage date: | 03/15/2024 - 03:34:04 - 03/15/2024 - 03:34:59 |
-| Parser: | MultiReport (12x Cobertura) |
-| Assemblies: | 13 |
-| Classes: | 39 |
-| Files: | 37 |
-| **Line coverage:** | 67.7% (405 of 598) |
-| Covered lines: | 405 |
-| Uncovered lines: | 193 |
-| Coverable lines: | 598 |
-| Total lines: | 1577 |
-| **Branch coverage:** | 64.7% (101 of 156) |
-| Covered branches: | 101 |
-| Total branches: | 156 |
+| Generated on: | 03/27/2024 - 20:06:44 |
+| Coverage date: | 03/27/2024 - 20:05:48 - 03/27/2024 - 20:06:42 |
+| Parser: | MultiReport (13x Cobertura) |
+| Assemblies: | 15 |
+| Classes: | 46 |
+| Files: | 44 |
+| **Line coverage:** | 69.1% (478 of 691) |
+| Covered lines: | 478 |
+| Uncovered lines: | 213 |
+| Coverable lines: | 691 |
+| Total lines: | 1806 |
+| **Branch coverage:** | 64.2% (113 of 176) |
+| Covered branches: | 113 |
+| Total branches: | 176 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 71_8290930272 |
+| Tag: | 72_8457945218 |
 
 </details>
 
@@ -151,5 +151,26 @@
 |Nabs.Tests.PubSubTests.KafkaPubSubContainerRunOnce|100%||
 |Nabs.Tests.PubSubTests.KafkaPubSubFixtureBase|100%||
 |Nabs.Tests.PubSubTests.KafkaPubSubTestBase`1|100%||
+
+</details>
+<details><summary>Nabs.Ui - 78.7%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.Ui**|**78.7%**|**60%**|
+|Nabs.Ui.ExampleJsInterop|0%|0%|
+|Nabs.Ui.Forms.DynamicForm`1|89%|66.6%|
+|Nabs.Ui.Forms.Footer|100%||
+|Nabs.Ui.Forms.FormInputWrapper|100%||
+|Nabs.Ui.Forms.Header|100%||
+
+</details>
+<details><summary>Nabs.Ui.Abstractions - 76.9%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.Ui.Abstractions**|**76.9%**|****|
+|Nabs.Ui.Abstractions.BlazorUIHintAttribute|100%||
+|Nabs.Ui.Abstractions.BlazorUiHintMappings|72.7%||
 
 </details>

@@ -309,6 +309,21 @@ var assemblies = [
       { "name": "Nabs.Tests.PubSubTests.KafkaPubSubFixtureBase", "rp": "Nabs.Tests.PubSubTests_KafkaPubSubFixtureBase.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.PubSubTests.KafkaPubSubTestBase<T>", "rp": "Nabs.Tests.PubSubTests_KafkaPubSubTestBase_1.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
+  {
+    "name": "Nabs.Ui",
+    "classes": [
+      { "name": "Nabs.Ui.ExampleJsInterop", "rp": "Nabs.Ui_ExampleJsInterop.html", "cl": 0, "ucl": 10, "cal": 10, "tl": 37, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Ui.Forms.DynamicForm<T>", "rp": "Nabs.Ui_DynamicForm_1.html", "cl": 57, "ucl": 7, "cal": 64, "tl": 111, "cb": 12, "tb": 18, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Ui.Forms.Footer", "rp": "Nabs.Ui_Footer.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Ui.Forms.FormInputWrapper", "rp": "Nabs.Ui_FormInputWrapper.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Ui.Forms.Header", "rp": "Nabs.Ui_Header.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+    ]},
+  {
+    "name": "Nabs.Ui.Abstractions",
+    "classes": [
+      { "name": "Nabs.Ui.Abstractions.BlazorUIHintAttribute", "rp": "Nabs.Ui.Abstractions_BlazorUIHintAttribute.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Ui.Abstractions.BlazorUiHintMappings", "rp": "Nabs.Ui.Abstractions_BlazorUiHintMappings.html", "cl": 8, "ucl": 3, "cal": 11, "tl": 29, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+    ]},
 ];
 
 var metrics = [{ "name": "Crap Score", "abbreviation": "crp", "explanationUrl": "https://googletesting.blogspot.de/2011/02/this-code-is-crap.html" }, { "name": "Cyclomatic complexity", "abbreviation": "cc", "explanationUrl": "https://en.wikipedia.org/wiki/Cyclomatic_complexity" }, { "name": "Line coverage", "abbreviation": "cov", "explanationUrl": "https://en.wikipedia.org/wiki/Code_coverage" }, { "name": "Branch coverage", "abbreviation": "bcov", "explanationUrl": "https://en.wikipedia.org/wiki/Code_coverage" }];
@@ -350,6 +365,12 @@ var riskHotspots = [
     "metrics": [
       { "value": 20, "exceeded": true },
       { "value": 4, "exceeded": false },
+    ]},
+  {
+    "assembly": "Nabs.Ui", "class": "Nabs.Ui.Forms.DynamicForm<T>", "reportPath": "Nabs.Ui_DynamicForm_1.html", "methodName": "CreateEventCallback(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Reflection.PropertyInfo,System.Object)", "methodShortName": "CreateEventCallback(...)", "fileIndex": 0, "line": 73,
+    "metrics": [
+      { "value": 18.37, "exceeded": true },
+      { "value": 10, "exceeded": false },
     ]},
 ];
 
