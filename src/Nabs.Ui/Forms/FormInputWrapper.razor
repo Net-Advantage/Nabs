@@ -1,0 +1,15 @@
+﻿<div class="form-group">
+    <label for="@Id">@Label</label>
+    @ChildContent
+</div>
+@code {
+
+    [Parameter]
+    public string Id { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Label { get; set; } = string.Empty;
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

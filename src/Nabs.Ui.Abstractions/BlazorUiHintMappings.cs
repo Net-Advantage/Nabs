@@ -2,21 +2,28 @@
 
 public static class BlazorUiHintMappings
 {
-    public static Dictionary<string, Type> Mappings { get; } = [];
+    public static Type? FormInputWrapper { get; private set; }
+    public static Dictionary<string, Type> InputMappings { get; } = [];
 
     public static void ClearMappings()
     {
-        Mappings.Clear();
+        FormInputWrapper = null;
+        InputMappings.Clear();
     }
 
-    public static void AddMapping<TValue>(Type componentType)
+    public static void AddFormInputWrapper(Type componentType)
+    {
+        FormInputWrapper = componentType;
+    }
+
+    public static void AddFormInputMapping<TValue>(Type componentType)
     {
         var typeName = typeof(TValue).Name;
-        Mappings.TryAdd(typeName, componentType);
+        InputMappings.TryAdd(typeName, componentType);
     }
 
-    public static void AddMapping(string typeName, Type componentType)
+    public static void AddFormInputMapping(string typeName, Type componentType)
     {
-        Mappings.TryAdd(typeName, componentType);
+        InputMappings.TryAdd(typeName, componentType);
     }
 }

@@ -1,4 +1,5 @@
-﻿@typeparam TModel
+﻿@using System.Linq.Expressions
+@typeparam TModel
 
 @if (Model is not null)
 {
@@ -25,24 +26,47 @@
 
     private RenderFragment RenderInputForProperty(PropertyInfo propertyInfo) => builder =>
     {
-        var sequence = 0;
+        var inputSequence = 0;
+        var wrapperSequence = 0;
+
         var propertyType = propertyInfo.PropertyType;
         var value = propertyInfo.GetValue(Model);
 
         var uiHint = propertyInfo.GetCustomAttribute<BlazorUIHintAttribute>();
         if (uiHint != null)
         {
-            var componentType = BlazorUiHintMappings.Mappings[uiHint.UIComponent];
-            builder.OpenComponent(sequence++, componentType);
-            builder.AddAttribute(1, "id", propertyInfo.Name);
-            builder.AddAttribute(2, "Label", uiHint.UiLabel);
-            builder.AddAttribute(3, "Value", value);
-            CreateEventCallback(builder, propertyInfo, value);
-            //builder.AddAttribute(5, "ValueExpression", () => value);
+            var formInputWrapper = BlazorUiHintMappings.FormInputWrapper;
+            if (formInputWrapper != null)
+            {
+                builder.OpenComponent(wrapperSequence++, formInputWrapper);
+                builder.AddAttribute(1, "Id", propertyInfo.Name);
+                builder.AddAttribute(2, "Label", uiHint.UiLabel);
+                builder.AddAttribute(3, "ChildContent", (RenderFragment)(childBuilder =>
+                {
+                    CreateInputComponent(childBuilder, uiHint, inputSequence, propertyInfo, value);
+                    childBuilder.CloseComponent();
+                }));
+            }
+            else
+            {
+                CreateInputComponent(builder, uiHint, inputSequence, propertyInfo, value);
+            }
 
             builder.CloseComponent();
         }
     };
+
+    private void CreateInputComponent(RenderTreeBuilder builder, BlazorUIHintAttribute uiHint, 
+        int inputSequence, PropertyInfo propertyInfo, object? value)
+    {
+        var attributeSequence = 0;
+        var componentType = BlazorUiHintMappings.InputMappings[uiHint.UIComponent];
+        builder.OpenComponent(inputSequence++, componentType);
+        builder.AddAttribute(attributeSequence++, "id", propertyInfo.Name);
+        builder.AddAttribute(attributeSequence++, "Label", uiHint.UiLabel);
+        builder.AddAttribute(attributeSequence++, "Value", value);
+        CreateEventCallback(builder, propertyInfo, value);
+    }
 
     private void CreateEventCallback(RenderTreeBuilder builder, PropertyInfo propertyInfo, object? value)
     {
@@ -77,7 +101,11 @@
 
     private void SetValueChangedArgs<T>((RenderTreeBuilder builder, int sequence, PropertyInfo propertyInfo) args)
     {
-        args.builder.AddAttribute(args.sequence, "ValueChanged",
+        args.builder.AddAttribute(args.sequence++, "ValueChanged",
             EventCallback.Factory.Create(this, (T val) => args.propertyInfo.SetValue(Model, val)));
+
+        args.builder.AddAttribute(args.sequence, "ValueExpression", Expression.Lambda<Func<T>>(Expression.Property(
+            Expression.Constant(Model), args.propertyInfo)));
     }
+
 }

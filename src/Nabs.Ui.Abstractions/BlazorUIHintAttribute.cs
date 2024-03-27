@@ -10,5 +10,4 @@ public class BlazorUIHintAttribute : Attribute
 
     public string UIComponent { get; }
     public string UiLabel { get; }
-
 }
