@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 03/27/2024 - 20:06:44 |
-| Coverage date: | 03/27/2024 - 20:05:48 - 03/27/2024 - 20:06:42 |
+| Generated on: | 03/28/2024 - 06:02:10 |
+| Coverage date: | 03/28/2024 - 06:01:12 - 03/28/2024 - 06:02:07 |
 | Parser: | MultiReport (13x Cobertura) |
-| Assemblies: | 15 |
-| Classes: | 46 |
-| Files: | 44 |
-| **Line coverage:** | 69.1% (478 of 691) |
-| Covered lines: | 478 |
-| Uncovered lines: | 213 |
-| Coverable lines: | 691 |
-| Total lines: | 1806 |
-| **Branch coverage:** | 64.2% (113 of 176) |
-| Covered branches: | 113 |
-| Total branches: | 176 |
+| Assemblies: | 16 |
+| Classes: | 51 |
+| Files: | 48 |
+| **Line coverage:** | 69.3% (523 of 754) |
+| Covered lines: | 523 |
+| Uncovered lines: | 231 |
+| Coverable lines: | 754 |
+| Total lines: | 1942 |
+| **Branch coverage:** | 63.1% (115 of 182) |
+| Covered branches: | 115 |
+| Total branches: | 182 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 72_8457945218 |
+| Tag: | 73_8463109146 |
 
 </details>
 
@@ -153,24 +153,36 @@
 |Nabs.Tests.PubSubTests.KafkaPubSubTestBase`1|100%||
 
 </details>
-<details><summary>Nabs.Ui - 78.7%</summary>
+<details><summary>Nabs.Tests.UiUnitTestsComponents - 46.6%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Ui**|**78.7%**|**60%**|
+|**Nabs.Tests.UiUnitTestsComponents**|**46.6%**|**33.3%**|
+|Nabs.Tests.UiUnitTestsComponents.CustomDivComponent|100%||
+|Nabs.Tests.UiUnitTestsComponents.ExampleJsInterop|0%|0%|
+|Nabs.Tests.UiUnitTestsComponents.TestMainComponent|68.4%|50%|
+
+</details>
+<details><summary>Nabs.Ui - 82.5%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.Ui**|**82.5%**|**60%**|
 |Nabs.Ui.ExampleJsInterop|0%|0%|
-|Nabs.Ui.Forms.DynamicForm`1|89%|66.6%|
+|Nabs.Ui.Forms.DynamicForm`1|92.3%|66.6%|
 |Nabs.Ui.Forms.Footer|100%||
+|Nabs.Ui.Forms.FormGroupWrapper|0%||
 |Nabs.Ui.Forms.FormInputWrapper|100%||
 |Nabs.Ui.Forms.Header|100%||
 
 </details>
-<details><summary>Nabs.Ui.Abstractions - 76.9%</summary>
+<details><summary>Nabs.Ui.Abstractions - 82.3%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Ui.Abstractions**|**76.9%**|****|
+|**Nabs.Ui.Abstractions**|**82.3%**|****|
+|Nabs.Ui.Abstractions.BlazorUIGroupAttribute|100%||
 |Nabs.Ui.Abstractions.BlazorUIHintAttribute|100%||
-|Nabs.Ui.Abstractions.BlazorUiHintMappings|72.7%||
+|Nabs.Ui.Abstractions.BlazorUiMappings|76.9%||
 
 </details>
