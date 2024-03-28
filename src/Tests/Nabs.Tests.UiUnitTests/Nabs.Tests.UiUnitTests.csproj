@@ -4,7 +4,6 @@
 
 	<ItemGroup>
 		<PackageReference Include="bunit" />
-		<PackageReference Include="HtmlAgilityPack" />
 		<PackageReference Update="coverlet.collector">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -26,9 +25,6 @@
 
 	<ItemGroup>
 	  <None Update="DynamicFormWithDefaultUiUnitTest.Test2.verified.txt">
-	    <DependentUpon>DynamicFormWithDefaultUiUnitTest.cs</DependentUpon>
-	  </None>
-	  <None Update="DynamicFormWithDefaultUiUnitTest.Test1.verified.txt">
 	    <DependentUpon>DynamicFormWithDefaultUiUnitTest.cs</DependentUpon>
 	  </None>
 	</ItemGroup>
