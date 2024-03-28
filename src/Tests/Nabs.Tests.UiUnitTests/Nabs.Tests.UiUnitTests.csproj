@@ -21,6 +21,16 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
 		<ProjectReference Include="..\..\Nabs.Ui\Nabs.Ui.csproj" />
+		<ProjectReference Include="..\Nabs.Tests.UiUnitTestsComponents\Nabs.Tests.UiUnitTestsComponents.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="DynamicFormWithDefaultUiUnitTest.Test2.verified.txt">
+	    <DependentUpon>DynamicFormWithDefaultUiUnitTest.cs</DependentUpon>
+	  </None>
+	  <None Update="DynamicFormWithDefaultUiUnitTest.Test1.verified.txt">
+	    <DependentUpon>DynamicFormWithDefaultUiUnitTest.cs</DependentUpon>
+	  </None>
 	</ItemGroup>
 
 </Project>

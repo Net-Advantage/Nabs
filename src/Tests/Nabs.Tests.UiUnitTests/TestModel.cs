@@ -9,4 +9,19 @@ public class TestModel
 
     [BlazorUIHint("int", "Int value")]
     public int IntValue { get; set; } = 10;
+
+    [BlazorUIGroup("Section", "Address")]
+    public Address Address { get; set; } = new();
+}
+
+public class Address
+{
+    [BlazorUIHint("string", "Address Line 1")]
+    public string? AddressLine1 { get; set; }
+
+    [BlazorUIHint("string", "Address Line 2")]
+    public string? AddressLine2 { get; set; }
+
+    [BlazorUIHint("string", "City")]
+    public string? City { get; set; }
 }

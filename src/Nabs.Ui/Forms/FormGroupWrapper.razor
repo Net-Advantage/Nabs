@@ -1,0 +1,12 @@
+﻿<div class="form-group">
+    <h3>@Title</h3>
+    @ChildContent
+</div>
+@code {
+
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

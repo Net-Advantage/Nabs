@@ -1,0 +1,26 @@
+@using Microsoft.AspNetCore.Components.Rendering
+<div>
+    @RenderChildren()
+</div>
+
+@code {
+    private RenderFragment RenderChildren() => builder =>
+    {
+        builder.OpenComponent(0, typeof(CustomDivComponent));
+        builder.AddAttribute(1, "ChildContent", (RenderFragment)(childBuilder =>
+            {
+                RenderChildrenRecursively<CustomDivComponent>(childBuilder);
+            }));
+        builder.CloseComponent();
+    };
+
+    private RenderFragment RenderChildrenRecursively<TComponent>(RenderTreeBuilder builder) => builder =>
+    {
+        builder.OpenComponent(0, typeof(CustomDivComponent));
+        builder.AddAttribute(1, "ChildContent", (RenderFragment)(childBuilder =>
+            {
+                childBuilder.AddContent(1, "Hello World");
+            }));
+        builder.CloseComponent();
+    };
+}

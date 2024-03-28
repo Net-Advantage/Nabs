@@ -11,3 +11,15 @@ public class BlazorUIHintAttribute : Attribute
     public string UIComponent { get; }
     public string UiLabel { get; }
 }
+
+public class BlazorUIGroupAttribute : Attribute
+{
+    public BlazorUIGroupAttribute(string groupComponent, string uiTitle)
+    {
+        GroupComponent = groupComponent;
+        UiTitle = uiTitle;
+    }
+
+    public string GroupComponent { get; }
+    public string UiTitle { get; }
+}

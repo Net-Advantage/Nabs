@@ -1,4 +1,5 @@
 ﻿@using System.Linq.Expressions
+@inject BlazorUiMappings _blazorUiMappings
 @typeparam TModel
 
 @if (Model is not null)
@@ -7,7 +8,8 @@
         <Header />
         @foreach (var property in typeof(TModel).GetProperties())
         {
-            @RenderInputForProperty(property)
+            @RenderBlazorUiGroup(property)
+            @RenderBlazorUiHint(property, Model)
         }
         <br />
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -20,49 +22,75 @@
     [Parameter]
     public TModel? Model { get; set; }
 
-
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
-    private RenderFragment RenderInputForProperty(PropertyInfo propertyInfo) => builder =>
+    private RenderFragment RenderBlazorUiGroup(PropertyInfo propertyInfo) => builder =>
     {
+        var uiGroup = propertyInfo.GetCustomAttribute<BlazorUIGroupAttribute>();
+        if (uiGroup is null)
+        {
+            return;
+        }
+
+        // var propertyType = propertyInfo.PropertyType;
+        // var value = propertyInfo.GetValue(Model);
+
+        // var formGroupWrapper = BlazorUiMappings.FormGroupWrapper!;
+        
+        // builder.OpenComponent(1, formGroupWrapper);
+        // builder.AddAttribute(1, "Title", uiGroup.UiTitle);
+        // foreach (var childProperty in propertyInfo.PropertyType.GetProperties())
+        // {
+        //     builder.AddAttribute(2, "ChildContent", (RenderFragment)(childBuilder =>
+        //     {
+        //         RenderBlazorUiHint(childProperty, value)(childBuilder);
+        //     }));
+        // }
+        // builder.CloseComponent();
+    };
+
+    private RenderFragment RenderBlazorUiHint<T>(PropertyInfo propertyInfo, T model) => builder =>
+    {
+        var uiHint = propertyInfo.GetCustomAttribute<BlazorUIHintAttribute>();
+        if (uiHint is null)
+        {
+            return;
+        }
+
         var inputSequence = 0;
         var wrapperSequence = 0;
 
         var propertyType = propertyInfo.PropertyType;
-        var value = propertyInfo.GetValue(Model);
+        var value = propertyInfo.GetValue(model);
 
-        var uiHint = propertyInfo.GetCustomAttribute<BlazorUIHintAttribute>();
-        if (uiHint != null)
+        var formInputWrapper = _blazorUiMappings.FormInputWrapper;
+        if (formInputWrapper != null)
         {
-            var formInputWrapper = BlazorUiHintMappings.FormInputWrapper;
-            if (formInputWrapper != null)
+            builder.OpenComponent(wrapperSequence++, formInputWrapper);
+            builder.AddAttribute(1, "Id", propertyInfo.Name);
+            builder.AddAttribute(2, "Label", uiHint.UiLabel);
+            builder.AddAttribute(3, "ChildContent", (RenderFragment)(childBuilder =>
             {
-                builder.OpenComponent(wrapperSequence++, formInputWrapper);
-                builder.AddAttribute(1, "Id", propertyInfo.Name);
-                builder.AddAttribute(2, "Label", uiHint.UiLabel);
-                builder.AddAttribute(3, "ChildContent", (RenderFragment)(childBuilder =>
-                {
-                    CreateInputComponent(childBuilder, uiHint, inputSequence, propertyInfo, value);
-                    childBuilder.CloseComponent();
-                }));
-            }
-            else
-            {
-                CreateInputComponent(builder, uiHint, inputSequence, propertyInfo, value);
-            }
-
-            builder.CloseComponent();
+                CreateInputComponent(childBuilder, uiHint, inputSequence, propertyInfo, value);
+                childBuilder.CloseComponent();
+            }));
         }
+        else
+        {
+            CreateInputComponent(builder, uiHint, inputSequence, propertyInfo, value);
+        }
+
+        builder.CloseComponent();
     };
 
-    private void CreateInputComponent(RenderTreeBuilder builder, BlazorUIHintAttribute uiHint, 
+    private void CreateInputComponent(RenderTreeBuilder builder, BlazorUIHintAttribute uiHint,
         int inputSequence, PropertyInfo propertyInfo, object? value)
     {
         var attributeSequence = 0;
-        var componentType = BlazorUiHintMappings.InputMappings[uiHint.UIComponent];
+        var componentType = _blazorUiMappings.InputMappings[uiHint.UIComponent];
         builder.OpenComponent(inputSequence++, componentType);
-        builder.AddAttribute(attributeSequence++, "id", propertyInfo.Name);
+        builder.AddAttribute(attributeSequence++, "Id", propertyInfo.Name);
         builder.AddAttribute(attributeSequence++, "Label", uiHint.UiLabel);
         builder.AddAttribute(attributeSequence++, "Value", value);
         CreateEventCallback(builder, propertyInfo, value);
@@ -93,6 +121,10 @@
             case TypeCode.Object when propertyInfo.PropertyType == typeof(int?):
                 SetValueChangedArgs<int?>(valueChangedArgs);
                 break;
+
+            // case TypeCode.Object when propertyInfo.PropertyType == typeof(int?):
+            //     SetValueChangedArgs<int?>(valueChangedArgs);
+            //     break;
 
             default:
                 return;
