@@ -4,6 +4,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="bunit" />
+		<PackageReference Include="Syncfusion.Blazor" />
 		<PackageReference Update="coverlet.collector">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
