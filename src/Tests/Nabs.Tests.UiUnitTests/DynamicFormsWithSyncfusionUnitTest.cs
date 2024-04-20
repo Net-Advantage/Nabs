@@ -1,32 +1,33 @@
-using Bunit;
-using Bunit.TestDoubles;
+﻿using Bunit;
 using FluentAssertions;
-using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.Extensions.DependencyInjection;
 using Nabs.Ui.Abstractions;
 using Nabs.Ui.Forms;
 using Xunit.Abstractions;
+using Syncfusion.Blazor;
+using Syncfusion.Blazor.Inputs;
 
 namespace Nabs.Tests.UiUnitTests;
 
-public class DynamicFormWithDefaultUiUnitTest : TestContext
+public sealed class DynamicFormsWithSyncfusionUnitTest : TestContext
 {
     private readonly ITestOutputHelper _testOutputHelper;
 
-    public DynamicFormWithDefaultUiUnitTest(ITestOutputHelper testOutputHelper)
+    public DynamicFormsWithSyncfusionUnitTest(ITestOutputHelper testOutputHelper)
     {
         JSInterop.Mode = JSRuntimeMode.Loose;
-        _testOutputHelper = testOutputHelper;
+        Services.AddSyncfusionBlazor();
         Services.AddTransient<BlazorUiMappings>((sp) =>
         {
             var blazorUiMappings = new BlazorUiMappings();
             blazorUiMappings.ClearMappings();
             blazorUiMappings.AddFormGroupWrapper(typeof(FormGroupWrapper));
             blazorUiMappings.AddFormInputWrapper(typeof(FormInputWrapper));
-            blazorUiMappings.AddFormInputMapping("string", typeof(InputText));
-            blazorUiMappings.AddFormInputMapping("int", typeof(InputNumber<int>));
+            blazorUiMappings.AddFormInputMapping("string", typeof(SfTextBox));
+            blazorUiMappings.AddFormInputMapping("int", typeof(SfNumericTextBox<int>));
             return blazorUiMappings;
         });
+        _testOutputHelper = testOutputHelper;
     }
 
     [Fact]

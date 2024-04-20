@@ -1,11 +1,11 @@
 ﻿namespace Nabs.Tests.ActivityFrameworkUnitTests.UiManifest;
 
-public sealed class MyActivityStateUiManifest : ActivityStateUiManifest<MyActivityState>
+public sealed class SimpleActivityStateUiManifest : ActivityStateUiManifest<SimpleActivityState>
 {
-	public MyActivityStateUiManifest()
+	public SimpleActivityStateUiManifest()
 	{
-		TitleFor("The Form")
-			.WithDescription("The form's description.");
+		TitleFor("Simple Activity State Form")
+			.WithDescription("The simple activity state form's description.");
 
 		PropertyFor(x => x.Username)
 			.WithSequence(1)
