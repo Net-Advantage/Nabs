@@ -3,42 +3,42 @@
 
 |||
 |:---|:---|
-| Generated on: | 03/28/2024 - 06:22:16 |
-| Coverage date: | 03/28/2024 - 06:21:19 - 03/28/2024 - 06:22:14 |
+| Generated on: | 04/20/2024 - 11:41:46 |
+| Coverage date: | 04/20/2024 - 11:40:49 - 04/20/2024 - 11:41:44 |
 | Parser: | MultiReport (13x Cobertura) |
 | Assemblies: | 16 |
 | Classes: | 51 |
-| Files: | 48 |
-| **Line coverage:** | 69.3% (523 of 754) |
-| Covered lines: | 523 |
-| Uncovered lines: | 231 |
-| Coverable lines: | 754 |
-| Total lines: | 1942 |
-| **Branch coverage:** | 63.1% (115 of 182) |
-| Covered branches: | 115 |
-| Total branches: | 182 |
+| Files: | 49 |
+| **Line coverage:** | 71.2% (542 of 761) |
+| Covered lines: | 542 |
+| Uncovered lines: | 219 |
+| Coverable lines: | 761 |
+| Total lines: | 1968 |
+| **Branch coverage:** | 59.5% (112 of 188) |
+| Covered branches: | 112 |
+| Total branches: | 188 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 74_8463303177 |
+| Tag: | 75_8764755940 |
 
 </details>
 
 ## Coverage
-<details><summary>Nabs - 100%</summary>
+<details><summary>Nabs - 47.3%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs**|**100%**|**100%**|
-|Nabs.ValueObject`1|100%|100%|
+|**Nabs**|**47.3%**|**23%**|
+|Nabs.NewValueService|66.6%|33.3%|
+|Nabs.ValueObject`1|34.7%|20%|
 
 </details>
-<details><summary>Nabs.ActivityFramework - 33.6%</summary>
+<details><summary>Nabs.ActivityFramework - 65.4%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.ActivityFramework**|**33.6%**|**10%**|
-|Nabs.ActivityFramework.Activity`1|50%|50%|
-|Nabs.ActivityFramework.Activity`3|0%|0%|
-|Nabs.ActivityFramework.ActivityStateValidator`1|0%|0%|
+|**Nabs.ActivityFramework**|**65.4%**|**46.6%**|
+|Nabs.ActivityFramework.Activity`1|85.7%|72.2%|
+|Nabs.ActivityFramework.ActivityStateValidator`1|42.8%|50%|
 |Nabs.ActivityFramework.UiManifest.ActivityStateUiManifest`1|100%||
 |Nabs.ActivityFramework.UiManifest.UiManifestResult|100%||
 |Nabs.ActivityFramework.Workflow`1|0%|0%|
