@@ -1,6 +1,7 @@
 ﻿namespace Nabs.ActivityFramework.UiManifest;
 
-public abstract class ActivityStateUiManifest<T> : IActivityStateUiManifestTitle<T>, IActivityStateUiManifestProperty<T>
+public abstract class ActivityStateUiManifest<T> 
+	: IActivityStateUiManifestTitle<T>, IActivityStateUiManifestProperty<T>
 	where T : class, IActivityState
 {
 	private readonly UiManifestTitle _manifestTitle = new();

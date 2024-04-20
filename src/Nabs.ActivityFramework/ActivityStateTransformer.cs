@@ -8,5 +8,5 @@ public abstract class ActivityStateTransformer<TActivityState>
 	: IActivityStateTransformer<TActivityState>
 	where TActivityState : class, IActivityState
 {
-	public abstract Task<TActivityState> RunAsync(TActivityState activityState);
+	public abstract TActivityState Run(TActivityState activityState);
 }

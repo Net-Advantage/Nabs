@@ -5,3 +5,4 @@ global using Nabs.Serialisation;
 global using Nabs.Tests.ActivityFrameworkUnitTests.UiManifest;
 global using Xunit;
 global using Xunit.Abstractions;
+global using FluentValidation;

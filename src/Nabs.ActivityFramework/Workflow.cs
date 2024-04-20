@@ -39,30 +39,18 @@ public abstract class Workflow<TWorkflowState>
 		Activities.Add(activity, action);
 	}
 
-	protected virtual Task OnDataLoadAsync()
-	{
-		return Task.CompletedTask;
-	}
-
-	protected virtual Task OnDataPersistAsync()
-	{
-		return Task.CompletedTask;
-	}
-
-	public async Task RunAsync()
+	public void Run()
 	{
 		Processed = false;
-		await OnDataLoadAsync();
-		await ProcessActivitiesAsync();
-		await OnDataPersistAsync();
+		ProcessActivities();
 		Processed = true;
 	}
 
-	public virtual async Task ProcessActivitiesAsync()
+	public virtual void ProcessActivities()
 	{
 		foreach (var activity in Activities)
 		{
-			await activity.Key.RunAsync();
+			activity.Key.Run();
 			activity.Value?.DynamicInvoke(activity.Key);
 		}
 	}

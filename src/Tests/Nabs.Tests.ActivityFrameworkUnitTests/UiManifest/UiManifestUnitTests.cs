@@ -8,7 +8,7 @@ public sealed class UiManifestUnitTests(ITestOutputHelper outputHelper)
 	public void RenderUiManifestTest()
 	{
 		// Arrange
-		var uiManifest = new MyActivityStateUiManifest();
+		var uiManifest = new SimpleActivityStateUiManifest();
 		
 		// Act
 		var result = uiManifest.Render();

@@ -2,14 +2,14 @@
 
 public interface IActivity
 {
-	bool HasStateChanged { get; }
-	ValidationResult ValidationResult { get; }
-	Task RunAsync();
+    bool HasStateChanged { get; }
+    ValidationResult ValidationResult { get; }
+    void Run();
 }
 
 public interface IActivity<TActivityState>
-	: IActivity
-	where TActivityState : class, IActivityState;
+    : IActivity
+    where TActivityState : class, IActivityState;
 
 /// <summary>
 /// An activity that holds the state based on TActivityState.
@@ -18,95 +18,79 @@ public interface IActivity<TActivityState>
 /// </summary>
 /// <typeparam name="TActivityState"></typeparam>
 public abstract class Activity<
-	TActivityState>
-	: IActivity<TActivityState>
-	where TActivityState : class, IActivityState
+    TActivityState>
+    : IActivity<TActivityState>
+    where TActivityState : class, IActivityState
 {
+    private IActivityStateFactory<TActivityState>? _activityStateFactory;
+    private IActivityStateValidator<TActivityState>? _activityStateValidator;
 
-	public TActivityState? InitialActivityState { get; protected set; }
-	public TActivityState ActivityState { get; set; } = default!;
+    protected Activity(TActivityState activityState)
+    {
+        InitialActivityState = activityState;
+        ActivityState = activityState;
+    }
 
-	public bool HasStateChanged => InitialActivityState != ActivityState;
+    public TActivityState? InitialActivityState { get; protected set; }
+    public TActivityState? ActivityState { get; protected set; } = default!;
 
-	public ValidationResult ValidationResult { get; set; } = default!;
+    public bool HasStateChanged => InitialActivityState != ActivityState;
 
-	public virtual async Task RunAsync()
-	{
-		if (InitialActivityState is null || ActivityState is null)
-		{
-			InitialActivityState = (TActivityState)Activator.CreateInstance(typeof(TActivityState))!;
-			ActivityState ??= InitialActivityState;
-		}
+    public ValidationResult ValidationResult { get; set; } = default!;
 
-		await Task.CompletedTask;
-	}
-}
+    protected Dictionary<IActivityStateBehaviour<TActivityState>, Action?> Behaviours { get; } = [];
 
-/// <summary>
-/// An activity that holds the state based on TActivityState.
-/// It will retrieve or create state base on the implementation of the TActivityStateFactory.
-/// </summary>
-/// <typeparam name="TActivityState"></typeparam>
-/// <typeparam name="TActivityStateFactory"></typeparam>
-public abstract class Activity<
-	TActivityState,
-	TActivityStateFactory,
-	TActivityStateValidator>
-	: Activity<TActivityState>
-	where TActivityState : class, IActivityState
-	where TActivityStateFactory : class, IActivityStateInitialiser<TActivityState>
-	where TActivityStateValidator : class, IActivityStateValidator<TActivityState>
-{
-	public Activity()
-	{
+    protected void AddFactory(IActivityStateFactory<TActivityState> factory)
+    {
+        _activityStateFactory = factory;
+    }
 
-	}
+    protected void AddValidator(IActivityStateValidator<TActivityState> validator)
+    {
+        _activityStateValidator = validator;
+    }
 
-	protected Dictionary<IActivityStateBehaviour<TActivityState>, Action?> Behaviours { get; } = [];
+    protected void AddBehaviour(IActivityStateBehaviour<TActivityState> behaviour, Action? action = null)
+    {
+        Behaviours.Add(behaviour, action);
+    }
 
-	protected void AddBehaviour(IActivityStateBehaviour<TActivityState> behaviour, Action? action = null)
-	{
-		Behaviours.Add(behaviour, action);
-	}
+    public virtual void Run()
+    {
+        if (InitialActivityState is null 
+            && _activityStateFactory is not null)
+        {
+            InitialActivityState = _activityStateFactory.Run();
+        }
 
-	public void InitialiseState(TActivityState activityState)
-	{
-		InitialActivityState = activityState;
-		ActivityState = InitialActivityState;
-	}
+        ActivityState ??= InitialActivityState;
 
-	public sealed override async Task RunAsync()
-	{
-		if (InitialActivityState is null)
-		{
-			var factory = (TActivityStateFactory)Activator.CreateInstance(typeof(TActivityStateFactory))!;
-			InitialActivityState = await factory.RunAsync();
+        if (Behaviours.Count > 0)
+        {
+            ProcessBehaviours();
+        }
 
-			ActivityState ??= InitialActivityState;
-		}
+        if (_activityStateValidator is not null)
+        {
+            ValidationResult = _activityStateValidator.Run(ActivityState);
+        }
+        ValidationResult ??= new ValidationResult();
+    }
 
-		if (Behaviours.Count > 0)
-		{
-			await ProcessBehaviours();
-		}
+    public virtual void ProcessBehaviours()
+    {
+        if (ActivityState is null)
+        {
+            return;
+        }
 
-		var validator = (TActivityStateValidator)Activator.CreateInstance(typeof(TActivityStateValidator))!;
-		ValidationResult = validator.Run(ActivityState);
-	}
-	public virtual async Task ProcessBehaviours()
-	{
-		if (ActivityState is null)
-		{
-			return;
-		}
-
-		foreach (var behaviour in Behaviours)
-		{
-			ActivityState = await behaviour.Key.RunAsync(ActivityState);
-			if (behaviour.Value is not null)
-			{
-				behaviour.Value();
-			}
-		}
-	}
+        foreach (var behaviour in Behaviours)
+        {
+            ActivityState = behaviour.Key.Run(ActivityState);
+            if (behaviour.Value is not null)
+            {
+                behaviour.Value();
+            }
+        }
+    }
 }
