@@ -1,4 +1,4 @@
-﻿namespace Nabs.Tests.ActivityFrameworkUnitTests.Activities.FullActivity;
+﻿namespace Nabs.Tests.ActivityFrameworkUnitTests.Activities.Full;
 
 public sealed class FullActivityStateActivityUnitTests(
     ITestOutputHelper outputHelper)

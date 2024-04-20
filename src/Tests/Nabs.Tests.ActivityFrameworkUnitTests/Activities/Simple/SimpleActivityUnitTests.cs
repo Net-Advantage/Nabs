@@ -1,4 +1,4 @@
-﻿namespace Nabs.Tests.ActivityFrameworkUnitTests.Activities.SimpleActivity;
+﻿namespace Nabs.Tests.ActivityFrameworkUnitTests.Activities.Simple;
 
 public sealed class SimpleActivityUnitTests(
     ITestOutputHelper outputHelper)
