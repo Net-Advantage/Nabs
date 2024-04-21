@@ -1,4 +1,6 @@
-﻿namespace Nabs.Tests.ScenariosUnitTests.Scenarios.PersonScenario.GetList;
+﻿using Nabs.Projections;
+
+namespace Nabs.Tests.ScenariosUnitTests.Scenarios.PersonScenario.GetList;
 
 public sealed class GetPersonListHandler : IRequestHandler<GetListRequest, PersonListProjection>
 {
@@ -15,10 +17,27 @@ public sealed class GetPersonListHandler : IRequestHandler<GetListRequest, Perso
 
         // IO BL pipeline
 
-
-
         return await Task.FromResult(result);
     }
 }
 
 public sealed class GetListRequest : IRequest<PersonListProjection>;
+
+public abstract class ScenarioBase<TRequest, TResponse>
+    : IRequestHandler<TRequest, TResponse>
+    where TRequest : IRequest<TResponse>, IProjection
+    where TResponse : class, IProjection
+{
+    public abstract Task<TResponse> Handle(
+        TRequest request, CancellationToken cancellationToken);
+
+    public void MapRequestToState(TRequest request)
+    {
+        // Map request to state
+    }
+
+    public TResponse MapStateToResponse()
+    {
+        // Map state to response
+    }
+}
