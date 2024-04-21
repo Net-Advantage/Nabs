@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 04/21/2024 - 02:54:23 |
-| Coverage date: | 04/21/2024 - 02:53:26 - 04/21/2024 - 02:54:21 |
+| Generated on: | 04/21/2024 - 11:36:20 |
+| Coverage date: | 04/21/2024 - 11:35:23 - 04/21/2024 - 11:36:18 |
 | Parser: | MultiReport (13x Cobertura) |
-| Assemblies: | 16 |
-| Classes: | 51 |
-| Files: | 49 |
-| **Line coverage:** | 73.1% (557 of 761) |
-| Covered lines: | 557 |
-| Uncovered lines: | 204 |
-| Coverable lines: | 761 |
-| Total lines: | 1968 |
-| **Branch coverage:** | 68% (128 of 188) |
+| Assemblies: | 17 |
+| Classes: | 52 |
+| Files: | 50 |
+| **Line coverage:** | 72.8% (571 of 784) |
+| Covered lines: | 571 |
+| Uncovered lines: | 213 |
+| Coverable lines: | 784 |
+| Total lines: | 2036 |
+| **Branch coverage:** | 67.3% (128 of 190) |
 | Covered branches: | 128 |
-| Total branches: | 188 |
+| Total branches: | 190 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 76_8769646511 |
+| Tag: | 78_8772338014 |
 
 </details>
 
@@ -32,12 +32,12 @@
 |Nabs.ValueObject`1|100%|100%|
 
 </details>
-<details><summary>Nabs.ActivityFramework - 65.4%</summary>
+<details><summary>Nabs.ActivityFramework - 65.2%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.ActivityFramework**|**65.4%**|**46.6%**|
-|Nabs.ActivityFramework.Activity`1|85.7%|72.2%|
+|**Nabs.ActivityFramework**|**65.2%**|**43.7%**|
+|Nabs.ActivityFramework.Activity`1|80.5%|65%|
 |Nabs.ActivityFramework.ActivityStateValidator`1|42.8%|50%|
 |Nabs.ActivityFramework.UiManifest.ActivityStateUiManifest`1|100%||
 |Nabs.ActivityFramework.UiManifest.UiManifestResult|100%||
@@ -86,6 +86,13 @@
 |Nabs.Persistence.TenantQueryExtensions|100%||
 
 </details>
+<details><summary>Nabs.Projections - </summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.Projections**|****|****|
+
+</details>
 <details><summary>Nabs.Reflection - 100%</summary>
 
 |**Name**|**Line**|**Branch**|
@@ -102,12 +109,13 @@
 |Nabs.Resources.EmbeddedResourceLoader|100%|100%|
 
 </details>
-<details><summary>Nabs.Scenarios - 100%</summary>
+<details><summary>Nabs.Scenarios - 76.9%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Scenarios**|**100%**|**100%**|
+|**Nabs.Scenarios**|**76.9%**|**100%**|
 |Nabs.Scenarios.ApplicationContext|100%||
+|Nabs.Scenarios.ScenarioBase`3|60%||
 |Nabs.Scenarios.TenantId|100%|100%|
 
 </details>

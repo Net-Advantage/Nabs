@@ -227,7 +227,7 @@ var assemblies = [
   {
     "name": "Nabs.ActivityFramework",
     "classes": [
-      { "name": "Nabs.ActivityFramework.Activity<T>", "rp": "Nabs.ActivityFramework_Activity_1.html", "cl": 24, "ucl": 4, "cal": 28, "tl": 96, "cb": 13, "tb": 18, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.Activity<T>", "rp": "Nabs.ActivityFramework_Activity_1.html", "cl": 29, "ucl": 7, "cal": 36, "tl": 118, "cb": 13, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.ActivityStateValidator<T>", "rp": "Nabs.ActivityFramework_ActivityStateValidator_1.html", "cl": 3, "ucl": 4, "cal": 7, "tl": 25, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.UiManifest.ActivityStateUiManifest<T>", "rp": "Nabs.ActivityFramework_ActivityStateUiManifest_1.html", "cl": 27, "ucl": 0, "cal": 27, "tl": 71, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.UiManifest.UiManifestResult", "rp": "Nabs.ActivityFramework_UiManifestResult.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -264,6 +264,10 @@ var assemblies = [
       { "name": "Nabs.Persistence.TenantQueryExtensions", "rp": "Nabs.Persistence_TenantQueryExtensions.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 31, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
+    "name": "Nabs.Projections",
+    "classes": [
+    ]},
+  {
     "name": "Nabs.Reflection",
     "classes": [
       { "name": "Nabs.Reflection.ReflectionExtensions", "rp": "Nabs.Reflection_ReflectionExtensions.html", "cl": 31, "ucl": 0, "cal": 31, "tl": 66, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -277,6 +281,7 @@ var assemblies = [
     "name": "Nabs.Scenarios",
     "classes": [
       { "name": "Nabs.Scenarios.ApplicationContext", "rp": "Nabs.Scenarios_ApplicationContext.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Scenarios.ScenarioBase<T1, T2, T3>", "rp": "Nabs.Scenarios_ScenarioBase_3.html", "cl": 9, "ucl": 6, "cal": 15, "tl": 46, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Scenarios.TenantId", "rp": "Nabs.Scenarios_TenantId.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 24, "cb": 2, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
