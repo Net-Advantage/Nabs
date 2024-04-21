@@ -25,13 +25,29 @@ public abstract class Activity<
     private IActivityStateFactory<TActivityState>? _activityStateFactory;
     private IActivityStateValidator<TActivityState>? _activityStateValidator;
 
+    protected Activity()
+    {
+    }
+
     protected Activity(TActivityState activityState)
     {
         InitialActivityState = activityState;
         ActivityState = activityState;
     }
 
-    public TActivityState? InitialActivityState { get; protected set; }
+    private TActivityState? _initialActivityState;
+    public TActivityState? InitialActivityState { 
+        get { return _initialActivityState; } 
+        protected set 
+        {
+            if (_initialActivityState is not null)
+            {
+                throw new InvalidOperationException("InitialActivityState can only be set once.");
+            }
+            _initialActivityState = value;
+            ActivityState = value;
+        } 
+    }
     public TActivityState? ActivityState { get; protected set; } = default!;
 
     public bool HasStateChanged => InitialActivityState != ActivityState;
@@ -57,10 +73,16 @@ public abstract class Activity<
 
     public virtual void Run()
     {
-        if (InitialActivityState is null 
-            && _activityStateFactory is not null)
+        if (InitialActivityState is null)
         {
-            InitialActivityState = _activityStateFactory.Run();
+            if (_activityStateFactory is not null)
+            {
+                InitialActivityState = _activityStateFactory.Run();
+            }
+            else
+            {
+                throw new InvalidOperationException("InitialActivityState is null and no factory has been provided. Set the InitialActivityState manually.");
+            }
         }
 
         ActivityState ??= InitialActivityState;
