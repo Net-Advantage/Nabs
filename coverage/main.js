@@ -222,7 +222,7 @@ var assemblies = [
     "name": "Nabs",
     "classes": [
       { "name": "Nabs.NewValueService", "rp": "Nabs_NewValueService.html", "cl": 10, "ucl": 5, "cal": 15, "tl": 53, "cb": 2, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.ValueObject<T>", "rp": "Nabs_ValueObject_1.html", "cl": 8, "ucl": 15, "cal": 23, "tl": 55, "cb": 4, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ValueObject<T>", "rp": "Nabs_ValueObject_1.html", "cl": 23, "ucl": 0, "cal": 23, "tl": 55, "cb": 20, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.ActivityFramework",
@@ -352,28 +352,10 @@ var riskHotspots = [
       { "value": 14, "exceeded": false },
     ]},
   {
-    "assembly": "Nabs", "class": "Nabs.ValueObject<T>", "reportPath": "Nabs_ValueObject_1.html", "methodName": "op_Equality(Nabs.ValueObject`1<T>,Nabs.ValueObject`1<T>)", "methodShortName": "op_Equality(...)", "fileIndex": 0, "line": 33,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
     "assembly": "Nabs.ActivityFramework", "class": "Nabs.ActivityFramework.Workflow<T>", "reportPath": "Nabs.ActivityFramework_Workflow_1.html", "methodName": "get_ValidationResult()", "methodShortName": "get_ValidationResult()", "fileIndex": 0, "line": 15,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "Nabs", "class": "Nabs.ValueObject<T>", "reportPath": "Nabs_ValueObject_1.html", "methodName": "Equals(T)", "methodShortName": "Equals(...)", "fileIndex": 0, "line": 10,
-    "metrics": [
-      { "value": 20, "exceeded": true },
-      { "value": 4, "exceeded": false },
-    ]},
-  {
-    "assembly": "Nabs", "class": "Nabs.ValueObject<T>", "reportPath": "Nabs_ValueObject_1.html", "methodName": "Equals(System.Object)", "methodShortName": "Equals(...)", "fileIndex": 0, "line": 49,
-    "metrics": [
-      { "value": 20, "exceeded": true },
-      { "value": 4, "exceeded": false },
     ]},
   {
     "assembly": "Nabs.ActivityFramework", "class": "Nabs.ActivityFramework.Workflow<T>", "reportPath": "Nabs.ActivityFramework_Workflow_1.html", "methodName": "ProcessActivities()", "methodShortName": "ProcessActivities()", "fileIndex": 0, "line": 51,

@@ -3,33 +3,33 @@
 
 |||
 |:---|:---|
-| Generated on: | 04/20/2024 - 11:41:46 |
-| Coverage date: | 04/20/2024 - 11:40:49 - 04/20/2024 - 11:41:44 |
+| Generated on: | 04/21/2024 - 02:54:23 |
+| Coverage date: | 04/21/2024 - 02:53:26 - 04/21/2024 - 02:54:21 |
 | Parser: | MultiReport (13x Cobertura) |
 | Assemblies: | 16 |
 | Classes: | 51 |
 | Files: | 49 |
-| **Line coverage:** | 71.2% (542 of 761) |
-| Covered lines: | 542 |
-| Uncovered lines: | 219 |
+| **Line coverage:** | 73.1% (557 of 761) |
+| Covered lines: | 557 |
+| Uncovered lines: | 204 |
 | Coverable lines: | 761 |
 | Total lines: | 1968 |
-| **Branch coverage:** | 59.5% (112 of 188) |
-| Covered branches: | 112 |
+| **Branch coverage:** | 68% (128 of 188) |
+| Covered branches: | 128 |
 | Total branches: | 188 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 75_8764755940 |
+| Tag: | 76_8769646511 |
 
 </details>
 
 ## Coverage
-<details><summary>Nabs - 47.3%</summary>
+<details><summary>Nabs - 86.8%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs**|**47.3%**|**23%**|
+|**Nabs**|**86.8%**|**84.6%**|
 |Nabs.NewValueService|66.6%|33.3%|
-|Nabs.ValueObject`1|34.7%|20%|
+|Nabs.ValueObject`1|100%|100%|
 
 </details>
 <details><summary>Nabs.ActivityFramework - 65.4%</summary>
