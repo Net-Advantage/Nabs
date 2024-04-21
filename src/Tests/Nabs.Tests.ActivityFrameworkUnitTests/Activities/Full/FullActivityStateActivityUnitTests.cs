@@ -1,19 +1,25 @@
 ﻿namespace Nabs.Tests.ActivityFrameworkUnitTests.Activities.Full;
 
-public sealed class FullActivityStateActivityUnitTests(
-    ITestOutputHelper outputHelper)
-    : ActivityUnitTestBase(outputHelper)
+public sealed class FullActivityStateActivityUnitTests : ActivityUnitTestBase
 {
+    private FullActivityState _expectedInitialState = default!;
+    private FullActivityState _expectedState = default!;
+
+    public FullActivityStateActivityUnitTests(
+        ITestOutputHelper outputHelper) : base(outputHelper)
+    {
+        _expectedInitialState = new FullActivityState(Guid.NewGuid(), "Joe", "Soap");
+        _expectedState = _expectedInitialState with
+        {
+            FullName = "Joe Soap"
+        };
+    }
+
     [Fact]
     public void CreateActivityTest()
     {
         // Arrange
-        var expectedInitialState = new FullActivityState(Guid.NewGuid(), "Joe", "Soap");
-        var expectedState = expectedInitialState with
-        {
-            FullName = "Joe Soap"
-        };
-        var state = expectedInitialState;
+        var state = _expectedInitialState;
         var activity = new FullActivity(state);
 
         // Act
@@ -21,8 +27,22 @@ public sealed class FullActivityStateActivityUnitTests(
 
         // Assert
         ActivityTestValidation
-            .ValidateActivity(activity, expectedInitialState, expectedState);
+            .ValidateActivity(activity, _expectedInitialState, _expectedState);
 
         activity.ActivityState!.FullName.Should().Be($"{state.FirstName} {state.LastName}");
+    }
+
+    [Fact]
+    public void FullActivityStateTransformerTest()
+    {
+        // Arrange
+        var state = _expectedInitialState;
+        var transformer = new FullActivityStateTransformer();
+
+        // Act
+        var actualState = transformer.Run(state);
+
+        // Assert
+        actualState.Should().BeEquivalentTo(_expectedState);
     }
 }

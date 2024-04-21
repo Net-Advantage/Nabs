@@ -28,11 +28,11 @@ public abstract class ScenarioBase<TRequest, TResponse, TActivityState>
 
     public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken)
     {
-        var result = await InvokeActivity(request);
+        await InvokeActivity(request);
 
         Run();
 
-        await Task.CompletedTask;
+        var result = ProcessResult();
         return result;
     }
 
@@ -42,5 +42,6 @@ public abstract class ScenarioBase<TRequest, TResponse, TActivityState>
         ActivityState = InitialActivityState;
     }
 
-    protected abstract Task<TResponse> InvokeActivity(TRequest request);
+    protected abstract Task InvokeActivity(TRequest request);
+    protected abstract TResponse ProcessResult();
 }

@@ -11,12 +11,15 @@ public sealed class GetPersonListScenario
         AddBehaviour(new GetPersonListActivityMapper());
     }
 
-    protected override async Task<GetListResponse> InvokeActivity(GetListRequest request)
+    protected override async Task InvokeActivity(GetListRequest request)
     {
         var personEntities = await LoadData();
 
         InitialActivityState = new GetPersonListActivityState(request, personEntities);
-        
+    }
+
+    protected override GetListResponse ProcessResult()
+    {
         var result = new GetListResponse()
         {
             PersonList = ActivityState!.Result!
@@ -26,7 +29,7 @@ public sealed class GetPersonListScenario
 
     private static async Task<List<PersonEntity>> LoadData()
     {
-        // This will come from the dbContext
+        // This will typically come from the dbContext
         var personEntities = new List<PersonEntity>
         {
             new()
