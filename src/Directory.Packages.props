@@ -10,17 +10,17 @@
   <ItemGroup>
     <!-- microsoft asp net dependencies -->
     <PackageVersion Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageVersion Include="bunit" Version="1.27.17" />
+    <PackageVersion Include="bunit" Version="1.28.9" />
     <PackageVersion Include="HtmlAgilityPack" Version="1.11.59" />
     <PackageVersion Include="MediatR" Version="12.2.0" />
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.1" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.Web" Version="8.0.4" />
     <!-- microsoft identity dependencies -->
-    <PackageVersion Include="Azure.Identity" Version="1.11.0" />
+    <PackageVersion Include="Azure.Identity" Version="1.11.2" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
-    <PackageVersion Include="Microsoft.Identity.Web" Version="2.17.4" />
-    <PackageVersion Include="Syncfusion.Blazor" Version="25.1.39" />
+    <PackageVersion Include="Microsoft.Identity.Web" Version="2.17.5" />
+    <PackageVersion Include="Syncfusion.Blazor" Version="25.1.40" />
     <PackageVersion Include="Syncfusion.Blazor.Inputs" Version="25.1.37" />
     <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
     <!-- microsoft extensions dependencies -->
@@ -51,7 +51,7 @@
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
     <PackageVersion Include="Testcontainers.MsSql" Version="3.8.0" />
     <PackageVersion Include="Testcontainers.Kafka" Version="3.8.0" />
-    <PackageVersion Include="Verify.Xunit" Version="24.0.0" />
+    <PackageVersion Include="Verify.Xunit" Version="24.1.0" />
     <PackageVersion Include="xunit" Version="2.7.1" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.5.8" />
     <PackageVersion Include="coverlet.collector" Version="6.0.2" />
@@ -69,7 +69,7 @@
     <PackageVersion Include="System.Reactive" Version="6.0.0" />
     <PackageVersion Include="Cocona" Version="2.2.0" />
     <PackageVersion Include="FluentValidation" Version="11.9.0" />
-    <PackageVersion Include="CsvHelper" Version="31.0.3" />
+    <PackageVersion Include="CsvHelper" Version="31.0.4" />
     <PackageVersion Include="LanguageExt.Core" Version="4.4.8" />
     <PackageVersion Include="Newtonsoft.Json.Schema" Version="3.0.15" />
     <PackageVersion Include="NJsonSchema" Version="10.9.0" />
@@ -84,7 +84,7 @@
     <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.6.1" />
     <!-- Azure dependencies -->
     <PackageVersion Include="Azure.Security.KeyVault.Secrets" Version="4.6.0" />
-    <PackageVersion Include="Microsoft.Extensions.Azure" Version="1.7.2" />
+    <PackageVersion Include="Microsoft.Extensions.Azure" Version="1.7.3" />
     <PackageVersion Include="Azure.Storage.Blobs" Version="12.19.1" />
     <!-- AWS dependencies -->
     <!-- TODO: DWS -->
