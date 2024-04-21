@@ -281,7 +281,7 @@ var assemblies = [
     "name": "Nabs.Scenarios",
     "classes": [
       { "name": "Nabs.Scenarios.ApplicationContext", "rp": "Nabs.Scenarios_ApplicationContext.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Scenarios.ScenarioBase<T1, T2, T3>", "rp": "Nabs.Scenarios_ScenarioBase_3.html", "cl": 9, "ucl": 6, "cal": 15, "tl": 46, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Scenarios.ScenarioBase<T1, T2, T3>", "rp": "Nabs.Scenarios_ScenarioBase_3.html", "cl": 9, "ucl": 6, "cal": 15, "tl": 47, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Scenarios.TenantId", "rp": "Nabs.Scenarios_TenantId.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 24, "cb": 2, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {

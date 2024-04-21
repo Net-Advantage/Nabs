@@ -3,8 +3,8 @@
 
 |||
 |:---|:---|
-| Generated on: | 04/21/2024 - 11:36:20 |
-| Coverage date: | 04/21/2024 - 11:35:23 - 04/21/2024 - 11:36:18 |
+| Generated on: | 04/21/2024 - 19:41:18 |
+| Coverage date: | 04/21/2024 - 19:40:20 - 04/21/2024 - 19:41:16 |
 | Parser: | MultiReport (13x Cobertura) |
 | Assemblies: | 17 |
 | Classes: | 52 |
@@ -13,12 +13,12 @@
 | Covered lines: | 571 |
 | Uncovered lines: | 213 |
 | Coverable lines: | 784 |
-| Total lines: | 2036 |
+| Total lines: | 2037 |
 | **Branch coverage:** | 67.3% (128 of 190) |
 | Covered branches: | 128 |
 | Total branches: | 190 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 78_8772338014 |
+| Tag: | 79_8775064660 |
 
 </details>
 
