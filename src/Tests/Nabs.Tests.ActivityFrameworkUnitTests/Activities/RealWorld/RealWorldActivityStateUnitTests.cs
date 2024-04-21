@@ -1,6 +1,4 @@
-﻿using Nabs.Tests.ActivityFrameworkUnitTests.Activities.Full;
-
-namespace Nabs.Tests.ActivityFrameworkUnitTests.Activities.RealWorld;
+﻿namespace Nabs.Tests.ActivityFrameworkUnitTests.Activities.RealWorld;
 
 public sealed class RealWorldActivityStateUnitTests(
     ITestOutputHelper testOutputHelper)
@@ -56,5 +54,4 @@ public sealed class RealWorldActivityStateUnitTests(
         activityState.SessionId.Should().NotBeNull();
         activityState.SessionId.Should().NotBeEmpty();
     }
-
 }

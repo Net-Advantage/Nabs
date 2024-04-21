@@ -5,7 +5,7 @@ public interface IProjection; // Marker interface
 public interface IListProjection<TListItemProjection> : IProjection
     where TListItemProjection : IListItemProjection
 {
-    IEnumerable<TListItemProjection> Items { get; }
+    List<TListItemProjection> Items { get; }
 }
 
 public interface IListItemProjection : IProjection;
