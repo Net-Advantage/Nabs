@@ -1,3 +1,3 @@
 ﻿[assembly: Xunit.TestFramework(
-	KafkaPubSubContainerRunOnce.RunOnceFqn,
-	KafkaPubSubContainerRunOnce.RunOnceAssemblyName)]
+    KafkaPubSubContainerRunOnce.RunOnceFqn,
+    KafkaPubSubContainerRunOnce.RunOnceAssemblyName)]

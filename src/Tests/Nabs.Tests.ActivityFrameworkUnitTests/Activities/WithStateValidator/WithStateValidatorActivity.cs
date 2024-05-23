@@ -4,7 +4,7 @@ public sealed class WithStateValidatorActivity
     : Activity<WithStateValidatorActivityState>
 {
     public WithStateValidatorActivity(
-        WithStateValidatorActivityState activityState) 
+        WithStateValidatorActivityState activityState)
         : base(activityState)
     {
         AddValidator(new WithStateValidatorActivityStateValidator());

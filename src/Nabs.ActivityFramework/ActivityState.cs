@@ -2,10 +2,10 @@
 
 public interface IActivityState
 {
-	
+
 }
 
 public abstract record ActivityState : IActivityState
 {
-	
+
 }

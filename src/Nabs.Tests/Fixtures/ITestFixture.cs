@@ -2,5 +2,5 @@
 
 public interface ITestFixture : IDisposable
 {
-	public void Initialise();
+    public void Initialise();
 }

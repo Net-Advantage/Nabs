@@ -5,6 +5,6 @@ public sealed class FullActivityStateValidator
 {
     public FullActivityStateValidator()
     {
-        
+
     }
 }

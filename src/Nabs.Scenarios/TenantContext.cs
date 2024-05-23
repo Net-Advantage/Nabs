@@ -2,5 +2,5 @@
 
 public sealed class TenantContext : ITenantContext
 {
-	public Guid TenantId { get; init; }
+    public Guid TenantId { get; init; }
 }

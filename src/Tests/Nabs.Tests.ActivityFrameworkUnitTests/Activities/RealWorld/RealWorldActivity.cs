@@ -3,7 +3,7 @@
 public sealed class RealWorldActivity
     : Activity<RealWorldActivityState>
 {
-    public RealWorldActivity(RealWorldActivityState activityState) 
+    public RealWorldActivity(RealWorldActivityState activityState)
         : base(activityState)
     {
         AddValidator(new RealWorldActivityStateValidator());

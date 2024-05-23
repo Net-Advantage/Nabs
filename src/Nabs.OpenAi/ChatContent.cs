@@ -3,5 +3,5 @@
 namespace Nabs.OpenAi;
 
 public sealed record ChatContent(
-	string Prompt,
-	ChatRole Role);
+    string Prompt,
+    ChatRole Role);

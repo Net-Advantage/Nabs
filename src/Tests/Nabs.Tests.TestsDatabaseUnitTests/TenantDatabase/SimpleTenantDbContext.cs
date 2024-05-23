@@ -1,9 +1,9 @@
 ﻿namespace Nabs.Tests.TestDatabaseUnitTests.TenantDatabase;
 
 public sealed class SimpleTenantDbContext(
-	DbContextOptions options,
-	IApplicationContext applicationContext)
-	: TenantableDbContext<SimpleTenantEntity>(options, applicationContext)
+    DbContextOptions options,
+    IApplicationContext applicationContext)
+    : TenantableDbContext<SimpleTenantEntity>(options, applicationContext)
 {
-	public DbSet<CommentEntity> Comments => Set<CommentEntity>();
+    public DbSet<CommentEntity> Comments => Set<CommentEntity>();
 }

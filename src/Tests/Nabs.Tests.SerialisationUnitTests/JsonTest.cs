@@ -2,5 +2,5 @@
 
 public sealed class JsonTest
 {
-	public string Name { get; set; } = default!;
+    public string Name { get; set; } = default!;
 }

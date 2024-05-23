@@ -17,8 +17,8 @@ public abstract class ScenarioBase<TRequest, TResponse, TActivityState>
     }
 
     protected ScenarioBase(
-        TActivityState activityState, 
-        IApplicationContext applicationContext) 
+        TActivityState activityState,
+        IApplicationContext applicationContext)
         : base(activityState)
     {
         ApplicationContext = applicationContext;

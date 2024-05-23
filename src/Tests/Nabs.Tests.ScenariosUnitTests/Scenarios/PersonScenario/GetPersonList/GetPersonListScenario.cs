@@ -1,6 +1,6 @@
 ﻿namespace Nabs.Tests.ScenariosUnitTests.Scenarios.PersonScenario.GetList;
 
-public sealed class GetPersonListScenario 
+public sealed class GetPersonListScenario
     : ScenarioBase<GetListRequest, GetListResponse, GetPersonListActivityState>
 {
     public GetPersonListScenario(

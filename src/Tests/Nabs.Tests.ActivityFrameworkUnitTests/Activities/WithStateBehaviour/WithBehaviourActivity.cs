@@ -4,7 +4,7 @@ public sealed class WithBehaviourActivity
     : Activity<WithBehaviourActivityState>
 {
     public WithBehaviourActivity(
-        WithBehaviourActivityState activityState) 
+        WithBehaviourActivityState activityState)
         : base(activityState)
     {
         AddBehaviour(new WithBehaviourActivityBehaviour());

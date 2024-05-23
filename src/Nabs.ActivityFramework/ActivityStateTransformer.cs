@@ -1,12 +1,12 @@
 ﻿namespace Nabs.ActivityFramework;
 
 public interface IActivityStateTransformer<TActivityState>
-	: IActivityStateBehaviour<TActivityState>
-	where TActivityState : class, IActivityState;
+    : IActivityStateBehaviour<TActivityState>
+    where TActivityState : class, IActivityState;
 
 public abstract class ActivityStateTransformer<TActivityState>
-	: IActivityStateTransformer<TActivityState>
-	where TActivityState : class, IActivityState
+    : IActivityStateTransformer<TActivityState>
+    where TActivityState : class, IActivityState
 {
-	public abstract TActivityState Run(TActivityState activityState);
+    public abstract TActivityState Run(TActivityState activityState);
 }

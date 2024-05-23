@@ -2,5 +2,5 @@
 
 public interface ITenantableDbContext
 {
-	public IApplicationContext ApplicationContext { get; }
+    public IApplicationContext ApplicationContext { get; }
 }

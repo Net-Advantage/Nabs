@@ -1,9 +1,9 @@
 ﻿namespace Nabs.ActivityFramework;
 
 public interface IActivityStateFactory<TActivityState>
-	where TActivityState : class, IActivityState
+    where TActivityState : class, IActivityState
 {
-	TActivityState Run();
+    TActivityState Run();
 };
 
 
@@ -12,8 +12,8 @@ public interface IActivityStateFactory<TActivityState>
 /// </summary>
 /// <typeparam name="TActivityState"></typeparam>
 public abstract class ActivityStateFactory<TActivityState>
-	: IActivityStateFactory<TActivityState>
-	where TActivityState : class, IActivityState
+    : IActivityStateFactory<TActivityState>
+    where TActivityState : class, IActivityState
 {
-	public abstract TActivityState Run();
+    public abstract TActivityState Run();
 }

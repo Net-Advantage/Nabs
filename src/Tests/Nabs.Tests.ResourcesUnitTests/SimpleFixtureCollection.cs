@@ -2,7 +2,7 @@
 
 [CollectionDefinition(nameof(SimpleFixtureCollection))]
 public sealed class SimpleFixtureCollection
-	: ICollectionFixture<SimpleTestFixture>
+    : ICollectionFixture<SimpleTestFixture>
 {
 
 }

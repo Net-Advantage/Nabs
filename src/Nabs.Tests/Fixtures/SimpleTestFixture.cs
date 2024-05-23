@@ -1,10 +1,10 @@
 ﻿namespace Nabs.Tests.Fixtures;
 
 public class SimpleTestFixture(IMessageSink diagnosticMessageSink)
-	: TestFixtureBase(diagnosticMessageSink)
+    : TestFixtureBase(diagnosticMessageSink)
 {
-	public override void Initialise()
-	{
+    public override void Initialise()
+    {
 
-	}
+    }
 }

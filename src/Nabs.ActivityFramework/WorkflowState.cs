@@ -2,10 +2,10 @@
 
 public interface IWorkflowState
 {
-	Guid Id { get; set; }
+    Guid Id { get; set; }
 }
 
 public abstract class WorkflowState : IWorkflowState
 {
-	public Guid Id { get; set; }
+    public Guid Id { get; set; }
 }

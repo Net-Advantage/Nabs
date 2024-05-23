@@ -36,9 +36,10 @@ public abstract class Activity<
     }
 
     private TActivityState? _initialActivityState;
-    public TActivityState? InitialActivityState { 
-        get { return _initialActivityState; } 
-        protected set 
+    public TActivityState? InitialActivityState
+    {
+        get { return _initialActivityState; }
+        protected set
         {
             if (_initialActivityState is not null)
             {
@@ -46,7 +47,7 @@ public abstract class Activity<
             }
             _initialActivityState = value;
             ActivityState = value;
-        } 
+        }
     }
     public TActivityState? ActivityState { get; protected set; } = default!;
 

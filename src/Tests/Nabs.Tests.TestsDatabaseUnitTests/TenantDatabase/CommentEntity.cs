@@ -2,5 +2,5 @@
 
 public sealed class CommentEntity : EntityBase<Guid>, ITenantableEntity
 {
-	public string Comments { get; set; } = string.Empty;
+    public string Comments { get; set; } = string.Empty;
 }

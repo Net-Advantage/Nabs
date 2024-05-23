@@ -2,7 +2,7 @@
 
 public enum SimpleEnum
 {
-	One,
-	Two,
-	Three
+    One,
+    Two,
+    Three
 }

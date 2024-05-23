@@ -23,7 +23,7 @@ public sealed class WithBehaviourActivityUnitTests(
         // Assert
         ActivityTestValidation
             .ValidateActivity(
-                activity, 
+                activity,
                 expectedInitialState,
                 expectedFinalState);
 

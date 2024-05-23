@@ -2,7 +2,7 @@
 
 [CollectionDefinition(nameof(AzureConfigurationTestFixtureCollection))]
 public class AzureConfigurationTestFixtureCollection
-	: ICollectionFixture<AzureConfigurationTestFixture>
+    : ICollectionFixture<AzureConfigurationTestFixture>
 {
 
 }

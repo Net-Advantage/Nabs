@@ -23,7 +23,7 @@ public sealed class NewValueService
 
     public Guid NewGuid()
     {
-        if(!_isUnderTest)
+        if (!_isUnderTest)
         {
             return Guid.NewGuid();
         }

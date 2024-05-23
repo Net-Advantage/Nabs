@@ -1,6 +1,6 @@
 ﻿namespace Nabs.Tests.ActivityFrameworkUnitTests.Activities.Full;
 
-public sealed class FullActivity 
+public sealed class FullActivity
     : Activity<FullActivityState>
 {
     public FullActivity(FullActivityState activityState)

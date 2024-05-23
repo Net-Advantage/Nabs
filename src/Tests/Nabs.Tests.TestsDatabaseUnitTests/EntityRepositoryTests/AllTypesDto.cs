@@ -2,5 +2,5 @@
 
 public sealed class AllTypesDto
 {
-	public string StringColumn { get; set; } = string.Empty;
+    public string StringColumn { get; set; } = string.Empty;
 }

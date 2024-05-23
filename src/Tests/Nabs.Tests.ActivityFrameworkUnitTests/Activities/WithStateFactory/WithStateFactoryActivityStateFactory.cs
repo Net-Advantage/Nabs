@@ -5,8 +5,8 @@ public sealed class WithStateFactoryActivityStateFactory : IActivityStateFactory
     public WithStateFactoryActivityState Run()
     {
         return new WithStateFactoryActivityState(
-            Guid.Empty, 
-            "", 
+            Guid.Empty,
+            "",
             null);
     }
 }

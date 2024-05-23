@@ -2,7 +2,7 @@
 
 public sealed record RealWorldActivityState(
     PersonEntity PersonEntity,
-    NewValueService NewValueService) 
+    NewValueService NewValueService)
     : ActivityState
 {
     public Guid? SessionId { get; set; }

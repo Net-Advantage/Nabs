@@ -5,12 +5,12 @@ namespace Nabs.Tests.PubSubTests;
 
 public interface IKafkaPubSubFixtureBase : ITestFixture
 {
-	Func<IApplicationContext>? ApplicationContextFactory { get; set; }
+    Func<IApplicationContext>? ApplicationContextFactory { get; set; }
 };
 
 public abstract class KafkaPubSubFixtureBase(
-	IMessageSink diagnosticMessageSink)
-	: ConfigurationTestFixtureBase(diagnosticMessageSink), IKafkaPubSubFixtureBase
+    IMessageSink diagnosticMessageSink)
+    : ConfigurationTestFixtureBase(diagnosticMessageSink), IKafkaPubSubFixtureBase
 {
-	public Func<IApplicationContext>? ApplicationContextFactory { get; set; }
+    public Func<IApplicationContext>? ApplicationContextFactory { get; set; }
 }

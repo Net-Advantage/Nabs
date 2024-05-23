@@ -2,5 +2,5 @@
 
 public interface ITenantContext
 {
-	Guid TenantId { get; init; }
+    Guid TenantId { get; init; }
 }

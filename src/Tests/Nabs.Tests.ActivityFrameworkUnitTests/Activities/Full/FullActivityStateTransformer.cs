@@ -1,6 +1,6 @@
 ﻿namespace Nabs.Tests.ActivityFrameworkUnitTests.Activities.Full;
 
-public sealed class FullActivityStateTransformer 
+public sealed class FullActivityStateTransformer
     : ActivityStateTransformer<FullActivityState>
 {
     public override FullActivityState Run(FullActivityState activityState)

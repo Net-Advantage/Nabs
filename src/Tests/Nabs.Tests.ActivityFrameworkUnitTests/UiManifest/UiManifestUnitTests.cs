@@ -2,22 +2,22 @@
 
 public sealed class UiManifestUnitTests(ITestOutputHelper outputHelper)
 {
-	private readonly ITestOutputHelper _outputHelper = outputHelper;
+    private readonly ITestOutputHelper _outputHelper = outputHelper;
 
-	[Fact]
-	public void RenderUiManifestTest()
-	{
-		// Arrange
-		var uiManifest = new SimpleActivityStateUiManifest();
-		
-		// Act
-		var result = uiManifest.Render();
+    [Fact]
+    public void RenderUiManifestTest()
+    {
+        // Arrange
+        var uiManifest = new SimpleActivityStateUiManifest();
 
-		// Assert
-		result.Should().NotBeNull();
-		result.Title.Should().NotBeNull();
-		result.Items.Should().NotBeNullOrEmpty();
+        // Act
+        var result = uiManifest.Render();
 
-		_outputHelper.WriteLine(result.ToString());
-	}
+        // Assert
+        result.Should().NotBeNull();
+        result.Title.Should().NotBeNull();
+        result.Items.Should().NotBeNullOrEmpty();
+
+        _outputHelper.WriteLine(result.ToString());
+    }
 }
