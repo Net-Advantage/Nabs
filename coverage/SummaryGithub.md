@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 04/21/2024 - 19:41:18 |
-| Coverage date: | 04/21/2024 - 19:40:20 - 04/21/2024 - 19:41:16 |
+| Generated on: | 05/23/2024 - 10:48:34 |
+| Coverage date: | 05/23/2024 - 10:47:34 - 05/23/2024 - 10:48:32 |
 | Parser: | MultiReport (13x Cobertura) |
 | Assemblies: | 17 |
-| Classes: | 52 |
-| Files: | 50 |
-| **Line coverage:** | 72.8% (571 of 784) |
-| Covered lines: | 571 |
-| Uncovered lines: | 213 |
-| Coverable lines: | 784 |
-| Total lines: | 2037 |
+| Classes: | 49 |
+| Files: | 47 |
+| **Line coverage:** | 72.7% (562 of 773) |
+| Covered lines: | 562 |
+| Uncovered lines: | 211 |
+| Coverable lines: | 773 |
+| Total lines: | 2001 |
 | **Branch coverage:** | 67.3% (128 of 190) |
 | Covered branches: | 128 |
 | Total branches: | 190 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 79_8775064660 |
+| Tag: | 80_9206637383 |
 
 </details>
 
@@ -161,26 +161,23 @@
 |Nabs.Tests.PubSubTests.KafkaPubSubTestBase`1|100%||
 
 </details>
-<details><summary>Nabs.Tests.UiUnitTestsComponents - 46.6%</summary>
+<details><summary>Nabs.Tests.UiUnitTestsComponents - 42.8%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Tests.UiUnitTestsComponents**|**46.6%**|**33.3%**|
-|Nabs.Tests.UiUnitTestsComponents.CustomDivComponent|100%||
+|**Nabs.Tests.UiUnitTestsComponents**|**42.8%**|**33.3%**|
 |Nabs.Tests.UiUnitTestsComponents.ExampleJsInterop|0%|0%|
-|Nabs.Tests.UiUnitTestsComponents.TestMainComponent|68.4%|50%|
+|Nabs.Tests.UiUnitTestsComponents.TestMainComponent|66.6%|50%|
 
 </details>
-<details><summary>Nabs.Ui - 82.5%</summary>
+<details><summary>Nabs.Ui - 83%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Ui**|**82.5%**|**60%**|
+|**Nabs.Ui**|**83%**|**60%**|
 |Nabs.Ui.ExampleJsInterop|0%|0%|
-|Nabs.Ui.Forms.DynamicForm`1|92.3%|66.6%|
+|Nabs.Ui.Forms.DynamicForm`1|92%|66.6%|
 |Nabs.Ui.Forms.Footer|100%||
-|Nabs.Ui.Forms.FormGroupWrapper|0%||
-|Nabs.Ui.Forms.FormInputWrapper|100%||
 |Nabs.Ui.Forms.Header|100%||
 
 </details>

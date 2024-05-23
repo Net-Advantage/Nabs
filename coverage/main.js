@@ -227,7 +227,7 @@ var assemblies = [
   {
     "name": "Nabs.ActivityFramework",
     "classes": [
-      { "name": "Nabs.ActivityFramework.Activity<T>", "rp": "Nabs.ActivityFramework_Activity_1.html", "cl": 29, "ucl": 7, "cal": 36, "tl": 118, "cb": 13, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.Activity<T>", "rp": "Nabs.ActivityFramework_Activity_1.html", "cl": 29, "ucl": 7, "cal": 36, "tl": 119, "cb": 13, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.ActivityStateValidator<T>", "rp": "Nabs.ActivityFramework_ActivityStateValidator_1.html", "cl": 3, "ucl": 4, "cal": 7, "tl": 25, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.UiManifest.ActivityStateUiManifest<T>", "rp": "Nabs.ActivityFramework_ActivityStateUiManifest_1.html", "cl": 27, "ucl": 0, "cal": 27, "tl": 71, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.UiManifest.UiManifestResult", "rp": "Nabs.ActivityFramework_UiManifestResult.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -317,19 +317,16 @@ var assemblies = [
   {
     "name": "Nabs.Tests.UiUnitTestsComponents",
     "classes": [
-      { "name": "Nabs.Tests.UiUnitTestsComponents.CustomDivComponent", "rp": "Nabs.Tests.UiUnitTestsComponents_CustomDivComponent.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.UiUnitTestsComponents.ExampleJsInterop", "rp": "Nabs.Tests.UiUnitTestsComponents_ExampleJsInterop.html", "cl": 0, "ucl": 10, "cal": 10, "tl": 37, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Tests.UiUnitTestsComponents.TestMainComponent", "rp": "Nabs.Tests.UiUnitTestsComponents_TestMainComponent.html", "cl": 13, "ucl": 6, "cal": 19, "tl": 26, "cb": 2, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.UiUnitTestsComponents.TestMainComponent", "rp": "Nabs.Tests.UiUnitTestsComponents_TestMainComponent.html", "cl": 12, "ucl": 6, "cal": 18, "tl": 26, "cb": 2, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.Ui",
     "classes": [
       { "name": "Nabs.Ui.ExampleJsInterop", "rp": "Nabs.Ui_ExampleJsInterop.html", "cl": 0, "ucl": 10, "cal": 10, "tl": 37, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Ui.Forms.DynamicForm<T>", "rp": "Nabs.Ui_DynamicForm_1.html", "cl": 84, "ucl": 7, "cal": 91, "tl": 143, "cb": 12, "tb": 18, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Ui.Forms.Footer", "rp": "Nabs.Ui_Footer.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Ui.Forms.FormGroupWrapper", "rp": "Nabs.Ui_FormGroupWrapper.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Ui.Forms.FormInputWrapper", "rp": "Nabs.Ui_FormInputWrapper.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Ui.Forms.Header", "rp": "Nabs.Ui_Header.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Ui.Forms.DynamicForm<T>", "rp": "Nabs.Ui_DynamicForm_1.html", "cl": 81, "ucl": 7, "cal": 88, "tl": 143, "cb": 12, "tb": 18, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Ui.Forms.Footer", "rp": "Nabs.Ui_Footer.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Ui.Forms.Header", "rp": "Nabs.Ui_Header.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.Ui.Abstractions",
