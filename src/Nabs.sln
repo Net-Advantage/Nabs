@@ -81,6 +81,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests.UiUnitTestsCompo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Projections", "Nabs.Projections\Nabs.Projections.csproj", "{FC793FF5-5680-4D4C-B167-B3101B9D2011}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Aspire.ServiceDefaults", "Nabs.Aspire.ServiceDefaults\Nabs.Aspire.ServiceDefaults.csproj", "{C041B957-147A-4DD7-B976-E5C78BC93580}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -207,6 +209,10 @@ Global
 		{FC793FF5-5680-4D4C-B167-B3101B9D2011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC793FF5-5680-4D4C-B167-B3101B9D2011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC793FF5-5680-4D4C-B167-B3101B9D2011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C041B957-147A-4DD7-B976-E5C78BC93580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C041B957-147A-4DD7-B976-E5C78BC93580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C041B957-147A-4DD7-B976-E5C78BC93580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C041B957-147A-4DD7-B976-E5C78BC93580}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

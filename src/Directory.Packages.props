@@ -1,91 +1,92 @@
 <Project>
-  <PropertyGroup>
-    <!-- Enable central package management -->
-    <!-- https://learn.microsoft.com/en-us/nuget/consume-packages/Central-Package-Management -->
-    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <!-- Version variables -->
-    <AspireVersion>8.0.1</AspireVersion>
-  </PropertyGroup>
-  <ItemGroup>
-    <!-- microsoft asp net dependencies -->
-    <PackageVersion Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageVersion Include="bunit" Version="1.28.9" />
-    <PackageVersion Include="HtmlAgilityPack" Version="1.11.59" />
-    <PackageVersion Include="MediatR" Version="12.2.0" />
-    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.1" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.Web" Version="8.0.5" />
-    <!-- microsoft identity dependencies -->
-    <PackageVersion Include="Azure.Identity" Version="1.11.3" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
-    <PackageVersion Include="Microsoft.Identity.Web" Version="2.18.2" />
-    <PackageVersion Include="Syncfusion.Blazor" Version="25.2.5" />
-    <PackageVersion Include="Syncfusion.Blazor.Inputs" Version="25.1.37" />
-    <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
-    <!-- microsoft extensions dependencies -->
-    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="8.1.0" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
-    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
-    <!-- open telemetry dependencies -->
-    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.7.0" />
-    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.7.0" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.7.0" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.GrpcNetClient" Version="1.6.0-beta.3" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.7.0" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.7.0" />
-    <!-- efcore dependencies -->
-    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.5" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Cosmos" Version="8.0.5" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.3" />
-    <!-- xUnit dependencies -->
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
-    <PackageVersion Include="Testcontainers.MsSql" Version="3.8.0" />
-    <PackageVersion Include="Testcontainers.Kafka" Version="3.8.0" />
-    <PackageVersion Include="Verify.Xunit" Version="24.2.0" />
-    <PackageVersion Include="xunit" Version="2.8.0" />
-    <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.0" />
-    <PackageVersion Include="coverlet.collector" Version="6.0.2" />
-    <PackageVersion Include="coverlet.msbuild" Version="6.0.0" />
-    <PackageVersion Include="xunit.extensibility.core" Version="2.8.0" />
-    <PackageVersion Include="xunit.extensibility.execution" Version="2.8.0" />
-    <PackageVersion Include="xunit.abstractions" Version="2.0.3" />
-    <PackageVersion Include="ReportGenerator" Version="5.3.0" />
-    <PackageVersion Include="FluentAssertions" Version="6.12.0" />
-    <PackageVersion Include="Moq" Version="4.20.70" />
-    <!-- other dependencies -->
-    <PackageVersion Include="Dapr.AspNetCore" Version="1.12.0" />
-    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageVersion Include="Yarp.ReverseProxy" Version="2.1.0" />
-    <PackageVersion Include="System.Reactive" Version="6.0.0" />
-    <PackageVersion Include="Cocona" Version="2.2.0" />
-    <PackageVersion Include="FluentValidation" Version="11.9.1" />
-    <PackageVersion Include="CsvHelper" Version="32.0.3" />
-    <PackageVersion Include="LanguageExt.Core" Version="4.4.8" />
-    <PackageVersion Include="Newtonsoft.Json.Schema" Version="3.0.15" />
-    <PackageVersion Include="NJsonSchema" Version="10.9.0" />
-    <PackageVersion Include="NJsonSchema.CodeGeneration.CSharp" Version="10.9.0" />
-    <PackageVersion Include="OneOf" Version="3.0.263" />
-    <PackageVersion Include="Ardalis.Specification" Version="8.0.0" />
-    <PackageVersion Include="Ardalis.Specification.EntityFrameworkCore" Version="8.0.0" />
-    <PackageVersion Include="Confluent.Kafka" Version="2.4.0" />
-    <!-- FluentUI -->
-    <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.7.2" />
-    <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components.Emoji" Version="4.6.0" />
-    <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.7.2" />
-    <!-- Azure dependencies -->
-    <PackageVersion Include="Azure.Security.KeyVault.Secrets" Version="4.6.0" />
-    <PackageVersion Include="Microsoft.Extensions.Azure" Version="1.7.3" />
-    <PackageVersion Include="Azure.Storage.Blobs" Version="12.19.1" />
-    <!-- AWS dependencies -->
-    <!-- TODO: DWS -->
-  </ItemGroup>
+	<PropertyGroup>
+		<!-- Enable central package management -->
+		<!-- https://learn.microsoft.com/en-us/nuget/consume-packages/Central-Package-Management -->
+		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+		<!-- Version variables -->
+		<AspireVersion>8.0.1</AspireVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- microsoft asp net dependencies -->
+		<PackageVersion Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+		<PackageVersion Include="bunit" Version="1.28.9" />
+		<PackageVersion Include="HtmlAgilityPack" Version="1.11.59" />
+		<PackageVersion Include="MediatR" Version="12.2.0" />
+		<PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
+		<PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.1" />
+		<PackageVersion Include="Microsoft.AspNetCore.Components.Web" Version="8.0.6" />
+		<!-- microsoft identity dependencies -->
+		<PackageVersion Include="Azure.Identity" Version="1.11.3" />
+		<PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
+		<PackageVersion Include="Microsoft.Identity.Web" Version="2.19.0" />
+		<PackageVersion Include="Syncfusion.Blazor" Version="25.2.6" />
+		<PackageVersion Include="Syncfusion.Blazor.Inputs" Version="25.1.37" />
+		<PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
+		<!-- microsoft extensions dependencies -->
+		<PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="8.5.0" />
+		<PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="8.0.1" />
+		<PackageVersion Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+		<PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+		<PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+		<PackageVersion Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
+		<PackageVersion Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+		<PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+		<PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+		<PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+		<PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+		<!-- open telemetry dependencies -->
+		<PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.8.1" />
+		<PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.8.1" />
+		<PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.8.1" />
+		<PackageVersion Include="OpenTelemetry.Instrumentation.GrpcNetClient" Version="1.8.1" />
+		<PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.8.1" />
+		<PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.8.1" />
+		<!-- efcore dependencies -->
+		<PackageVersion Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.6" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore.Cosmos" Version="8.0.6" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.3" />
+		<!-- xUnit dependencies -->
+		<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+		<PackageVersion Include="Testcontainers.MsSql" Version="3.8.0" />
+		<PackageVersion Include="Testcontainers.Kafka" Version="3.8.0" />
+		<PackageVersion Include="Verify.Xunit" Version="25.0.1" />
+		<PackageVersion Include="xunit" Version="2.8.1" />
+		<PackageVersion Include="xunit.runner.visualstudio" Version="2.8.1" />
+		<PackageVersion Include="coverlet.collector" Version="6.0.2" />
+		<PackageVersion Include="coverlet.msbuild" Version="6.0.0" />
+		<PackageVersion Include="xunit.extensibility.core" Version="2.8.1" />
+		<PackageVersion Include="xunit.extensibility.execution" Version="2.8.1" />
+		<PackageVersion Include="xunit.abstractions" Version="2.0.3" />
+		<PackageVersion Include="ReportGenerator" Version="5.3.5" />
+		<PackageVersion Include="FluentAssertions" Version="6.12.0" />
+		<PackageVersion Include="Moq" Version="4.20.70" />
+		<!-- other dependencies -->
+		<PackageVersion Include="Dapr.AspNetCore" Version="1.12.0" />
+		<PackageVersion Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageVersion Include="Yarp.ReverseProxy" Version="2.1.0" />
+		<PackageVersion Include="System.Reactive" Version="6.0.0" />
+		<PackageVersion Include="Cocona" Version="2.2.0" />
+		<PackageVersion Include="FluentValidation" Version="11.9.1" />
+		<PackageVersion Include="CsvHelper" Version="32.0.3" />
+		<PackageVersion Include="LanguageExt.Core" Version="4.4.8" />
+		<PackageVersion Include="Newtonsoft.Json.Schema" Version="3.0.15" />
+		<PackageVersion Include="NJsonSchema" Version="10.9.0" />
+		<PackageVersion Include="NJsonSchema.CodeGeneration.CSharp" Version="10.9.0" />
+		<PackageVersion Include="OneOf" Version="3.0.263" />
+		<PackageVersion Include="Ardalis.Specification" Version="8.0.0" />
+		<PackageVersion Include="Ardalis.Specification.EntityFrameworkCore" Version="8.0.0" />
+		<PackageVersion Include="Confluent.Kafka" Version="2.4.0" />
+		<!-- FluentUI -->
+		<PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.7.2" />
+		<PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components.Emoji" Version="4.6.0" />
+		<PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.7.2" />
+		<!-- Azure dependencies -->
+		<PackageVersion Include="Azure.Security.KeyVault.Secrets" Version="4.6.0" />
+		<PackageVersion Include="Microsoft.Extensions.Azure" Version="1.7.3" />
+		<PackageVersion Include="Azure.Storage.Blobs" Version="12.19.1" />
+		<!-- AWS dependencies -->
+		<!-- TODO: DWS -->
+	</ItemGroup>
 </Project>
