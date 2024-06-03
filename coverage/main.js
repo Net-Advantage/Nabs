@@ -227,11 +227,11 @@ var assemblies = [
   {
     "name": "Nabs.ActivityFramework",
     "classes": [
-      { "name": "Nabs.ActivityFramework.Activity<T>", "rp": "Nabs.ActivityFramework_Activity_1.html", "cl": 29, "ucl": 7, "cal": 36, "tl": 119, "cb": 13, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.Activity<T>", "rp": "Nabs.ActivityFramework_Activity_1.html", "cl": 31, "ucl": 10, "cal": 41, "tl": 131, "cb": 14, "tb": 24, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.ActivityStateValidator<T>", "rp": "Nabs.ActivityFramework_ActivityStateValidator_1.html", "cl": 3, "ucl": 4, "cal": 7, "tl": 25, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.UiManifest.ActivityStateUiManifest<T>", "rp": "Nabs.ActivityFramework_ActivityStateUiManifest_1.html", "cl": 27, "ucl": 0, "cal": 27, "tl": 71, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.UiManifest.UiManifestResult", "rp": "Nabs.ActivityFramework_UiManifestResult.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.ActivityFramework.Workflow<T>", "rp": "Nabs.ActivityFramework_Workflow_1.html", "cl": 0, "ucl": 21, "cal": 21, "tl": 57, "cb": 0, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.Workflow<T>", "rp": "Nabs.ActivityFramework_Workflow_1.html", "cl": 0, "ucl": 22, "cal": 22, "tl": 57, "cb": 0, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.AzureConfiguration",
@@ -256,9 +256,9 @@ var assemblies = [
   {
     "name": "Nabs.Persistence",
     "classes": [
-      { "name": "Nabs.Persistence.BaseDbContext", "rp": "Nabs.Persistence_BaseDbContext.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 8, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Persistence.BaseDbContext", "rp": "Nabs.Persistence_BaseDbContext.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 7, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Persistence.DependencyInversionExtensions", "rp": "Nabs.Persistence_DependencyInversionExtensions.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Nabs.Persistence.EntityRepository<T>", "rp": "Nabs.Persistence_EntityRepository_1.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 8, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Persistence.EntityRepository<T>", "rp": "Nabs.Persistence_EntityRepository_1.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 7, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Persistence.TenantableDbContext<T>", "rp": "Nabs.Persistence_TenantableDbContext_1.html", "cl": 27, "ucl": 0, "cal": 27, "tl": 65, "cb": 18, "tb": 18, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Persistence.TenantableDbContextFactory<T>", "rp": "Nabs.Persistence_TenantableDbContextFactory_1.html", "cl": 14, "ucl": 2, "cal": 16, "tl": 65, "cb": 3, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Persistence.TenantQueryExtensions", "rp": "Nabs.Persistence_TenantQueryExtensions.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 31, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -360,7 +360,7 @@ var riskHotspots = [
       { "value": 6, "exceeded": false },
     ]},
   {
-    "assembly": "Nabs.ActivityFramework", "class": "Nabs.ActivityFramework.Workflow<T>", "reportPath": "Nabs.ActivityFramework_Workflow_1.html", "methodName": "ProcessActivities()", "methodShortName": "ProcessActivities()", "fileIndex": 0, "line": 51,
+    "assembly": "Nabs.ActivityFramework", "class": "Nabs.ActivityFramework.Workflow<T>", "reportPath": "Nabs.ActivityFramework_Workflow_1.html", "methodName": "ProcessActivitiesAsync()", "methodShortName": "ProcessActivitiesAsync()", "fileIndex": 0, "line": 51,
     "metrics": [
       { "value": 20, "exceeded": true },
       { "value": 4, "exceeded": false },
@@ -369,6 +369,12 @@ var riskHotspots = [
     "assembly": "Nabs.Ui", "class": "Nabs.Ui.Forms.DynamicForm<T>", "reportPath": "Nabs.Ui_DynamicForm_1.html", "methodName": "CreateEventCallback(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Reflection.PropertyInfo,System.Object)", "methodShortName": "CreateEventCallback(...)", "fileIndex": 0, "line": 101,
     "metrics": [
       { "value": 18.37, "exceeded": true },
+      { "value": 10, "exceeded": false },
+    ]},
+  {
+    "assembly": "Nabs.ActivityFramework", "class": "Nabs.ActivityFramework.Activity<T>", "reportPath": "Nabs.ActivityFramework_Activity_1.html", "methodName": "ProcessBehaviours()", "methodShortName": "ProcessBehaviours()", "fileIndex": 0, "line": 104,
+    "metrics": [
+      { "value": 17.24, "exceeded": true },
       { "value": 10, "exceeded": false },
     ]},
 ];

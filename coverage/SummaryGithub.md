@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 05/23/2024 - 10:48:34 |
-| Coverage date: | 05/23/2024 - 10:47:34 - 05/23/2024 - 10:48:32 |
+| Generated on: | 06/03/2024 - 03:28:08 |
+| Coverage date: | 06/03/2024 - 03:27:11 - 06/03/2024 - 03:28:06 |
 | Parser: | MultiReport (13x Cobertura) |
 | Assemblies: | 17 |
 | Classes: | 49 |
 | Files: | 47 |
-| **Line coverage:** | 72.7% (562 of 773) |
-| Covered lines: | 562 |
-| Uncovered lines: | 211 |
-| Coverable lines: | 773 |
-| Total lines: | 2001 |
-| **Branch coverage:** | 67.3% (128 of 190) |
-| Covered branches: | 128 |
-| Total branches: | 190 |
+| **Line coverage:** | 72.4% (564 of 779) |
+| Covered lines: | 564 |
+| Uncovered lines: | 215 |
+| Coverable lines: | 779 |
+| Total lines: | 2011 |
+| **Branch coverage:** | 66.4% (129 of 194) |
+| Covered branches: | 129 |
+| Total branches: | 194 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 80_9206637383 |
+| Tag: | 81_9343817528 |
 
 </details>
 
@@ -32,12 +32,12 @@
 |Nabs.ValueObject`1|100%|100%|
 
 </details>
-<details><summary>Nabs.ActivityFramework - 65.2%</summary>
+<details><summary>Nabs.ActivityFramework - 63.2%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.ActivityFramework**|**65.2%**|**43.7%**|
-|Nabs.ActivityFramework.Activity`1|80.5%|65%|
+|**Nabs.ActivityFramework**|**63.2%**|**41.6%**|
+|Nabs.ActivityFramework.Activity`1|75.6%|58.3%|
 |Nabs.ActivityFramework.ActivityStateValidator`1|42.8%|50%|
 |Nabs.ActivityFramework.UiManifest.ActivityStateUiManifest`1|100%||
 |Nabs.ActivityFramework.UiManifest.UiManifestResult|100%||
