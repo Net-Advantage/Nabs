@@ -5,7 +5,7 @@ public sealed class SimpleActivityUnitTests(
     : ActivityUnitTestBase(outputHelper)
 {
     [Fact]
-    public void CreateActivityTest()
+    public async Task CreateActivityTest()
     {
         // Arrange
         var state = new SimpleActivityState(Guid.NewGuid(), "JoeS", "Joe");
@@ -13,7 +13,7 @@ public sealed class SimpleActivityUnitTests(
         var activity = new SimpleActivity(state);
 
         // Act
-        activity.Run();
+        await activity.RunAsync();
 
         // Assert
         ActivityTestValidation

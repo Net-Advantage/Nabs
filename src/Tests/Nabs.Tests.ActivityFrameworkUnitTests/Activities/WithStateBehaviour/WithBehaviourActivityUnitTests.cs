@@ -7,7 +7,7 @@ public sealed class WithBehaviourActivityUnitTests(
     : ActivityUnitTestBase(outputHelper)
 {
     [Fact]
-    public void CreateActivityTest()
+    public async Task CreateActivityTest()
     {
         // Arrange
         var expectedInitialState = new WithBehaviourActivityState(
@@ -18,7 +18,7 @@ public sealed class WithBehaviourActivityUnitTests(
         var activity = new WithBehaviourActivity(state);
 
         // Act
-        activity.Run();
+        await activity.RunAsync();
 
         // Assert
         ActivityTestValidation

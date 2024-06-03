@@ -4,7 +4,7 @@ public interface IActivity
 {
     bool HasStateChanged { get; }
     ValidationResult ValidationResult { get; }
-    void Run();
+    Task RunAsync();
 }
 
 public interface IActivity<TActivityState>
@@ -17,8 +17,7 @@ public interface IActivity<TActivityState>
 /// Typically this state is used to start off a workflow that will present blank or partially filled state.
 /// </summary>
 /// <typeparam name="TActivityState"></typeparam>
-public abstract class Activity<
-    TActivityState>
+public abstract class Activity<TActivityState>
     : IActivity<TActivityState>
     where TActivityState : class, IActivityState
 {
@@ -55,7 +54,7 @@ public abstract class Activity<
 
     public ValidationResult ValidationResult { get; set; } = default!;
 
-    protected Dictionary<IActivityStateBehaviour<TActivityState>, Action?> Behaviours { get; } = [];
+    protected Dictionary<IActivityStateBehaviour, Action?> Behaviours { get; } = [];
 
     protected void AddFactory(IActivityStateFactory<TActivityState> factory)
     {
@@ -67,12 +66,12 @@ public abstract class Activity<
         _activityStateValidator = validator;
     }
 
-    protected void AddBehaviour(IActivityStateBehaviour<TActivityState> behaviour, Action? action = null)
+    protected void AddBehaviour(IActivityStateBehaviour behaviour, Action? action = null)
     {
         Behaviours.Add(behaviour, action);
     }
 
-    public virtual void Run()
+    public async Task RunAsync()
     {
         if (InitialActivityState is null)
         {
@@ -90,7 +89,7 @@ public abstract class Activity<
 
         if (Behaviours.Count > 0)
         {
-            ProcessBehaviours();
+            await ProcessBehaviours();
         }
 
         if (_activityStateValidator is not null)
@@ -100,7 +99,7 @@ public abstract class Activity<
         ValidationResult ??= new ValidationResult();
     }
 
-    public virtual void ProcessBehaviours()
+    private async Task ProcessBehaviours()
     {
         if (ActivityState is null)
         {
@@ -109,7 +108,20 @@ public abstract class Activity<
 
         foreach (var behaviour in Behaviours)
         {
-            ActivityState = behaviour.Key.Run(ActivityState);
+            if(behaviour.Key is IActivityStateBehaviourSync<TActivityState> syncBehaviour)
+            {
+                ActivityState = syncBehaviour.Run(ActivityState);
+
+            }
+            else if (behaviour.Key is IActivityStateBehaviourAsync<TActivityState> asyncBehaviour)
+            {
+                ActivityState = await asyncBehaviour.RunAsync(ActivityState);
+            }
+            else
+            {
+                throw new InvalidOperationException("Behaviour is not of type IActivityStateBehaviourSync or IActivityStateBehaviourAsync.");
+            }
+
             if (behaviour.Value is not null)
             {
                 behaviour.Value();

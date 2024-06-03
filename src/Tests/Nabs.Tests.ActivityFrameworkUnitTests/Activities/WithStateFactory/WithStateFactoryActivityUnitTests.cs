@@ -5,7 +5,7 @@ public sealed class WithStateFactoryActivityUnitTests(
     : ActivityUnitTestBase(outputHelper)
 {
     [Fact]
-    public void CreateActivityTest()
+    public async Task CreateActivityTest()
     {
         // Arrange
         var expectedInitialState = new WithStateFactoryActivityState(
@@ -16,7 +16,7 @@ public sealed class WithStateFactoryActivityUnitTests(
         var activity = new WithStateFactoryActivity(state);
 
         // Act
-        activity.Run();
+        await activity.RunAsync();
 
         // Assert
         ActivityTestValidation

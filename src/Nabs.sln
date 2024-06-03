@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.AzureConfiguration", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests.AzureConfigurationTests", "Tests\Nabs.Tests.AzureConfigurationTests\Nabs.Tests.AzureConfigurationTests.csproj", "{1068E27B-5995-4622-A702-FFAC7B072F20}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{A4BF6906-CD5C-418D-9AB3-E4CC6589FC0A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Resources", "Nabs.Resources\Nabs.Resources.csproj", "{4976201B-F5C9-444E-9DC0-A90FBCE683F7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests.ResourcesUnitTests", "Tests\Nabs.Tests.ResourcesUnitTests\Nabs.Tests.ResourcesUnitTests.csproj", "{0ED73316-96EA-4762-BCB8-E840C56D2CD0}"
@@ -81,7 +79,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests.UiUnitTests", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Tests.UiUnitTestsComponents", "Tests\Nabs.Tests.UiUnitTestsComponents\Nabs.Tests.UiUnitTestsComponents.csproj", "{E922A5ED-84D7-4DC3-B1F3-6E6AA4BF8525}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nabs.Projections", "Nabs.Projections\Nabs.Projections.csproj", "{FC793FF5-5680-4D4C-B167-B3101B9D2011}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nabs.Projections", "Nabs.Projections\Nabs.Projections.csproj", "{FC793FF5-5680-4D4C-B167-B3101B9D2011}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

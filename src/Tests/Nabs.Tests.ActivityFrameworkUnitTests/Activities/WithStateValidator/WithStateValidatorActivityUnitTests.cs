@@ -6,7 +6,7 @@ public sealed class WithStateValidatorActivityUnitTests(
     private readonly ITestOutputHelper _outputHelper = outputHelper;
 
     [Fact]
-    public void CreateActivityTest()
+    public async Task CreateActivityTest()
     {
         // Arrange
         var initialActivityState = new WithStateValidatorActivityState(
@@ -15,7 +15,7 @@ public sealed class WithStateValidatorActivityUnitTests(
         var activity = new WithStateValidatorActivity(state);
 
         // Act
-        activity.Run();
+        await activity.RunAsync();
 
         // Assert
         var result = activity.ActivityState;

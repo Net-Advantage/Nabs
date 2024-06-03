@@ -30,7 +30,7 @@ public abstract class ScenarioBase<TRequest, TResponse, TActivityState>
     {
         await InvokeActivity(request);
 
-        Run();
+        await RunAsync();
 
         var result = ProcessResult();
         return result;

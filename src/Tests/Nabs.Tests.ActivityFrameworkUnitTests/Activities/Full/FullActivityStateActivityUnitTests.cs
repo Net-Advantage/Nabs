@@ -16,14 +16,14 @@ public sealed class FullActivityStateActivityUnitTests : ActivityUnitTestBase
     }
 
     [Fact]
-    public void CreateActivityTest()
+    public async Task CreateActivityTest()
     {
         // Arrange
         var state = _expectedInitialState;
         var activity = new FullActivity(state);
 
         // Act
-        activity.Run();
+        await activity.RunAsync();
 
         // Assert
         ActivityTestValidation

@@ -10,7 +10,8 @@
 					</Include>
 					<Exclude>
 						<ExcludeByAttribute>GeneratedCodeAttribute</ExcludeByAttribute>
-						<ExcludeByFile>**/Nabs.OpenAi/DependencyInversionExtensions.cs,**/BindingExtensions.g.cs</ExcludeByFile>
+						<!--<ExcludeByFile>**/Nabs.OpenAi/DependencyInversionExtensions.cs,**/BindingExtensions.g.cs</ExcludeByFile>-->
+						<ExcludeByFile>**/*.g.cs</ExcludeByFile>
 						<!-- Exclude code marked as generated -->
 					</Exclude>
 					<Threshold>80</Threshold>

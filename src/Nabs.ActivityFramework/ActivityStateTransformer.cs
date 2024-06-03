@@ -1,7 +1,7 @@
 ﻿namespace Nabs.ActivityFramework;
 
 public interface IActivityStateTransformer<TActivityState>
-    : IActivityStateBehaviour<TActivityState>
+    : IActivityStateBehaviourSync<TActivityState>
     where TActivityState : class, IActivityState;
 
 public abstract class ActivityStateTransformer<TActivityState>

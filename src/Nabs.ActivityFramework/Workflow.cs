@@ -39,18 +39,18 @@ public abstract class Workflow<TWorkflowState>
         Activities.Add(activity, action);
     }
 
-    public void Run()
+    public async Task RunAsync()
     {
         Processed = false;
-        ProcessActivities();
+        await ProcessActivitiesAsync();
         Processed = true;
     }
 
-    public virtual void ProcessActivities()
+    private async Task ProcessActivitiesAsync()
     {
         foreach (var activity in Activities)
         {
-            activity.Key.Run();
+            await activity.Key.RunAsync();
             activity.Value?.DynamicInvoke(activity.Key);
         }
     }

@@ -5,7 +5,7 @@ public sealed class RealWorldActivityStateUnitTests(
         : ActivityUnitTestBase(testOutputHelper)
 {
     [Fact]
-    public void CreateActivityTest()
+    public async Task CreateActivityTest()
     {
         // Arrange
         var newValueService = new NewValueService(true);
@@ -43,7 +43,7 @@ public sealed class RealWorldActivityStateUnitTests(
         var activity = new RealWorldActivity(state);
 
         // Act
-        activity.Run();
+        await activity.RunAsync();
 
         // Assert
         ActivityTestValidation
