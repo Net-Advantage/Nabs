@@ -108,7 +108,7 @@ public abstract class Activity<TActivityState>
 
         foreach (var behaviour in Behaviours)
         {
-            if(behaviour.Key is IActivityStateBehaviourSync<TActivityState> syncBehaviour)
+            if (behaviour.Key is IActivityStateBehaviourSync<TActivityState> syncBehaviour)
             {
                 ActivityState = syncBehaviour.Run(ActivityState);
 

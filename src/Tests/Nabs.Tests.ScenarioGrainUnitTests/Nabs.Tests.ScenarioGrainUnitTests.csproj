@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="../../Tests.Directory.Build.props" />
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Nabs.ScenarioGrains\Nabs.ScenarioGrains.csproj" />
+		<ProjectReference Include="..\..\Nabs.Tests\Nabs.Tests.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Update="coverlet.collector">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Update="xunit.runner.visualstudio">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+</Project>

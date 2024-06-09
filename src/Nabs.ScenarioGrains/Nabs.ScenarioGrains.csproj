@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="../NuGet.Directory.Build.props" />
+
+	<ItemGroup>
+		<PackageReference Include="Ardalis.Result" />
+		<PackageReference Include="Microsoft.Orleans.Server" />
+	</ItemGroup>
+
+</Project>
