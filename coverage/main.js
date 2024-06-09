@@ -280,7 +280,7 @@ var assemblies = [
   {
     "name": "Nabs.ScenarioGrains",
     "classes": [
-      { "name": "Nabs.ScenarioGrains.ScenarioGrain<T>", "rp": "Nabs.ScenarioGrains_ScenarioGrain_1.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 39, "cb": 2, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ScenarioGrains.ScenarioGrain<T>", "rp": "Nabs.ScenarioGrains_ScenarioGrain_1.html", "cl": 20, "ucl": 4, "cal": 24, "tl": 62, "cb": 4, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "OrleansCodeGen.Nabs.ScenarioGrains.Proxy_IScenarioGrain", "rp": "Nabs.ScenarioGrains_Proxy_IScenarioGrain.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "OrleansCodeGen.NabsScenarioGrains.Metadata_NabsScenarioGrains", "rp": "Nabs.ScenarioGrains_Metadata_NabsScenarioGrains.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 35, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},

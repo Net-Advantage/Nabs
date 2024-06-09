@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 06/09/2024 - 10:38:12 |
-| Coverage date: | 06/09/2024 - 10:37:12 - 06/09/2024 - 10:38:10 |
+| Generated on: | 06/09/2024 - 12:48:15 |
+| Coverage date: | 06/09/2024 - 12:47:16 - 06/09/2024 - 12:48:14 |
 | Parser: | MultiReport (14x Cobertura) |
 | Assemblies: | 18 |
 | Classes: | 52 |
 | Files: | 49 |
-| **Line coverage:** | 72.4% (579 of 799) |
-| Covered lines: | 579 |
-| Uncovered lines: | 220 |
-| Coverable lines: | 799 |
-| Total lines: | 2069 |
-| **Branch coverage:** | 66.8% (131 of 196) |
-| Covered branches: | 131 |
-| Total branches: | 196 |
+| **Line coverage:** | 72.2% (584 of 808) |
+| Covered lines: | 584 |
+| Uncovered lines: | 224 |
+| Coverable lines: | 808 |
+| Total lines: | 2092 |
+| **Branch coverage:** | 66.5% (133 of 200) |
+| Covered branches: | 133 |
+| Total branches: | 200 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 84_9435933146 |
+| Tag: | 85_9436663989 |
 
 </details>
 
@@ -109,12 +109,12 @@
 |Nabs.Resources.EmbeddedResourceLoader|100%|100%|
 
 </details>
-<details><summary>Nabs.ScenarioGrains - 75%</summary>
+<details><summary>Nabs.ScenarioGrains - 68.9%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.ScenarioGrains**|**75%**|**100%**|
-|Nabs.ScenarioGrains.ScenarioGrain`1|100%|100%|
+|**Nabs.ScenarioGrains**|**68.9%**|**66.6%**|
+|Nabs.ScenarioGrains.ScenarioGrain`1|83.3%|66.6%|
 |OrleansCodeGen.Nabs.ScenarioGrains.Proxy_IScenarioGrain|0%||
 |OrleansCodeGen.NabsScenarioGrains.Metadata_NabsScenarioGrains|0%||
 
