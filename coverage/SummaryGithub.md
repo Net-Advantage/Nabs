@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 06/03/2024 - 05:22:36 |
-| Coverage date: | 06/03/2024 - 05:21:37 - 06/03/2024 - 05:22:34 |
-| Parser: | MultiReport (13x Cobertura) |
-| Assemblies: | 17 |
-| Classes: | 49 |
-| Files: | 47 |
-| **Line coverage:** | 72.4% (564 of 779) |
-| Covered lines: | 564 |
-| Uncovered lines: | 215 |
-| Coverable lines: | 779 |
-| Total lines: | 2011 |
-| **Branch coverage:** | 66.4% (129 of 194) |
-| Covered branches: | 129 |
-| Total branches: | 194 |
+| Generated on: | 06/09/2024 - 10:38:12 |
+| Coverage date: | 06/09/2024 - 10:37:12 - 06/09/2024 - 10:38:10 |
+| Parser: | MultiReport (14x Cobertura) |
+| Assemblies: | 18 |
+| Classes: | 52 |
+| Files: | 49 |
+| **Line coverage:** | 72.4% (579 of 799) |
+| Covered lines: | 579 |
+| Uncovered lines: | 220 |
+| Coverable lines: | 799 |
+| Total lines: | 2069 |
+| **Branch coverage:** | 66.8% (131 of 196) |
+| Covered branches: | 131 |
+| Total branches: | 196 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 83_9344697944 |
+| Tag: | 84_9435933146 |
 
 </details>
 
@@ -107,6 +107,16 @@
 |:---|---:|---:|
 |**Nabs.Resources**|**100%**|**100%**|
 |Nabs.Resources.EmbeddedResourceLoader|100%|100%|
+
+</details>
+<details><summary>Nabs.ScenarioGrains - 75%</summary>
+
+|**Name**|**Line**|**Branch**|
+|:---|---:|---:|
+|**Nabs.ScenarioGrains**|**75%**|**100%**|
+|Nabs.ScenarioGrains.ScenarioGrain`1|100%|100%|
+|OrleansCodeGen.Nabs.ScenarioGrains.Proxy_IScenarioGrain|0%||
+|OrleansCodeGen.NabsScenarioGrains.Metadata_NabsScenarioGrains|0%||
 
 </details>
 <details><summary>Nabs.Scenarios - 76.9%</summary>
