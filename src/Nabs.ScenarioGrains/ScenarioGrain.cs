@@ -33,7 +33,7 @@ public abstract class ScenarioGrain<TGrainState> : Grain, IScenarioGrain
             else
             {
                 throw new InvalidOperationException(
-                    $"Failed to query state for {this.GetPrimaryKey()}");
+                    $"Failed to query for {this.GetType().FullName}: {this.GetPrimaryKey()}");
             }
         }
 
@@ -47,14 +47,14 @@ public abstract class ScenarioGrain<TGrainState> : Grain, IScenarioGrain
         await GrainState.WriteStateAsync();
 
         var persistResult = await GrainRepository.Persist(this, GrainState.State);
-        if(persistResult.IsSuccess)
+        if (persistResult.IsSuccess)
         {
             await GrainState.ClearStateAsync();
         }
         else
         {
             throw new InvalidOperationException(
-                $"Failed to persist state for {this.GetPrimaryKey()}");
+                $"Failed to persist for {this.GetType().FullName}: {this.GetPrimaryKey()}");
         }
 
         await base.OnDeactivateAsync(reason, cancellationToken);
