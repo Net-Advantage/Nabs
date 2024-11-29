@@ -4,16 +4,14 @@
 		<DataCollectors>
 			<DataCollector friendlyName="XPlat code coverage">
 				<Configuration>
-					<Include>
-						<Include>[Nabs*]*</Include>
-						<!-- Include all types in Nabs namespace -->
-					</Include>
 					<Exclude>
 						<ExcludeByAttribute>GeneratedCodeAttribute</ExcludeByAttribute>
-						<!--<ExcludeByFile>**/Nabs.OpenAi/DependencyInversionExtensions.cs,**/BindingExtensions.g.cs</ExcludeByFile>-->
-						<ExcludeByFile>**/*.g.cs</ExcludeByFile>
-						<!-- Exclude code marked as generated -->
+						<ExcludeByFile>[Nabs*]*/*.g.cs,</ExcludeByFile>
 					</Exclude>
+					<Include>
+						<Include>[Nabs*]*</Include>
+					</Include>
+					<IncludeTestAssembly>false</IncludeTestAssembly>
 					<Threshold>80</Threshold>
 					<ThresholdType>line</ThresholdType>
 					<ThresholdStat>total</ThresholdStat>
