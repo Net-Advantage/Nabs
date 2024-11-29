@@ -1,4 +1,4 @@
-﻿namespace Nabs.Tests.TestDatabaseUnitTests.TenantDatabase;
+﻿namespace Nabs.Tests.TestsDatabaseUnitTests.TenantDatabase;
 
 public sealed class SimpleTenantDbContext(
     DbContextOptions options,

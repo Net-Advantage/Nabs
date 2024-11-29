@@ -1,4 +1,6 @@
-﻿namespace Nabs.Tests.TestDatabaseUnitTests;
+﻿using Nabs.Tests.TestsDatabaseUnitTests.Database;
+
+namespace Nabs.Tests.TestDatabaseUnitTests;
 
 public sealed class SimpleDatabaseTestFixture(
     IMessageSink diagnosticMessageSink)

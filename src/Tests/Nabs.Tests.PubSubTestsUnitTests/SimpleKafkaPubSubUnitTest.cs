@@ -21,10 +21,10 @@ public class SimpleKafkaPubSubUnitTest(
         {
             Key = testKey,
             Value = testValue,
-            Headers = new()
-            {
+            Headers =
+            [
                 new Header("test-header-1", Encoding.UTF8.GetBytes("test-header-value-1"))
-            },
+            ],
             Timestamp = new Timestamp(DateTimeOffset.UtcNow),
         };
 

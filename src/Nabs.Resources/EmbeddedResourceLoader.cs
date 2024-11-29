@@ -57,7 +57,7 @@ public class EmbeddedResourceLoader
         var result = resourceStreamResult.Match(resourceStream =>
         {
             var resourceBytes = new byte[resourceStream.Length];
-            resourceStream.Read(resourceBytes, 0, resourceBytes.Length);
+            resourceStream.ReadExactly(resourceBytes);
             return resourceBytes;
 
         }, exception =>

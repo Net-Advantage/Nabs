@@ -1,4 +1,6 @@
-﻿namespace Nabs.Tests.TestDatabaseUnitTests;
+﻿using Nabs.Tests.TestsDatabaseUnitTests.TenantDatabase;
+
+namespace Nabs.Tests.TestDatabaseUnitTests;
 
 public sealed class TenantIsolationStrategyTestFixture(
     IMessageSink diagnosticMessageSink)

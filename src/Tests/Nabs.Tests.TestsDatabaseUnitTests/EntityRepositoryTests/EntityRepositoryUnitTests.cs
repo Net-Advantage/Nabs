@@ -1,4 +1,8 @@
-﻿namespace Nabs.Tests.TestDatabaseUnitTests.EntityRepositoryTests;
+﻿using Nabs.Tests.TestDatabaseUnitTests;
+using Nabs.Tests.TestDatabaseUnitTests.EntityRepositoryTests;
+using Nabs.Tests.TestsDatabaseUnitTests.Database;
+
+namespace Nabs.Tests.TestsDatabaseUnitTests.EntityRepositoryTests;
 
 public sealed class EntityRepositoryUnitTests(
     ITestOutputHelper testOutputHelper,

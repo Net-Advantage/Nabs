@@ -1,3 +1,5 @@
+using Nabs.Tests.TestsDatabaseUnitTests.Database;
+
 namespace Nabs.Tests.TestDatabaseUnitTests;
 
 public class SimpleDatabaseUnitTests(

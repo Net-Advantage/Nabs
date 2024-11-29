@@ -8,7 +8,5 @@ global using Nabs.Persistence;
 global using Nabs.Scenarios;
 global using Nabs.Serialisation;
 global using Nabs.Tests.DatabaseTests;
-global using Nabs.Tests.TestDatabaseUnitTests.Database;
-global using Nabs.Tests.TestDatabaseUnitTests.TenantDatabase;
 global using Xunit;
 global using Xunit.Abstractions;

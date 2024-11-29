@@ -1,4 +1,7 @@
-﻿namespace Nabs.Tests.TestDatabaseUnitTests.EntityRepositoryTests;
+﻿using Nabs.Tests.TestsDatabaseUnitTests.Database;
+using Nabs.Tests.TestsDatabaseUnitTests.EntityRepositoryTests;
+
+namespace Nabs.Tests.TestDatabaseUnitTests.EntityRepositoryTests;
 
 public sealed class GetAllTypesDtoSpecification
     : Specification<AllTypesEntity, AllTypesDto>

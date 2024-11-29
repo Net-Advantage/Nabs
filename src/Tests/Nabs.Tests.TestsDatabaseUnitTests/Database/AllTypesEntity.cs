@@ -1,4 +1,4 @@
-﻿namespace Nabs.Tests.TestDatabaseUnitTests.Database;
+﻿namespace Nabs.Tests.TestsDatabaseUnitTests.Database;
 
 public sealed class AllTypesEntity : EntityBase<Guid>
 {

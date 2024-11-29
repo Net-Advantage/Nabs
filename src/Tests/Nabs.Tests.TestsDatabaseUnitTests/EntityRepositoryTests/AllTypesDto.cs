@@ -1,4 +1,4 @@
-﻿namespace Nabs.Tests.TestDatabaseUnitTests.EntityRepositoryTests;
+﻿namespace Nabs.Tests.TestsDatabaseUnitTests.EntityRepositoryTests;
 
 public sealed class AllTypesDto
 {

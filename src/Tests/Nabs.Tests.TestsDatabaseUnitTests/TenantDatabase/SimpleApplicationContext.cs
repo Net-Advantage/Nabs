@@ -1,5 +1,4 @@
-﻿
-namespace Nabs.Tests.TestDatabaseUnitTests.TenantDatabase;
+﻿namespace Nabs.Tests.TestsDatabaseUnitTests.TenantDatabase;
 
 public sealed class SimpleApplicationContext : IApplicationContext
 {
