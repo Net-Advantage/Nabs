@@ -25,10 +25,10 @@ jobs:
             echo "Listing files and directories in the workspace /src directory:"
             ls -alh "${GITHUB_WORKSPACE}/src"
   
-        - name: Setup .NET 8.0
+        - name: Setup .NET 9.0
           uses: actions/setup-dotnet@v4
           with:
-            dotnet-version: '8.0.x'
+            dotnet-version: '9.0.x'
 
         - name: Restore dependencies using nuget.config
           run: dotnet restore src/Nabs.sln --configfile ./src/nuget.config
@@ -40,7 +40,7 @@ jobs:
           run: dotnet test src/Nabs.sln --configuration Release --no-restore --no-build --logger "console;verbosity=detailed" --settings src/coverlet.runsettings
 
         - name: Generate Code Coverage Report
-          uses: danielpalme/ReportGenerator-GitHub-Action@5.2.3
+          uses: danielpalme/ReportGenerator-GitHub-Action@5.4.1
           with:
             reports: '**/TestResults/**/coverage.cobertura.xml'
             targetdir: coveragereport
@@ -55,5 +55,5 @@ jobs:
           
         - name: Pack NuGet packages
           run: |
-              dotnet pack src/Nabs.sln --configuration Release --no-restore --no-build --output nupkgs /p:PackageVersion=8.0.$GITHUB_RUN_NUMBER
+              dotnet pack src/Nabs.sln --configuration Release --no-restore --no-build --output nupkgs /p:PackageVersion=9.0.$GITHUB_RUN_NUMBER
               dotnet nuget push **/*.nupkg --source "https://api.nuget.org/v3/index.json" --skip-duplicate --api-key ${{secrets.NABS_NUGET_API_KEY}}
