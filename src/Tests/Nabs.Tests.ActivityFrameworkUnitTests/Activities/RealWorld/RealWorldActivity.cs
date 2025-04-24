@@ -6,7 +6,7 @@ public sealed class RealWorldActivity
     public RealWorldActivity(RealWorldActivityState activityState)
         : base(activityState)
     {
-        AddValidator(new RealWorldActivityStateValidator());
+        AddValidator<RealWorldActivityStateValidator>();
 
         AddBehaviour(new RealWorldActivityStateTransformer());
         AddBehaviour(new RealWorldActivityStateEmailTransformer());

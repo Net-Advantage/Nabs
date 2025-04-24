@@ -66,6 +66,12 @@ public abstract class Activity<TActivityState>
         _activityStateValidator = validator;
     }
 
+    protected void AddValidator<TStateValidator>()
+        where TStateValidator : IActivityStateValidator<TActivityState>, new()
+    {
+        _activityStateValidator = new TStateValidator();
+    }
+
     protected void AddBehaviour(IActivityStateBehaviour behaviour, Action? action = null)
     {
         Behaviours.Add(behaviour, action);
