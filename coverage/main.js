@@ -227,7 +227,7 @@ var assemblies = [
   {
     "name": "Nabs.ActivityFramework",
     "classes": [
-      { "name": "Nabs.ActivityFramework.Activity<T>", "rp": "Nabs.ActivityFramework_Activity_1.html", "cl": 31, "ucl": 10, "cal": 41, "tl": 131, "cb": 14, "tb": 24, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.ActivityFramework.Activity<T>", "rp": "Nabs.ActivityFramework_Activity_1.html", "cl": 33, "ucl": 10, "cal": 43, "tl": 137, "cb": 14, "tb": 24, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.ActivityStateValidator<T>", "rp": "Nabs.ActivityFramework_ActivityStateValidator_1.html", "cl": 3, "ucl": 4, "cal": 7, "tl": 25, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.UiManifest.ActivityStateUiManifest<T>", "rp": "Nabs.ActivityFramework_ActivityStateUiManifest_1.html", "cl": 27, "ucl": 0, "cal": 27, "tl": 71, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.ActivityFramework.UiManifest.UiManifestResult", "rp": "Nabs.ActivityFramework_UiManifestResult.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -292,6 +292,7 @@ var assemblies = [
       { "name": "Nabs.Tests.FixtureTestBase<T>", "rp": "Nabs.Tests_FixtureTestBase_1.html", "cl": 21, "ucl": 0, "cal": 21, "tl": 55, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.LoadEnumerableFromJsonDataAttribute<T>", "rp": "Nabs.Tests_LoadEnumerableFromJsonDataAttribute_1.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 43, "cb": 4, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Nabs.Tests.LoadFromCsvDataAttribute<T>", "rp": "Nabs.Tests_LoadFromCsvDataAttribute_1.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 41, "cb": 4, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "Nabs.Tests.TestCaseFactory", "rp": "Nabs.Tests_TestCaseFactory.html", "cl": 0, "ucl": 15, "cal": 15, "tl": 45, "cb": 0, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Nabs.Tests.DatabaseTests",

@@ -3,22 +3,22 @@
 
 |||
 |:---|:---|
-| Generated on: | 11/29/2024 - 10:08:29 |
-| Coverage date: | 11/29/2024 - 10:07:31 - 11/29/2024 - 10:08:27 |
+| Generated on: | 04/24/2025 - 08:16:27 |
+| Coverage date: | 04/24/2025 - 08:15:37 - 04/24/2025 - 08:16:25 |
 | Parser: | MultiReport (14x Cobertura) |
 | Assemblies: | 16 |
-| Classes: | 47 |
-| Files: | 45 |
-| **Line coverage:** | 79.8% (551 of 690) |
-| Covered lines: | 551 |
-| Uncovered lines: | 139 |
-| Coverable lines: | 690 |
-| Total lines: | 1779 |
-| **Branch coverage:** | 73.7% (115 of 156) |
+| Classes: | 48 |
+| Files: | 46 |
+| **Line coverage:** | 78.2% (553 of 707) |
+| Covered lines: | 553 |
+| Uncovered lines: | 154 |
+| Coverable lines: | 707 |
+| Total lines: | 1830 |
+| **Branch coverage:** | 71.8% (115 of 160) |
 | Covered branches: | 115 |
-| Total branches: | 156 |
+| Total branches: | 160 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 89_12082781886 |
+| Tag: | 90_14636759620 |
 
 </details>
 
@@ -32,12 +32,12 @@
 |Nabs.ValueObject`1|100%|100%|
 
 </details>
-<details><summary>Nabs.ActivityFramework - 63.2%</summary>
+<details><summary>Nabs.ActivityFramework - 64%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.ActivityFramework**|**63.2%**|**41.6%**|
-|Nabs.ActivityFramework.Activity`1|75.6%|58.3%|
+|**Nabs.ActivityFramework**|**64%**|**41.6%**|
+|Nabs.ActivityFramework.Activity`1|76.7%|58.3%|
 |Nabs.ActivityFramework.ActivityStateValidator`1|42.8%|50%|
 |Nabs.ActivityFramework.UiManifest.ActivityStateUiManifest`1|100%||
 |Nabs.ActivityFramework.UiManifest.UiManifestResult|100%||
@@ -118,17 +118,18 @@
 |Nabs.Serialisation.GlobalSettings|100%|100%|
 
 </details>
-<details><summary>Nabs.Tests - 100%</summary>
+<details><summary>Nabs.Tests - 86.7%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Nabs.Tests**|**100%**|**100%**|
+|**Nabs.Tests**|**86.7%**|**66.6%**|
 |Nabs.Tests.Fixtures.ConfigurationTestFixtureBase|100%||
 |Nabs.Tests.Fixtures.SimpleTestFixture|100%||
 |Nabs.Tests.Fixtures.TestFixtureBase|100%||
 |Nabs.Tests.FixtureTestBase`1|100%||
 |Nabs.Tests.LoadEnumerableFromJsonDataAttribute`1|100%|100%|
 |Nabs.Tests.LoadFromCsvDataAttribute`1|100%|100%|
+|Nabs.Tests.TestCaseFactory|0%|0%|
 
 </details>
 <details><summary>Nabs.Tests.DatabaseTests - 82%</summary>
